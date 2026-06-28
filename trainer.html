@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Listening Trainer</title>
+    <meta name="description" content="中国語のピンイン（スペル）とネイティブ発音の脳内ミスマッチを解消するための、リスニング特化型トレーニングツール。">
+    <!-- Google Fonts: Outfit & Noto Sans SC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0d0e15;
+            --card-bg: rgba(22, 23, 37, 0.65);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --primary: #4bcffa;     /* Neon Blue */
+            --accent: #ff9f43;      /* Neon Orange */
+            --success: #1dd1a1;     /* Neon Green */
+            --danger: #ff6b6b;      /* Neon Red */
+            --cushion-bg: #fff8db;  /* Giant Pinyin Cushion Background */
+            --cushion-text: #111111;/* Giant Pinyin Cushion Text */
+            --text-main: #f1f2f6;
+            --text-muted: #8b92b6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 0.25) 0, transparent 50%), 
+                radial-gradient(at 100% 100%, hsla(339, 49%, 30%, 0.15) 0, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            font-family: 'Outfit', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            overflow-x: hidden;
+        }
+
+        /* アプリ全体コンテナ */
+        .app-container {
+            width: 100%;
+            max-width: 1080px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 900px) {
+            .app-container {
+                grid-template-columns: 320px 1fr;
+            }
+        }
+
+        /* 左側サイドバー（コントロール & ガイド） */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .sidebar-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        /* キーボードガイド（Lazy-UI ビジュアル） */
+        .key-guide {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.8rem;
+        }
+
+        .key-row {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .keycap {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 38px;
+            height: 38px;
+            background: #25283c;
+            border: 1.5px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #ffffff;
+            box-shadow: 0 3px 0 #151724;
+            transition: all 0.1s ease;
+            flex-shrink: 0;
+        }
+
+        .keycap.space {
+            width: 80px;
+        }
+
+        .keycap.active {
+            transform: translateY(2px);
+            box-shadow: 0 1px 0 #151724;
+            background: var(--primary);
+            color: #000000;
+            border-color: var(--primary);
+        }
+
+        .key-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.3;
+        }
+
+        /* 右側メインエリア */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        /* 訓練カード */
+        .trainer-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+            position: relative;
+            min-height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border-color 0.3s ease;
+        }
+
+        /* カードの枠線アニメーション効果 */
+        .trainer-card.bombard-active {
+            border-color: var(--danger);
+            box-shadow: 0 0 25px rgba(255, 107, 107, 0.2), 0 20px 50px rgba(0, 0, 0, 0.35);
+        }
+
+        /* ヘッダー情報 */
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .status-dot.revealed {
+            background: var(--success);
+            box-shadow: 0 0 8px var(--success);
+        }
+
+        .status-dot.bombard {
+            background: var(--danger);
+            box-shadow: 0 0 10px var(--danger);
+            animation: pulse 1s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.7; }
+            100% { transform: scale(1.3); opacity: 1; }
+        }
+
+        .sentence-counter {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* メインセンテンス表示エリア */
+        .sentence-display {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+            min-height: 120px;
+        }
+
+        /* チャンクボックス */
+        .chunk-box {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: flex-end;
+            gap: 0.2rem;
+            padding: 0.4rem 0.6rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .chunk-box.f-active {
+            background: rgba(75, 207, 250, 0.1);
+            box-shadow: 0 0 15px rgba(75, 207, 250, 0.15);
+            transform: scale(1.03);
+        }
+
+        /* スラッシュ区切り記号 */
+        .chunk-slash {
+            font-size: 2.2rem;
+            color: var(--accent);
+            font-weight: 300;
+            opacity: 0;
+            width: 0;
+            display: inline-block;
+            transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            align-self: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .chunk-slash.visible {
+            opacity: 1;
+            width: auto;
+            margin: 0 0.5rem;
+            transform: scale(1.1);
+        }
+
+        .q-revealed .chunk-slash {
+            opacity: 0.25;
+            width: auto;
+            margin: 0 0.5rem;
+            color: #ffffff;
+        }
+
+        /* 漢字ルビボックス */
+        .char-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            min-width: 3rem;
+        }
+
+        .pinyin {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.4rem;
+            text-align: center;
+            height: 1.6rem;
+            line-height: 1.6rem;
+            transition: all 0.25s ease;
+            width: 100%;
+        }
+
+        .hanzi {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            text-align: center;
+            line-height: 1.2;
+            transition: all 0.25s ease;
+        }
+
+        /* 未回答状態の表示マスク */
+        .q-hidden .pinyin {
+            opacity: 0;
+            transform: translateY(-8px);
+            pointer-events: none;
+        }
+
+        .q-hidden .hanzi {
+            color: transparent !important;
+            border-bottom: 4px solid rgba(255, 255, 255, 0.22);
+            border-radius: 2px;
+            user-select: none;
+        }
+
+        /* 天敵ピンインのハイライトカラー */
+        .pinyin.bad-an {
+            color: var(--accent);
+            border-bottom: 2px dashed rgba(255, 159, 67, 0.6);
+        }
+        .pinyin.bad-e {
+            color: #ff6b6b;
+            border-bottom: 2px dashed rgba(255, 107, 107, 0.6);
+        }
+        .pinyin.bad-retro {
+            color: var(--primary);
+            border-bottom: 2px dashed rgba(75, 207, 250, 0.6);
+        }
+        .pinyin.bad-ing {
+            color: var(--success);
+            border-bottom: 2px dashed rgba(29, 209, 161, 0.6);
+        }
+
+        /* 前舌面音（xi-）の罠 ― 紫で区別 */
+        .pinyin.bad-front {
+            color: #c084fc; /* Neon Purple */
+            border-bottom: 2px dashed rgba(192, 132, 252, 0.6);
+        }
+
+        /* 複合属性トラップ用のカラー（文字色：巻き舌/blue、アンダーライン：各母音） */
+        .pinyin.bad-retro.bad-an {
+            color: var(--primary) !important;
+            border-bottom: 2px dashed rgba(255, 159, 67, 0.75) !important;
+        }
+        .pinyin.bad-retro.bad-e {
+            color: var(--primary) !important;
+            border-bottom: 2px dashed rgba(255, 107, 107, 0.75) !important;
+        }
+        .pinyin.bad-retro.bad-ing {
+            color: var(--primary) !important;
+            border-bottom: 2px dashed rgba(29, 209, 161, 0.75) !important;
+        }
+
+        /* 前舌面音の複合（文字色：紫、アンダーライン：各母音） */
+        .pinyin.bad-front.bad-an {
+            color: #c084fc !important;
+            border-bottom: 2px dashed rgba(255, 159, 67, 0.75) !important;
+        }
+        .pinyin.bad-front.bad-ing {
+            color: #c084fc !important;
+            border-bottom: 2px dashed rgba(29, 209, 161, 0.75) !important;
+        }
+
+        /* Gモード（超巨大ピンインフォーカス） */
+        .char-box.giant-pinyin-focus {
+            background-color: var(--cushion-bg) !important;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            margin: 0 !important; /* マージンを0にして背景を結合 */
+            border-radius: 0;
+            z-index: 10;
+        }
+
+        .char-box.giant-pinyin-focus.focus-start {
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+            padding-left: 0.8rem;
+        }
+
+        .char-box.giant-pinyin-focus.focus-end {
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+            padding-right: 0.8rem;
+        }
+
+        .char-box.giant-pinyin-focus .pinyin {
+            font-size: 2.8rem !important;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            height: auto;
+            line-height: 1.0;
+        }
+
+        /* 黄色座布団上での天敵ピンイン高コントラスト色 */
+        .char-box.giant-pinyin-focus .pinyin.bad-an {
+            color: #b35c00 !important; /* 暗いオレンジ */
+            border-bottom: 3px solid rgba(179, 92, 0, 0.85) !important;
+        }
+        .char-box.giant-pinyin-focus .pinyin.bad-e {
+            color: #b81d1d !important; /* 暗い赤 */
+            border-bottom: 3px solid rgba(184, 29, 29, 0.85) !important;
+        }
+        .char-box.giant-pinyin-focus .pinyin.bad-retro {
+            color: #0b59b3 !important; /* 暗い青 */
+            border-bottom: 3px solid rgba(11, 89, 179, 0.85) !important;
+        }
+        .char-box.giant-pinyin-focus .pinyin.bad-ing {
+            color: #0a6b3f !important; /* 暗い緑 */
+            border-bottom: 3px solid rgba(10, 107, 63, 0.85) !important;
+        }
+        .char-box.giant-pinyin-focus .pinyin.bad-front {
+            color: #6b21a8 !important; /* 暗い紫 */
+            border-bottom: 3px solid rgba(107, 33, 168, 0.85) !important;
+        }
+
+        /* 黄色座布団上での天敵ピンイン高コントラスト複合色 */
+        .char-box.giant-pinyin-focus .pinyin.bad-retro.bad-an {
+            color: #0b59b3 !important; /* 暗い青 */
+            border-bottom: 3px dashed rgba(179, 92, 0, 0.95) !important;
+        }
+        .char-box.giant-pinyin-focus .pinyin.bad-retro.bad-e {
+            color: #0b59b3 !important; /* 暗い青 */
+            border-bottom: 3px dashed rgba(184, 29, 29, 0.95) !important;
+        }
+        .char-box.giant-pinyin-focus .pinyin.bad-retro.bad-ing {
+            color: #0b59b3 !important; /* 暗い青 */
+            border-bottom: 3px dashed rgba(10, 107, 63, 0.95) !important;
+        }
+
+        /* 前舌面音の複合 */
+        .char-box.giant-pinyin-focus .pinyin.bad-front.bad-an {
+            color: #6b21a8 !important;
+            border-bottom: 3px dashed rgba(179, 92, 0, 0.95) !important;
+        }
+        .char-box.giant-pinyin-focus .pinyin.bad-front.bad-ing {
+            color: #6b21a8 !important;
+            border-bottom: 3px dashed rgba(10, 107, 63, 0.95) !important;
+        }
+
+        /* 通常文字は黒 */
+        .char-box.giant-pinyin-focus .pinyin:not(.bad-an):not(.bad-e):not(.bad-retro):not(.bad-ing):not(.bad-front) {
+            color: #111111 !important;
+            border-bottom: none !important;
+        }
+
+        .char-box.giant-pinyin-focus .hanzi {
+            font-size: 2.4rem;
+            color: var(--cushion-text) !important;
+        }
+
+        /* 答え合わせパネル（日本語訳、Tips） */
+        .details-panel {
+            display: none;
+            flex-direction: column;
+            gap: 1rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+            margin-top: auto;
+        }
+
+        .details-panel.active {
+            display: flex;
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        .translation-box {
+            font-size: 1.2rem;
+            color: #ffffff;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .tip-box {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+
+        /* 単語ヒントパネル */
+        .hints-panel {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.2rem 1.5rem;
+            display: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .hints-panel.active {
+            display: block;
+            animation: slideDown 0.25s ease forwards;
+        }
+
+        .hints-panel-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 0.8rem;
+        }
+
+        .hints-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .hint-badge {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.4rem 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+        }
+
+        .hint-word {
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .hint-level {
+            font-size: 0.7rem;
+            font-weight: 700;
+            background: rgba(75, 207, 250, 0.15);
+            color: var(--primary);
+            padding: 0.1rem 0.3rem;
+            border-radius: 4px;
+        }
+
+        .hint-meaning {
+            color: var(--text-muted);
+        }
+
+        .no-hints {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* 天敵警告パネル */
+        .enemy-warnings-panel {
+            display: none;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .enemy-warnings-panel.active {
+            display: flex;
+            animation: slideDown 0.3s ease forwards;
+        }
+
+        .enemy-warning-card {
+            background: rgba(255, 107, 107, 0.08);
+            border: 1px solid rgba(255, 107, 107, 0.15);
+            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .enemy-warning-id {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #ff6b6b;
+            letter-spacing: 0.05em;
+        }
+
+        .enemy-warning-text {
+            font-size: 0.88rem;
+            color: #f1f2f6;
+            line-height: 1.4;
+        }
+
+        /* 制御フッター（速度ギアと前・次ナビゲーション） */
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        .speedometer {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+        }
+
+        .speed-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .speed-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            min-width: 45px;
+            text-align: right;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+
+        /* アニメーション定義 */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 各種入力フォーム・設定項目 */
+        .settings-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .setting-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .setting-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .custom-select {
+            width: 100%;
+            background: #1c1d30;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 0.5rem 0.8rem;
+            border-radius: 8px;
+            outline: none;
+            font-size: 0.9rem;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .custom-select:focus {
+            border-color: var(--primary);
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.88rem;
+            cursor: pointer;
+            color: var(--text-main);
+        }
+
+        .radio-label input {
+            cursor: pointer;
+            accent-color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <!-- 左側サイドバー -->
+        <div class="sidebar">
+            
+            <!-- 設定カード -->
+            <div class="sidebar-card">
+                <div class="sidebar-title">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    Settings & Options
+                </div>
+                <div class="settings-grid">
+                    
+                    <!-- HSK フィルター -->
+                    <div class="setting-group">
+                        <span class="setting-label">HSK 足切りレベル</span>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="hsk-filter" value="2" checked> HSK 2級以上
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="hsk-filter" value="3"> HSK 3級以上
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 操作ガイドカード -->
+            <div class="sidebar-card">
+                <div class="sidebar-title">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect><line x1="6" y1="8" x2="6" y2="8"></line><line x1="10" y1="8" x2="10" y2="8"></line><line x1="14" y1="8" x2="14" y2="8"></line><line x1="18" y1="8" x2="18" y2="8"></line><line x1="6" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="18" y2="12"></line><line x1="7" y1="16" x2="17" y2="16"></line></svg>
+                    Lazy-UI Controls
+                </div>
+                <div class="key-guide">
+                    <div class="key-row">
+                        <kbd id="key-space" class="keycap space">Space</kbd>
+                        <kbd id="key-r" class="keycap">R</kbd>
+                        <span class="key-desc">音声再生（Before Q:文再生 / After Q:1.0x再生 / G中:単体等倍）</span>
+                    </div>
+                    <div class="key-row">
+                        <kbd id="key-q" class="keycap">Q</kbd>
+                        <span class="key-desc">答え合わせ（ピンイン・翻訳・Tipsの開示 ＋ 1.0x文再生。G中は解除）</span>
+                    </div>
+                    <div class="key-row">
+                        <kbd id="key-f" class="keycap">F</kbd>
+                        <span class="key-desc">お助けポーズ＆スラッシュ（1.5s停止再生）</span>
+                    </div>
+                    <div class="key-row">
+                        <kbd id="key-w" class="keycap">W</kbd>
+                        <span class="key-desc">単語ヒント表示（設定したHSKレベル以上のみ）</span>
+                    </div>
+                    <div class="key-row">
+                        <kbd id="key-g" class="keycap">G</kbd>
+                        <span class="key-desc">ピンイン爆撃（Q押下後有効・要注意語を加速3連打再生）</span>
+                    </div>
+                    <div class="key-row">
+                        <kbd id="key-e" class="keycap">E</kbd>
+                        <span class="key-desc">再チャレンジ（答え合わせ後にリセット）</span>
+                    </div>
+                    <div class="key-row">
+                        <kbd id="key-s" class="keycap">S</kbd>
+                        <span class="key-desc">シャッフルモード（オン・オフトグル）</span>
+                    </div>
+                    <div class="key-row">
+                        <kbd id="key-1" class="keycap">1</kbd>
+                        <kbd id="key-2" class="keycap">2</kbd>
+                        <kbd id="key-3" class="keycap">3</kbd>
+                        <span class="key-desc">速度ギア（1:減速 / 2:等倍リセット / 3:加速）</span>
+                    </div>
+                    <div class="key-row">
+                        <kbd id="key-arrowleft" class="keycap">←</kbd>
+                        <kbd id="key-arrowright" class="keycap">→</kbd>
+                        <span class="key-desc">前の文 / 次の文へ移動</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 右側メインエリア -->
+        <div class="main-content">
+            
+            <!-- 訓練カード -->
+            <div id="trainer-card" class="trainer-card">
+                
+                <!-- カードヘッダー -->
+                <div class="card-header">
+                    <div class="status-badge">
+                        <span id="status-dot" class="status-dot"></span>
+                        <span id="status-text">Challenge Mode</span>
+                    </div>
+                    <div id="sentence-counter" class="sentence-counter">
+                        Sentence 1 of 8
+                    </div>
+                </div>
+
+                <!-- 中国語表示部 -->
+                <div id="sentence-display" class="sentence-display q-hidden">
+                    <!-- JavaScriptにより動的生成 -->
+                </div>
+
+                <!-- 単語ヒントパネル -->
+                <div id="hints-panel" class="hints-panel">
+                    <!-- JavaScriptにより動的生成 -->
+                </div>
+
+                <!-- 天敵ピンイン解説パネル -->
+                <div id="enemy-warnings-panel" class="enemy-warnings-panel">
+                    <!-- JavaScriptにより動的生成 -->
+                </div>
+
+                <!-- 答え合わせパネル -->
+                <div id="details-panel" class="details-panel">
+                    <div id="translation-box" class="translation-box">
+                        <!-- 日本語訳 -->
+                    </div>
+                    <div id="tip-box" class="tip-box">
+                        <!-- Tip -->
+                    </div>
+                </div>
+
+                <!-- カードフッター -->
+                <div class="card-footer">
+                    
+                    <!-- 速度メーター -->
+                    <div class="speedometer">
+                        <span class="speed-label">Speed Gear</span>
+                        <span id="speed-value" class="speed-value">1.0x</span>
+                    </div>
+
+                    <!-- 前後ナビゲーション -->
+                    <div class="navigation-buttons">
+                        <button id="btn-prev" class="nav-btn">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            Prev
+                        </button>
+                        <button id="btn-next" class="nav-btn">
+                            Next
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- スタティックデータの読み込み -->
+    <script src="data.js"></script>
+    <script>
+        // アプリケーション状態管理
+        let currentIdx = 0;
+        let isRevealed = false;
+        let speed = 1.0;
+        let activeGIndex = null;
+        let isFPlaying = false;
+        let isHintVisible = false;
+        let shuffleActive = false;
+        let shuffledOrder = [];
+        let shufflePos = 0;
+        
+        let selectedVoice = null;
+        let activeTimeouts = [];
+        let currentUtterance = null;
+
+        // ドム要素の参照
+        const trainerCard = document.getElementById('trainer-card');
+        const statusDot = document.getElementById('status-dot');
+        const statusText = document.getElementById('status-text');
+        const sentenceCounter = document.getElementById('sentence-counter');
+        const sentenceDisplay = document.getElementById('sentence-display');
+        const hintsPanel = document.getElementById('hints-panel');
+        const enemyWarningsPanel = document.getElementById('enemy-warnings-panel');
+        const detailsPanel = document.getElementById('details-panel');
+        const translationBox = document.getElementById('translation-box');
+        const tipBox = document.getElementById('tip-box');
+        const speedValue = document.getElementById('speed-value');
+        
+        const btnPrev = document.getElementById('btn-prev');
+        const btnNext = document.getElementById('btn-next');
+        const hskFilters = document.querySelectorAll('input[name="hsk-filter"]');
+
+        // 読み込み完了時初期化
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof studyData === 'undefined' || typeof pinyinMasterDB === 'undefined') {
+                console.error("data.js is not loaded correctly.");
+                alert("data.jsが読み込めませんでした。ファイル配置を確認してください。");
+                return;
+            }
+            init();
+        });
+
+        function init() {
+            loadSentence(0);
+            autoSelectVoice();
+            if (window.speechSynthesis.onvoiceschanged !== undefined) {
+                window.speechSynthesis.onvoiceschanged = autoSelectVoice;
+            }
+            setupKeyListeners();
+            setupClickEvents();
+        }
+
+        // センテンス読み込み
+        function loadSentence(idx) {
+            cancelAllSpeechAndTimers();
+            
+            currentIdx = idx;
+            isRevealed = false;
+            activeGIndex = null;
+            isFPlaying = false;
+            isHintVisible = false;
+            
+            // 状態表示更新
+            sentenceCounter.innerText = `Sentence ${currentIdx + 1} of ${studyData.length}`;
+            
+            // UIパネルの初期化
+            trainerCard.classList.remove('bombard-active');
+            
+            sentenceDisplay.className = 'sentence-display q-hidden';
+            sentenceDisplay.innerHTML = studyData[currentIdx].html_content;
+
+            // スラッシュを動的にDOMに挟み込む
+            const chunks = sentenceDisplay.querySelectorAll('.chunk-box');
+            for (let i = 0; i < chunks.length - 1; i++) {
+                const slash = document.createElement('span');
+                slash.className = 'chunk-slash';
+                slash.innerText = '/';
+                slash.dataset.slashIndex = i;
+                chunks[i].after(slash);
+            }
+
+            // 各種パネルを非表示に
+            hintsPanel.classList.remove('active');
+            hintsPanel.innerHTML = '';
+            enemyWarningsPanel.classList.remove('active');
+            enemyWarningsPanel.innerHTML = '';
+            detailsPanel.classList.remove('active');
+            
+            // 日本語訳、Tipsをバインド
+            translationBox.innerText = studyData[currentIdx].japanese_translation;
+            tipBox.innerText = studyData[currentIdx].tip;
+
+            updateUIStates();
+        }
+
+        // UI表示状態の同期
+        function updateUIStates() {
+            // スピードメーター更新
+            speedValue.innerText = `${speed.toFixed(1)}x`;
+
+            // ナビゲーションボタン無効化
+            btnPrev.disabled = currentIdx === 0;
+            btnNext.disabled = currentIdx === studyData.length - 1;
+
+            // ステータスバッジの同期
+            statusDot.className = 'status-dot';
+            if (activeGIndex !== null) {
+                statusDot.classList.add('bombard');
+                statusText.innerText = 'Bombard Mode';
+                trainerCard.classList.add('bombard-active');
+            } else if (isRevealed) {
+                statusDot.classList.add('revealed');
+                statusText.innerText = 'Revealed Mode';
+                trainerCard.classList.remove('bombard-active');
+            } else {
+                statusText.innerText = 'Challenge Mode';
+                trainerCard.classList.remove('bombard-active');
+            }
+        }
+
+        // 音声合成発話 (TTS)
+        function speakText(text, rate, onendCallback) {
+            window.speechSynthesis.cancel();
+            
+            const utterance = new SpeechSynthesisUtterance(text);
+            
+            if (selectedVoice) {
+                utterance.voice = selectedVoice;
+            }
+            utterance.lang = 'zh-CN';
+            utterance.rate = Math.max(0.5, Math.min(1.5, rate));
+            
+            utterance.onend = () => {
+                currentUtterance = null;
+                if (onendCallback) onendCallback();
+            };
+            
+            utterance.onerror = (e) => {
+                console.error("SpeechSynthesis error:", e);
+                currentUtterance = null;
+                if (onendCallback) onendCallback();
+            };
+
+            currentUtterance = utterance;
+            window.speechSynthesis.speak(utterance);
+        }
+
+        // 全音声および待機タイマーの一斉破棄
+        function cancelAllSpeechAndTimers() {
+            window.speechSynthesis.cancel();
+            if (currentUtterance) {
+                currentUtterance.onend = null;
+                currentUtterance = null;
+            }
+
+            activeTimeouts.forEach(id => clearTimeout(id));
+            activeTimeouts = [];
+
+            // Fモードのハイライトおよびスラッシュ表示リセット
+            const chunks = sentenceDisplay.querySelectorAll('.chunk-box');
+            chunks.forEach(c => c.classList.remove('f-active'));
+            const slashes = sentenceDisplay.querySelectorAll('.chunk-slash');
+            slashes.forEach(s => s.classList.remove('visible'));
+        }
+
+        // 音声自動選択（UIを汚さずに最適な中国語話者をバインド）
+        function autoSelectVoice() {
+            const voices = window.speechSynthesis.getVoices();
+            const zhVoices = voices.filter(v => v.lang.startsWith('zh'));
+            
+            // zh-CN優先バインド
+            const defaultVoice = zhVoices.find(v => v.lang === 'zh-CN') || zhVoices[0];
+            if (defaultVoice) {
+                selectedVoice = defaultVoice;
+                console.log("Selected Chinese voice:", selectedVoice.name);
+            } else if (voices.length > 0) {
+                selectedVoice = voices[0];
+                console.warn("No Chinese voice found. Falling back to default voice:", selectedVoice.name);
+            }
+        }
+
+        // キーボードショートカット設定
+        function setupKeyListeners() {
+            window.addEventListener('keydown', (e) => {
+                // Spaceキーのスクロール無効化
+                if (e.key === ' ' || e.code === 'Space') {
+                    e.preventDefault();
+                    triggerActiveVisual('key-space');
+                    handleSpaceOrRKey();
+                } else if (e.key === 'r' || e.key === 'R') {
+                    triggerActiveVisual('key-r');
+                    handleSpaceOrRKey();
+                } else if (e.key === 'q' || e.key === 'Q') {
+                    triggerActiveVisual('key-q');
+                    revealAnswer();
+                } else if (e.key === 'f' || e.key === 'F') {
+                    triggerActiveVisual('key-f');
+                    playFMode();
+                } else if (e.key === 'w' || e.key === 'W') {
+                    triggerActiveVisual('key-w');
+                    toggleHints();
+                } else if (e.key === 'g' || e.key === 'G') {
+                    triggerActiveVisual('key-g');
+                    if (isRevealed) triggerGBombardmentMode();
+                } else if (e.key === 'e' || e.key === 'E') {
+                    triggerActiveVisual('key-e');
+                    reChallenge();
+                } else if (e.key === 's' || e.key === 'S') {
+                    triggerActiveVisual('key-s');
+                    toggleShuffle();
+                } else if (e.key === '1') {
+                    triggerActiveVisual('key-1');
+                    changeSpeed(-0.1);
+                } else if (e.key === '2') {
+                    triggerActiveVisual('key-2');
+                    changeSpeed(0);
+                } else if (e.key === '3') {
+                    triggerActiveVisual('key-3');
+                    changeSpeed(0.1);
+                } else if (e.key === 'ArrowLeft') {
+                    triggerActiveVisual('key-arrowleft');
+                    navigateSentence(-1);
+                } else if (e.key === 'ArrowRight') {
+                    triggerActiveVisual('key-arrowright');
+                    navigateSentence(1);
+                }
+            });
+
+            window.addEventListener('keyup', (e) => {
+                let id = '';
+                if (e.key === ' ' || e.code === 'Space') id = 'key-space';
+                else if (e.key === 'r' || e.key === 'R') id = 'key-r';
+                else if (e.key === 'q' || e.key === 'Q') id = 'key-q';
+                else if (e.key === 'f' || e.key === 'F') id = 'key-f';
+                else if (e.key === 'w' || e.key === 'W') id = 'key-w';
+                else if (e.key === 'g' || e.key === 'G') id = 'key-g';
+                else if (e.key === 'e' || e.key === 'E') id = 'key-e';
+                else if (e.key === 's' || e.key === 'S') id = 'key-s';
+                else if (e.key === '1') id = 'key-1';
+                else if (e.key === '2') id = 'key-2';
+                else if (e.key === '3') id = 'key-3';
+                else if (e.key === 'ArrowLeft') id = 'key-arrowleft';
+                else if (e.key === 'ArrowRight') id = 'key-arrowright';
+
+                if (id) {
+                    const el = document.getElementById(id);
+                    if (el) el.classList.remove('active');
+                }
+            });
+        }
+
+        // キーが押されたときの物理風アクティブ表示
+        function triggerActiveVisual(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.add('active');
+            }
+        }
+
+        // ボタンのクリックイベントバインド
+        function setupClickEvents() {
+            btnPrev.addEventListener('click', () => navigateSentence(-1));
+            btnNext.addEventListener('click', () => navigateSentence(1));
+            
+            // HSKフィルタ切り替え時のヒント追従
+            hskFilters.forEach(f => {
+                f.addEventListener('change', () => {
+                    if (isHintVisible) {
+                        renderHints();
+                    }
+                });
+            });
+        }
+
+        // Space / R キー処理
+        function handleSpaceOrRKey() {
+            const sentence = studyData[currentIdx];
+            
+            if (activeGIndex !== null) {
+                // Gモード中はフォーカス要注意語のみを「等倍」で再生
+                cancelAllSpeechAndTimers();
+                speakText(sentence.vulnerable_targets[activeGIndex].text, 1.0);
+            } else {
+                cancelAllSpeechAndTimers();
+                // Q押下前：設定速度で文再生、Q押下後：等倍で文再生
+                const playSpeed = isRevealed ? 1.0 : speed;
+                speakText(sentence.full_sentence, playSpeed);
+            }
+        }
+
+        // 答え合わせ (Q)
+        function revealAnswer() {
+            if (isRevealed) {
+                // すでに開示されている状態でQが押された場合、Gモード（爆撃）を解除してノーマルに戻す
+                if (activeGIndex !== null) {
+                    deactivateGMode();
+                    updateUIStates();
+                }
+                cancelAllSpeechAndTimers();
+                speakText(studyData[currentIdx].full_sentence, 1.0);
+                return;
+            }
+            isRevealed = true;
+            cancelAllSpeechAndTimers();
+
+            // UI状態の切り替え
+            sentenceDisplay.className = 'sentence-display q-revealed';
+            detailsPanel.classList.add('active');
+            
+            updateUIStates();
+
+            // 全文を等倍(1.0x)で自動1回再生
+            speakText(studyData[currentIdx].full_sentence, 1.0);
+        }
+
+        // お助けポーズ＆スラッシュ (F)
+        function playFMode() {
+            cancelAllSpeechAndTimers();
+            isFPlaying = true;
+
+            const chunks = sentenceDisplay.querySelectorAll('.chunk-box');
+            const slashes = sentenceDisplay.querySelectorAll('.chunk-slash');
+            
+            // 状態初期化
+            chunks.forEach(c => c.classList.remove('f-active'));
+            slashes.forEach(s => s.classList.remove('visible'));
+
+            const sentence = studyData[currentIdx];
+            let chunkIdx = 0;
+
+            function playStep() {
+                if (chunkIdx >= sentence.chunks.length) {
+                    isFPlaying = false;
+                    chunks.forEach(c => c.classList.remove('f-active'));
+                    return;
+                }
+
+                // 対象チャンクをハイライト
+                chunks.forEach((c, idx) => {
+                    if (idx === chunkIdx) c.classList.add('f-active');
+                    else c.classList.remove('f-active');
+                });
+
+                const chunkText = sentence.chunks[chunkIdx].text;
+                speakText(chunkText, speed, () => {
+                    // 最終チャンクでなければ、1.5秒ポーズを挟みスラッシュを表示して次へ
+                    if (chunkIdx < sentence.chunks.length - 1) {
+                        const slashEl = sentenceDisplay.querySelector(`.chunk-slash[data-slash-index="${chunkIdx}"]`);
+                        if (slashEl) {
+                            slashEl.classList.add('visible');
+                        }
+
+                        const timeoutId = setTimeout(() => {
+                            chunkIdx++;
+                            playStep();
+                        }, 1500);
+                        activeTimeouts.push(timeoutId);
+                    } else {
+                        isFPlaying = false;
+                        const timeoutId = setTimeout(() => {
+                            chunks.forEach(c => c.classList.remove('f-active'));
+                        }, 500);
+                        activeTimeouts.push(timeoutId);
+                    }
+                });
+            }
+
+            playStep();
+        }
+
+        // 再チャレンジ（答え合わせ後にq-hidden状態に戻す）
+        function reChallenge() {
+            if (!isRevealed) return;
+            deactivateGMode();
+            cancelAllSpeechAndTimers();
+            isRevealed = false;
+            isHintVisible = false;
+            sentenceDisplay.className = 'sentence-display q-hidden';
+            detailsPanel.classList.remove('active');
+            hintsPanel.classList.remove('active');
+            hintsPanel.innerHTML = '';
+            updateUIStates();
+        }
+
+        // シャッフルモードのトグル
+        function toggleShuffle() {
+            shuffleActive = !shuffleActive;
+            if (shuffleActive) {
+                // Fisher-Yatesシャッフル
+                shuffledOrder = [...Array(studyData.length).keys()];
+                for (let i = shuffledOrder.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [shuffledOrder[i], shuffledOrder[j]] = [shuffledOrder[j], shuffledOrder[i]];
+                }
+                // 現在の文をシャッフル順の先頭に置く
+                shufflePos = 0;
+                shuffledOrder[0] = currentIdx;
+                console.log("Shuffle ON:", shuffledOrder);
+            } else {
+                console.log("Shuffle OFF");
+            }
+            updateShuffleBadge();
+        }
+
+        // シャッフル状態の表示更新
+        function updateShuffleBadge() {
+            const el = document.getElementById('key-s');
+            if (el) {
+                el.style.background = shuffleActive ? 'var(--success)' : '';
+                el.style.color = shuffleActive ? '#000' : '';
+            }
+        }
+
+        // 未知語ヒント表示 (W)
+        function toggleHints() {
+            isHintVisible = !isHintVisible;
+            renderHints();
+        }
+
+        function renderHints() {
+            if (!isHintVisible) {
+                hintsPanel.classList.remove('active');
+                hintsPanel.innerHTML = '';
+                return;
+            }
+
+            // ラジオボタンの足切りレベルを取得
+            const selectedLevel = parseInt(document.querySelector('input[name="hsk-filter"]:checked').value);
+            const sentence = studyData[currentIdx];
+            const matchingWords = [];
+
+            sentence.chunks.forEach(c => {
+                if (c.words) {
+                    c.words.forEach(w => {
+                        if (w.level >= selectedLevel) {
+                            matchingWords.push(w);
+                        }
+                    });
+                }
+            });
+
+            if (matchingWords.length === 0) {
+                hintsPanel.innerHTML = `
+                    <div class="hints-panel-title">Word Hints</div>
+                    <div class="no-hints">指定レベル（HSK ${selectedLevel}級以上）の未知語はありません。</div>`;
+            } else {
+                let html = `
+                    <div class="hints-panel-title">Word Hints (HSK ${selectedLevel}級以上)</div>
+                    <div class="hints-list">`;
+                matchingWords.forEach(w => {
+                    html += `
+                        <div class="hint-badge">
+                            <span class="hint-word">${w.word}</span>
+                            <span class="hint-level">HSK ${w.level}</span>
+                            <span class="hint-meaning">${w.meaning}</span>
+                        </div>`;
+                });
+                html += `</div>`;
+                hintsPanel.innerHTML = html;
+            }
+            hintsPanel.classList.add('active');
+        }
+
+        // 天敵ピンインのユーザーフレンドリーなカテゴリ名マッピング
+        const enemyCategoryNames = {
+            "ROM-ian": "ローマ字の罠 [-ian ＝ イェン]",
+            "ROM-e":   "こもる『e』の罠 [e ＝ ウ／オ]",
+            "ROM-ü":   "点々省略の罠 [ü ＝ 口を丸める]",
+            "ROM-ui":  "省略トラップ [-ui ＝ ウェイ]",
+            "ROM-un":  "省略トラップ [-un ＝ ウェン]",
+            "VOW-si":  "空母音の罠 [si ＝ ス]",
+            "VOW-shi": "巻き舌の罠 [shi ＝ シュ]",
+            "VOW-xi":  "前舌面の罠 [xi ＝ シー]",
+            "VOW-zi":  "空母音の罠 [zi ＝ ズ]",
+            "VOW-zhi": "巻き舌の罠 [zhi ＝ ヂュ]",
+            "VOW-ji":  "無気音の罠 [ji ＝ ジー]",
+            "VOW-ng":  "鼻音終わりの罠 [-ng ＝ ン]"
+        };
+
+        // Gモード解除処理
+        function deactivateGMode() {
+            activeGIndex = null;
+            const allBoxes = sentenceDisplay.querySelectorAll('.char-box');
+            allBoxes.forEach(box => {
+                box.classList.remove('giant-pinyin-focus', 'focus-start', 'focus-end');
+            });
+            enemyWarningsPanel.classList.remove('active');
+            enemyWarningsPanel.innerHTML = '';
+        }
+
+        // 要注意ピンイン爆撃モード (G)
+        function triggerGBombardmentMode() {
+            const sentence = studyData[currentIdx];
+            if (!sentence.vulnerable_targets || sentence.vulnerable_targets.length === 0) return;
+
+            // ローテーション選択 (最後の要素の次はGモード解除)
+            if (activeGIndex === null) {
+                activeGIndex = 0;
+            } else if (activeGIndex === sentence.vulnerable_targets.length - 1) {
+                deactivateGMode();
+                updateUIStates();
+                cancelAllSpeechAndTimers();
+                speakText(sentence.full_sentence, 1.0);
+                return;
+            } else {
+                activeGIndex++;
+            }
+
+            const target = sentence.vulnerable_targets[activeGIndex];
+            
+            // DOMハイライト
+            highlightVulnerableTarget(target.text);
+            
+            // 解説カード表示
+            displayEnemyWarnings(target.enemy_id);
+            
+            // 3連打加速再生 (0.8x -> 0.9x -> 1.0x)
+            playGBombardment(target.text);
+            
+            updateUIStates();
+        }
+
+        // 対象テキストをDOM内で探してハイライト
+        function highlightVulnerableTarget(targetText) {
+            const allBoxes = sentenceDisplay.querySelectorAll('.char-box');
+            allBoxes.forEach(box => {
+                box.classList.remove('giant-pinyin-focus', 'focus-start', 'focus-end');
+            });
+
+            // 連続した.char-boxの漢字テキストを結合してマッチング
+            let matchedIndices = [];
+            for (let i = 0; i <= allBoxes.length - targetText.length; i++) {
+                let candidate = '';
+                for (let j = 0; j < targetText.length; j++) {
+                    candidate += allBoxes[i + j].querySelector('.hanzi').innerText.trim();
+                }
+                if (candidate === targetText) {
+                    for (let j = 0; j < targetText.length; j++) {
+                        matchedIndices.push(i + j);
+                    }
+                    break;
+                }
+            }
+
+            matchedIndices.forEach((idx, step) => {
+                const box = allBoxes[idx];
+                box.classList.add('giant-pinyin-focus');
+                if (step === 0) {
+                    box.classList.add('focus-start');
+                }
+                if (step === matchedIndices.length - 1) {
+                    box.classList.add('focus-end');
+                }
+            });
+        }
+
+        // 天敵ピンイン解説のレンダリング
+        function displayEnemyWarnings(enemyIdsStr) {
+            const ids = enemyIdsStr.split(',').map(id => id.trim());
+            let html = '';
+            
+            ids.forEach(id => {
+                const text = pinyinMasterDB[id];
+                const categoryName = enemyCategoryNames[id] || id;
+                if (text) {
+                    html += `
+                        <div class="enemy-warning-card">
+                            <span class="enemy-warning-id">${categoryName}</span>
+                            <span class="enemy-warning-text">${text}</span>
+                        </div>`;
+                }
+            });
+
+            enemyWarningsPanel.innerHTML = html;
+            enemyWarningsPanel.classList.add('active');
+        }
+
+        // 3連加速再生ロジック
+        function playGBombardment(targetText) {
+            cancelAllSpeechAndTimers();
+            const snapshotGIndex = activeGIndex; // ゾンビガード：割り込み時に古いコールバックを無効化
+
+            const speeds = [0.8, 0.9, 1.0];
+            let step = 0;
+
+            function runStep() {
+                // 現在のGIndexがスナップショットと差异があれば、別の操作に割り込まれたと判断して中止
+                if (activeGIndex !== snapshotGIndex) return;
+
+                if (step >= speeds.length) {
+                    speedValue.innerText = `${speed.toFixed(1)}x`;
+                    return;
+                }
+
+                const currentSpeed = speeds[step];
+                speedValue.innerText = `${currentSpeed.toFixed(1)}x`;
+
+                speakText(targetText, currentSpeed, () => {
+                    if (activeGIndex !== snapshotGIndex) return; // 再チェック
+                    step++;
+                    if (step < speeds.length) {
+                        const timeoutId = setTimeout(() => {
+                            runStep();
+                        }, 400);
+                        activeTimeouts.push(timeoutId);
+                    } else {
+                        speedValue.innerText = `${speed.toFixed(1)}x`;
+                    }
+                });
+            }
+
+            runStep();
+        }
+
+        // 速度ギア調整 (1/2/3)
+        function changeSpeed(delta) {
+            // Fモード実行中は何もしない
+            if (isFPlaying) return;
+
+            if (delta === 0) {
+                speed = 1.0;
+            } else {
+                speed = Math.max(0.5, Math.min(1.5, parseFloat((speed + delta).toFixed(1))));
+            }
+
+            updateUIStates();
+
+            // 音声鳴動
+            const sentence = studyData[currentIdx];
+            if (activeGIndex !== null) {
+                // Gモード中はフォーカス対象のみを新規速度で1回リピート
+                cancelAllSpeechAndTimers();
+                speakText(sentence.vulnerable_targets[activeGIndex].text, speed);
+            } else {
+                // 通常時は文全体を新規速度で再生
+                cancelAllSpeechAndTimers();
+                // 答え合わせ後は常に1.0x等倍再生指定のため、Q押下前のみ可変速度で流す
+                const playSpeed = isRevealed ? 1.0 : speed;
+                speakText(sentence.full_sentence, playSpeed);
+            }
+        }
+
+        // 問題ナビゲーション
+        function navigateSentence(direction) {
+            if (shuffleActive) {
+                shufflePos = (shufflePos + direction + studyData.length) % studyData.length;
+                loadSentence(shuffledOrder[shufflePos]);
+            } else {
+                const nextIdx = currentIdx + direction;
+                if (nextIdx >= 0 && nextIdx < studyData.length) {
+                    loadSentence(nextIdx);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
