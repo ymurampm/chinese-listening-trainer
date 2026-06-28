@@ -885,7 +885,7 @@
         let activeGIndex = null;
         let isFPlaying = false;
         let isHintVisible = false;
-        let shuffleActive = false;
+        let shuffleActive = true; // デフォルトでシャッフルON
         let shuffledOrder = [];
         let shufflePos = 0;
         
@@ -1070,6 +1070,10 @@
                 } else if (e.key === 'r' || e.key === 'R') {
                     triggerActiveVisual('key-r');
                     handleSpaceOrRKey();
+                } else if (e.key === 'a' || e.key === 'A' || e.key === '4') {
+                    navigateSentence(-1);
+                } else if (e.key === 'd' || e.key === 'D' || e.key === '5') {
+                    navigateSentence(1);
                 } else if (e.key === 'q' || e.key === 'Q') {
                     triggerActiveVisual('key-q');
                     revealAnswer();
@@ -1266,14 +1270,8 @@
         function toggleShuffle() {
             shuffleActive = !shuffleActive;
             if (shuffleActive) {
-                // Fisher-Yatesシャッフル
-                shuffledOrder = [...Array(studyData.length).keys()];
-                for (let i = shuffledOrder.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [shuffledOrder[i], shuffledOrder[j]] = [shuffledOrder[j], shuffledOrder[i]];
-                }
+                generateShuffleOrder();
                 // 現在の文をシャッフル順の先頭に置く
-                shufflePos = 0;
                 shuffledOrder[0] = currentIdx;
                 console.log("Shuffle ON:", shuffledOrder);
             } else {
@@ -1458,13 +1456,12 @@
         // 3連加速再生ロジック
         function playGBombardment(targetText) {
             cancelAllSpeechAndTimers();
-            const snapshotGIndex = activeGIndex; // ゾンビガード：割り込み時に古いコールバックを無効化
+            const snapshotGIndex = activeGIndex; // ゾンビガード
 
-            const speeds = [0.8, 0.9, 1.0];
+            const speeds = [0.7, 0.85, 1.0]; // 0.7x -> 0.85x -> 1.0x
             let step = 0;
 
             function runStep() {
-                // 現在のGIndexがスナップショットと差异があれば、別の操作に割り込まれたと判断して中止
                 if (activeGIndex !== snapshotGIndex) return;
 
                 if (step >= speeds.length) {
@@ -1476,12 +1473,12 @@
                 speedValue.innerText = `${currentSpeed.toFixed(1)}x`;
 
                 speakText(targetText, currentSpeed, () => {
-                    if (activeGIndex !== snapshotGIndex) return; // 再チェック
+                    if (activeGIndex !== snapshotGIndex) return;
                     step++;
                     if (step < speeds.length) {
                         const timeoutId = setTimeout(() => {
                             runStep();
-                        }, 400);
+                        }, 250); // インターバルを400msから250msに短縮
                         activeTimeouts.push(timeoutId);
                     } else {
                         speedValue.innerText = `${speed.toFixed(1)}x`;
@@ -1532,6 +1529,24 @@
                 }
             }
         }
+
+        // デフォルトでシャッフルONのため、起動時にシャッフル順を生成
+        if (shuffleActive) {
+            generateShuffleOrder();
+            currentIdx = shuffledOrder[0];
+        }
+        loadSentence(currentIdx);
+        updateShuffleBadge();
+    };
+
+    function generateShuffleOrder() {
+        shuffledOrder = [...Array(studyData.length).keys()];
+        for (let i = shuffledOrder.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffledOrder[i], shuffledOrder[j]] = [shuffledOrder[j], shuffledOrder[i]];
+        }
+        shufflePos = 0;
+    }
     </script>
 </body>
 </html>
