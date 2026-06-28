@@ -963,6 +963,10 @@
             tipBox.innerText = studyData[currentIdx].tip;
 
             updateUIStates();
+
+            // 問題切り替え時の自動再生（初回ロード含む。初回のみAutoplayポリシー制限を受ける場合あり）
+            const playSpeed = isRevealed ? 1.0 : speed;
+            speakText(studyData[currentIdx].full_sentence, playSpeed);
         }
 
         // UI表示状態の同期
@@ -1229,7 +1233,7 @@
                         const timeoutId = setTimeout(() => {
                             chunkIdx++;
                             playStep();
-                        }, 1500);
+                        }, 800); // 1500msから800msに短縮しテンポを改善
                         activeTimeouts.push(timeoutId);
                     } else {
                         isFPlaying = false;
@@ -1530,6 +1534,10 @@
             } else {
                 currentIdx = 0;
             }
+            
+            // 初回ブラウザAutoplay制限の解除用ダミー発音をキュー
+            window.speechSynthesis.speak(new SpeechSynthesisUtterance(""));
+
             loadSentence(currentIdx);
             autoSelectVoice();
             if (window.speechSynthesis.onvoiceschanged !== undefined) {
