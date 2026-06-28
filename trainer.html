@@ -920,15 +920,7 @@
             init();
         });
 
-        function init() {
-            loadSentence(0);
-            autoSelectVoice();
-            if (window.speechSynthesis.onvoiceschanged !== undefined) {
-                window.speechSynthesis.onvoiceschanged = autoSelectVoice;
-            }
-            setupKeyListeners();
-            setupClickEvents();
-        }
+
 
         // センテンス読み込み
         function loadSentence(idx) {
@@ -1531,22 +1523,31 @@
         }
 
         // デフォルトでシャッフルONのため、起動時にシャッフル順を生成
-        if (shuffleActive) {
-            generateShuffleOrder();
-            currentIdx = shuffledOrder[0];
+        function init() {
+            if (shuffleActive) {
+                generateShuffleOrder();
+                currentIdx = shuffledOrder[0];
+            } else {
+                currentIdx = 0;
+            }
+            loadSentence(currentIdx);
+            autoSelectVoice();
+            if (window.speechSynthesis.onvoiceschanged !== undefined) {
+                window.speechSynthesis.onvoiceschanged = autoSelectVoice;
+            }
+            setupKeyListeners();
+            setupClickEvents();
+            updateShuffleBadge();
         }
-        loadSentence(currentIdx);
-        updateShuffleBadge();
-    };
 
-    function generateShuffleOrder() {
-        shuffledOrder = [...Array(studyData.length).keys()];
-        for (let i = shuffledOrder.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [shuffledOrder[i], shuffledOrder[j]] = [shuffledOrder[j], shuffledOrder[i]];
+        function generateShuffleOrder() {
+            shuffledOrder = [...Array(studyData.length).keys()];
+            for (let i = shuffledOrder.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffledOrder[i], shuffledOrder[j]] = [shuffledOrder[j], shuffledOrder[i]];
+            }
+            shufflePos = 0;
         }
-        shufflePos = 0;
-    }
     </script>
 </body>
 </html>
