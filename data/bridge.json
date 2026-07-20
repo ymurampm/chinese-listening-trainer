@@ -1,0 +1,2364 @@
+{
+  "studyData": [
+    {
+      "full_sentence": "因为今天有考试，所以我很紧张。",
+      "japanese_translation": "今日は試験があるので、私はとても緊張しています。",
+      "tip": "今天(jīntiān)の無気音で息の漏れないji・「イェン」化する-ian、紧张(jǐnzhāng)の無気音で息の漏れないji・巻き舌のzhiに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">yīn</span><span class=\"hanzi\">因</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">wèi</span><span class=\"hanzi\">为</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jīn</span><span class=\"hanzi\">今</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">tiān</span><span class=\"hanzi\">天</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yǒu</span><span class=\"hanzi\">有</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">kǎo</span><span class=\"hanzi\">考</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">试</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">suǒ</span><span class=\"hanzi\">所</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yǐ</span><span class=\"hanzi\">以</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hěn</span><span class=\"hanzi\">很</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jǐn</span><span class=\"hanzi\">紧</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">zhāng</span><span class=\"hanzi\">张</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "因为今天有考试",
+          "words": [
+            {
+              "word": "因为",
+              "level": 2,
+              "meaning": "なぜなら"
+            },
+            {
+              "word": "今天",
+              "level": 1,
+              "meaning": "今日"
+            },
+            {
+              "word": "考试",
+              "level": 2,
+              "meaning": "試験"
+            }
+          ]
+        },
+        {
+          "text": "所以我很紧张",
+          "words": [
+            {
+              "word": "所以",
+              "level": 2,
+              "meaning": "だから"
+            },
+            {
+              "word": "紧张",
+              "level": 3,
+              "meaning": "緊張する"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "因为",
+          "enemy_id": "ROM-ui",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">yīn</span><span class=\"hanzi\">因</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-an\">wèi</span><span class=\"hanzi\">为</span></div>"
+        },
+        {
+          "text": "今天",
+          "enemy_id": "VOW-ji,ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">jīn</span><span class=\"hanzi\">今</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-an\">tiān</span><span class=\"hanzi\">天</span></div>"
+        },
+        {
+          "text": "考试",
+          "enemy_id": "VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">kǎo</span><span class=\"hanzi\">考</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">试</span></div>"
+        },
+        {
+          "text": "紧张",
+          "enemy_id": "VOW-ji,VOW-zhi,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">jǐn</span><span class=\"hanzi\">紧</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">zhāng</span><span class=\"hanzi\">张</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "虽然天气很热，但是我们还是决定去爬山。",
+      "japanese_translation": "天気はとても暑いですが、それでも私たちは山登りに行くことに決めました。",
+      "tip": "虽然(suīrán)の舌先を歯茎に寄せる摩擦音のs・「ウェイ」に聞こえる-ui、天气(tiānqì)の「イェン」化する-ian・無気音で息の漏れないjiに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">suī</span><span class=\"hanzi\">虽</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">tiān</span><span class=\"hanzi\">天</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">qì</span><span class=\"hanzi\">气</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hěn</span><span class=\"hanzi\">很</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">rè</span><span class=\"hanzi\">热</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">dàn</span><span class=\"hanzi\">但</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">是</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">men</span><span class=\"hanzi\">们</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hái</span><span class=\"hanzi\">还</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">是</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"2\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jué</span><span class=\"hanzi\">决</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">dìng</span><span class=\"hanzi\">定</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">qù</span><span class=\"hanzi\">去</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">pá</span><span class=\"hanzi\">爬</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shān</span><span class=\"hanzi\">山</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "虽然天气很热",
+          "words": [
+            {
+              "word": "虽然",
+              "level": 3,
+              "meaning": "〜だけれども"
+            },
+            {
+              "word": "天气",
+              "level": 1,
+              "meaning": "天気"
+            }
+          ]
+        },
+        {
+          "text": "但是我们还是",
+          "words": [
+            {
+              "word": "但是",
+              "level": 2,
+              "meaning": "しかし"
+            },
+            {
+              "word": "还是",
+              "level": 2,
+              "meaning": "それでも"
+            }
+          ]
+        },
+        {
+          "text": "决定去爬山",
+          "words": [
+            {
+              "word": "决定",
+              "level": 3,
+              "meaning": "決める"
+            },
+            {
+              "word": "爬山",
+              "level": 2,
+              "meaning": "登山する"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "虽然",
+          "enemy_id": "VOW-si,ROM-ui,VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">suī</span><span class=\"hanzi\">虽</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>"
+        },
+        {
+          "text": "天气",
+          "enemy_id": "ROM-ian,VOW-ji",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-an\">tiān</span><span class=\"hanzi\">天</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">qì</span><span class=\"hanzi\">气</span></div>"
+        },
+        {
+          "text": "热",
+          "enemy_id": "VOW-shi,ROM-e",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">rè</span><span class=\"hanzi\">热</span></div>"
+        },
+        {
+          "text": "决定",
+          "enemy_id": "ROM-ü,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">jué</span><span class=\"hanzi\">决</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-ing\">dìng</span><span class=\"hanzi\">定</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "我先做完作业，然后再看一会儿电视。",
+      "japanese_translation": "私はまず宿題を終わらせて、それから少しテレビを見ます。",
+      "tip": "先(xiān)の前舌面のxi・「イェン」化する-ian、作业(zuòyè)の濁りを伴うzi・こもった『ウ/オ』のeに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front bad-an\">xiān</span><span class=\"hanzi\">先</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zuò</span><span class=\"hanzi\">做</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">wán</span><span class=\"hanzi\">完</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zuò</span><span class=\"hanzi\">作</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">yè</span><span class=\"hanzi\">业</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hòu</span><span class=\"hanzi\">后</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zài</span><span class=\"hanzi\">再</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">kàn</span><span class=\"hanzi\">看</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yí</span><span class=\"hanzi\">一</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">huì</span><span class=\"hanzi\">会</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">er</span><span class=\"hanzi\">儿</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">diàn</span><span class=\"hanzi\">电</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">视</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "我先做完作业",
+          "words": [
+            {
+              "word": "先",
+              "level": 2,
+              "meaning": "まず"
+            },
+            {
+              "word": "作业",
+              "level": 2,
+              "meaning": "宿題"
+            }
+          ]
+        },
+        {
+          "text": "然后再看一会儿电视",
+          "words": [
+            {
+              "word": "然后",
+              "level": 2,
+              "meaning": "それから"
+            },
+            {
+              "word": "一会儿",
+              "level": 2,
+              "meaning": "少しの間"
+            },
+            {
+              "word": "电视",
+              "level": 1,
+              "meaning": "テレビ"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "先",
+          "enemy_id": "VOW-xi,ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-front bad-an\">xiān</span><span class=\"hanzi\">先</span></div>"
+        },
+        {
+          "text": "作业",
+          "enemy_id": "VOW-zi,ROM-e",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">zuò</span><span class=\"hanzi\">作</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-e\">yè</span><span class=\"hanzi\">业</span></div>"
+        },
+        {
+          "text": "一会儿",
+          "enemy_id": "ROM-ui",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">yí</span><span class=\"hanzi\">一</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-an\">huì</span><span class=\"hanzi\">会</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">er</span><span class=\"hanzi\">儿</span></div>"
+        },
+        {
+          "text": "电视",
+          "enemy_id": "ROM-ian,VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-an\">diàn</span><span class=\"hanzi\">电</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">视</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "明天可能会下雨，你记得带伞。",
+      "japanese_translation": "明日は雨が降るかもしれないので、傘を持っていくのを覚えておいてね。",
+      "tip": "明天(míngtiān)の鼻に抜ける-ng・「イェン」化する-ian、可能(kěnéng)のこもった『ウ/オ』のe・鼻に抜ける-ngに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">míng</span><span class=\"hanzi\">明</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">tiān</span><span class=\"hanzi\">天</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">kě</span><span class=\"hanzi\">可</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">néng</span><span class=\"hanzi\">能</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">huì</span><span class=\"hanzi\">会</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xià</span><span class=\"hanzi\">下</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">yǔ</span><span class=\"hanzi\">雨</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">nǐ</span><span class=\"hanzi\">你</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jì</span><span class=\"hanzi\">记</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">de</span><span class=\"hanzi\">得</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">dài</span><span class=\"hanzi\">带</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">sǎn</span><span class=\"hanzi\">伞</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "明天可能会下雨",
+          "words": [
+            {
+              "word": "明天",
+              "level": 1,
+              "meaning": "明日"
+            },
+            {
+              "word": "可能",
+              "level": 2,
+              "meaning": "〜かもしれない"
+            },
+            {
+              "word": "下雨",
+              "level": 1,
+              "meaning": "雨が降る"
+            }
+          ]
+        },
+        {
+          "text": "你记得带伞",
+          "words": [
+            {
+              "word": "记得",
+              "level": 3,
+              "meaning": "覚えている"
+            },
+            {
+              "word": "伞",
+              "level": 3,
+              "meaning": "傘"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "明天",
+          "enemy_id": "VOW-ng,ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-ing\">míng</span><span class=\"hanzi\">明</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-an\">tiān</span><span class=\"hanzi\">天</span></div>"
+        },
+        {
+          "text": "可能",
+          "enemy_id": "ROM-e,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-e\">kě</span><span class=\"hanzi\">可</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-ing\">néng</span><span class=\"hanzi\">能</span></div>"
+        },
+        {
+          "text": "下雨",
+          "enemy_id": "VOW-xi,ROM-ü",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-front\">xià</span><span class=\"hanzi\">下</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">yǔ</span><span class=\"hanzi\">雨</span></div>"
+        },
+        {
+          "text": "记得",
+          "enemy_id": "VOW-ji,ROM-e",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">jì</span><span class=\"hanzi\">记</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-e\">de</span><span class=\"hanzi\">得</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "这个办法很简单，你试试就知道了。",
+      "japanese_translation": "この方法はとても簡単なので、試してみればすぐに分かります。",
+      "tip": "这个(zhège)の巻き舌のzhi・こもった『ウ/オ』のe、简单(jiǎndān)の無気音で息の漏れないji・「イェン」化する-ianに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">zhè</span><span class=\"hanzi\">这</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">ge</span><span class=\"hanzi\">个</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">bàn</span><span class=\"hanzi\">办</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">fǎ</span><span class=\"hanzi\">法</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hěn</span><span class=\"hanzi\">很</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">jiǎn</span><span class=\"hanzi\">简</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">dān</span><span class=\"hanzi\">单</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">nǐ</span><span class=\"hanzi\">你</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">试</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">试</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jiù</span><span class=\"hanzi\">就</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zhī</span><span class=\"hanzi\">知</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">dào</span><span class=\"hanzi\">道</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">le</span><span class=\"hanzi\">了</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "这个办法很简单",
+          "words": [
+            {
+              "word": "办法",
+              "level": 3,
+              "meaning": "方法"
+            },
+            {
+              "word": "简单",
+              "level": 3,
+              "meaning": "簡単"
+            }
+          ]
+        },
+        {
+          "text": "你试试就知道了",
+          "words": [
+            {
+              "word": "试试",
+              "level": 2,
+              "meaning": "試してみる"
+            },
+            {
+              "word": "知道",
+              "level": 1,
+              "meaning": "知っている"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "这个",
+          "enemy_id": "VOW-zhi,ROM-e",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">zhè</span><span class=\"hanzi\">这</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-e\">ge</span><span class=\"hanzi\">个</span></div>"
+        },
+        {
+          "text": "简单",
+          "enemy_id": "VOW-ji,ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">jiǎn</span><span class=\"hanzi\">简</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">dān</span><span class=\"hanzi\">单</span></div>"
+        },
+        {
+          "text": "试试",
+          "enemy_id": "VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">试</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">试</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "我们班同学都很喜欢新老师。",
+      "japanese_translation": "私たちのクラスメートはみんな新しい先生が好きです。",
+      "tip": "同学(tóngxué)の鼻に抜ける-ng・点々省略のü(丸口)、喜欢(xǐhuān)の前舌面のxiに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">men</span><span class=\"hanzi\">们</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">bān</span><span class=\"hanzi\">班</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">tóng</span><span class=\"hanzi\">同</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xué</span><span class=\"hanzi\">学</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">dōu</span><span class=\"hanzi\">都</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">hěn</span><span class=\"hanzi\">很</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xǐ</span><span class=\"hanzi\">喜</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">huān</span><span class=\"hanzi\">欢</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xīn</span><span class=\"hanzi\">新</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">lǎo</span><span class=\"hanzi\">老</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shī</span><span class=\"hanzi\">师</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "我们班同学都",
+          "words": [
+            {
+              "word": "同学",
+              "level": 1,
+              "meaning": "クラスメート"
+            }
+          ]
+        },
+        {
+          "text": "很喜欢新老师",
+          "words": [
+            {
+              "word": "喜欢",
+              "level": 1,
+              "meaning": "好き"
+            },
+            {
+              "word": "老师",
+              "level": 1,
+              "meaning": "先生"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "同学",
+          "enemy_id": "VOW-ng,ROM-ü",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-ing\">tóng</span><span class=\"hanzi\">同</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-front\">xué</span><span class=\"hanzi\">学</span></div>"
+        },
+        {
+          "text": "喜欢",
+          "enemy_id": "VOW-xi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-front\">xǐ</span><span class=\"hanzi\">喜</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">huān</span><span class=\"hanzi\">欢</span></div>"
+        },
+        {
+          "text": "老师",
+          "enemy_id": "VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">lǎo</span><span class=\"hanzi\">老</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">shī</span><span class=\"hanzi\">师</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "老师告诉我们这次考试比较难。",
+      "japanese_translation": "先生は私たちに、今回の試験は比較的難しいと言いました。",
+      "tip": "老师(lǎoshī)の巻き舌のこもったshi、这次(zhècì)の巻き舌のzhi・こもった『ウ/オ』のeに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">lǎo</span><span class=\"hanzi\">老</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shī</span><span class=\"hanzi\">师</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">gào</span><span class=\"hanzi\">告</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">sù</span><span class=\"hanzi\">诉</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">men</span><span class=\"hanzi\">们</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">zhè</span><span class=\"hanzi\">这</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">cì</span><span class=\"hanzi\">次</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">kǎo</span><span class=\"hanzi\">考</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">试</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">bǐ</span><span class=\"hanzi\">比</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jiào</span><span class=\"hanzi\">较</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">nán</span><span class=\"hanzi\">难</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "老师告诉我们",
+          "words": [
+            {
+              "word": "老师",
+              "level": 1,
+              "meaning": "先生"
+            },
+            {
+              "word": "告诉",
+              "level": 3,
+              "meaning": "告げる"
+            }
+          ]
+        },
+        {
+          "text": "这次考试比较难",
+          "words": [
+            {
+              "word": "这次",
+              "level": 2,
+              "meaning": "今回"
+            },
+            {
+              "word": "考试",
+              "level": 2,
+              "meaning": "試験"
+            },
+            {
+              "word": "比较",
+              "level": 3,
+              "meaning": "比較的"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "老师",
+          "enemy_id": "VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">lǎo</span><span class=\"hanzi\">老</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">shī</span><span class=\"hanzi\">师</span></div>"
+        },
+        {
+          "text": "告诉",
+          "enemy_id": "VOW-si",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">gào</span><span class=\"hanzi\">告</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">sù</span><span class=\"hanzi\">诉</span></div>"
+        },
+        {
+          "text": "这次",
+          "enemy_id": "VOW-zhi,ROM-e,VOW-zi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">zhè</span><span class=\"hanzi\">这</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">cì</span><span class=\"hanzi\">次</span></div>"
+        },
+        {
+          "text": "比较",
+          "enemy_id": "VOW-ji",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">bǐ</span><span class=\"hanzi\">比</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">jiào</span><span class=\"hanzi\">较</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "我觉得学习汉语越来越有意思。",
+      "japanese_translation": "中国語の勉強はますます面白いと思います。",
+      "tip": "觉得(juéde)の点々省略のü(丸口)・こもった『ウ/オ』のe、学习(xuéxí)の点々省略のü(丸口)・前舌面のxiに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jué</span><span class=\"hanzi\">觉</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">de</span><span class=\"hanzi\">得</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xué</span><span class=\"hanzi\">学</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xí</span><span class=\"hanzi\">习</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hàn</span><span class=\"hanzi\">汉</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">yǔ</span><span class=\"hanzi\">语</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">yuè</span><span class=\"hanzi\">越</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">lái</span><span class=\"hanzi\">来</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">yuè</span><span class=\"hanzi\">越</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yǒu</span><span class=\"hanzi\">有</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yì</span><span class=\"hanzi\">意</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">si</span><span class=\"hanzi\">思</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "我觉得学习汉语",
+          "words": [
+            {
+              "word": "觉得",
+              "level": 2,
+              "meaning": "〜と思う"
+            },
+            {
+              "word": "学习",
+              "level": 1,
+              "meaning": "勉強する"
+            },
+            {
+              "word": "汉语",
+              "level": 1,
+              "meaning": "中国語"
+            }
+          ]
+        },
+        {
+          "text": "越来越有意思",
+          "words": [
+            {
+              "word": "越来越",
+              "level": 3,
+              "meaning": "ますます"
+            },
+            {
+              "word": "有意思",
+              "level": 2,
+              "meaning": "面白い"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "觉得",
+          "enemy_id": "ROM-ü,ROM-e",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">jué</span><span class=\"hanzi\">觉</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-e\">de</span><span class=\"hanzi\">得</span></div>"
+        },
+        {
+          "text": "学习",
+          "enemy_id": "ROM-ü,VOW-xi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-front\">xué</span><span class=\"hanzi\">学</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-front\">xí</span><span class=\"hanzi\">习</span></div>"
+        },
+        {
+          "text": "有意思",
+          "enemy_id": "VOW-si",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">yǒu</span><span class=\"hanzi\">有</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">yì</span><span class=\"hanzi\">意</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">si</span><span class=\"hanzi\">思</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "因为下雪，所以学校决定放假一天。",
+      "japanese_translation": "雪が降ったので、学校は一日休みにすることを決めました。",
+      "tip": "下雪(xiàxuě)の前舌面のxi・点々省略のü(丸口)、学校(xuéxiào)の点々省略のü(丸口)・前舌面のxiに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">yīn</span><span class=\"hanzi\">因</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">wèi</span><span class=\"hanzi\">为</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xià</span><span class=\"hanzi\">下</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xuě</span><span class=\"hanzi\">雪</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">suǒ</span><span class=\"hanzi\">所</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yǐ</span><span class=\"hanzi\">以</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xué</span><span class=\"hanzi\">学</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xiào</span><span class=\"hanzi\">校</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jué</span><span class=\"hanzi\">决</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">dìng</span><span class=\"hanzi\">定</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">fàng</span><span class=\"hanzi\">放</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jià</span><span class=\"hanzi\">假</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yì</span><span class=\"hanzi\">一</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">tiān</span><span class=\"hanzi\">天</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "因为下雪所以",
+          "words": [
+            {
+              "word": "因为",
+              "level": 2,
+              "meaning": "なぜなら"
+            },
+            {
+              "word": "下雪",
+              "level": 2,
+              "meaning": "雪が降る"
+            },
+            {
+              "word": "所以",
+              "level": 2,
+              "meaning": "だから"
+            }
+          ]
+        },
+        {
+          "text": "学校决定放假一天",
+          "words": [
+            {
+              "word": "学校",
+              "level": 1,
+              "meaning": "学校"
+            },
+            {
+              "word": "决定",
+              "level": 3,
+              "meaning": "決める"
+            },
+            {
+              "word": "放假",
+              "level": 3,
+              "meaning": "休みになる"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "下雪",
+          "enemy_id": "VOW-xi,ROM-ü",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-front\">xià</span><span class=\"hanzi\">下</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-front\">xuě</span><span class=\"hanzi\">雪</span></div>"
+        },
+        {
+          "text": "学校",
+          "enemy_id": "ROM-ü,VOW-xi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-front\">xué</span><span class=\"hanzi\">学</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-front\">xiào</span><span class=\"hanzi\">校</span></div>"
+        },
+        {
+          "text": "决定",
+          "enemy_id": "ROM-ü,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">jué</span><span class=\"hanzi\">决</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-ing\">dìng</span><span class=\"hanzi\">定</span></div>"
+        },
+        {
+          "text": "放假",
+          "enemy_id": "VOW-ng,VOW-ji",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-ing\">fàng</span><span class=\"hanzi\">放</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">jià</span><span class=\"hanzi\">假</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "他突然告诉我们一个好消息。",
+      "japanese_translation": "彼は突然、私たちに良いニュースを教えてくれました。",
+      "tip": "突然(tūrán)の巻き舌のこもったshi、告诉(gàosù)の舌先を歯茎に寄せる摩擦音のsに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">tā</span><span class=\"hanzi\">他</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">tū</span><span class=\"hanzi\">突</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">gào</span><span class=\"hanzi\">告</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">sù</span><span class=\"hanzi\">诉</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">men</span><span class=\"hanzi\">们</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">yí</span><span class=\"hanzi\">一</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">gè</span><span class=\"hanzi\">个</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hǎo</span><span class=\"hanzi\">好</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xiāo</span><span class=\"hanzi\">消</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xī</span><span class=\"hanzi\">息</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "他突然告诉我们",
+          "words": [
+            {
+              "word": "突然",
+              "level": 3,
+              "meaning": "突然"
+            },
+            {
+              "word": "告诉",
+              "level": 3,
+              "meaning": "告げる"
+            }
+          ]
+        },
+        {
+          "text": "一个好消息",
+          "words": [
+            {
+              "word": "消息",
+              "level": 3,
+              "meaning": "知らせ"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "突然",
+          "enemy_id": "VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">tū</span><span class=\"hanzi\">突</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>"
+        },
+        {
+          "text": "告诉",
+          "enemy_id": "VOW-si",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">gào</span><span class=\"hanzi\">告</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">sù</span><span class=\"hanzi\">诉</span></div>"
+        },
+        {
+          "text": "一个",
+          "enemy_id": "ROM-e",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">yí</span><span class=\"hanzi\">一</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-e\">gè</span><span class=\"hanzi\">个</span></div>"
+        },
+        {
+          "text": "消息",
+          "enemy_id": "VOW-xi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-front\">xiāo</span><span class=\"hanzi\">消</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-front\">xī</span><span class=\"hanzi\">息</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "我们公司最近在准备一个新计划。",
+      "japanese_translation": "私たちの会社は最近新しい計画を準備しています。",
+      "tip": "公司(gōngsī)の鼻に抜ける-ng・舌先を歯茎に寄せる摩擦音のs、最近(zuìjìn)の濁りを伴うzi・「ウェイ」に聞こえる-uiに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">men</span><span class=\"hanzi\">们</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">gōng</span><span class=\"hanzi\">公</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">sī</span><span class=\"hanzi\">司</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">zuì</span><span class=\"hanzi\">最</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jìn</span><span class=\"hanzi\">近</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zài</span><span class=\"hanzi\">在</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">zhǔn</span><span class=\"hanzi\">准</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">bèi</span><span class=\"hanzi\">备</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yí</span><span class=\"hanzi\">一</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">gè</span><span class=\"hanzi\">个</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xīn</span><span class=\"hanzi\">新</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jì</span><span class=\"hanzi\">计</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">huà</span><span class=\"hanzi\">划</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "我们公司最近在",
+          "words": [
+            {
+              "word": "公司",
+              "level": 2,
+              "meaning": "会社"
+            },
+            {
+              "word": "最近",
+              "level": 2,
+              "meaning": "最近"
+            }
+          ]
+        },
+        {
+          "text": "准备一个新计划",
+          "words": [
+            {
+              "word": "准备",
+              "level": 3,
+              "meaning": "準備する"
+            },
+            {
+              "word": "计划",
+              "level": 3,
+              "meaning": "計画"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "公司",
+          "enemy_id": "VOW-ng,VOW-si",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-ing\">gōng</span><span class=\"hanzi\">公</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">sī</span><span class=\"hanzi\">司</span></div>"
+        },
+        {
+          "text": "最近",
+          "enemy_id": "VOW-zi,ROM-ui,VOW-ji",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">zuì</span><span class=\"hanzi\">最</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">jìn</span><span class=\"hanzi\">近</span></div>"
+        },
+        {
+          "text": "准备",
+          "enemy_id": "VOW-zhi,ROM-un",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">zhǔn</span><span class=\"hanzi\">准</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">bèi</span><span class=\"hanzi\">备</span></div>"
+        },
+        {
+          "text": "一个",
+          "enemy_id": "ROM-e",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">yí</span><span class=\"hanzi\">一</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-e\">gè</span><span class=\"hanzi\">个</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "经理说这件事情必须今天结束。",
+      "japanese_translation": "マネージャーはこの仕事を今日中に終わらせなければならないと言いました。",
+      "tip": "这件(zhèjiàn)の巻き舌のzhi・こもった『ウ/オ』のe、事情(shìqíng)の巻き舌のこもったshi・無気音で息の漏れないjiに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">jīng</span><span class=\"hanzi\">经</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">lǐ</span><span class=\"hanzi\">理</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shuō</span><span class=\"hanzi\">说</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">zhè</span><span class=\"hanzi\">这</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">jiàn</span><span class=\"hanzi\">件</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">事</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">qíng</span><span class=\"hanzi\">情</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">bì</span><span class=\"hanzi\">必</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xū</span><span class=\"hanzi\">须</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jīn</span><span class=\"hanzi\">今</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">tiān</span><span class=\"hanzi\">天</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jié</span><span class=\"hanzi\">结</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shù</span><span class=\"hanzi\">束</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "经理说这件事情",
+          "words": [
+            {
+              "word": "经理",
+              "level": 3,
+              "meaning": "マネージャー"
+            },
+            {
+              "word": "事情",
+              "level": 2,
+              "meaning": "こと"
+            }
+          ]
+        },
+        {
+          "text": "必须今天结束",
+          "words": [
+            {
+              "word": "必须",
+              "level": 3,
+              "meaning": "〜しなければならない"
+            },
+            {
+              "word": "结束",
+              "level": 3,
+              "meaning": "終わる"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "这件",
+          "enemy_id": "VOW-zhi,ROM-e,VOW-ji,ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">zhè</span><span class=\"hanzi\">这</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">jiàn</span><span class=\"hanzi\">件</span></div>"
+        },
+        {
+          "text": "事情",
+          "enemy_id": "VOW-shi,VOW-ji,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">事</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">qíng</span><span class=\"hanzi\">情</span></div>"
+        },
+        {
+          "text": "必须",
+          "enemy_id": "ROM-ü",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">bì</span><span class=\"hanzi\">必</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-front\">xū</span><span class=\"hanzi\">须</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "虽然工作很忙，但是他觉得很有意思。",
+      "japanese_translation": "仕事はとても忙しいですが、彼はとても面白いと感じています。",
+      "tip": "虽然(suīrán)の舌先を歯茎に寄せる摩擦音のs・「ウェイ」に聞こえる-ui、工作(gōngzuò)の鼻に抜ける-ng・濁りを伴うziに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">suī</span><span class=\"hanzi\">虽</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">gōng</span><span class=\"hanzi\">工</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zuò</span><span class=\"hanzi\">作</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hěn</span><span class=\"hanzi\">很</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">máng</span><span class=\"hanzi\">忙</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">dàn</span><span class=\"hanzi\">但</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">是</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">tā</span><span class=\"hanzi\">他</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jué</span><span class=\"hanzi\">觉</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">de</span><span class=\"hanzi\">得</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hěn</span><span class=\"hanzi\">很</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yǒu</span><span class=\"hanzi\">有</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yì</span><span class=\"hanzi\">意</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">si</span><span class=\"hanzi\">思</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "虽然工作很忙",
+          "words": [
+            {
+              "word": "工作",
+              "level": 1,
+              "meaning": "仕事"
+            },
+            {
+              "word": "忙",
+              "level": 2,
+              "meaning": "忙しい"
+            }
+          ]
+        },
+        {
+          "text": "但是他觉得很有意思",
+          "words": [
+            {
+              "word": "觉得",
+              "level": 2,
+              "meaning": "思う"
+            },
+            {
+              "word": "有意思",
+              "level": 2,
+              "meaning": "面白い"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "虽然",
+          "enemy_id": "VOW-si,ROM-ui,VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">suī</span><span class=\"hanzi\">虽</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>"
+        },
+        {
+          "text": "工作",
+          "enemy_id": "VOW-ng,VOW-zi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-ing\">gōng</span><span class=\"hanzi\">工</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">zuò</span><span class=\"hanzi\">作</span></div>"
+        },
+        {
+          "text": "觉得",
+          "enemy_id": "ROM-ü,ROM-e",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">jué</span><span class=\"hanzi\">觉</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-e\">de</span><span class=\"hanzi\">得</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "我需要先检查一下这些数字。",
+      "japanese_translation": "まずこの数字を確認する必要があります。",
+      "tip": "检查(jiǎnchá)の無気音で息の漏れないji・「イェン」化する-ian、这些(zhèxiē)の巻き舌のzhi・こもった『ウ/オ』のeに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xū</span><span class=\"hanzi\">需</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yào</span><span class=\"hanzi\">要</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front bad-an\">xiān</span><span class=\"hanzi\">先</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">jiǎn</span><span class=\"hanzi\">检</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">chá</span><span class=\"hanzi\">查</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">yí</span><span class=\"hanzi\">一</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xià</span><span class=\"hanzi\">下</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">zhè</span><span class=\"hanzi\">这</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xiē</span><span class=\"hanzi\">些</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shù</span><span class=\"hanzi\">数</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zì</span><span class=\"hanzi\">字</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "我需要先检查",
+          "words": [
+            {
+              "word": "需要",
+              "level": 2,
+              "meaning": "必要とする"
+            },
+            {
+              "word": "检查",
+              "level": 3,
+              "meaning": "確認する"
+            }
+          ]
+        },
+        {
+          "text": "一下这些数字",
+          "words": [
+            {
+              "word": "一下",
+              "level": 2,
+              "meaning": "ちょっと"
+            },
+            {
+              "word": "这些",
+              "level": 1,
+              "meaning": "これら"
+            },
+            {
+              "word": "数字",
+              "level": 3,
+              "meaning": "数字"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "需要",
+          "enemy_id": "ROM-ü",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-front\">xū</span><span class=\"hanzi\">需</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">yào</span><span class=\"hanzi\">要</span></div>"
+        },
+        {
+          "text": "检查",
+          "enemy_id": "VOW-ji,ROM-ian,VOW-zhi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">jiǎn</span><span class=\"hanzi\">检</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">chá</span><span class=\"hanzi\">查</span></div>"
+        },
+        {
+          "text": "这些",
+          "enemy_id": "VOW-zhi,ROM-e,VOW-xi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">zhè</span><span class=\"hanzi\">这</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-front\">xiē</span><span class=\"hanzi\">些</span></div>"
+        },
+        {
+          "text": "数字",
+          "enemy_id": "VOW-shi,VOW-zi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">shù</span><span class=\"hanzi\">数</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">zì</span><span class=\"hanzi\">字</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "如果有机会，我希望去国外工作。",
+      "japanese_translation": "もし機会があれば、海外で働きたいです。",
+      "tip": "机会(jīhuì)の無気音で息の漏れないji・「ウェイ」に聞こえる-ui、希望(xīwàng)の前舌面のxi・鼻に抜ける-ngに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">rú</span><span class=\"hanzi\">如</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">guǒ</span><span class=\"hanzi\">果</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yǒu</span><span class=\"hanzi\">有</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jī</span><span class=\"hanzi\">机</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">huì</span><span class=\"hanzi\">会</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xī</span><span class=\"hanzi\">希</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">wàng</span><span class=\"hanzi\">望</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">qù</span><span class=\"hanzi\">去</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">guó</span><span class=\"hanzi\">国</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">wài</span><span class=\"hanzi\">外</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">gōng</span><span class=\"hanzi\">工</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zuò</span><span class=\"hanzi\">作</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "如果有机会",
+          "words": [
+            {
+              "word": "如果",
+              "level": 3,
+              "meaning": "もし"
+            },
+            {
+              "word": "机会",
+              "level": 3,
+              "meaning": "機会"
+            }
+          ]
+        },
+        {
+          "text": "我希望去国外工作",
+          "words": [
+            {
+              "word": "希望",
+              "level": 2,
+              "meaning": "希望する"
+            },
+            {
+              "word": "国外",
+              "level": 3,
+              "meaning": "海外"
+            },
+            {
+              "word": "工作",
+              "level": 1,
+              "meaning": "仕事"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "如果",
+          "enemy_id": "VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">rú</span><span class=\"hanzi\">如</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">guǒ</span><span class=\"hanzi\">果</span></div>"
+        },
+        {
+          "text": "机会",
+          "enemy_id": "VOW-ji,ROM-ui",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">jī</span><span class=\"hanzi\">机</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-an\">huì</span><span class=\"hanzi\">会</span></div>"
+        },
+        {
+          "text": "希望",
+          "enemy_id": "VOW-xi,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-front\">xī</span><span class=\"hanzi\">希</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-ing\">wàng</span><span class=\"hanzi\">望</span></div>"
+        },
+        {
+          "text": "工作",
+          "enemy_id": "VOW-ng,VOW-zi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-ing\">gōng</span><span class=\"hanzi\">工</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">zuò</span><span class=\"hanzi\">作</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "同事们最近工作压力越来越大。",
+      "japanese_translation": "同僚たちは最近仕事のプレッシャーがますます大きくなっています。",
+      "tip": "同事们(tóngshìmen)の鼻に抜ける-ng・巻き舌のこもったshi、最近(zuìjìn)の濁りを伴うzi・「ウェイ」に聞こえる-uiに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">tóng</span><span class=\"hanzi\">同</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">事</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">men</span><span class=\"hanzi\">们</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">zuì</span><span class=\"hanzi\">最</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jìn</span><span class=\"hanzi\">近</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">gōng</span><span class=\"hanzi\">工</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zuò</span><span class=\"hanzi\">作</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">yā</span><span class=\"hanzi\">压</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">lì</span><span class=\"hanzi\">力</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">yuè</span><span class=\"hanzi\">越</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">lái</span><span class=\"hanzi\">来</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">yuè</span><span class=\"hanzi\">越</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">dà</span><span class=\"hanzi\">大</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "同事们最近工作",
+          "words": [
+            {
+              "word": "最近",
+              "level": 2,
+              "meaning": "最近"
+            }
+          ]
+        },
+        {
+          "text": "压力越来越大",
+          "words": [
+            {
+              "word": "压力",
+              "level": 4,
+              "meaning": "プレッシャー"
+            },
+            {
+              "word": "越来越",
+              "level": 3,
+              "meaning": "ますます"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "同事们",
+          "enemy_id": "VOW-ng,VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-ing\">tóng</span><span class=\"hanzi\">同</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">事</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">men</span><span class=\"hanzi\">们</span></div>"
+        },
+        {
+          "text": "最近",
+          "enemy_id": "VOW-zi,ROM-ui,VOW-ji",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">zuì</span><span class=\"hanzi\">最</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">jìn</span><span class=\"hanzi\">近</span></div>"
+        },
+        {
+          "text": "越来越",
+          "enemy_id": "ROM-ü",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">yuè</span><span class=\"hanzi\">越</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">lái</span><span class=\"hanzi\">来</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">yuè</span><span class=\"hanzi\">越</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "我们决定先坐飞机，再坐火车。",
+      "japanese_translation": "私たちはまず飛行機に乗り、それから電車に乗ることにしました。",
+      "tip": "决定(juédìng)の点々省略のü(丸口)・鼻に抜ける-ng、先(xiān)の前舌面のxi・「イェン」化する-ianに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">men</span><span class=\"hanzi\">们</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jué</span><span class=\"hanzi\">决</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">dìng</span><span class=\"hanzi\">定</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front bad-an\">xiān</span><span class=\"hanzi\">先</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zuò</span><span class=\"hanzi\">坐</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">fēi</span><span class=\"hanzi\">飞</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jī</span><span class=\"hanzi\">机</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zài</span><span class=\"hanzi\">再</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zuò</span><span class=\"hanzi\">坐</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">huǒ</span><span class=\"hanzi\">火</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">chē</span><span class=\"hanzi\">车</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "我们决定先坐飞机",
+          "words": [
+            {
+              "word": "决定",
+              "level": 3,
+              "meaning": "決める"
+            },
+            {
+              "word": "飞机",
+              "level": 1,
+              "meaning": "飛行機"
+            }
+          ]
+        },
+        {
+          "text": "再坐火车",
+          "words": [
+            {
+              "word": "火车",
+              "level": 1,
+              "meaning": "電車"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "决定",
+          "enemy_id": "ROM-ü,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">jué</span><span class=\"hanzi\">决</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-ing\">dìng</span><span class=\"hanzi\">定</span></div>"
+        },
+        {
+          "text": "先",
+          "enemy_id": "VOW-xi,ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-front bad-an\">xiān</span><span class=\"hanzi\">先</span></div>"
+        },
+        {
+          "text": "飞机",
+          "enemy_id": "VOW-ji",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">fēi</span><span class=\"hanzi\">飞</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">jī</span><span class=\"hanzi\">机</span></div>"
+        },
+        {
+          "text": "火车",
+          "enemy_id": "VOW-zhi,ROM-e",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">huǒ</span><span class=\"hanzi\">火</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">chē</span><span class=\"hanzi\">车</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "这次旅行的机会真的很难得。",
+      "japanese_translation": "今回の旅行のチャンスは本当に貴重です。",
+      "tip": "这次(zhècì)の巻き舌のzhi・こもった『ウ/オ』のe、旅行(lǚxíng)の点々省略のü(丸口)・前舌面のxiに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">zhè</span><span class=\"hanzi\">这</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">cì</span><span class=\"hanzi\">次</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">lǚ</span><span class=\"hanzi\">旅</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front bad-ing\">xíng</span><span class=\"hanzi\">行</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">de</span><span class=\"hanzi\">的</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jī</span><span class=\"hanzi\">机</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">huì</span><span class=\"hanzi\">会</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zhēn</span><span class=\"hanzi\">真</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">de</span><span class=\"hanzi\">的</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hěn</span><span class=\"hanzi\">很</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">nán</span><span class=\"hanzi\">难</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">dé</span><span class=\"hanzi\">得</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "这次旅行的机会",
+          "words": [
+            {
+              "word": "旅行",
+              "level": 2,
+              "meaning": "旅行"
+            },
+            {
+              "word": "机会",
+              "level": 3,
+              "meaning": "機会"
+            }
+          ]
+        },
+        {
+          "text": "真的很难得",
+          "words": [
+            {
+              "word": "真的",
+              "level": 2,
+              "meaning": "本当に"
+            },
+            {
+              "word": "难得",
+              "level": 3,
+              "meaning": "得難い"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "这次",
+          "enemy_id": "VOW-zhi,ROM-e,VOW-zi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">zhè</span><span class=\"hanzi\">这</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">cì</span><span class=\"hanzi\">次</span></div>"
+        },
+        {
+          "text": "旅行",
+          "enemy_id": "ROM-ü,VOW-xi,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">lǚ</span><span class=\"hanzi\">旅</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-front bad-ing\">xíng</span><span class=\"hanzi\">行</span></div>"
+        },
+        {
+          "text": "机会",
+          "enemy_id": "VOW-ji,ROM-ui",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">jī</span><span class=\"hanzi\">机</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-an\">huì</span><span class=\"hanzi\">会</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "请问附近有什么好玩的地方吗？",
+      "japanese_translation": "すみません、この近くに何か面白い場所はありますか。",
+      "tip": "请问(qǐngwèn)の無気音で息の漏れないji・鼻に抜ける-ng、什么(shénme)の巻き舌のこもったshi・こもった『ウ/オ』のeに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">qǐng</span><span class=\"hanzi\">请</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">wèn</span><span class=\"hanzi\">问</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">fù</span><span class=\"hanzi\">附</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jìn</span><span class=\"hanzi\">近</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yǒu</span><span class=\"hanzi\">有</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shén</span><span class=\"hanzi\">什</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">me</span><span class=\"hanzi\">么</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hǎo</span><span class=\"hanzi\">好</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">wán</span><span class=\"hanzi\">玩</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">de</span><span class=\"hanzi\">的</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">dì</span><span class=\"hanzi\">地</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">fāng</span><span class=\"hanzi\">方</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">ma</span><span class=\"hanzi\">吗</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "请问附近有",
+          "words": [
+            {
+              "word": "请问",
+              "level": 2,
+              "meaning": "お尋ねします"
+            },
+            {
+              "word": "附近",
+              "level": 3,
+              "meaning": "近く"
+            }
+          ]
+        },
+        {
+          "text": "什么好玩的地方吗",
+          "words": [
+            {
+              "word": "好玩",
+              "level": 2,
+              "meaning": "楽しい"
+            },
+            {
+              "word": "地方",
+              "level": 3,
+              "meaning": "場所"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "请问",
+          "enemy_id": "VOW-ji,VOW-ng,ROM-un",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">qǐng</span><span class=\"hanzi\">请</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-an\">wèn</span><span class=\"hanzi\">问</span></div>"
+        },
+        {
+          "text": "什么",
+          "enemy_id": "VOW-shi,ROM-e",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">shén</span><span class=\"hanzi\">什</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-e\">me</span><span class=\"hanzi\">么</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "我们先去机场，然后再去酒店。",
+      "japanese_translation": "私たちはまず空港へ行き、それからホテルへ行きます。",
+      "tip": "先(xiān)の前舌面のxi・「イェン」化する-ian、机场(jīchǎng)の無気音で息の漏れないji・巻き舌のzhiに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">men</span><span class=\"hanzi\">们</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front bad-an\">xiān</span><span class=\"hanzi\">先</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">qù</span><span class=\"hanzi\">去</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jī</span><span class=\"hanzi\">机</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">chǎng</span><span class=\"hanzi\">场</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hòu</span><span class=\"hanzi\">后</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zài</span><span class=\"hanzi\">再</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">qù</span><span class=\"hanzi\">去</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jiǔ</span><span class=\"hanzi\">酒</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">diàn</span><span class=\"hanzi\">店</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "我们先去机场",
+          "words": [
+            {
+              "word": "机场",
+              "level": 2,
+              "meaning": "空港"
+            }
+          ]
+        },
+        {
+          "text": "然后再去酒店",
+          "words": [
+            {
+              "word": "然后",
+              "level": 2,
+              "meaning": "それから"
+            },
+            {
+              "word": "酒店",
+              "level": 2,
+              "meaning": "ホテル"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "先",
+          "enemy_id": "VOW-xi,ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-front bad-an\">xiān</span><span class=\"hanzi\">先</span></div>"
+        },
+        {
+          "text": "机场",
+          "enemy_id": "VOW-ji,VOW-zhi,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">jī</span><span class=\"hanzi\">机</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">chǎng</span><span class=\"hanzi\">场</span></div>"
+        },
+        {
+          "text": "然后",
+          "enemy_id": "VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">hòu</span><span class=\"hanzi\">后</span></div>"
+        },
+        {
+          "text": "酒店",
+          "enemy_id": "VOW-ji,ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">jiǔ</span><span class=\"hanzi\">酒</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-an\">diàn</span><span class=\"hanzi\">店</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "出发以前，你必须检查好护照。",
+      "japanese_translation": "出発前に、必ずパスポートを確認してください。",
+      "tip": "以前(yǐqián)の無気音で息の漏れないji・「イェン」化する-ian、检查(jiǎnchá)の無気音で息の漏れないji・「イェン」化する-ianに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">chū</span><span class=\"hanzi\">出</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">fā</span><span class=\"hanzi\">发</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yǐ</span><span class=\"hanzi\">以</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">qián</span><span class=\"hanzi\">前</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">nǐ</span><span class=\"hanzi\">你</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">bì</span><span class=\"hanzi\">必</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xū</span><span class=\"hanzi\">须</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">jiǎn</span><span class=\"hanzi\">检</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">chá</span><span class=\"hanzi\">查</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hǎo</span><span class=\"hanzi\">好</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hù</span><span class=\"hanzi\">护</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zhào</span><span class=\"hanzi\">照</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "出发以前",
+          "words": [
+            {
+              "word": "出发",
+              "level": 3,
+              "meaning": "出発する"
+            },
+            {
+              "word": "以前",
+              "level": 2,
+              "meaning": "以前"
+            }
+          ]
+        },
+        {
+          "text": "你必须检查好护照",
+          "words": [
+            {
+              "word": "必须",
+              "level": 3,
+              "meaning": "〜しなければならない"
+            },
+            {
+              "word": "检查",
+              "level": 3,
+              "meaning": "確認する"
+            },
+            {
+              "word": "护照",
+              "level": 3,
+              "meaning": "パスポート"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "以前",
+          "enemy_id": "VOW-ji,ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">yǐ</span><span class=\"hanzi\">以</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">qián</span><span class=\"hanzi\">前</span></div>"
+        },
+        {
+          "text": "必须",
+          "enemy_id": "ROM-ü",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">bì</span><span class=\"hanzi\">必</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-front\">xū</span><span class=\"hanzi\">须</span></div>"
+        },
+        {
+          "text": "检查",
+          "enemy_id": "VOW-ji,ROM-ian,VOW-zhi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">jiǎn</span><span class=\"hanzi\">检</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">chá</span><span class=\"hanzi\">查</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "虽然路上很累，但是风景美极了。",
+      "japanese_translation": "道中はとても疲れましたが、景色は最高に美しかったです。",
+      "tip": "虽然(suīrán)の舌先を歯茎に寄せる摩擦音のs・「ウェイ」に聞こえる-ui、路上(lùshàng)の巻き舌のこもったshi・鼻に抜ける-ngに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">suī</span><span class=\"hanzi\">虽</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">lù</span><span class=\"hanzi\">路</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">shàng</span><span class=\"hanzi\">上</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hěn</span><span class=\"hanzi\">很</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">lèi</span><span class=\"hanzi\">累</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">dàn</span><span class=\"hanzi\">但</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">是</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">fēng</span><span class=\"hanzi\">风</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">jǐng</span><span class=\"hanzi\">景</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">měi</span><span class=\"hanzi\">美</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jí</span><span class=\"hanzi\">极</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">le</span><span class=\"hanzi\">了</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "虽然路上很累",
+          "words": [
+            {
+              "word": "路上",
+              "level": 2,
+              "meaning": "道中"
+            },
+            {
+              "word": "累",
+              "level": 2,
+              "meaning": "疲れている"
+            }
+          ]
+        },
+        {
+          "text": "但是风景美极了",
+          "words": [
+            {
+              "word": "风景",
+              "level": 3,
+              "meaning": "景色"
+            },
+            {
+              "word": "极了",
+              "level": 3,
+              "meaning": "とても"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "虽然",
+          "enemy_id": "VOW-si,ROM-ui,VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">suī</span><span class=\"hanzi\">虽</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>"
+        },
+        {
+          "text": "路上",
+          "enemy_id": "VOW-shi,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">lù</span><span class=\"hanzi\">路</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">shàng</span><span class=\"hanzi\">上</span></div>"
+        },
+        {
+          "text": "风景",
+          "enemy_id": "VOW-ng,VOW-ji",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-ing\">fēng</span><span class=\"hanzi\">风</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">jǐng</span><span class=\"hanzi\">景</span></div>"
+        },
+        {
+          "text": "极了",
+          "enemy_id": "VOW-ji,ROM-e",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">jí</span><span class=\"hanzi\">极</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-e\">le</span><span class=\"hanzi\">了</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "我最近觉得身体越来越不舒服。",
+      "japanese_translation": "最近、体の調子がますます悪いと感じています。",
+      "tip": "最近(zuìjìn)の濁りを伴うzi・「ウェイ」に聞こえる-ui、觉得(juéde)の点々省略のü(丸口)・こもった『ウ/オ』のeに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">zuì</span><span class=\"hanzi\">最</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jìn</span><span class=\"hanzi\">近</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jué</span><span class=\"hanzi\">觉</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">de</span><span class=\"hanzi\">得</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shēn</span><span class=\"hanzi\">身</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">tǐ</span><span class=\"hanzi\">体</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">yuè</span><span class=\"hanzi\">越</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">lái</span><span class=\"hanzi\">来</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">yuè</span><span class=\"hanzi\">越</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">bù</span><span class=\"hanzi\">不</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shū</span><span class=\"hanzi\">舒</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">fú</span><span class=\"hanzi\">服</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "我最近觉得",
+          "words": [
+            {
+              "word": "最近",
+              "level": 2,
+              "meaning": "最近"
+            },
+            {
+              "word": "觉得",
+              "level": 2,
+              "meaning": "思う"
+            }
+          ]
+        },
+        {
+          "text": "身体越来越不舒服",
+          "words": [
+            {
+              "word": "身体",
+              "level": 2,
+              "meaning": "体"
+            },
+            {
+              "word": "舒服",
+              "level": 3,
+              "meaning": "快適だ"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "最近",
+          "enemy_id": "VOW-zi,ROM-ui,VOW-ji",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">zuì</span><span class=\"hanzi\">最</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">jìn</span><span class=\"hanzi\">近</span></div>"
+        },
+        {
+          "text": "觉得",
+          "enemy_id": "ROM-ü,ROM-e",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">jué</span><span class=\"hanzi\">觉</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-e\">de</span><span class=\"hanzi\">得</span></div>"
+        },
+        {
+          "text": "身体",
+          "enemy_id": "VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">shēn</span><span class=\"hanzi\">身</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">tǐ</span><span class=\"hanzi\">体</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "医生说这个问题不太严重了。",
+      "japanese_translation": "医者はこの問題はそれほど深刻ではないと言いました。",
+      "tip": "医生(yīshēng)の巻き舌のこもったshi・鼻に抜ける-ng、严重(yánzhòng)の「イェン」化する-ian・巻き舌のzhiに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">yī</span><span class=\"hanzi\">医</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">shēng</span><span class=\"hanzi\">生</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shuō</span><span class=\"hanzi\">说</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">zhè</span><span class=\"hanzi\">这</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">ge</span><span class=\"hanzi\">个</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">wèn</span><span class=\"hanzi\">问</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">tí</span><span class=\"hanzi\">题</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">bú</span><span class=\"hanzi\">不</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">tài</span><span class=\"hanzi\">太</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">yán</span><span class=\"hanzi\">严</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">zhòng</span><span class=\"hanzi\">重</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">le</span><span class=\"hanzi\">了</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "医生说这个问题",
+          "words": [
+            {
+              "word": "医生",
+              "level": 1,
+              "meaning": "医者"
+            },
+            {
+              "word": "问题",
+              "level": 2,
+              "meaning": "問題"
+            }
+          ]
+        },
+        {
+          "text": "不太严重了",
+          "words": [
+            {
+              "word": "不太",
+              "level": 2,
+              "meaning": "あまり〜ない"
+            },
+            {
+              "word": "严重",
+              "level": 4,
+              "meaning": "深刻だ"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "医生",
+          "enemy_id": "VOW-shi,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">yī</span><span class=\"hanzi\">医</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">shēng</span><span class=\"hanzi\">生</span></div>"
+        },
+        {
+          "text": "这个",
+          "enemy_id": "VOW-zhi,ROM-e",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">zhè</span><span class=\"hanzi\">这</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-e\">ge</span><span class=\"hanzi\">个</span></div>"
+        },
+        {
+          "text": "问题",
+          "enemy_id": "ROM-un",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-an\">wèn</span><span class=\"hanzi\">问</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">tí</span><span class=\"hanzi\">题</span></div>"
+        },
+        {
+          "text": "严重",
+          "enemy_id": "ROM-ian,VOW-zhi,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-an\">yán</span><span class=\"hanzi\">严</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">zhòng</span><span class=\"hanzi\">重</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "你必须多休息，才能快点好起来。",
+      "japanese_translation": "たくさん休まなければ、早く良くなりません。",
+      "tip": "必须(bìxū)の点々省略のü(丸口)、休息(xiūxī)の前舌面のxiに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">nǐ</span><span class=\"hanzi\">你</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">bì</span><span class=\"hanzi\">必</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xū</span><span class=\"hanzi\">须</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">duō</span><span class=\"hanzi\">多</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xiū</span><span class=\"hanzi\">休</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xī</span><span class=\"hanzi\">息</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">cái</span><span class=\"hanzi\">才</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">néng</span><span class=\"hanzi\">能</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">kuài</span><span class=\"hanzi\">快</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">diǎn</span><span class=\"hanzi\">点</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hǎo</span><span class=\"hanzi\">好</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">qǐ</span><span class=\"hanzi\">起</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">lái</span><span class=\"hanzi\">来</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "你必须多休息",
+          "words": [
+            {
+              "word": "必须",
+              "level": 3,
+              "meaning": "〜しなければならない"
+            },
+            {
+              "word": "休息",
+              "level": 2,
+              "meaning": "休む"
+            }
+          ]
+        },
+        {
+          "text": "才能快点好起来",
+          "words": [
+            {
+              "word": "才",
+              "level": 3,
+              "meaning": "〜してこそ"
+            },
+            {
+              "word": "快点",
+              "level": 2,
+              "meaning": "早く"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "必须",
+          "enemy_id": "ROM-ü",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">bì</span><span class=\"hanzi\">必</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-front\">xū</span><span class=\"hanzi\">须</span></div>"
+        },
+        {
+          "text": "休息",
+          "enemy_id": "VOW-xi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-front\">xiū</span><span class=\"hanzi\">休</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-front\">xī</span><span class=\"hanzi\">息</span></div>"
+        },
+        {
+          "text": "快点",
+          "enemy_id": "ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">kuài</span><span class=\"hanzi\">快</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-an\">diǎn</span><span class=\"hanzi\">点</span></div>"
+        },
+        {
+          "text": "好起来",
+          "enemy_id": "VOW-ji",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">hǎo</span><span class=\"hanzi\">好</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">qǐ</span><span class=\"hanzi\">起</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">lái</span><span class=\"hanzi\">来</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "医院离这儿不太远，走路就能到。",
+      "japanese_translation": "病院はここから遠くなく、歩いて行けます。",
+      "tip": "医院(yīyuàn)の点々省略のü(丸口)・「イェン」化する-ian、这儿(zhèér)の巻き舌のzhi・こもった『ウ/オ』のeに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">yī</span><span class=\"hanzi\">医</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">yuàn</span><span class=\"hanzi\">院</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">lí</span><span class=\"hanzi\">离</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">zhè</span><span class=\"hanzi\">这</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">ér</span><span class=\"hanzi\">儿</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">bú</span><span class=\"hanzi\">不</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">tài</span><span class=\"hanzi\">太</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">yuǎn</span><span class=\"hanzi\">远</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zǒu</span><span class=\"hanzi\">走</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">lù</span><span class=\"hanzi\">路</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jiù</span><span class=\"hanzi\">就</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">néng</span><span class=\"hanzi\">能</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">dào</span><span class=\"hanzi\">到</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "医院离这儿不太远",
+          "words": [
+            {
+              "word": "医院",
+              "level": 1,
+              "meaning": "病院"
+            },
+            {
+              "word": "离",
+              "level": 2,
+              "meaning": "〜から"
+            },
+            {
+              "word": "不太",
+              "level": 2,
+              "meaning": "あまり〜ない"
+            }
+          ]
+        },
+        {
+          "text": "走路就能到",
+          "words": [
+            {
+              "word": "走路",
+              "level": 2,
+              "meaning": "歩く"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "医院",
+          "enemy_id": "ROM-ü,ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">yī</span><span class=\"hanzi\">医</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">yuàn</span><span class=\"hanzi\">院</span></div>"
+        },
+        {
+          "text": "这儿",
+          "enemy_id": "VOW-zhi,ROM-e",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">zhè</span><span class=\"hanzi\">这</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">ér</span><span class=\"hanzi\">儿</span></div>"
+        },
+        {
+          "text": "走路",
+          "enemy_id": "VOW-zi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">zǒu</span><span class=\"hanzi\">走</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">lù</span><span class=\"hanzi\">路</span></div>"
+        },
+        {
+          "text": "就",
+          "enemy_id": "VOW-ji",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">jiù</span><span class=\"hanzi\">就</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "突然头疼，我决定去医院检查。",
+      "japanese_translation": "突然頭が痛くなったので、病院で検査を受けることにしました。",
+      "tip": "决定(juédìng)の点々省略のü(丸口)・鼻に抜ける-ng、检查(jiǎnchá)の無気音で息の漏れないji・「イェン」化する-ianに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">tū</span><span class=\"hanzi\">突</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">tóu</span><span class=\"hanzi\">头</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">téng</span><span class=\"hanzi\">疼</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jué</span><span class=\"hanzi\">决</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">dìng</span><span class=\"hanzi\">定</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">qù</span><span class=\"hanzi\">去</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yī</span><span class=\"hanzi\">医</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">yuàn</span><span class=\"hanzi\">院</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">jiǎn</span><span class=\"hanzi\">检</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">chá</span><span class=\"hanzi\">查</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "突然头疼",
+          "words": [
+            {
+              "word": "突然",
+              "level": 3,
+              "meaning": "突然"
+            },
+            {
+              "word": "头疼",
+              "level": 3,
+              "meaning": "頭が痛い"
+            }
+          ]
+        },
+        {
+          "text": "我决定去医院检查",
+          "words": [
+            {
+              "word": "决定",
+              "level": 3,
+              "meaning": "決める"
+            },
+            {
+              "word": "医院",
+              "level": 1,
+              "meaning": "病院"
+            },
+            {
+              "word": "检查",
+              "level": 3,
+              "meaning": "検査する"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "突然",
+          "enemy_id": "VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">tū</span><span class=\"hanzi\">突</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>"
+        },
+        {
+          "text": "决定",
+          "enemy_id": "ROM-ü,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">jué</span><span class=\"hanzi\">决</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-ing\">dìng</span><span class=\"hanzi\">定</span></div>"
+        },
+        {
+          "text": "检查",
+          "enemy_id": "VOW-ji,ROM-ian,VOW-zhi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">jiǎn</span><span class=\"hanzi\">检</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">chá</span><span class=\"hanzi\">查</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "每天运动一下，身体才会更好。",
+      "japanese_translation": "毎日少し運動すれば、体はもっと良くなります。",
+      "tip": "每天(měitiān)の「イェン」化する-ian、运动(yùndòng)の「ウェン」に聞こえる-un・鼻に抜ける-ngに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">měi</span><span class=\"hanzi\">每</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">tiān</span><span class=\"hanzi\">天</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">yùn</span><span class=\"hanzi\">运</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">dòng</span><span class=\"hanzi\">动</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yí</span><span class=\"hanzi\">一</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xià</span><span class=\"hanzi\">下</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shēn</span><span class=\"hanzi\">身</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">tǐ</span><span class=\"hanzi\">体</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">cái</span><span class=\"hanzi\">才</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">huì</span><span class=\"hanzi\">会</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">gèng</span><span class=\"hanzi\">更</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hǎo</span><span class=\"hanzi\">好</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "每天运动一下",
+          "words": [
+            {
+              "word": "每天",
+              "level": 1,
+              "meaning": "毎日"
+            },
+            {
+              "word": "运动",
+              "level": 1,
+              "meaning": "運動する"
+            },
+            {
+              "word": "一下",
+              "level": 2,
+              "meaning": "ちょっと"
+            }
+          ]
+        },
+        {
+          "text": "身体才会更好",
+          "words": [
+            {
+              "word": "身体",
+              "level": 2,
+              "meaning": "体"
+            },
+            {
+              "word": "才",
+              "level": 3,
+              "meaning": "〜してこそ"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "每天",
+          "enemy_id": "ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">měi</span><span class=\"hanzi\">每</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-an\">tiān</span><span class=\"hanzi\">天</span></div>"
+        },
+        {
+          "text": "运动",
+          "enemy_id": "ROM-un,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-an\">yùn</span><span class=\"hanzi\">运</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-ing\">dòng</span><span class=\"hanzi\">动</span></div>"
+        },
+        {
+          "text": "一下",
+          "enemy_id": "VOW-xi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">yí</span><span class=\"hanzi\">一</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-front\">xià</span><span class=\"hanzi\">下</span></div>"
+        },
+        {
+          "text": "身体",
+          "enemy_id": "VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">shēn</span><span class=\"hanzi\">身</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">tǐ</span><span class=\"hanzi\">体</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "虽然认识时间不长，但是我们很谈得来。",
+      "japanese_translation": "知り合ってからまだ日は浅いですが、私たちはとても話が合います。",
+      "tip": "虽然(suīrán)の舌先を歯茎に寄せる摩擦音のs・「ウェイ」に聞こえる-ui、时间(shíjiān)の巻き舌のこもったshi・無気音で息の漏れないjiに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">suī</span><span class=\"hanzi\">虽</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">rèn</span><span class=\"hanzi\">认</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shí</span><span class=\"hanzi\">识</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shí</span><span class=\"hanzi\">时</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">jiān</span><span class=\"hanzi\">间</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">bù</span><span class=\"hanzi\">不</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">cháng</span><span class=\"hanzi\">长</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">dàn</span><span class=\"hanzi\">但</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">是</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">men</span><span class=\"hanzi\">们</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hěn</span><span class=\"hanzi\">很</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">tán</span><span class=\"hanzi\">谈</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">de</span><span class=\"hanzi\">得</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">lái</span><span class=\"hanzi\">来</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "虽然认识时间不长",
+          "words": [
+            {
+              "word": "虽然",
+              "level": 3,
+              "meaning": "〜だけれども"
+            },
+            {
+              "word": "认识",
+              "level": 1,
+              "meaning": "知り合う"
+            },
+            {
+              "word": "时间",
+              "level": 1,
+              "meaning": "時間"
+            }
+          ]
+        },
+        {
+          "text": "但是我们很谈得来",
+          "words": [
+            {
+              "word": "但是",
+              "level": 2,
+              "meaning": "しかし"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "虽然",
+          "enemy_id": "VOW-si,ROM-ui,VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">suī</span><span class=\"hanzi\">虽</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>"
+        },
+        {
+          "text": "时间",
+          "enemy_id": "VOW-shi,VOW-ji,ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">shí</span><span class=\"hanzi\">时</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">jiān</span><span class=\"hanzi\">间</span></div>"
+        },
+        {
+          "text": "长",
+          "enemy_id": "VOW-zhi,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">cháng</span><span class=\"hanzi\">长</span></div>"
+        },
+        {
+          "text": "得",
+          "enemy_id": "ROM-e",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-e\">de</span><span class=\"hanzi\">得</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "我觉得他是一个很热情的人。",
+      "japanese_translation": "彼はとても親切な人だと思います。",
+      "tip": "觉得(juéde)の点々省略のü(丸口)・こもった『ウ/オ』のe、热情(rèqíng)の巻き舌のこもったshi・こもった『ウ/オ』のeに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jué</span><span class=\"hanzi\">觉</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">de</span><span class=\"hanzi\">得</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">tā</span><span class=\"hanzi\">他</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">是</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">yí</span><span class=\"hanzi\">一</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">gè</span><span class=\"hanzi\">个</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hěn</span><span class=\"hanzi\">很</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">rè</span><span class=\"hanzi\">热</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">qíng</span><span class=\"hanzi\">情</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">de</span><span class=\"hanzi\">的</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">rén</span><span class=\"hanzi\">人</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "我觉得他是",
+          "words": [
+            {
+              "word": "觉得",
+              "level": 2,
+              "meaning": "思う"
+            }
+          ]
+        },
+        {
+          "text": "一个很热情的人",
+          "words": [
+            {
+              "word": "热情",
+              "level": 3,
+              "meaning": "親切だ"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "觉得",
+          "enemy_id": "ROM-ü,ROM-e",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">jué</span><span class=\"hanzi\">觉</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-e\">de</span><span class=\"hanzi\">得</span></div>"
+        },
+        {
+          "text": "热情",
+          "enemy_id": "VOW-shi,ROM-e,VOW-ji,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">rè</span><span class=\"hanzi\">热</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">qíng</span><span class=\"hanzi\">情</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "请告诉我，你现在是什么意思？",
+      "japanese_translation": "教えてください、あなたが今言っているのはどういう意味ですか。",
+      "tip": "请(qǐng)の無気音で息の漏れないji・鼻に抜ける-ng、现在(xiànzài)の前舌面のxi・「イェン」化する-ianに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">qǐng</span><span class=\"hanzi\">请</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">gào</span><span class=\"hanzi\">告</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">sù</span><span class=\"hanzi\">诉</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">nǐ</span><span class=\"hanzi\">你</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front bad-an\">xiàn</span><span class=\"hanzi\">现</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zài</span><span class=\"hanzi\">在</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">是</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shén</span><span class=\"hanzi\">什</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">me</span><span class=\"hanzi\">么</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yì</span><span class=\"hanzi\">意</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">si</span><span class=\"hanzi\">思</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "请告诉我",
+          "words": [
+            {
+              "word": "告诉",
+              "level": 3,
+              "meaning": "告げる"
+            }
+          ]
+        },
+        {
+          "text": "你现在是什么意思",
+          "words": [
+            {
+              "word": "现在",
+              "level": 1,
+              "meaning": "今"
+            },
+            {
+              "word": "意思",
+              "level": 2,
+              "meaning": "意味"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "请",
+          "enemy_id": "VOW-ji,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-ing\">qǐng</span><span class=\"hanzi\">请</span></div>"
+        },
+        {
+          "text": "告诉",
+          "enemy_id": "VOW-si",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">gào</span><span class=\"hanzi\">告</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">sù</span><span class=\"hanzi\">诉</span></div>"
+        },
+        {
+          "text": "现在",
+          "enemy_id": "VOW-xi,ROM-ian,VOW-zi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-front bad-an\">xiàn</span><span class=\"hanzi\">现</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">zài</span><span class=\"hanzi\">在</span></div>"
+        },
+        {
+          "text": "什么",
+          "enemy_id": "VOW-shi,ROM-e",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">shén</span><span class=\"hanzi\">什</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-e\">me</span><span class=\"hanzi\">么</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "朋友之间应该互相帮助才对。",
+      "japanese_translation": "友達同士はお互いに助け合うべきです。",
+      "tip": "之间(zhījiān)の巻き舌のzhi・無気音で息の漏れないji、互相(hùxiāng)の前舌面のxi・鼻に抜ける-ngに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">péng</span><span class=\"hanzi\">朋</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yǒu</span><span class=\"hanzi\">友</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zhī</span><span class=\"hanzi\">之</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">jiān</span><span class=\"hanzi\">间</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">yīng</span><span class=\"hanzi\">应</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">gāi</span><span class=\"hanzi\">该</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">hù</span><span class=\"hanzi\">互</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front bad-ing\">xiāng</span><span class=\"hanzi\">相</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">bāng</span><span class=\"hanzi\">帮</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zhù</span><span class=\"hanzi\">助</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">cái</span><span class=\"hanzi\">才</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">duì</span><span class=\"hanzi\">对</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "朋友之间应该",
+          "words": [
+            {
+              "word": "朋友",
+              "level": 1,
+              "meaning": "友達"
+            },
+            {
+              "word": "之间",
+              "level": 3,
+              "meaning": "〜の間"
+            },
+            {
+              "word": "应该",
+              "level": 2,
+              "meaning": "〜すべき"
+            }
+          ]
+        },
+        {
+          "text": "互相帮助才对",
+          "words": [
+            {
+              "word": "互相",
+              "level": 3,
+              "meaning": "お互いに"
+            },
+            {
+              "word": "帮助",
+              "level": 2,
+              "meaning": "助ける"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "之间",
+          "enemy_id": "VOW-zhi,VOW-ji,ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">zhī</span><span class=\"hanzi\">之</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">jiān</span><span class=\"hanzi\">间</span></div>"
+        },
+        {
+          "text": "互相",
+          "enemy_id": "VOW-xi,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">hù</span><span class=\"hanzi\">互</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-front bad-ing\">xiāng</span><span class=\"hanzi\">相</span></div>"
+        },
+        {
+          "text": "才",
+          "enemy_id": "VOW-zi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">cái</span><span class=\"hanzi\">才</span></div>"
+        },
+        {
+          "text": "对",
+          "enemy_id": "ROM-ui",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-an\">duì</span><span class=\"hanzi\">对</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "他最近好像有一点不太高兴。",
+      "japanese_translation": "彼は最近少し機嫌が悪いようです。",
+      "tip": "最近(zuìjìn)の濁りを伴うzi・「ウェイ」に聞こえる-ui、好像(hǎoxiàng)の前舌面のxi・鼻に抜ける-ngに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">tā</span><span class=\"hanzi\">他</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">zuì</span><span class=\"hanzi\">最</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jìn</span><span class=\"hanzi\">近</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hǎo</span><span class=\"hanzi\">好</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front bad-ing\">xiàng</span><span class=\"hanzi\">像</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">yǒu</span><span class=\"hanzi\">有</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yì</span><span class=\"hanzi\">一</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">diǎn</span><span class=\"hanzi\">点</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">bú</span><span class=\"hanzi\">不</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">tài</span><span class=\"hanzi\">太</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">gāo</span><span class=\"hanzi\">高</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front bad-ing\">xìng</span><span class=\"hanzi\">兴</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "他最近好像",
+          "words": [
+            {
+              "word": "最近",
+              "level": 2,
+              "meaning": "最近"
+            },
+            {
+              "word": "好像",
+              "level": 3,
+              "meaning": "〜のようだ"
+            }
+          ]
+        },
+        {
+          "text": "有一点不太高兴",
+          "words": [
+            {
+              "word": "一点",
+              "level": 2,
+              "meaning": "少し"
+            },
+            {
+              "word": "高兴",
+              "level": 1,
+              "meaning": "嬉しい"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "最近",
+          "enemy_id": "VOW-zi,ROM-ui,VOW-ji",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">zuì</span><span class=\"hanzi\">最</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">jìn</span><span class=\"hanzi\">近</span></div>"
+        },
+        {
+          "text": "好像",
+          "enemy_id": "VOW-xi,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">hǎo</span><span class=\"hanzi\">好</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-front bad-ing\">xiàng</span><span class=\"hanzi\">像</span></div>"
+        },
+        {
+          "text": "一点",
+          "enemy_id": "ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">yì</span><span class=\"hanzi\">一</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-an\">diǎn</span><span class=\"hanzi\">点</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "如果你需要帮忙，随时告诉我。",
+      "japanese_translation": "もし助けが必要なら、いつでも私に教えてください。",
+      "tip": "如果(rúguǒ)の巻き舌のこもったshi、随时(suíshí)の舌先を歯茎に寄せる摩擦音のs・「ウェイ」に聞こえる-uiに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">rú</span><span class=\"hanzi\">如</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">guǒ</span><span class=\"hanzi\">果</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">nǐ</span><span class=\"hanzi\">你</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xū</span><span class=\"hanzi\">需</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yào</span><span class=\"hanzi\">要</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">bāng</span><span class=\"hanzi\">帮</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">máng</span><span class=\"hanzi\">忙</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">suí</span><span class=\"hanzi\">随</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shí</span><span class=\"hanzi\">时</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">gào</span><span class=\"hanzi\">告</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">sù</span><span class=\"hanzi\">诉</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "如果你需要帮忙",
+          "words": [
+            {
+              "word": "如果",
+              "level": 3,
+              "meaning": "もし"
+            },
+            {
+              "word": "需要",
+              "level": 2,
+              "meaning": "必要とする"
+            },
+            {
+              "word": "帮忙",
+              "level": 2,
+              "meaning": "手伝う"
+            }
+          ]
+        },
+        {
+          "text": "随时告诉我",
+          "words": [
+            {
+              "word": "随时",
+              "level": 3,
+              "meaning": "いつでも"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "如果",
+          "enemy_id": "VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">rú</span><span class=\"hanzi\">如</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">guǒ</span><span class=\"hanzi\">果</span></div>"
+        },
+        {
+          "text": "需要",
+          "enemy_id": "ROM-ü",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-front\">xū</span><span class=\"hanzi\">需</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">yào</span><span class=\"hanzi\">要</span></div>"
+        },
+        {
+          "text": "帮忙",
+          "enemy_id": "VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-ing\">bāng</span><span class=\"hanzi\">帮</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-ing\">máng</span><span class=\"hanzi\">忙</span></div>"
+        },
+        {
+          "text": "随时",
+          "enemy_id": "VOW-si,ROM-ui,VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">suí</span><span class=\"hanzi\">随</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">shí</span><span class=\"hanzi\">时</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "最近这几天天气越来越冷了。",
+      "japanese_translation": "ここ数日、天気がますます寒くなってきました。",
+      "tip": "最近(zuìjìn)の濁りを伴うzi・「ウェイ」に聞こえる-ui、这几天(zhèjǐtiān)の巻き舌のzhi・こもった『ウ/オ』のeに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">zuì</span><span class=\"hanzi\">最</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jìn</span><span class=\"hanzi\">近</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">zhè</span><span class=\"hanzi\">这</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jǐ</span><span class=\"hanzi\">几</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">tiān</span><span class=\"hanzi\">天</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">tiān</span><span class=\"hanzi\">天</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">qì</span><span class=\"hanzi\">气</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">yuè</span><span class=\"hanzi\">越</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">lái</span><span class=\"hanzi\">来</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">yuè</span><span class=\"hanzi\">越</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">lěng</span><span class=\"hanzi\">冷</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">le</span><span class=\"hanzi\">了</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "最近这几天",
+          "words": [
+            {
+              "word": "最近",
+              "level": 2,
+              "meaning": "最近"
+            }
+          ]
+        },
+        {
+          "text": "天气越来越冷了",
+          "words": [
+            {
+              "word": "天气",
+              "level": 1,
+              "meaning": "天気"
+            },
+            {
+              "word": "越来越",
+              "level": 3,
+              "meaning": "ますます"
+            },
+            {
+              "word": "冷",
+              "level": 1,
+              "meaning": "寒い"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "最近",
+          "enemy_id": "VOW-zi,ROM-ui,VOW-ji",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">zuì</span><span class=\"hanzi\">最</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">jìn</span><span class=\"hanzi\">近</span></div>"
+        },
+        {
+          "text": "这几天",
+          "enemy_id": "VOW-zhi,ROM-e,VOW-ji,ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-e\">zhè</span><span class=\"hanzi\">这</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">jǐ</span><span class=\"hanzi\">几</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-an\">tiān</span><span class=\"hanzi\">天</span></div>"
+        },
+        {
+          "text": "越来越",
+          "enemy_id": "ROM-ü",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">yuè</span><span class=\"hanzi\">越</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">lái</span><span class=\"hanzi\">来</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">yuè</span><span class=\"hanzi\">越</span></div>"
+        },
+        {
+          "text": "冷",
+          "enemy_id": "VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-ing\">lěng</span><span class=\"hanzi\">冷</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "天气突然变化，你要多穿点衣服。",
+      "japanese_translation": "天気が急に変わったので、もっと服を着てください。",
+      "tip": "天气(tiānqì)の「イェン」化する-ian・無気音で息の漏れないji、突然(tūrán)の巻き舌のこもったshiに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">tiān</span><span class=\"hanzi\">天</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">qì</span><span class=\"hanzi\">气</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">tū</span><span class=\"hanzi\">突</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">biàn</span><span class=\"hanzi\">变</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">huà</span><span class=\"hanzi\">化</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">nǐ</span><span class=\"hanzi\">你</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yào</span><span class=\"hanzi\">要</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">duō</span><span class=\"hanzi\">多</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">chuān</span><span class=\"hanzi\">穿</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">diǎn</span><span class=\"hanzi\">点</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yī</span><span class=\"hanzi\">衣</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">fú</span><span class=\"hanzi\">服</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "天气突然变化",
+          "words": [
+            {
+              "word": "天气",
+              "level": 1,
+              "meaning": "天気"
+            },
+            {
+              "word": "突然",
+              "level": 3,
+              "meaning": "突然"
+            },
+            {
+              "word": "变化",
+              "level": 3,
+              "meaning": "変化"
+            }
+          ]
+        },
+        {
+          "text": "你要多穿点衣服",
+          "words": [
+            {
+              "word": "衣服",
+              "level": 1,
+              "meaning": "服"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "天气",
+          "enemy_id": "ROM-ian,VOW-ji",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-an\">tiān</span><span class=\"hanzi\">天</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">qì</span><span class=\"hanzi\">气</span></div>"
+        },
+        {
+          "text": "突然",
+          "enemy_id": "VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">tū</span><span class=\"hanzi\">突</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>"
+        },
+        {
+          "text": "穿",
+          "enemy_id": "VOW-zhi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">chuān</span><span class=\"hanzi\">穿</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "虽然下雨了，但是我们还是决定出发。",
+      "japanese_translation": "雨が降っていますが、それでも私たちは出発することに決めました。",
+      "tip": "虽然(suīrán)の舌先を歯茎に寄せる摩擦音のs・「ウェイ」に聞こえる-ui、下雨(xiàyǔ)の前舌面のxi・点々省略のü(丸口)に注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">suī</span><span class=\"hanzi\">虽</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xià</span><span class=\"hanzi\">下</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">yǔ</span><span class=\"hanzi\">雨</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">le</span><span class=\"hanzi\">了</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">dàn</span><span class=\"hanzi\">但</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">是</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">men</span><span class=\"hanzi\">们</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hái</span><span class=\"hanzi\">还</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">是</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">jué</span><span class=\"hanzi\">决</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">dìng</span><span class=\"hanzi\">定</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">chū</span><span class=\"hanzi\">出</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">fā</span><span class=\"hanzi\">发</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "虽然下雨了",
+          "words": [
+            {
+              "word": "下雨",
+              "level": 1,
+              "meaning": "雨が降る"
+            }
+          ]
+        },
+        {
+          "text": "但是我们还是决定出发",
+          "words": [
+            {
+              "word": "还是",
+              "level": 2,
+              "meaning": "それでも"
+            },
+            {
+              "word": "决定",
+              "level": 3,
+              "meaning": "決める"
+            },
+            {
+              "word": "出发",
+              "level": 3,
+              "meaning": "出発する"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "虽然",
+          "enemy_id": "VOW-si,ROM-ui,VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">suī</span><span class=\"hanzi\">虽</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">rán</span><span class=\"hanzi\">然</span></div>"
+        },
+        {
+          "text": "下雨",
+          "enemy_id": "VOW-xi,ROM-ü",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-front\">xià</span><span class=\"hanzi\">下</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">yǔ</span><span class=\"hanzi\">雨</span></div>"
+        },
+        {
+          "text": "决定",
+          "enemy_id": "ROM-ü,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">jué</span><span class=\"hanzi\">决</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-ing\">dìng</span><span class=\"hanzi\">定</span></div>"
+        },
+        {
+          "text": "出发",
+          "enemy_id": "VOW-zhi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">chū</span><span class=\"hanzi\">出</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">fā</span><span class=\"hanzi\">发</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "我业余时间喜欢听音乐和看书。",
+      "japanese_translation": "私は暇な時間に音楽を聴いたり本を読んだりするのが好きです。",
+      "tip": "业余(yèyú)のこもった『ウ/オ』のe・点々省略のü(丸口)、时间(shíjiān)の巻き舌のこもったshi・無気音で息の漏れないjiに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">yè</span><span class=\"hanzi\">业</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">yú</span><span class=\"hanzi\">余</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shí</span><span class=\"hanzi\">时</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">jiān</span><span class=\"hanzi\">间</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xǐ</span><span class=\"hanzi\">喜</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">huān</span><span class=\"hanzi\">欢</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">tīng</span><span class=\"hanzi\">听</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yīn</span><span class=\"hanzi\">音</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">yuè</span><span class=\"hanzi\">乐</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-e\">hé</span><span class=\"hanzi\">和</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">kàn</span><span class=\"hanzi\">看</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shū</span><span class=\"hanzi\">书</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "我业余时间",
+          "words": [
+            {
+              "word": "业余",
+              "level": 3,
+              "meaning": "余暇の"
+            },
+            {
+              "word": "时间",
+              "level": 1,
+              "meaning": "時間"
+            }
+          ]
+        },
+        {
+          "text": "喜欢听音乐和看书",
+          "words": [
+            {
+              "word": "喜欢",
+              "level": 1,
+              "meaning": "好き"
+            },
+            {
+              "word": "音乐",
+              "level": 1,
+              "meaning": "音楽"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "业余",
+          "enemy_id": "ROM-e,ROM-ü",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-e\">yè</span><span class=\"hanzi\">业</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">yú</span><span class=\"hanzi\">余</span></div>"
+        },
+        {
+          "text": "时间",
+          "enemy_id": "VOW-shi,VOW-ji,ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">shí</span><span class=\"hanzi\">时</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">jiān</span><span class=\"hanzi\">间</span></div>"
+        },
+        {
+          "text": "喜欢",
+          "enemy_id": "VOW-xi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-front\">xǐ</span><span class=\"hanzi\">喜</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">huān</span><span class=\"hanzi\">欢</span></div>"
+        },
+        {
+          "text": "听",
+          "enemy_id": "VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-ing\">tīng</span><span class=\"hanzi\">听</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "学游泳一开始很难，但是很有意思。",
+      "japanese_translation": "水泳を習うのは最初とても難しいですが、とても面白いです。",
+      "tip": "学(xué)の点々省略のü(丸口)、游泳(yóuyǒng)の鼻に抜ける-ngに注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-front\">xué</span><span class=\"hanzi\">学</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yóu</span><span class=\"hanzi\">游</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">yǒng</span><span class=\"hanzi\">泳</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yì</span><span class=\"hanzi\">一</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">kāi</span><span class=\"hanzi\">开</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shǐ</span><span class=\"hanzi\">始</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin\">hěn</span><span class=\"hanzi\">很</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">nán</span><span class=\"hanzi\">难</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">dàn</span><span class=\"hanzi\">但</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">shì</span><span class=\"hanzi\">是</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">hěn</span><span class=\"hanzi\">很</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yǒu</span><span class=\"hanzi\">有</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">yì</span><span class=\"hanzi\">意</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">si</span><span class=\"hanzi\">思</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "学游泳一开始",
+          "words": [
+            {
+              "word": "游泳",
+              "level": 2,
+              "meaning": "水泳"
+            },
+            {
+              "word": "一开始",
+              "level": 3,
+              "meaning": "最初は"
+            }
+          ]
+        },
+        {
+          "text": "很难但是很有意思",
+          "words": [
+            {
+              "word": "有意思",
+              "level": 2,
+              "meaning": "面白い"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "学",
+          "enemy_id": "ROM-ü",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-front\">xué</span><span class=\"hanzi\">学</span></div>"
+        },
+        {
+          "text": "游泳",
+          "enemy_id": "VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">yóu</span><span class=\"hanzi\">游</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-ing\">yǒng</span><span class=\"hanzi\">泳</span></div>"
+        },
+        {
+          "text": "一开始",
+          "enemy_id": "VOW-shi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">yì</span><span class=\"hanzi\">一</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">kāi</span><span class=\"hanzi\">开</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">shǐ</span><span class=\"hanzi\">始</span></div>"
+        },
+        {
+          "text": "有意思",
+          "enemy_id": "VOW-si",
+          "html": "<div class=\"char-box\"><span class=\"pinyin\">yǒu</span><span class=\"hanzi\">有</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">yì</span><span class=\"hanzi\">意</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro\">si</span><span class=\"hanzi\">思</span></div>"
+        }
+      ]
+    },
+    {
+      "full_sentence": "周末我们打算先去公园，再去看电影。",
+      "japanese_translation": "週末、私たちはまず公園に行き、それから映画を見に行くつもりです。",
+      "tip": "先(xiān)の前舌面のxi・「イェン」化する-ian、公园(gōngyuán)の鼻に抜ける-ng・点々省略のü(丸口)に注意しましょう。",
+      "html_content": "<div class=\"chunk-box\" data-chunk-index=\"0\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zhōu</span><span class=\"hanzi\">周</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">mò</span><span class=\"hanzi\">末</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">wǒ</span><span class=\"hanzi\">我</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">men</span><span class=\"hanzi\">们</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">dǎ</span><span class=\"hanzi\">打</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">suàn</span><span class=\"hanzi\">算</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"1\">\n      <div class=\"char-box\"><span class=\"pinyin bad-front bad-an\">xiān</span><span class=\"hanzi\">先</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">qù</span><span class=\"hanzi\">去</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">gōng</span><span class=\"hanzi\">公</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">yuán</span><span class=\"hanzi\">园</span></div>\n    </div>\n    <div class=\"chunk-box\" data-chunk-index=\"2\">\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">zài</span><span class=\"hanzi\">再</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-retro\">qù</span><span class=\"hanzi\">去</span></div>\n      <div class=\"char-box\"><span class=\"pinyin\">kàn</span><span class=\"hanzi\">看</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-an\">diàn</span><span class=\"hanzi\">电</span></div>\n      <div class=\"char-box\"><span class=\"pinyin bad-ing\">yǐng</span><span class=\"hanzi\">影</span></div>\n    </div>",
+      "chunks": [
+        {
+          "text": "周末我们打算",
+          "words": [
+            {
+              "word": "周末",
+              "level": 2,
+              "meaning": "週末"
+            },
+            {
+              "word": "打算",
+              "level": 3,
+              "meaning": "〜するつもりだ"
+            }
+          ]
+        },
+        {
+          "text": "先去公园",
+          "words": [
+            {
+              "word": "公园",
+              "level": 2,
+              "meaning": "公園"
+            }
+          ]
+        },
+        {
+          "text": "再去看电影",
+          "words": [
+            {
+              "word": "电影",
+              "level": 1,
+              "meaning": "映画"
+            }
+          ]
+        }
+      ],
+      "vulnerable_targets": [
+        {
+          "text": "周末",
+          "enemy_id": "VOW-zhi",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-retro\">zhōu</span><span class=\"hanzi\">周</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin\">mò</span><span class=\"hanzi\">末</span></div>"
+        },
+        {
+          "text": "先",
+          "enemy_id": "VOW-xi,ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-front bad-an\">xiān</span><span class=\"hanzi\">先</span></div>"
+        },
+        {
+          "text": "公园",
+          "enemy_id": "VOW-ng,ROM-ü,ROM-ian",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-ing\">gōng</span><span class=\"hanzi\">公</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-retro bad-an\">yuán</span><span class=\"hanzi\">园</span></div>"
+        },
+        {
+          "text": "电影",
+          "enemy_id": "ROM-ian,VOW-ng",
+          "html": "<div class=\"char-box\"><span class=\"pinyin bad-an\">diàn</span><span class=\"hanzi\">电</span></div>\n                 <div class=\"char-box\"><span class=\"pinyin bad-ing\">yǐng</span><span class=\"hanzi\">影</span></div>"
+        }
+      ]
+    }
+  ]
+}

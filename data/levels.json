@@ -1,0 +1,29 @@
+{
+  "defaultLevelId": "hsk1",
+  "levels": [
+    {
+      "id": "hsk1",
+      "label": "HSK1 (入門)",
+      "file": "data/hsk1.json",
+      "description": "HSK1語彙・基本文型のみ。短く単純な文でリスニングの基礎を作る。"
+    },
+    {
+      "id": "hsk2",
+      "label": "HSK2 (初級)",
+      "file": "data/hsk2.json",
+      "description": "HSK2語彙中心。日常会話でよく使う表現を含む。"
+    },
+    {
+      "id": "bridge",
+      "label": "HSK2-3 (橋渡し)",
+      "file": "data/bridge.json",
+      "description": "HSK2からHSK3-4への橋渡し。やや長めの文・複合語を含む。"
+    },
+    {
+      "id": "hsk3-4",
+      "label": "HSK3-4 (中級)",
+      "file": "data/hsk3-4.json",
+      "description": "従来からの問題セット。HSK3-4語彙が混在する中級レベル。"
+    }
+  ]
+}

@@ -735,10 +735,18 @@
                     Settings & Options
                 </div>
                 <div class="settings-grid">
-                    
-                    <!-- HSK フィルター -->
+
+                    <!-- 学習レベル選択 -->
                     <div class="setting-group">
-                        <span class="setting-label">HSK 足切りレベル</span>
+                        <span class="setting-label">学習レベル（問題セット）</span>
+                        <select id="level-select" class="custom-select">
+                            <!-- JavaScriptにより動的生成 -->
+                        </select>
+                    </div>
+
+                    <!-- HSK フィルター（文中の未知語ヒント表示のしきい値） -->
+                    <div class="setting-group">
+                        <span class="setting-label">HSK 足切りレベル（単語ヒント用）</span>
                         <div class="radio-group">
                             <label class="radio-label">
                                 <input type="radio" name="hsk-filter" value="2" checked> HSK 2級以上
@@ -875,9 +883,11 @@
 
     </div>
 
-    <!-- スタティックデータの読み込み -->
-    <script src="data.js"></script>
     <script>
+        // 外部JSONから読み込むデータ（fetch完了まで空）
+        let studyData = [];
+        let pinyinMasterDB = {};
+
         // アプリケーション状態管理
         let currentIdx = 0;
         let isRevealed = false;
@@ -888,7 +898,10 @@
         let shuffleActive = true; // デフォルトでシャッフルON
         let shuffledOrder = [];
         let shufflePos = 0;
-        
+
+        let levelsManifest = [];
+        let currentLevelId = null;
+
         let selectedVoice = null;
         let activeTimeouts = [];
         let currentUtterance = null;
@@ -909,16 +922,106 @@
         const btnPrev = document.getElementById('btn-prev');
         const btnNext = document.getElementById('btn-next');
         const hskFilters = document.querySelectorAll('input[name="hsk-filter"]');
+        const levelSelect = document.getElementById('level-select');
 
         // 読み込み完了時初期化
         window.addEventListener('DOMContentLoaded', () => {
-            if (typeof studyData === 'undefined' || typeof pinyinMasterDB === 'undefined') {
-                console.error("data.js is not loaded correctly.");
-                alert("data.jsが読み込めませんでした。ファイル配置を確認してください。");
-                return;
-            }
-            init();
+            loadData();
         });
+
+        // レベルマニフェスト・天敵ピンインDB・初期レベルの非同期読み込み
+        // （GitHub Pages等のHTTPサーバー配信が必要。file://直開きはCORSで失敗します）
+        async function loadData() {
+            try {
+                const [levelsRes, pinyinRes] = await Promise.all([
+                    fetch('data/levels.json'),
+                    fetch('data/pinyin-master-db.json')
+                ]);
+                if (!levelsRes.ok) throw new Error(`HTTP ${levelsRes.status} (data/levels.json)`);
+                if (!pinyinRes.ok) throw new Error(`HTTP ${pinyinRes.status} (data/pinyin-master-db.json)`);
+
+                const levelsData = await levelsRes.json();
+                pinyinMasterDB = await pinyinRes.json();
+
+                if (!levelsData || !Array.isArray(levelsData.levels) || levelsData.levels.length === 0) {
+                    throw new Error("data/levels.json の内容が不正です。");
+                }
+                levelsManifest = levelsData.levels;
+                populateLevelSelector();
+
+                // 前回選択したレベルをlocalStorageから復元（無ければマニフェストの既定値）
+                const savedLevelId = localStorage.getItem('selectedLevelId');
+                const initialLevelId = (savedLevelId && levelsManifest.some(l => l.id === savedLevelId))
+                    ? savedLevelId
+                    : (levelsData.defaultLevelId || levelsManifest[0].id);
+
+                const entry = levelsManifest.find(l => l.id === initialLevelId) || levelsManifest[0];
+                const levelData = await fetchLevelStudyData(entry);
+
+                studyData = levelData;
+                currentLevelId = entry.id;
+                levelSelect.value = entry.id;
+                localStorage.setItem('selectedLevelId', entry.id);
+
+                init();
+            } catch (err) {
+                console.error("データの読み込みに失敗しました:", err);
+                alert("データファイルが読み込めませんでした。HTTPサーバー経由（GitHub Pages、python -m http.server等）でアクセスしているか確認してください。");
+            }
+        }
+
+        // レベル選択セレクトボックスの中身を生成
+        function populateLevelSelector() {
+            levelSelect.innerHTML = '';
+            levelsManifest.forEach(l => {
+                const opt = document.createElement('option');
+                opt.value = l.id;
+                opt.textContent = l.label;
+                if (l.description) opt.title = l.description;
+                levelSelect.appendChild(opt);
+            });
+        }
+
+        // 指定レベルのファイルをfetchしてstudyData配列を取得
+        async function fetchLevelStudyData(entry) {
+            const res = await fetch(entry.file);
+            if (!res.ok) throw new Error(`HTTP ${res.status} (${entry.file})`);
+            const data = await res.json();
+            if (!data || !Array.isArray(data.studyData) || data.studyData.length === 0) {
+                throw new Error(`${entry.file} の内容が不正です。`);
+            }
+            return data.studyData;
+        }
+
+        // レベル切り替え（設定は保持したまま問題セットのみ入れ替える）
+        async function switchLevel(levelId) {
+            if (levelId === currentLevelId) return;
+            const entry = levelsManifest.find(l => l.id === levelId);
+            if (!entry) return;
+
+            try {
+                const levelData = await fetchLevelStudyData(entry);
+                studyData = levelData;
+                currentLevelId = levelId;
+                localStorage.setItem('selectedLevelId', levelId);
+                resetAndLoadFirstSentence();
+            } catch (err) {
+                console.error("レベルの読み込みに失敗しました:", err);
+                alert(`レベル「${entry.label}」の読み込みに失敗しました。`);
+                levelSelect.value = currentLevelId;
+            }
+        }
+
+        // シャッフル順を再生成し、先頭の問題を読み込む（初期化・レベル切り替え共通処理）
+        function resetAndLoadFirstSentence() {
+            if (shuffleActive) {
+                generateShuffleOrder();
+                currentIdx = shuffledOrder[0];
+            } else {
+                currentIdx = 0;
+            }
+            loadSentence(currentIdx);
+        }
 
 
 
@@ -1149,6 +1252,11 @@
                         renderHints();
                     }
                 });
+            });
+
+            // レベル選択切り替え
+            levelSelect.addEventListener('change', (e) => {
+                switchLevel(e.target.value);
             });
         }
 
@@ -1526,19 +1634,12 @@
             }
         }
 
-        // デフォルトでシャッフルONのため、起動時にシャッフル順を生成
+        // データ読み込み完了後の初期化（レベル切り替え時は呼び出さない）
         function init() {
-            if (shuffleActive) {
-                generateShuffleOrder();
-                currentIdx = shuffledOrder[0];
-            } else {
-                currentIdx = 0;
-            }
-            
             // 初回ブラウザAutoplay制限の解除用ダミー発音をキュー
             window.speechSynthesis.speak(new SpeechSynthesisUtterance(""));
 
-            loadSentence(currentIdx);
+            resetAndLoadFirstSentence();
             autoSelectVoice();
             if (window.speechSynthesis.onvoiceschanged !== undefined) {
                 window.speechSynthesis.onvoiceschanged = autoSelectVoice;
