@@ -1,13 +1,12 @@
 /**
  * Speech Synthesis (TTS) Engine for Chinese Listening & Dialogue Training
- * Proven exact voice binding algorithm from Listening Training (trainer.html).
- * Ensures identical natural Chinese speech across Windows Edge, Chrome, and all environments.
+ * 100% Exact Pure Engine from Listening Training (trainer.html).
+ * Zero extra voice dropdown overrides. Unlocks browser audio context with dummy utterance.
  */
 
 class DialogueTTSEngine {
     constructor() {
         this.synth = window.speechSynthesis;
-        this.voices = [];
         this.selectedVoice = null;
         this.rate = 0.85;             // Global playback rate (0.5 to 1.5)
         
@@ -25,52 +24,34 @@ class DialogueTTSEngine {
         this.onLineEnd = null;        // (lineIndex) => {}
         this.onSegmentStart = null;   // (lineIndex, segmentIndex, segmentText) => {}
         this.onRoleTurn = null;       // (lineIndex, lineData) => {}
-        this.onVoicesUpdated = null;  // (voices) => {}
         this.onFinish = null;         // () => {}
 
-        this.initVoices();
+        this.init();
     }
 
-    /**
-     * Auto voice selection - Identical to trainer.html algorithm
-     */
-    initVoices() {
-        const update = () => {
-            const allVoices = this.synth.getVoices();
-            const zhVoices = allVoices.filter(v => v.lang && (v.lang.startsWith('zh') || v.lang.includes('CN')));
-            
-            // Priority: Exact 'zh-CN' match -> First Chinese voice -> First available voice
-            const defaultVoice = zhVoices.find(v => v.lang === 'zh-CN') 
-                || zhVoices.find(v => v.lang.toLowerCase().startsWith('zh'))
-                || zhVoices[0];
+    init() {
+        // Unlock browser audio context with dummy utterance (exact trainer.html mechanism)
+        if (typeof window !== 'undefined' && window.speechSynthesis) {
+            try {
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance(""));
+            } catch (e) {}
+        }
 
+        const autoSelectVoice = () => {
+            const voices = window.speechSynthesis.getVoices();
+            const zhVoices = voices.filter(v => v.lang && v.lang.startsWith('zh'));
+            
+            const defaultVoice = zhVoices.find(v => v.lang === 'zh-CN') || zhVoices[0];
             if (defaultVoice) {
                 this.selectedVoice = defaultVoice;
-                this.voices = zhVoices.length > 0 ? zhVoices : allVoices;
-            } else if (allVoices.length > 0) {
-                this.selectedVoice = allVoices[0];
-                this.voices = allVoices;
-            }
-
-            if (this.onVoicesUpdated) {
-                this.onVoicesUpdated(this.voices);
+            } else if (voices.length > 0) {
+                this.selectedVoice = voices[0];
             }
         };
 
-        update();
-        if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
-            speechSynthesis.onvoiceschanged = update;
-        }
-    }
-
-    setVoiceByName(name) {
-        if (!name) {
-            this.initVoices();
-            return;
-        }
-        const found = this.voices.find(v => v.name === name);
-        if (found) {
-            this.selectedVoice = found;
+        autoSelectVoice();
+        if (typeof window !== 'undefined' && window.speechSynthesis && window.speechSynthesis.onvoiceschanged !== undefined) {
+            window.speechSynthesis.onvoiceschanged = autoSelectVoice;
         }
     }
 
@@ -110,7 +91,6 @@ class DialogueTTSEngine {
         const line = dialogue.lines[lineIndex];
         if (!line) return;
 
-        // Check if it's user's turn in Role Play mode
         if (this.userRole && line.speaker === this.userRole) {
             if (this.onRoleTurn) this.onRoleTurn(lineIndex, line);
             return;
@@ -210,7 +190,7 @@ class DialogueTTSEngine {
     }
 
     /**
-     * Exact speech synthesis logic from Listening Training trainer.html
+     * Exact speakText function from Listening Training (trainer.html)
      */
     speakText(text, rate = 0.85, onEnd = null) {
         if (!('speechSynthesis' in window)) {
@@ -219,7 +199,7 @@ class DialogueTTSEngine {
             return;
         }
 
-        this.synth.cancel();
+        window.speechSynthesis.cancel();
 
         const cleanText = text.replace(/[\(\)（）]/g, '');
         const utterance = new SpeechSynthesisUtterance(cleanText);
@@ -239,6 +219,6 @@ class DialogueTTSEngine {
             if (onEnd) onEnd();
         };
 
-        this.synth.speak(utterance);
+        window.speechSynthesis.speak(utterance);
     }
 }
