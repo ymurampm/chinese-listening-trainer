@@ -238,6 +238,20 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.chat-bubble').forEach(b => b.classList.remove('playing'));
         });
 
+        const voiceSelect = document.getElementById('voice-select');
+        tts.onVoicesUpdated = (voices) => {
+            if (voiceSelect && voices.length > 0) {
+                voiceSelect.innerHTML = voices.map(v => 
+                    `<option value="${v.name}" ${v.name === tts.selectedVoice?.name ? 'selected' : ''}>${v.name}</option>`
+                ).join('');
+            }
+        };
+        if (voiceSelect) {
+            voiceSelect.addEventListener('change', (e) => {
+                tts.setVoiceByName(e.target.value);
+            });
+        }
+
         speedSelect.addEventListener('change', (e) => {
             tts.setRate(e.target.value);
         });

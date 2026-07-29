@@ -26,6 +26,7 @@ class DialogueTTSEngine {
         this.onLineEnd = null;      // (lineIndex) => {}
         this.onSegmentStart = null; // (lineIndex, segmentIndex, segmentText) => {}
         this.onRoleTurn = null;     // (lineIndex, lineData) => {}
+        this.onVoicesUpdated = null;// (voices) => {}
         this.onFinish = null;       // () => {}
 
         this.initVoices();
@@ -33,16 +34,35 @@ class DialogueTTSEngine {
 
     initVoices() {
         const update = () => {
-            this.voices = this.synth.getVoices().filter(v => v.lang.includes('zh') || v.lang.includes('cmn'));
+            this.voices = this.synth.getVoices().filter(v => 
+                v.lang.includes('zh') || v.lang.includes('cmn') || v.lang.includes('CN')
+            );
             if (this.voices.length > 0) {
-                // Prefer Google 普通话 / Microsoft Yaoyao / Kangkang / Huihui or default zh-CN
-                this.selectedVoice = this.voices.find(v => v.lang === 'zh-CN') || this.voices[0];
+                // Priority ranking for natural sound across Windows / Chrome / Edge:
+                // 1. Natural / Online Neural voices (Xiaoxiao, Yunxi, Yunyang)
+                // 2. Google 普通话
+                // 3. Microsoft Kangkang / Huihui / Yaoyao
+                // 4. Any zh-CN voice
+                this.selectedVoice = this.voices.find(v => v.name.includes('Natural') || v.name.includes('Neural'))
+                    || this.voices.find(v => v.name.includes('Google') || v.name.includes('Xiaoxiao') || v.name.includes('Yunxi'))
+                    || this.voices.find(v => v.lang === 'zh-CN')
+                    || this.voices[0];
+            }
+            if (this.onVoicesUpdated) {
+                this.onVoicesUpdated(this.voices);
             }
         };
 
         update();
         if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
             speechSynthesis.onvoiceschanged = update;
+        }
+    }
+
+    setVoiceByName(name) {
+        const found = this.voices.find(v => v.name === name);
+        if (found) {
+            this.selectedVoice = found;
         }
     }
 
@@ -138,7 +158,6 @@ class DialogueTTSEngine {
                 if (this.onLineStart) this.onLineStart(idx, line);
                 if (this.onRoleTurn) {
                     this.onRoleTurn(idx, line, () => {
-                        // User finished turn, proceed to next
                         playNext(idx + 1);
                     });
                 }
@@ -147,7 +166,6 @@ class DialogueTTSEngine {
 
             this.playLine(dialogue, idx, () => {
                 if (!this.isPlaying) return;
-                // Brief pause between dialogue turns
                 setTimeout(() => playNext(idx + 1), 600);
             });
         };
@@ -197,7 +215,7 @@ class DialogueTTSEngine {
             return;
         }
 
-        const cleanText = text.replace(/[\(\)（）]/g, ''); // Strip parentheses for audio
+        const cleanText = text.replace(/[\(\)（）]/g, '');
         const utterance = new SpeechSynthesisUtterance(cleanText);
         utterance.lang = 'zh-CN';
         if (this.selectedVoice) {
