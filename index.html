@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国語 会話宿題リスニングマスター (HSK2-3)</title>
+    <meta name="description" content="HSK 2級〜3級レベルの会話宿題を音声、ピンイン、日本語訳、文法解説、対話ロールプレイ、ディクテーションクイズで完全攻略するWebアプリ。">
+    <!-- Google Fonts: Outfit & Noto Sans SC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="brand-title">
+                <span class="brand-icon">🎧💬</span>
+                <div>
+                    <h1>中国語 会話宿題リスニングマスター</h1>
+                    <p>HSK 2級 ➔ 3級ステップアップ会話トレーニング</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <button id="btn-open-help" class="btn-help">⌨️ キーガイド</button>
+                <div class="selector-box">
+                    <select id="dialogue-select" aria-label="会話レッスンの選択">
+                        <!-- Options populated dynamically from JSON -->
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <!-- Control Toolbar -->
+        <section class="toolbar-card">
+            <!-- Mode Switcher -->
+            <div class="mode-switcher">
+                <button id="mode-listening" class="btn-mode active">💬 会話リスニング & シャドーイング (1)</button>
+                <button id="mode-roleplay" class="btn-mode">🎭 対話ロールプレイ (2)</button>
+                <button id="mode-quiz" class="btn-mode">✍️ ディクテーション・穴埋め (3)</button>
+            </div>
+
+            <!-- Roleplay Bar (Hidden by default) -->
+            <div id="roleplay-bar" class="sub-bar hidden">
+                <label for="role-select"><strong>担当する役:</strong></label>
+                <select id="role-select">
+                    <!-- Populated dynamically -->
+                </select>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">※ あなたのセリフの番になると一時停止します</span>
+            </div>
+
+            <!-- Primary Actions & Audio Options -->
+            <div class="action-row">
+                <div class="primary-controls">
+                    <button id="btn-play-full" class="btn-primary">▶️ 会話全体を再生 (P)</button>
+                    <button id="btn-stop" class="btn-danger">⏹️ 停止 (Esc)</button>
+                </div>
+                <div class="secondary-options">
+                    <div class="opt-group">
+                        <label for="speed-select">速度 ( [/] ):</label>
+                        <select id="speed-select">
+                            <option value="0.5">0.5x (ゆっくり)</option>
+                            <option value="0.7">0.7x (遅め)</option>
+                            <option value="0.85" selected>0.85x (標準学習)</option>
+                            <option value="1.0">1.0x (ナチュラル)</option>
+                            <option value="1.2">1.2x (速め)</option>
+                        </select>
+                    </div>
+
+                    <div class="opt-group">
+                        <label for="pinyin-toggle">ピンイン (Y):</label>
+                        <select id="pinyin-toggle">
+                            <option value="always" selected>常時表示</option>
+                            <option value="hover">ホバー/タップ時のみ</option>
+                            <option value="hidden">非表示 (耳あわせ)</option>
+                        </select>
+                    </div>
+
+                    <div class="opt-group">
+                        <label><input type="checkbox" id="ja-toggle" checked> 日本語訳 (T)</label>
+                    </div>
+
+                    <div class="opt-group">
+                        <label><input type="checkbox" id="segment-toggle" checked> 区切り再生</label>
+                    </div>
+
+                    <div class="opt-group">
+                        <label><input type="checkbox" id="loop-toggle"> 1文リピート (R)</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Topic Info Card -->
+        <div class="dialogue-info-card">
+            <h2 id="dialogue-header-title">タイトル</h2>
+            <p id="dialogue-header-topic">トピック情報</p>
+        </div>
+
+        <!-- Main Content Area: Chat + Notes Drawer -->
+        <main class="main-layout">
+            <!-- WeChat Style Chat Container -->
+            <section id="chat-container" class="chat-container" data-pinyin-mode="always">
+                <!-- Chat bubbles generated dynamically -->
+            </section>
+
+            <!-- Quiz Panel (Hidden by default) -->
+            <section id="quiz-panel" class="quiz-panel hidden">
+                <!-- Quiz card rendered here -->
+            </section>
+
+            <!-- Notes & Grammar Side Drawer -->
+            <aside id="notes-drawer" class="notes-drawer">
+                <div class="drawer-header">
+                    <h3>💡 語彙・文法解説</h3>
+                    <button id="close-notes" class="close-btn">✖</button>
+                </div>
+                <div id="notes-content">
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">会話文の中のハイライト語彙（例：<code>有点儿</code>、<code>一边...一边...</code>）や単語チップをタップすると解説が表示されます。</p>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <!-- Keyboard Shortcuts Help Modal -->
+    <div id="help-modal" class="modal-backdrop hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>⌨️ キーボードショートカット一覧</h2>
+                <button id="close-help" class="close-btn">✖</button>
+            </div>
+            <div class="modal-body">
+                <table class="shortcut-table">
+                    <thead>
+                        <tr>
+                            <th>キー</th>
+                            <th>機能</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><kbd>J</kbd></td><td>次のセリフへ移動して自動再生</td></tr>
+                        <tr><td><kbd>K</kbd></td><td>前のセリフへ移動して自動再生</td></tr>
+                        <tr><td><kbd>P</kbd> / <kbd>Space</kbd></td><td>選択中のセリフを再生 / 一時停止</td></tr>
+                        <tr><td><kbd>R</kbd></td><td>現在のセリフをもう一度再生（リピート）</td></tr>
+                        <tr><td><kbd>S</kbd> / <kbd>Esc</kbd></td><td>音声再生を停止</td></tr>
+                        <tr><td><kbd>Y</kbd></td><td>ピンイン表示切り替え（常時 ➔ ホバー ➔ 非表示）</td></tr>
+                        <tr><td><kbd>T</kbd></td><td>日本語訳の表示 / 非表示 切り替え</td></tr>
+                        <tr><td><kbd>[</kbd> / <kbd>]</kbd></td><td>再生速度をダウン / アップ</td></tr>
+                        <tr><td><kbd>N</kbd></td><td>語彙解説を開く / 複数語彙を順番にスイッチ</td></tr>
+                        <tr><td><kbd>M</kbd></td><td>表示中の語彙単語を発音・読み上げ</td></tr>
+                        <tr><td><kbd>1</kbd> / <kbd>2</kbd> / <kbd>3</kbd></td><td>学習モードの切替（1:リスニング 2:ロールプレイ 3:クイズ）</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/pinyin_utils.js"></script>
+    <script src="./js/tts.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>

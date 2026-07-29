@@ -1,0 +1,596 @@
+{
+  "id": "homework_20260727",
+  "title": "宿題 2026/07/27 会話レッスン",
+  "description": "For 村上さん20260727.pdf 11〜13ページ（初級会話「我的朋友苏飞」、中級会話「别做白日梦」）",
+  "dialogues": [
+    {
+      "id": "d1",
+      "title": "初级对话-2 我的朋友苏飞",
+      "level": "初級 (HSK 2)",
+      "topic": "カフェでの偶然の出会いと自己紹介",
+      "characters": [
+        {"id": "jieming", "name": "杰明", "gender": "male", "avatar": "👨", "pitch": 0.9, "rate": 0.95},
+        {"id": "lili", "name": "李丽", "gender": "female", "avatar": "👩", "pitch": 1.15, "rate": 0.95},
+        {"id": "sufei", "name": "苏飞", "gender": "female", "avatar": "👧", "pitch": 1.3, "rate": 0.95}
+      ],
+      "lines": [
+        {
+          "id": "d1_1",
+          "speaker": "jieming",
+          "zh": "早上好！李丽。",
+          "pinyin": "Zǎoshang hǎo! Lǐ Lì.",
+          "ja": "おはよう！李麗（リ・リー）。",
+          "segments": ["早上好！", "李丽。"],
+          "notes": [
+            {"word": "早上好", "pinyin": "zǎoshang hǎo", "meaning": "おはよう（ございます）"}
+          ]
+        },
+        {
+          "id": "d1_2",
+          "speaker": "lili",
+          "zh": "早！今天怎么样？",
+          "pinyin": "Zǎo! Jīntiān zěnmeyàng?",
+          "ja": "おはよう！今日は調子どう？",
+          "segments": ["早！", "今天怎么样？"],
+          "notes": [
+            {"word": "怎么样", "pinyin": "zěnmeyàng", "meaning": "どうですか？様子・状態を尋ねる疑問詞"}
+          ]
+        },
+        {
+          "id": "d1_3",
+          "speaker": "jieming",
+          "zh": "还可以！你呢？",
+          "pinyin": "Hái kěyǐ! Nǐ ne?",
+          "ja": "まあまあかな！君は？",
+          "segments": ["还可以！", "你呢？"],
+          "notes": [
+            {"word": "还可以", "pinyin": "hái kěyǐ", "meaning": "悪くない、まあまあである（HSK2）"}
+          ]
+        },
+        {
+          "id": "d1_4",
+          "speaker": "lili",
+          "zh": "今天有点儿累，因为工作太忙了。",
+          "pinyin": "Jīntiān yǒudiǎnr lèi, yīnwèi gōngzuò tài máng le.",
+          "ja": "今日はちょっと疲れてるんだ、仕事が忙しすぎたから。",
+          "segments": ["今天有点儿累，", "因为工作太忙了。"],
+          "notes": [
+            {"word": "有点儿", "pinyin": "yǒudiǎnr", "meaning": "少し、ちょっと（少し不満・好ましくない状態）"},
+            {"word": "因为", "pinyin": "yīnwèi", "meaning": "〜だから...（理由と度合い: 因为...太...了）"}
+          ]
+        },
+        {
+          "id": "d1_5",
+          "speaker": "jieming",
+          "zh": "你在哪里工作？",
+          "pinyin": "Nǐ zài nǎli gōngzuò?",
+          "ja": "どこで働いているの？",
+          "segments": ["你在哪里", "工作？"],
+          "notes": [
+            {"word": "工作", "pinyin": "gōngzuò", "meaning": "働く、仕事をする（在＋場所＋工作）"}
+          ]
+        },
+        {
+          "id": "d1_6",
+          "speaker": "lili",
+          "zh": "在中国银行，离这里不远。你看，那是谁？",
+          "pinyin": "Zài Zhōngguó Yínháng, lí zhèlǐ bù yuǎn. Nǐ kàn, nà shì shéi?",
+          "ja": "中国銀行よ、ここから遠くないわ。見て、あれは誰かしら？",
+          "segments": ["在中国银行，", "离这里不远。", "你看，", "那是谁？"],
+          "notes": [
+            {"word": "离", "pinyin": "lí", "meaning": "〜から（距離を表す: 离...不远）"},
+            {"word": "你看", "pinyin": "nǐ kàn", "meaning": "ほら見て、ごらん"}
+          ]
+        },
+        {
+          "id": "d1_7",
+          "speaker": "jieming",
+          "zh": "那是苏飞，是我的好朋友。苏飞，我在这儿。",
+          "pinyin": "Nà shì Sū Fēi, shì wǒ de hǎo péngyou. Sū Fēi, wǒ zài zhèr.",
+          "ja": "あれは蘇飛（スー・フェイ）だよ、僕の親友さ。蘇飛、ここだよ！",
+          "segments": ["那是苏飞，", "是我的好朋友。", "苏飞，", "我在这儿。"],
+          "notes": [
+            {"word": "好朋友", "pinyin": "hǎo péngyou", "meaning": "親友、仲の良い友達"}
+          ]
+        },
+        {
+          "id": "d1_8",
+          "speaker": "narrator",
+          "zh": "（苏飞走过来...）",
+          "pinyin": "(Sū Fēi zǒu guòlái...)",
+          "ja": "（蘇飛が歩いてやってくる...）",
+          "segments": ["苏飞走过来..."],
+          "notes": [
+            {"word": "走过来", "pinyin": "zǒu guòlái", "meaning": "歩いてこちらに来る（方向補語 来）"}
+          ]
+        },
+        {
+          "id": "d1_9",
+          "speaker": "jieming",
+          "zh": "苏飞，这是我的新朋友，叫李丽。",
+          "pinyin": "Sū Fēi, zhè shì wǒ de xīn péngyou, jiào Lǐ Lì.",
+          "ja": "蘇飛、こちらは僕の新しい友達で、李麗っていうんだ。",
+          "segments": ["苏飞，", "这是我的新朋友，", "叫李丽。"],
+          "notes": [
+            {"word": "叫", "pinyin": "jiào", "meaning": "〜という名前である、〜と呼ぶ"}
+          ]
+        },
+        {
+          "id": "d1_10",
+          "speaker": "sufei",
+          "zh": "你好！我叫苏飞。",
+          "pinyin": "Nǐ hǎo! Wǒ jiào Sū Fēi.",
+          "ja": "こんにちは！蘇飛といいます。",
+          "segments": ["你好！", "我叫苏飞。"],
+          "notes": []
+        },
+        {
+          "id": "d1_11",
+          "speaker": "lili",
+          "zh": "你好！我和杰明经常来这里喝咖啡，后来就认识了。",
+          "pinyin": "Nǐ hǎo! Wǒ hé Jiémíng jīngcháng lái zhèlǐ hē kāfēi, hòulái jiù rènshi le.",
+          "ja": "こんにちは！私とジェイミンはよくここへコーヒーを飲み来ていて、それで知り合ったの。",
+          "segments": ["你好！", "我和杰明经常来这里喝咖啡，", "后来就认识了。"],
+          "notes": [
+            {"word": "经常", "pinyin": "jīngcháng", "meaning": "いつも、しょっちゅう（HSK2）"},
+            {"word": "后来", "pinyin": "hòulái", "meaning": "その後、それから（HSK3）"},
+            {"word": "认识", "pinyin": "rènshi", "meaning": "知り合う、知っている"}
+          ]
+        },
+        {
+          "id": "d1_12",
+          "speaker": "jieming",
+          "zh": "是啊！我刚刚在等你的时候，又遇到李丽了。",
+          "pinyin": "Shì a! Wǒ gānggāng zài děng nǐ de shíhou, yòu yùdào Lǐ Lì le.",
+          "ja": "そうなんだ！さっき君を待っている時に、ちょうどまた李麗に会ったんだよ。",
+          "segments": ["是啊！", "我刚刚在等你的时候，", "又遇到李丽了。"],
+          "notes": [
+            {"word": "刚刚", "pinyin": "gānggāng", "meaning": "たった今、さっき（HSK3）"},
+            {"word": "的时候", "pinyin": "de shíhou", "meaning": "〜している時（在...的时候）"},
+            {"word": "遇到", "pinyin": "yùdào", "meaning": "偶然出会う、遭遇する（HSK3）"}
+          ]
+        },
+        {
+          "id": "d1_13",
+          "speaker": "sufei",
+          "zh": "杰明就是个咖啡大王！李丽，你也喜欢喝咖啡吗？",
+          "pinyin": "Jiémíng jiù shì gè kāfēi dàwáng! Lǐ Lì, nǐ yě xǐhuan hē kāfēi ma?",
+          "ja": "ジェイミンはまさにコーヒー大王ね！李麗、あなたもコーヒーが好き？",
+          "segments": ["杰明就是个咖啡大王！", "李丽，", "你也喜欢喝咖啡吗？"],
+          "notes": [
+            {"word": "就是", "pinyin": "jiù shì", "meaning": "まさに〜だ"},
+            {"word": "大王", "pinyin": "dàwáng", "meaning": "〜の達人、〜通、大王"}
+          ]
+        },
+        {
+          "id": "d1_14",
+          "speaker": "lili",
+          "zh": "一般般，我更喜欢喝茶，但是附近没有茶馆。",
+          "pinyin": "Yìbānbān, wǒ gèng xǐhuan hē chá, dànshì fùjìn méiyǒu cháguǎn.",
+          "ja": "まあまあかな、私はお茶の方が好きなんだけど、この近くに茶館がないの。",
+          "segments": ["一般般，", "我更喜欢喝茶，", "但是附近没有茶馆。"],
+          "notes": [
+            {"word": "一般般", "pinyin": "yìbānbān", "meaning": "まあまあ、普通（口語）"},
+            {"word": "更", "pinyin": "gèng", "meaning": "さらに、いっそう、より（HSK2）"},
+            {"word": "但是", "pinyin": "dànshì", "meaning": "しかし、だが（HSK2）"}
+          ]
+        },
+        {
+          "id": "d1_15",
+          "speaker": "sufei",
+          "zh": "我也是。对了，你是上海人吗？",
+          "pinyin": "Wǒ yě shì. Duìle, nǐ shì Shànghǎirén ma?",
+          "ja": "私もよ。ところで、あなたは上海の人？",
+          "segments": ["我也是。", "对了，", "你是上海人吗？"],
+          "notes": [
+            {"word": "对了", "pinyin": "duìle", "meaning": "そういえば、ところで（話題の転換）"}
+          ]
+        },
+        {
+          "id": "d1_16",
+          "speaker": "lili",
+          "zh": "不是，我是四川人。",
+          "pinyin": "Bú shì, wǒ shì Sìchuānrén.",
+          "ja": "違うわ、私は四川の人よ。",
+          "segments": ["不是，", "我是四川人。"],
+          "notes": [
+            {"word": "四川", "pinyin": "Sìchuān", "meaning": "四川省（激辛料理・火鍋・パンダで有名）"}
+          ]
+        },
+        {
+          "id": "d1_17",
+          "speaker": "sufei",
+          "zh": "四川很有名，川菜也很好吃！",
+          "pinyin": "Sìchuān hěn yǒumíng, Chuāncài yě hěn hǎochī!",
+          "ja": "四川はとても有名だし、四川料理も美味しいよね！",
+          "segments": ["四川很有名，", "川菜也很好吃！"],
+          "notes": [
+            {"word": "有名", "pinyin": "yǒumíng", "meaning": "有名である（HSK3）"},
+            {"word": "川菜", "pinyin": "chuāncài", "meaning": "四川料理"}
+          ]
+        },
+        {
+          "id": "d1_18",
+          "speaker": "lili",
+          "zh": "是啊！你去过四川吗？",
+          "pinyin": "Shì a! Nǐ qùguo Sìchuān ma?",
+          "ja": "そうなの！四川へ行ったことある？",
+          "segments": ["是啊！", "你去过四川吗？"],
+          "notes": [
+            {"word": "去过", "pinyin": "qùguo", "meaning": "行ったことがある（動詞＋过：経験）"}
+          ]
+        },
+        {
+          "id": "d1_19",
+          "speaker": "sufei",
+          "zh": "去过。我去了成都，最喜欢那里的美食！",
+          "pinyin": "Qùguo. Wǒ qùle Chéngdū, zuì xǐhuan nàlǐ de měishí!",
+          "ja": "あるよ。成都に行って、あこのグルメが一番気に入った！",
+          "segments": ["去过。", "我去了成都，", "最喜欢那里的美食！"],
+          "notes": [
+            {"word": "成都", "pinyin": "Chéngdū", "meaning": "成都（四川省の省都）"},
+            {"word": "美食", "pinyin": "měishí", "meaning": "美味しい料理、グルメ（HSK3）"}
+          ]
+        },
+        {
+          "id": "d1_20",
+          "speaker": "lili",
+          "zh": "那你去吃火锅了吗？",
+          "pinyin": "Nà nǐ qù chī huǒguō le ma?",
+          "ja": "じゃあ、火鍋を食べに行った？",
+          "segments": ["那你去吃火锅了吗？"],
+          "notes": [
+            {"word": "火锅", "pinyin": "huǒguō", "meaning": "火鍋（中国風しゃぶしゃぶ/鍋料理）"}
+          ]
+        },
+        {
+          "id": "d1_21",
+          "speaker": "sufei",
+          "zh": "当然！去了四天就吃了两次火锅！",
+          "pinyin": "Dāngrán! Qùle sì tiān jiù chīle liǎng cì huǒguō!",
+          "ja": "もちろん！4日間行って2回も火鍋を食べたよ！",
+          "segments": ["当然！", "去了四天", "就吃了两次火锅！"],
+          "notes": [
+            {"word": "当然", "pinyin": "dāngrán", "meaning": "もちろん、当然（HSK3）"},
+            {"word": "就", "pinyin": "jiù", "meaning": "早くも、もう〜も（強調）"},
+            {"word": "两次", "pinyin": "liǎng cì", "meaning": "2回（回数）"}
+          ]
+        },
+        {
+          "id": "d1_22",
+          "speaker": "jieming",
+          "zh": "哇！看来，你是个火锅大王。",
+          "pinyin": "Wa! Kànlái, nǐ shì gè huǒguō dàwáng.",
+          "ja": "わあ！どうやら君は火鍋大王だね。",
+          "segments": ["哇！", "看来，", "你是个火锅大王。"],
+          "notes": [
+            {"word": "看来", "pinyin": "kànlái", "meaning": "〜のようだ、見たところ（HSK3）"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d2",
+      "title": "中级对话-① 别做白日梦",
+      "level": "中級 (HSK 3)",
+      "topic": "空港での遅延と搭乗、将来の夢",
+      "characters": [
+        {"id": "sufei", "name": "苏飞", "gender": "female", "avatar": "👧", "pitch": 1.25, "rate": 0.95},
+        {"id": "jieming", "name": "杰明", "gender": "male", "avatar": "👨", "pitch": 0.9, "rate": 0.95}
+      ],
+      "lines": [
+        {
+          "id": "d2_1",
+          "speaker": "sufei",
+          "zh": "现在几点了？",
+          "pinyin": "Xiànzài jǐ diǎn le?",
+          "ja": "今何時？",
+          "segments": ["现在几点了？"],
+          "notes": []
+        },
+        {
+          "id": "d2_2",
+          "speaker": "jieming",
+          "zh": "我看看，差不多 10:30。",
+          "pinyin": "Wǒ kànkan, chàbuduō shí diǎn bàn.",
+          "ja": "ちょっと見てみるね、大体10時半だ。",
+          "segments": ["我看看，", "差不多 10:30。"],
+          "notes": [
+            {"word": "差不多", "pinyin": "chàbuduō", "meaning": "ほぼ、大体（HSK3）"}
+          ]
+        },
+        {
+          "id": "d2_3",
+          "speaker": "sufei",
+          "zh": "这么说，我们已经等了快半个小时了！",
+          "pinyin": "Zhème shuō, wǒmen yǐjīng děngle kuài bàn gè xiǎoshí le!",
+          "ja": "ということは、私たちはもう30分近く待ってるってこと！",
+          "segments": ["这么说，", "我们已经等了", "快半个小时了！"],
+          "notes": [
+            {"word": "这么说", "pinyin": "zhème shuō", "meaning": "ということは、そう言うなら"},
+            {"word": "已经", "pinyin": "yǐjīng", "meaning": "すでに、もう（HSK2）"},
+            {"word": "快", "pinyin": "kuài", "meaning": "まもなく、およそ〜近く"}
+          ]
+        },
+        {
+          "id": "d2_4",
+          "speaker": "jieming",
+          "zh": "对啊！刚才广播说这趟飞机晚点。怎么？你没有耐心了吗？",
+          "pinyin": "Duì a! Gāngcái guǎngbō shuō zhè tàng fēijī wǎndiǎn. Zěnme? Nǐ méiyǒu nàixīn le ma?",
+          "ja": "そうなんだ！さっきのアナウンスでこの便が遅延するって言ってた。どうしたの？しびれを切らした？",
+          "segments": ["对啊！", "刚才广播说这趟飞机晚点。", "怎么？", "你没有耐心了吗？"],
+          "notes": [
+            {"word": "广播", "pinyin": "guǎngbō", "meaning": "放送、アナウンス（HSK3）"},
+            {"word": "这趟", "pinyin": "zhè tàng", "meaning": "この便・本（便・列車の量詞 趟）"},
+            {"word": "晚点", "pinyin": "wǎndiǎn", "meaning": "遅延する、定刻に遅れる（HSK3）"},
+            {"word": "耐心", "pinyin": "nàixīn", "meaning": "忍耐力、根気（HSK3）"}
+          ]
+        },
+        {
+          "id": "d2_5",
+          "speaker": "sufei",
+          "zh": "早就没耐心了！在这里坐着，一边等飞机，一边玩手机，真是无聊！",
+          "pinyin": "Zǎojiù méi nàixīn le! Zài zhèlǐ zuòzhe, yìbiān děng fēijī, yìbiān wán shǒujī, zhēn shì wúliáo!",
+          "ja": "とっくに限界！ここで座って、飛行機を待ちながらスマホをいじるなんて、本当に退屈！",
+          "segments": ["早就没耐心了！", "在这里坐着，", "一边等飞机，", "一边玩手机，", "真是无聊！"],
+          "notes": [
+            {"word": "早就", "pinyin": "zǎojiù", "meaning": "とっくに、ずっと前から"},
+            {"word": "一边", "pinyin": "yìbiān", "meaning": "〜しながら〜する（同時進行: 一边...一边...）"},
+            {"word": "无聊", "pinyin": "wúliáo", "meaning": "退屈である、つまらない（HSK3）"}
+          ]
+        },
+        {
+          "id": "d2_6",
+          "speaker": "narrator",
+          "zh": "（5分钟后...）",
+          "pinyin": "(Wǔ fēnzhōng hòu...)",
+          "ja": "（5分後...）",
+          "segments": ["5分钟后..."],
+          "notes": []
+        },
+        {
+          "id": "d2_7",
+          "speaker": "jieming",
+          "zh": "你看，开始登机了！快拿好行李箱，我们去排队吧。",
+          "pinyin": "Nǐ kàn, kāishǐ dēngjī le! Kuài ná hǎo xínglixiāng, wǒmen qù páiduì ba.",
+          "ja": "ほら、搭乗が始まったよ！早くスーツケースを持って、並びに行こう。",
+          "segments": ["你看，", "开始登机了！", "快拿好行李箱，", "我们去排队吧。"],
+          "notes": [
+            {"word": "登机", "pinyin": "dēngjī", "meaning": "飛行機に乗る、搭乗する（HSK3）"},
+            {"word": "行李箱", "pinyin": "xínglixiāng", "meaning": "スーツケース、キャリーバッグ（HSK3）"},
+            {"word": "排队", "pinyin": "páiduì", "meaning": "列に並ぶ（HSK3）"}
+          ]
+        },
+        {
+          "id": "d2_8",
+          "speaker": "sufei",
+          "zh": "太好了！对了，我的登机牌在哪儿？",
+          "pinyin": "Tài hǎo le! Duìle, wǒ de dēngjīpái zài nǎr?",
+          "ja": "よかった！ところで、私の搭乗券はどこ？",
+          "segments": ["太好了！", "对了，", "我的登机牌在哪儿？"],
+          "notes": [
+            {"word": "登机牌", "pinyin": "dēngjīpái", "meaning": "搭乗券（ボーディングパス）"}
+          ]
+        },
+        {
+          "id": "d2_9",
+          "speaker": "jieming",
+          "zh": "别担心，在我的包里。",
+          "pinyin": "Bié dānxīn, zài wǒ de bāo li.",
+          "ja": "心配しないで、僕のカバンの中にあるよ。",
+          "segments": ["别担心，", "在我的包里。"],
+          "notes": [
+            {"word": "别担心", "pinyin": "bié dānxīn", "meaning": "心配しないで（别＝〜するな）"}
+          ]
+        },
+        {
+          "id": "d2_10",
+          "speaker": "sufei",
+          "zh": "好多人啊！我觉得这趟航班会有点挤。",
+          "pinyin": "Hǎo duō rén a! Wǒ juéde zhè tàng hángbān huì yǒudiǎnr jǐ.",
+          "ja": "人がすごく多いわね！このフライトはちょっと混みそう。",
+          "segments": ["好多人啊！", "我觉得这趟航班", "会有点挤。"],
+          "notes": [
+            {"word": "航班", "pinyin": "hángbān", "meaning": "定期便、フライト（HSK3）"},
+            {"word": "挤", "pinyin": "jǐ", "meaning": "混雑している、押し合う（HSK3）"}
+          ]
+        },
+        {
+          "id": "d2_11",
+          "speaker": "jieming",
+          "zh": "今天是星期六，当然很挤！只是，如果我们的飞机票是商务舱，或者头等舱，该有多好啊！",
+          "pinyin": "Jīntiān shì xīngqīliù, dāngrán hěn jǐ! Zhǐshì, rúguǒ wǒmen de fēijīpiào shì shāngwùcāng, huòzhě tóuděngcāng, gāi yǒu duō hǎo a!",
+          "ja": "今日は土曜日だから、当然混むよ！ただ、僕たちのチケットがビジネスクラスかファーストクラスだったら、どんなにいいだろう！",
+          "segments": ["今天是星期六，", "当然很挤！", "只是，", "如果我们的飞机票是商务舱，", "或者头等舱，", "该有多好啊！"],
+          "notes": [
+            {"word": "如果", "pinyin": "rúguǒ", "meaning": "もし〜ならば（条件: 如果...或者...）"},
+            {"word": "商务舱", "pinyin": "shāngwùcāng", "meaning": "ビジネスクラス"},
+            {"word": "头等舱", "pinyin": "tóuděngcāng", "meaning": "ファーストクラス"},
+            {"word": "该有多好啊", "pinyin": "gāi yǒu duō hǎo a", "meaning": "どんなに良いことか！感嘆表現"}
+          ]
+        },
+        {
+          "id": "d2_12",
+          "speaker": "sufei",
+          "zh": "别做白日梦了！商务舱和头等舱是有钱人坐的，我们就只好坐经济舱吧。",
+          "pinyin": "Bié zuò báirìmèng le! Shāngwùcāng hé tóuděngcāng shì yǒuqiánrén zuò de, wǒmen jiù zhǐhǎo zuò jīngjìcāng ba.",
+          "ja": "白昼夢を見るのはやめて！ビジネスクラスとファーストクラスはお金持ちが乗るもの、私たちはエコノミークラスに乗るしかないのよ。",
+          "segments": ["别做白日梦了！", "商务舱和头等舱是有钱人坐的，", "我们就只好坐经济舱吧。"],
+          "notes": [
+            {"word": "白日梦", "pinyin": "báirìmèng", "meaning": "白昼夢、高望み、空想"},
+            {"word": "只好", "pinyin": "zhǐhǎo", "meaning": "〜するしかない、やむを得ず〜する（HSK3）"},
+            {"word": "经济舱", "pinyin": "jīngjìcāng", "meaning": "エコノミークラス"}
+          ]
+        },
+        {
+          "id": "d2_13",
+          "speaker": "jieming",
+          "zh": "白日梦是暂时的！因为，我相信，将来我们一定会有钱坐商务舱和头等舱！",
+          "pinyin": "Báirìmèng shì zànshí de! Yīnwèi, wǒ xiāngxìn, jiānglái wǒmen yídìng huì yǒu qián zuò shāngwùcāng hé tóuděngcāng!",
+          "ja": "白昼夢は一時的なものさ！だって、将来僕たちは絶対にお金持ちになってビジネスクラスやファーストクラスに乗れると信じてるから！",
+          "segments": ["白日梦是暂时的！", "因为，我相信，", "将来我们一定会有钱", "坐商务舱和头等舱！"],
+          "notes": [
+            {"word": "暂时", "pinyin": "zànshí", "meaning": "一時的、しばらくの間（HSK3）"},
+            {"word": "相信", "pinyin": "xiāngxìn", "meaning": "信じる（HSK3）"},
+            {"word": "将来", "pinyin": "jiānglái", "meaning": "将来、未来（HSK3）"}
+          ]
+        },
+        {
+          "id": "d2_14",
+          "speaker": "sufei",
+          "zh": "好啊，那你就要努力挣钱吧！把白日梦变成现实！",
+          "pinyin": "Hǎo a, nà nǐ jiù yào nǔlì zhèngqián ba! Bǎ báirìmèng biànchéng xiànshí!",
+          "ja": "いいわね、じゃあ一生懸命稼いでね！白昼夢を現実に変えてちょうだい！",
+          "segments": ["好啊，", "那你就要努力挣钱吧！", "把白日梦变成现实！"],
+          "notes": [
+            {"word": "挣钱", "pinyin": "zhèngqián", "meaning": "お金を稼ぐ（HSK3）"},
+            {"word": "把", "pinyin": "bǎ", "meaning": "〜を（把構文: 把...变成...）"},
+            {"word": "现实", "pinyin": "xiànshí", "meaning": "現実"}
+          ]
+        },
+        {
+          "id": "d2_15",
+          "speaker": "jieming",
+          "zh": "当然！",
+          "pinyin": "Dāngrán!",
+          "ja": "もちろん！",
+          "segments": ["当然！"],
+          "notes": []
+        },
+        {
+          "id": "d2_16",
+          "speaker": "sufei",
+          "zh": "唉，我真后悔没有托运这个行李箱。",
+          "pinyin": "Ài, wǒ zhēn hòuhuǐ méiyǒu tuōyùn zhège xínglixiāng.",
+          "ja": "はぁ、このスーツケースを預けなかったのを本当に後悔してる。",
+          "segments": ["唉，", "我真后悔", "没有托运这个行李箱。"],
+          "notes": [
+            {"word": "后悔", "pinyin": "hòuhuǐ", "meaning": "後悔する（HSK3）"},
+            {"word": "托运", "pinyin": "tuōyùn", "meaning": "(荷物を)預ける、手荷物預け入れ"}
+          ]
+        },
+        {
+          "id": "d2_17",
+          "speaker": "jieming",
+          "zh": "为什么？",
+          "pinyin": "Wèishénme?",
+          "ja": "どうして？",
+          "segments": ["为什么？"],
+          "notes": []
+        },
+        {
+          "id": "d2_18",
+          "speaker": "sufei",
+          "zh": "我担心飞机上行李架的空间不够大。",
+          "pinyin": "Wǒ dānxīn fēijī shàng xínglijià de kōngjiān bú gòu dà.",
+          "ja": "機内の荷物棚のスペースが足りないんじゃないかと心配なの。",
+          "segments": ["我担心", "飞机上行李架的空间", "不够大。"],
+          "notes": [
+            {"word": "行李架", "pinyin": "xínglijià", "meaning": "荷物棚"},
+            {"word": "空间", "pinyin": "kōngjiān", "meaning": "空間、スペース"},
+            {"word": "够", "pinyin": "gòu", "meaning": "十分である、足りる（HSK3）"}
+          ]
+        },
+        {
+          "id": "d2_19",
+          "speaker": "jieming",
+          "zh": "这是一架大飞机，我觉得不会有问题，你别担心。",
+          "pinyin": "Zhè shì yì jià dà fēijī, wǒ juéde bú huì yǒu wèntí, nǐ bié dānxīn.",
+          "ja": "これは大型機だから問題ないと思うよ、心配しないで。",
+          "segments": ["这是一架大飞机，", "我觉得不会有问题，", "你别担心。"],
+          "notes": [
+            {"word": "架", "pinyin": "jià", "meaning": "機（航空機・機械の量詞）"}
+          ]
+        },
+        {
+          "id": "d2_20",
+          "speaker": "sufei",
+          "zh": "对了，你看看，我们的座位在哪里？",
+          "pinyin": "Duìle, nǐ kànkan, wǒmen de zuòwèi zài nǎli?",
+          "ja": "ところで、見て、私たちの座席はどこ？",
+          "segments": ["对了，", "你看看，", "我们的座位在哪里？"],
+          "notes": [
+            {"word": "座位", "pinyin": "zuòwèi", "meaning": "座席、席（HSK3）"}
+          ]
+        },
+        {
+          "id": "d2_21",
+          "speaker": "jieming",
+          "zh": "我的座位号是58A，靠窗户；你的座位号是58C，靠走廊。",
+          "pinyin": "Wǒ de zuòwèihào shì 58A, kào chuānghu; nǐ de zuòwèihào shì 58C, kào zǒuláng.",
+          "ja": "僕の席番号は58Aで窓側、君の席番号は58Cで通路側だよ。",
+          "segments": ["我的座位号是58A，", "靠窗户；", "你的座位号是58C，", "靠走廊。"],
+          "notes": [
+            {"word": "靠", "pinyin": "kào", "meaning": "〜に寄る、〜に近接する（HSK3）"},
+            {"word": "窗户", "pinyin": "chuānghu", "meaning": "窓（HSK3）"},
+            {"word": "走廊", "pinyin": "zǒuláng", "meaning": "通路、廊下"}
+          ]
+        },
+        {
+          "id": "d2_22",
+          "speaker": "sufei",
+          "zh": "真倒霉！我最讨厌靠走廊的座位。你介意跟我换一下吗？",
+          "pinyin": "Zhēn dǎoméi! Wǒ zuì tǎoyàn kào zǒuláng de zuòwèi. Nǐ jièyì gēn wǒ huàn yíxià ma?",
+          "ja": "なんてついてないの！通路側の席が一番嫌いなの。私と代わってくれない？",
+          "segments": ["真倒霉！", "我最讨厌靠走廊的座位。", "你介意跟我换一下吗？"],
+          "notes": [
+            {"word": "倒霉", "pinyin": "dǎoméi", "meaning": "ついていない、運が悪い（HSK3）"},
+            {"word": "讨厌", "pinyin": "tǎoyàn", "meaning": "嫌う、嫌いである（HSK3）"},
+            {"word": "介意", "pinyin": "jièyì", "meaning": "気にする、嫌がる（HSK3）"},
+            {"word": "换", "pinyin": "huàn", "meaning": "換える、交換する（HSK3）"}
+          ]
+        },
+        {
+          "id": "d2_23",
+          "speaker": "jieming",
+          "zh": "当然不介意！你想坐哪里就坐哪里。",
+          "pinyin": "Dāngrán bú jièyì! Nǐ xiǎng zuò nǎli jiù zuò nǎli.",
+          "ja": "もちろん構わないよ！座りたいところに座っていいよ。",
+          "segments": ["当然不介意！", "你想坐哪里就坐哪里。"],
+          "notes": [
+            {"word": "想", "pinyin": "xiǎng", "meaning": "〜したいように...する（想...就...）"}
+          ]
+        },
+        {
+          "id": "d2_24",
+          "speaker": "sufei",
+          "zh": "果然是个英国绅士！多谢！",
+          "pinyin": "Guǒrán shì gè Yīngguó shēnshì! Duōxiè!",
+          "ja": "さすがイギリスの紳士ね！本当にありがとう！",
+          "segments": ["果然是个英国绅士！", "多谢！"],
+          "notes": [
+            {"word": "果然", "pinyin": "guǒrán", "meaning": "果たして、やっぱり（HSK3）"},
+            {"word": "绅士", "pinyin": "shēnshì", "meaning": "紳士"}
+          ]
+        },
+        {
+          "id": "d2_25",
+          "speaker": "jieming",
+          "zh": "哪里哪里！其实，我更喜欢坐靠走廊的座位，因为我的腿长，可以伸腿。",
+          "pinyin": "Nǎli nǎli! Qíshí, wǒ gèng xǐhuan zuò kào zǒuláng de zuòwèi, yīnwèi wǒ de tuǐ cháng, kěyǐ shēn tuǐ.",
+          "ja": "いえいえ！実は、僕も通路側の席の方が好きなんだ。脚が長いから、脚を伸ばせるしね。",
+          "segments": ["哪里哪里！", "其实，", "我更喜欢坐靠走廊的座位，", "因为我的腿长，", "可以伸腿。"],
+          "notes": [
+            {"word": "哪里哪里", "pinyin": "nǎli nǎli", "meaning": "とんでもない、謙遜の挨拶"},
+            {"word": "其实", "pinyin": "qíshí", "meaning": "実は、本当は（HSK3）"},
+            {"word": "腿", "pinyin": "tuǐ", "meaning": "脚、足（HSK3）"},
+            {"word": "伸腿", "pinyin": "shēn tuǐ", "meaning": "脚を伸ばす"}
+          ]
+        },
+        {
+          "id": "d2_26",
+          "speaker": "sufei",
+          "zh": "反正我没有你的“蜘蛛大长腿”，我只想坐在窗边看风景。",
+          "pinyin": "Fǎnzhèng wǒ méiyǒu nǐ de \"zhīzhū dà chángtuǐ\", wǒ zhǐ xiǎng zuò zài chuāngbiān kàn fēngjǐng.",
+          "ja": "どうせ私にはあなたの“クモのような長脚”はないから、窓辺に座って景色を見たいだけよ。",
+          "segments": ["反正我没有你的“蜘蛛大长腿”，", "我只想坐在窗边看风景。"],
+          "notes": [
+            {"word": "反正", "pinyin": "fǎnzhèng", "meaning": "いずれにしても、どうせ（HSK3）"},
+            {"word": "蜘蛛", "pinyin": "zhīzhū", "meaning": "クモ（足が長いものの比喩）"},
+            {"word": "风景", "pinyin": "fēngjǐng", "meaning": "景色、風景（HSK3）"}
+          ]
+        }
+      ]
+    }
+  ]
+}
