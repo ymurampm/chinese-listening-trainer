@@ -276,6 +276,13 @@ document.addEventListener('DOMContentLoaded', () => {
             tts.setLoopSingleLine(e.target.checked);
         });
 
+        const naturalPitchToggle = document.getElementById('natural-pitch-toggle');
+        if (naturalPitchToggle) {
+            naturalPitchToggle.addEventListener('change', (e) => {
+                tts.setNaturalPitchMode(e.target.checked);
+            });
+        }
+
         closeNotesBtn.addEventListener('click', () => {
             notesDrawer.classList.remove('open');
             currentNoteWord = null;
