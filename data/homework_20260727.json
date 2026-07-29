@@ -9,9 +9,9 @@
       "level": "初級 (HSK 2)",
       "topic": "カフェでの偶然の出会いと自己紹介",
       "characters": [
-        {"id": "jieming", "name": "杰明", "gender": "male", "avatar": "👨", "pitch": 0.9, "rate": 0.95},
-        {"id": "lili", "name": "李丽", "gender": "female", "avatar": "👩", "pitch": 1.15, "rate": 0.95},
-        {"id": "sufei", "name": "苏飞", "gender": "female", "avatar": "👧", "pitch": 1.3, "rate": 0.95}
+        {"id": "jieming", "name": "杰明", "gender": "male", "avatar": "👨", "pitch": 0.92, "rate": 0.95},
+        {"id": "lili", "name": "李丽", "gender": "female", "avatar": "👩", "pitch": 1.05, "rate": 0.95},
+        {"id": "sufei", "name": "苏飞", "gender": "female", "avatar": "👧", "pitch": 1.10, "rate": 0.95}
       ],
       "lines": [
         {
@@ -275,8 +275,8 @@
       "level": "中級 (HSK 3)",
       "topic": "空港での遅延と搭乗、将来の夢",
       "characters": [
-        {"id": "sufei", "name": "苏飞", "gender": "female", "avatar": "👧", "pitch": 1.25, "rate": 0.95},
-        {"id": "jieming", "name": "杰明", "gender": "male", "avatar": "👨", "pitch": 0.9, "rate": 0.95}
+        {"id": "sufei", "name": "苏飞", "gender": "female", "avatar": "👧", "pitch": 1.10, "rate": 0.95},
+        {"id": "jieming", "name": "杰明", "gender": "male", "avatar": "👨", "pitch": 0.92, "rate": 0.95}
       ],
       "lines": [
         {
