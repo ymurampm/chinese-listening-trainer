@@ -409,7 +409,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // [ : Slower speed
             else if (key === '[') {
                 e.preventDefault();
-                const rates = ['0.5', '0.7', '0.85', '1.0', '1.2'];
+                const rates = ['0.4', '0.5', '0.6', '0.7', '0.85', '1.0', '1.2'];
                 const idx = Math.max(0, rates.indexOf(speedSelect.value) - 1);
                 speedSelect.value = rates[idx];
                 tts.setRate(rates[idx]);
@@ -417,7 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // ] : Faster speed
             else if (key === ']') {
                 e.preventDefault();
-                const rates = ['0.5', '0.7', '0.85', '1.0', '1.2'];
+                const rates = ['0.4', '0.5', '0.6', '0.7', '0.85', '1.0', '1.2'];
                 const idx = Math.min(rates.length - 1, rates.indexOf(speedSelect.value) + 1);
                 speedSelect.value = rates[idx];
                 tts.setRate(rates[idx]);
