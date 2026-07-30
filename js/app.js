@@ -9,9 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentMode = 'listening'; // 'listening' | 'roleplay' | 'quiz'
     let selectedLineIndex = 0;
 
-    // Vocab Note Tracking
+    // Vocab Note & Keybuffer Tracking
     let currentNoteIndex = 0;
     let currentNoteWord = null;
+    let lastGKeyPressTime = 0;
+    let numberBuffer = '';
+    let numberBufferTimeout = null;
 
     // DOM Elements
     const dialogueSelect = document.getElementById('dialogue-select');
@@ -200,6 +203,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function playNTimesRepeat(lineIndex, count) {
+        tts.stop();
+        let currentRepeat = 1;
+
+        const playStep = () => {
+            highlightActiveLine(lineIndex);
+            showRepeatBadge(lineIndex, currentRepeat, count);
+            tts.playLine(currentDialogue, lineIndex, () => {
+                if (currentRepeat < count) {
+                    currentRepeat++;
+                    setTimeout(playStep, 600);
+                } else {
+                    removeRepeatBadge(lineIndex);
+                }
+            });
+        };
+
+        playStep();
+    }
+
+    function showRepeatBadge(lineIndex, current, total) {
+        removeRepeatBadge(lineIndex);
+        const bubble = document.querySelector(`.chat-bubble[data-line-index="${lineIndex}"] .bubble-content`);
+        if (bubble) {
+            const badge = document.createElement('div');
+            badge.className = 'repeat-count-badge';
+            badge.id = `repeat-badge-${lineIndex}`;
+            badge.innerHTML = `🔁 リピート中 (${current}/${total}回目)`;
+            bubble.appendChild(badge);
+        }
+    }
+
+    function removeRepeatBadge(lineIndex) {
+        const badge = document.getElementById(`repeat-badge-${lineIndex}`);
+        if (badge) badge.remove();
+    }
+
     function showNoteDrawer(word, py, meaning, currentIdx = 1, totalCount = 1) {
         currentNoteWord = word;
         notesContent.innerHTML = `
@@ -222,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function playCurrentVocabAudio() {
         if (currentNoteWord) {
-            tts.speakText(currentNoteWord, 1.0, 0.85);
+            tts.speakText(currentNoteWord, 0.85);
         }
     }
 
@@ -237,8 +277,6 @@ document.addEventListener('DOMContentLoaded', () => {
             tts.stop();
             document.querySelectorAll('.chat-bubble').forEach(b => b.classList.remove('playing'));
         });
-
-
 
         speedSelect.addEventListener('change', (e) => {
             tts.setRate(e.target.value);
@@ -322,7 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /**
-     * Keyboard Shortcut Listener
+     * Keyboard Shortcut Listener (Vim & Learning Enhancements)
      */
     function setupKeyboardShortcuts() {
         document.addEventListener('keydown', (e) => {
@@ -332,12 +370,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            const key = e.key.toLowerCase();
+            const key = e.key;
+            const lowerKey = key.toLowerCase();
+
+            // Handle Number Buffer Prefix for N-Repeat (e.g. 3r)
+            if (/^[1-9]$/.test(key)) {
+                numberBuffer += key;
+                if (numberBufferTimeout) clearTimeout(numberBufferTimeout);
+                numberBufferTimeout = setTimeout(() => { numberBuffer = ''; }, 1500);
+                return;
+            }
+
+            // G / gg : Jump to Top or Bottom
+            if (key === 'G') { // Shift + g -> Jump to Last Line
+                e.preventDefault();
+                selectLine(currentDialogue.lines.length - 1, true);
+                return;
+            } else if (lowerKey === 'g') {
+                const now = Date.now();
+                if (now - lastGKeyPressTime < 400) { // Double 'g' -> Jump to Top
+                    e.preventDefault();
+                    selectLine(0, true);
+                    lastGKeyPressTime = 0;
+                    return;
+                }
+                lastGKeyPressTime = now;
+            }
 
             // P or Space: Play/Pause current line or full dialogue
-            if (key === 'p' || e.code === 'Space') {
+            if (lowerKey === 'p' || e.code === 'Space') {
                 e.preventDefault();
-                if (tts.isPlaying) {
+                if (e.shiftKey) { // Shift + P -> Play full dialogue
+                    highlightActiveLine(0);
+                    tts.playFullDialogue(currentDialogue, 0);
+                } else if (tts.isPlaying) {
                     tts.stop();
                     document.querySelectorAll('.chat-bubble').forEach(b => b.classList.remove('playing'));
                 } else {
@@ -345,40 +411,80 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
             // J: Next Sentence
-            else if (key === 'j') {
+            else if (lowerKey === 'j') {
                 e.preventDefault();
                 if (selectedLineIndex < currentDialogue.lines.length - 1) {
                     selectLine(selectedLineIndex + 1, true);
                 }
             }
             // K: Previous Sentence
-            else if (key === 'k') {
+            else if (lowerKey === 'k') {
                 e.preventDefault();
                 if (selectedLineIndex > 0) {
                     selectLine(selectedLineIndex - 1, true);
                 }
             }
-            // R: Repeat Current Sentence
-            else if (key === 'r') {
+            // R or . : Repeat Sentence (Support number prefix e.g. 3r)
+            else if (lowerKey === 'r' || key === '.') {
                 e.preventDefault();
-                selectLine(selectedLineIndex, true);
+                const count = numberBuffer ? parseInt(numberBuffer) : 1;
+                numberBuffer = '';
+                if (count > 1) {
+                    playNTimesRepeat(selectedLineIndex, count);
+                } else {
+                    selectLine(selectedLineIndex, true);
+                }
+            }
+            // W : Jump to Next Vocabulary Word & Pronounce
+            else if (lowerKey === 'w') {
+                e.preventDefault();
+                const currentLine = currentDialogue.lines[selectedLineIndex];
+                if (currentLine && currentLine.notes && currentLine.notes.length > 0) {
+                    if (!notesDrawer.classList.contains('open')) {
+                        currentNoteIndex = 0;
+                        const n = currentLine.notes[0];
+                        showNoteDrawer(n.word, n.pinyin, n.meaning, 1, currentLine.notes.length);
+                        playCurrentVocabAudio();
+                    } else {
+                        currentNoteIndex = (currentNoteIndex + 1) % currentLine.notes.length;
+                        const n = currentLine.notes[currentNoteIndex];
+                        showNoteDrawer(n.word, n.pinyin, n.meaning, currentNoteIndex + 1, currentLine.notes.length);
+                        playCurrentVocabAudio();
+                    }
+                } else {
+                    // Jump to next line with notes
+                    for (let i = selectedLineIndex + 1; i < currentDialogue.lines.length; i++) {
+                        if (currentDialogue.lines[i].notes && currentDialogue.lines[i].notes.length > 0) {
+                            selectLine(i, false);
+                            const n = currentDialogue.lines[i].notes[0];
+                            showNoteDrawer(n.word, n.pinyin, n.meaning, 1, currentDialogue.lines[i].notes.length);
+                            playCurrentVocabAudio();
+                            break;
+                        }
+                    }
+                }
+            }
+            // B : Toggle Blind / Masking Mode
+            else if (lowerKey === 'b') {
+                e.preventDefault();
+                chatContainer.classList.toggle('blind-mode');
             }
             // S or Escape: Stop Audio
-            else if (key === 's' || e.key === 'Escape') {
+            else if (lowerKey === 's' || e.key === 'Escape') {
                 e.preventDefault();
                 tts.stop();
                 document.querySelectorAll('.chat-bubble').forEach(b => b.classList.remove('playing'));
             }
             // Y: Toggle Pinyin Mode (Always -> Hover -> Hidden -> Always)
-            else if (key === 'y') {
+            else if (lowerKey === 'y') {
                 e.preventDefault();
                 const modes = ['always', 'hover', 'hidden'];
                 const nextMode = modes[(modes.indexOf(pinyinToggle.value) + 1) % modes.length];
                 pinyinToggle.value = nextMode;
                 PinyinUtils.setMode(nextMode);
             }
-            // T: Toggle Japanese Translation
-            else if (key === 't') {
+            // T or Z: Toggle Japanese Translation
+            else if (lowerKey === 't' || lowerKey === 'z') {
                 e.preventDefault();
                 jaToggle.checked = !jaToggle.checked;
                 if (jaToggle.checked) {
@@ -387,16 +493,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     chatContainer.classList.add('hide-ja');
                 }
             }
-            // [ : Slower speed
-            else if (key === '[') {
+            // < or [ : Slower speed
+            else if (key === '<' || key === '[') {
                 e.preventDefault();
                 const rates = ['0.4', '0.5', '0.6', '0.7', '0.85', '1.0', '1.2'];
                 const idx = Math.max(0, rates.indexOf(speedSelect.value) - 1);
                 speedSelect.value = rates[idx];
                 tts.setRate(rates[idx]);
             }
-            // ] : Faster speed
-            else if (key === ']') {
+            // > or ] : Faster speed
+            else if (key === '>' || key === ']') {
                 e.preventDefault();
                 const rates = ['0.4', '0.5', '0.6', '0.7', '0.85', '1.0', '1.2'];
                 const idx = Math.min(rates.length - 1, rates.indexOf(speedSelect.value) + 1);
@@ -404,17 +510,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 tts.setRate(rates[idx]);
             }
             // N: Cycle through Vocab Notes for current line
-            else if (key === 'n') {
+            else if (lowerKey === 'n') {
                 e.preventDefault();
                 const currentLine = currentDialogue.lines[selectedLineIndex];
                 if (currentLine && currentLine.notes && currentLine.notes.length > 0) {
                     if (!notesDrawer.classList.contains('open')) {
-                        // Open drawer with first note
                         currentNoteIndex = 0;
                         const n = currentLine.notes[0];
                         showNoteDrawer(n.word, n.pinyin, n.meaning, 1, currentLine.notes.length);
                     } else {
-                        // Cycle to next note
                         currentNoteIndex = (currentNoteIndex + 1) % currentLine.notes.length;
                         const n = currentLine.notes[currentNoteIndex];
                         showNoteDrawer(n.word, n.pinyin, n.meaning, currentNoteIndex + 1, currentLine.notes.length);
@@ -424,7 +528,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
             // M: Pronounce current vocabulary word
-            else if (key === 'm') {
+            else if (lowerKey === 'm') {
                 e.preventDefault();
                 if (currentNoteWord) {
                     playCurrentVocabAudio();
@@ -530,7 +634,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
 
         document.getElementById('btn-quiz-audio').addEventListener('click', () => {
-            tts.speakText(line.zh, 1.0, 0.85);
+            tts.speakText(line.zh, 0.85);
         });
 
         const submitBtn = document.getElementById('btn-quiz-submit');

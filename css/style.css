@@ -721,3 +721,40 @@ kbd {
 .hidden {
     display: none !important;
 }
+
+/* Blind Mode & Repeat Badges */
+.chat-container.blind-mode .text-zh,
+.chat-container.blind-mode ruby.pinyin-ruby rt {
+    filter: blur(8px);
+    transition: filter 0.2s ease;
+    user-select: none;
+}
+
+.chat-container.blind-mode .chat-bubble:hover .text-zh,
+.chat-container.blind-mode .chat-bubble:hover ruby.pinyin-ruby rt,
+.chat-container.blind-mode .chat-bubble.playing .text-zh,
+.chat-container.blind-mode .chat-bubble.playing ruby.pinyin-ruby rt {
+    filter: blur(0);
+}
+
+.blind-mode-badge {
+    background: rgba(255, 107, 107, 0.2);
+    border: 1px solid #ff6b6b;
+    color: #ff6b6b;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.repeat-count-badge {
+    background: rgba(75, 207, 250, 0.2);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    margin-top: 0.4rem;
+    align-self: flex-start;
+    font-weight: 600;
+}
