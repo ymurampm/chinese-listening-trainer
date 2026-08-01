@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastGKeyPressTime = 0;
     let numberBuffer = '';
     let numberBufferTimeout = null;
+    let isInitialUnplayedState = true;
 
     // DOM Elements
     const dialogueSelect = document.getElementById('dialogue-select');
@@ -77,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         selectedLineIndex = 0;
         currentNoteIndex = 0;
         currentNoteWord = null;
+        isInitialUnplayedState = true;
 
         // Update Title / Info Header
         document.getElementById('dialogue-header-title').textContent = currentDialogue.title;
@@ -184,6 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (autoPlay) {
+            isInitialUnplayedState = false;
             highlightActiveLine(idx);
             tts.playLine(currentDialogue, idx);
         }
@@ -410,17 +413,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     selectLine(selectedLineIndex, true);
                 }
             }
-            // J: Next Sentence
+            // J: Next Sentence (First press on page load plays 1st sentence)
             else if (lowerKey === 'j') {
                 e.preventDefault();
-                if (selectedLineIndex < currentDialogue.lines.length - 1) {
+                if (isInitialUnplayedState) {
+                    isInitialUnplayedState = false;
+                    selectLine(0, true);
+                } else if (selectedLineIndex < currentDialogue.lines.length - 1) {
                     selectLine(selectedLineIndex + 1, true);
                 }
             }
             // K: Previous Sentence
             else if (lowerKey === 'k') {
                 e.preventDefault();
-                if (selectedLineIndex > 0) {
+                if (isInitialUnplayedState) {
+                    isInitialUnplayedState = false;
+                    selectLine(0, true);
+                } else if (selectedLineIndex > 0) {
                     selectLine(selectedLineIndex - 1, true);
                 }
             }
