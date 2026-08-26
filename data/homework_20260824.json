@@ -1,0 +1,544 @@
+{
+  "id": "homework_20260824",
+  "title": "宿題 2026/08/24 会話レッスン",
+  "description": "For 村上さん20260824.pdf 9〜11ページ（初級会話「我太忙了」、中級会話「疯狂的吃货」）",
+  "dialogues": [
+    {
+      "id": "d20260824_1",
+      "title": "初级对话-3 我太忙了",
+      "level": "初級 (HSK 2)",
+      "topic": "仕事の忙しさと残業、火曜日の長い会議",
+      "characters": [
+        {"id": "sufei", "name": "苏飞", "gender": "female", "avatar": "👧", "pitch": 1.0, "rate": 0.95},
+        {"id": "jieming", "name": "杰明", "gender": "male", "avatar": "👨", "pitch": 1.0, "rate": 0.95}
+      ],
+      "lines": [
+        {
+          "id": "d3_1",
+          "speaker": "sufei",
+          "zh": "你想去哪儿？",
+          "pinyin": "Nǐ xiǎng qù nǎr?",
+          "ja": "どこに行きたいの？",
+          "segments": ["你想去哪儿？"],
+          "notes": [
+            {"word": "想", "pinyin": "xiǎng", "meaning": "〜したい（助動詞）"},
+            {"word": "去", "pinyin": "qù", "meaning": "行く（動詞）"}
+          ]
+        },
+        {
+          "id": "d3_2",
+          "speaker": "jieming",
+          "zh": "我想去超市买东西，你要跟我去吗？",
+          "pinyin": "Wǒ xiǎng qù chāoshì mǎi dōngxi, nǐ yào gēn wǒ qù ma?",
+          "ja": "スーパーに買い出しに行きたいんだけど、君も一緒に行く？",
+          "segments": ["我想去超市买东西，", "你要跟我去吗？"],
+          "notes": [
+            {"word": "超市", "pinyin": "chāoshì", "meaning": "スーパーマーケット（HSK2）"},
+            {"word": "买东西", "pinyin": "mǎi dōngxi", "meaning": "買い物をする（HSK2）"},
+            {"word": "跟", "pinyin": "gēn", "meaning": "〜と一緒に（前置詞）"}
+          ]
+        },
+        {
+          "id": "d3_3",
+          "speaker": "sufei",
+          "zh": "好吧，我也要去买午饭。",
+          "pinyin": "Hǎo ba, wǒ yě yào qù mǎi wǔfàn.",
+          "ja": "いいわよ、私もお昼ご飯を買いに行かなきゃ。",
+          "segments": ["好吧，", "我也要去买午饭。"],
+          "notes": [
+            {"word": "好吧", "pinyin": "hǎo ba", "meaning": "いいよ、まあいいか"},
+            {"word": "午饭", "pinyin": "wǔfàn", "meaning": "昼食、お昼ごはん"}
+          ]
+        },
+        {
+          "id": "d3_4",
+          "speaker": "jieming",
+          "zh": "今天忙吗？",
+          "pinyin": "Jīntiān máng ma?",
+          "ja": "今日は忙しい？",
+          "segments": ["今天忙吗？"],
+          "notes": [
+            {"word": "忙", "pinyin": "máng", "meaning": "忙しい（HSK2）"}
+          ]
+        },
+        {
+          "id": "d3_5",
+          "speaker": "sufei",
+          "zh": "太忙了，也快累成狗了！",
+          "pinyin": "Tài máng le, yě kuài lèi chéng gǒu le!",
+          "ja": "忙しすぎるわ、もう犬のようにクタクタだよ！",
+          "segments": ["太忙了，", "也快累成狗了！"],
+          "notes": [
+            {"word": "累", "pinyin": "lèi", "meaning": "疲れる（HSK2）"},
+            {"word": "累成狗", "pinyin": "lèi chéng gǒu", "meaning": "死ぬほど疲れる、犬のようにクタクタ（口語表現）"}
+          ]
+        },
+        {
+          "id": "d3_6",
+          "speaker": "jieming",
+          "zh": "为什么？",
+          "pinyin": "Wèishénme?",
+          "ja": "どうして？",
+          "segments": ["为什么？"],
+          "notes": [
+            {"word": "为什么", "pinyin": "wèishénme", "meaning": "なぜ、どうして"}
+          ]
+        },
+        {
+          "id": "d3_7",
+          "speaker": "sufei",
+          "zh": "我今天早上从八点就开始上班，一会儿还要回办公室开会。",
+          "pinyin": "Wǒ jīntiān zǎoshang cóng bā diǎn jiù kāishǐ shàngbān, yíhuìr hái yào huí bànɡōnɡshì kāihuì.",
+          "ja": "今朝は8時から出社してて、もうすぐまたオフィスに戻って会議をしなきゃいけないの。",
+          "segments": ["我今天早上从八点就开始上班，", "一会儿还要回办公室开会。"],
+          "notes": [
+            {"word": "从", "pinyin": "cóng", "meaning": "〜から（起点）"},
+            {"word": "上班", "pinyin": "shàngbān", "meaning": "出勤する、働く（HSK2）"},
+            {"word": "一会儿", "pinyin": "yíhuìr", "meaning": "間もなく、すぐ（HSK3）"},
+            {"word": "办公室", "pinyin": "bànɡōnɡshì", "meaning": "オフィス、事務所（HSK3）"},
+            {"word": "开会", "pinyin": "kāihuì", "meaning": "会議をする（HSK3）"}
+          ]
+        },
+        {
+          "id": "d3_8",
+          "speaker": "jieming",
+          "zh": "你怎么那么早上班？",
+          "pinyin": "Nǐ zěnme nàme zǎo shàngbān?",
+          "ja": "どうしてそんなに早く出勤したの？",
+          "segments": ["你怎么那么早上班？"],
+          "notes": [
+            {"word": "怎么", "pinyin": "zěnme", "meaning": "どうして、なぜ"},
+            {"word": "那么", "pinyin": "nàme", "meaning": "あんなに、そんなに"}
+          ]
+        },
+        {
+          "id": "d3_9",
+          "speaker": "sufei",
+          "zh": "今天的工作太多了，怕做不完。",
+          "pinyin": "Jīntiān de gōngzuò tài duō le, pà zuò bù wán.",
+          "ja": "今日の仕事が多すぎて、終わりそうにないのが心配なの。",
+          "segments": ["今天的工作太多了，", "怕做不完。"],
+          "notes": [
+            {"word": "怕", "pinyin": "pà", "meaning": "恐れる、心配する（HSK3）"},
+            {"word": "做不完", "pinyin": "zuò bù wán", "meaning": "やりきれない、終わらない（可能補語否定）"}
+          ]
+        },
+        {
+          "id": "d3_10",
+          "speaker": "jieming",
+          "zh": "为什么担心做不完？",
+          "pinyin": "Wèishénme dānxīn zuò bù wán?",
+          "ja": "どうして終わらないか心配なの？",
+          "segments": ["为什么担心做不完？"],
+          "notes": [
+            {"word": "担心", "pinyin": "dānxīn", "meaning": "心配する（HSK3）"}
+          ]
+        },
+        {
+          "id": "d3_11",
+          "speaker": "sufei",
+          "zh": "因为，今天下午，经理要和我们开会，要开三个小时。",
+          "pinyin": "Yīnwèi, jīntiān xiàwǔ, jīnglǐ yào hé wǒmen kāihuì, yào kāi sān gè xiǎoshí.",
+          "ja": "だって、今日の午後、マネージャーが私たちと会議をするんだけど、3時間もかかるのよ。",
+          "segments": ["因为，今天下午，", "经理要和我们开会，", "要开三个小时。"],
+          "notes": [
+            {"word": "经理", "pinyin": "jīnglǐ", "meaning": "支配人、マネージャー（HSK3）"},
+            {"word": "小时", "pinyin": "xiǎoshí", "meaning": "〜時間（HSK2）"}
+          ]
+        },
+        {
+          "id": "d3_12",
+          "speaker": "jieming",
+          "zh": "那么长时间！你们经理是个话多的人吗？",
+          "pinyin": "Nàme cháng shíjiān! Nǐmen jīnglǐ shì gè huà duō de rén ma?",
+          "ja": "そんなに長い時間！君たちのマネージャーはおしゃべりな人なの？",
+          "segments": ["那么长时间！", "你们经理是个话多的人吗？"],
+          "notes": [
+            {"word": "长时间", "pinyin": "cháng shíjiān", "meaning": "長い時間"},
+            {"word": "话多", "pinyin": "huà duō", "meaning": "話し好き、おしゃべり"}
+          ]
+        },
+        {
+          "id": "d3_13",
+          "speaker": "sufei",
+          "zh": "当然！而且总是说一些没用的话！",
+          "pinyin": "Dāngrán! Érqiě zǒngshì shuō yìxiē méiyòng de huà!",
+          "ja": "もちろん！しかもいつも何の役にも立たない話ばかりするの！",
+          "segments": ["当然！", "而且总是说一些没用的话！"],
+          "notes": [
+            {"word": "而且", "pinyin": "érqiě", "meaning": "しかも、その上（HSK3）"},
+            {"word": "总是", "pinyin": "zǒngshì", "meaning": "いつも、常に（HSK3）"},
+            {"word": "没用", "pinyin": "méiyòng", "meaning": "役に立たない、無駄な"}
+          ]
+        },
+        {
+          "id": "d3_14",
+          "speaker": "jieming",
+          "zh": "如果他浪费你们的时间，就是个没用的经理。",
+          "pinyin": "Rúguǒ tā làngfèi nǐmen de shíjiān, jiù shì gè méiyòng de jīnglǐ.",
+          "ja": "もし彼が君たちの時間を無駄にしているなら、ダメなマネージャーだな。",
+          "segments": ["如果他浪费你们的时间，", "就是个没用的经理。"],
+          "notes": [
+            {"word": "如果", "pinyin": "rúguǒ", "meaning": "もし〜ならば（HSK3）"},
+            {"word": "浪费", "pinyin": "làngfèi", "meaning": "無駄にする、浪費する（HSK3）"}
+          ]
+        },
+        {
+          "id": "d3_15",
+          "speaker": "sufei",
+          "zh": "是啊！很多同事也说他没用！",
+          "pinyin": "Shì a! Hěn duō tóngshì yě shuō tā méiyòng!",
+          "ja": "そうなのよ！たくさんの同僚も彼を無用だって言ってるわ！",
+          "segments": ["是啊！", "很多同事也说他没用！"],
+          "notes": [
+            {"word": "同事", "pinyin": "tóngshì", "meaning": "同僚（HSK3）"}
+          ]
+        },
+        {
+          "id": "d3_16",
+          "speaker": "jieming",
+          "zh": "那你们经常和经理开会吗？",
+          "pinyin": "Nà nǐmen jīngcháng hé jīnglǐ kāihuì ma?",
+          "ja": "じゃあ、君たちはよくマネージャーと会議をするの？",
+          "segments": ["那你们经常和经理开会吗？"],
+          "notes": [
+            {"word": "经常", "pinyin": "jīngcháng", "meaning": "いつも、よく（HSK2）"}
+          ]
+        },
+        {
+          "id": "d3_17",
+          "speaker": "sufei",
+          "zh": "嗯，一周一次，一般是星期二下午。",
+          "pinyin": "En, yì zhōu yí cì, yìbān shì xīngqī'èr xiàwǔ.",
+          "ja": "うん、週に1回、たいてい火曜日の午後ね。",
+          "segments": ["嗯，一周一次，", "一般是星期二下午。"],
+          "notes": [
+            {"word": "周", "pinyin": "zhōu", "meaning": "週（HSK3）"},
+            {"word": "一般", "pinyin": "yìbān", "meaning": "普通は、たいてい（HSK3）"}
+          ]
+        },
+        {
+          "id": "d3_18",
+          "speaker": "jieming",
+          "zh": "唉！你真倒霉！那你今天什么时候下班。",
+          "pinyin": "Ài! Nǐ zhēn dǎoméi! Nà nǐ jīntiān shénme shíhou xiàbān.",
+          "ja": "はぁ、本当についてないね！じゃあ今日は何時に退勤するの？",
+          "segments": ["唉！你真倒霉！", "那你今天什么时候下班。"],
+          "notes": [
+            {"word": "倒霉", "pinyin": "dǎoméi", "meaning": "ついていない、運が悪い（HSK3）"},
+            {"word": "下班", "pinyin": "xiàbān", "meaning": "退勤する、仕事が終わる（HSK2）"}
+          ]
+        },
+        {
+          "id": "d3_19",
+          "speaker": "sufei",
+          "zh": "我也不知道，可能是七点。",
+          "pinyin": "Wǒ yě bù zhīdào, kěnéng shì qī diǎn.",
+          "ja": "私にもわからないわ、たぶん7時かな。",
+          "segments": ["我也不知道，", "可能是七点。"],
+          "notes": [
+            {"word": "可能", "pinyin": "kěnéng", "meaning": "〜かもしれない（HSK3）"}
+          ]
+        },
+        {
+          "id": "d3_20",
+          "speaker": "jieming",
+          "zh": "那我七点去你的公司门口等你，我们一起吃晚饭，好吗？",
+          "pinyin": "Nà wǒ qī diǎn qù nǐ de gōngsī ménkǒu děng nǐ, wǒmen yìqǐ chī wǎnfàn, hǎo ma?",
+          "ja": "じゃあ7時に会社の入り口で君を待ってるから、一緒に晩ご飯を食べよう、いいね？",
+          "segments": ["那我七点去你的公司门口等你，", "我们一起吃晚饭，好吗？"],
+          "notes": [
+            {"word": "公司", "pinyin": "gōngsī", "meaning": "会社（HSK2）"},
+            {"word": "门口", "pinyin": "ménkǒu", "meaning": "入り口、門の前"}
+          ]
+        },
+        {
+          "id": "d3_21",
+          "speaker": "sufei",
+          "zh": "好，我想吃炒饭，你呢？",
+          "pinyin": "Hǎo, wǒ xiǎng chī chǎofàn, nǐ ne?",
+          "ja": "いいわね、私チャーハンが食べたい、君は？",
+          "segments": ["好，我想吃炒饭，", "你呢？"],
+          "notes": [
+            {"word": "炒饭", "pinyin": "chǎofàn", "meaning": "チャーハン、炒飯"}
+          ]
+        },
+        {
+          "id": "d3_22",
+          "speaker": "jieming",
+          "zh": "我也想吃炒饭。",
+          "pinyin": "Wǒ yě xiǎng chī chǎofàn.",
+          "ja": "僕もチャーハンが食べたいな。",
+          "segments": ["我也想吃炒饭。"],
+          "notes": []
+        }
+      ]
+    },
+    {
+      "id": "d20260824_2",
+      "title": "中级对话-② 疯狂的吃货",
+      "level": "中級 (HSK 3)",
+      "topic": "職場の食いしん坊と同僚のトラブル",
+      "characters": [
+        {"id": "sufei", "name": "苏飞", "gender": "female", "avatar": "👧", "pitch": 1.0, "rate": 0.95},
+        {"id": "lili", "name": "李丽", "gender": "female", "avatar": "👩", "pitch": 1.0, "rate": 0.95}
+      ],
+      "lines": [
+        {
+          "id": "d4_1",
+          "speaker": "sufei",
+          "zh": "丽丽，好久不见！",
+          "pinyin": "Lìli, hǎojiǔ bú jiàn!",
+          "ja": "リーリー、久しぶり！",
+          "segments": ["丽丽，", "好久不见！"],
+          "notes": [
+            {"word": "好久不见", "pinyin": "hǎojiǔ bú jiàn", "meaning": "お久しぶり（HSK3）"}
+          ]
+        },
+        {
+          "id": "d4_2",
+          "speaker": "lili",
+          "zh": "好久不见！还好吗？",
+          "pinyin": "Hǎojiǔ bú jiàn! Hái hǎo ma?",
+          "ja": "お久しぶり！元気にしてる？",
+          "segments": ["好久不见！", "还好吗？"],
+          "notes": [
+            {"word": "还好", "pinyin": "hái hǎo", "meaning": "悪くない、まあ元気である"}
+          ]
+        },
+        {
+          "id": "d4_3",
+          "speaker": "sufei",
+          "zh": "挺好的，你呢？",
+          "pinyin": "Tǐng hǎo de, nǐ ne?",
+          "ja": "とても元気よ、あなたは？",
+          "segments": ["挺好的，", "你呢？"],
+          "notes": [
+            {"word": "挺", "pinyin": "tǐng", "meaning": "とても、かなり（HSK3）"}
+          ]
+        },
+        {
+          "id": "d4_4",
+          "speaker": "lili",
+          "zh": "还算顺利，只是，最近办公室里有个同事太讨厌了，让我有点儿不高兴！",
+          "pinyin": "Hái suàn shùnlì, zhǐshì, zuìjìn bànɡōnɡshì li yǒu gè tóngshì tài tǎoyàn le, ràng wǒ yǒudiǎnr bù gāoxìng!",
+          "ja": "順調と言えるかな。ただ、最近オフィスの同僚にすごく嫌な人がいて、ちょっと不機嫌なの！",
+          "segments": ["还算顺利，", "只是，最近办公室里", "有个同事太讨厌了，", "让我有点儿不高兴！"],
+          "notes": [
+            {"word": "顺利", "pinyin": "shùnlì", "meaning": "順調である（HSK3）"},
+            {"word": "讨厌", "pinyin": "tǎoyàn", "meaning": "嫌である、嫌い（HSK3）"},
+            {"word": "让", "pinyin": "ràng", "meaning": "〜させる（使役構文, HSK2）"}
+          ]
+        },
+        {
+          "id": "d4_5",
+          "speaker": "sufei",
+          "zh": "发生了什么？",
+          "pinyin": "Fāshēng le shénme?",
+          "ja": "何があったの？",
+          "segments": ["发生了什么？"],
+          "notes": [
+            {"word": "发生", "pinyin": "fāshēng", "meaning": "発生する、起きる（HSK3）"}
+          ]
+        },
+        {
+          "id": "d4_6",
+          "speaker": "lili",
+          "zh": "几天前，有个同事偷吃我的方便面，被我发现了。",
+          "pinyin": "Jǐ tiān qián, yǒu gè tóngshì tōuchī wǒ de fāngbiànmiàn, bèi wǒ fāxiàn le.",
+          "ja": "数日前、ある同僚が私のインスタントラーメンを盗み食いしてて、私に見つかったのよ。",
+          "segments": ["几天前，", "有个同事偷吃我的方便面，", "被我发现了。"],
+          "notes": [
+            {"word": "方便面", "pinyin": "fāngbiànmiàn", "meaning": "インスタントラーメン（HSK3）"},
+            {"word": "被", "pinyin": "bèi", "meaning": "〜される（被動構文, HSK3）"},
+            {"word": "发现", "pinyin": "fāxiàn", "meaning": "発見する、気づく（HSK3）"}
+          ]
+        },
+        {
+          "id": "d4_7",
+          "speaker": "sufei",
+          "zh": "啊？这也太丢脸了吧！",
+          "pinyin": "A? Zhè yě tài diūliǎn le ba!",
+          "ja": "えっ？それってあまりにも恥ずかしすぎるでしょ！",
+          "segments": ["啊？", "这也太丢脸了吧！"],
+          "notes": [
+            {"word": "丢脸", "pinyin": "diūliǎn", "meaning": "恥をかく、みっともない（HSK3）"}
+          ]
+        },
+        {
+          "id": "d4_8",
+          "speaker": "lili",
+          "zh": "没错！而且这已经是第二次了！",
+          "pinyin": "Méicuò! Érqiě zhè yǐjīng shì dì-èr cì le!",
+          "ja": "その通りよ！しかもこれでもう2回目なの！",
+          "segments": ["没错！", "而且这已经是第二次了！"],
+          "notes": [
+            {"word": "没错", "pinyin": "méicuò", "meaning": "間違いない、その通り"},
+            {"word": "第二次", "pinyin": "dì-èr cì", "meaning": "2回目"}
+          ]
+        },
+        {
+          "id": "d4_9",
+          "speaker": "sufei",
+          "zh": "他想吃方便面，为什么不自己去买？干嘛要偷吃你的？",
+          "pinyin": "Tā xiǎng chī fāngbiànmiàn, wèishénme bù zìjǐ qù mǎi? Gànmá yào tōuchī nǐ de?",
+          "ja": "ラーメンが食べたいなら、どうして自分で買いに行かないの？なんであなたのを盗み食いするのよ？",
+          "segments": ["他想吃方便面，", "为什么不自己去买？", "干嘛要偷吃你的？"],
+          "notes": [
+            {"word": "自己", "pinyin": "zìjǐ", "meaning": "自分（HSK2）"},
+            {"word": "干嘛", "pinyin": "gànmá", "meaning": "なんで、何の目的で（口語）"}
+          ]
+        },
+        {
+          "id": "d4_10",
+          "speaker": "lili",
+          "zh": "他特别懒，肚子大大的，是个吃货！他不仅偷吃我的东西，还偷吃其他同事的。",
+          "pinyin": "Tā tèbié lǎn, dùzi dàdà de, shì gè chīhuò! Tā bùjǐn tōuchī wǒ de dōngxi, hái tōuchī qítā tóngshì de.",
+          "ja": "彼すごく怠け者で、お腹がポッコリ出てて、くいしん坊なの！私のものだけじゃなく、他の同僚の食べ物まで盗み食いしてるのよ。",
+          "segments": ["他特别懒，肚子大大的，", "是个吃货！", "他不仅偷吃我的东西，", "还偷吃其他同事的。"],
+          "notes": [
+            {"word": "特别", "pinyin": "tèbié", "meaning": "特に、非常に（HSK3）"},
+            {"word": "懒", "pinyin": "lǎn", "meaning": "怠惰な、面倒くさがり（HSK3）"},
+            {"word": "吃货", "pinyin": "chīhuò", "meaning": "食いしん坊、グルメ"},
+            {"word": "不仅", "pinyin": "bùjǐn", "meaning": "〜だけでなく...も（不仅...还..., HSK3）"},
+            {"word": "其他", "pinyin": "qítā", "meaning": "他の、その他の（HSK3）"}
+          ]
+        },
+        {
+          "id": "d4_11",
+          "speaker": "sufei",
+          "zh": "天啊！简直是一个疯狂的吃货！你们怎么受得了？",
+          "pinyin": "Tiān a! Jiǎnzhí shì yí gè fēngkuáng de chīhuò! Nǐmen zěnme shòudeliǎo?",
+          "ja": "信じられない！まさに狂った食いしん坊ね！あなたたち、よく耐えられるわね？",
+          "segments": ["天啊！", "简直是一个疯狂的吃货！", "你们怎么受得了？"],
+          "notes": [
+            {"word": "简直", "pinyin": "jiǎnzhí", "meaning": "まるで、まさに（HSK3）"},
+            {"word": "疯狂", "pinyin": "fēngkuáng", "meaning": "狂気的な、クレイジー（HSK3）"},
+            {"word": "受得了", "pinyin": "shòudeliǎo", "meaning": "耐えられる、がまんできる"}
+          ]
+        },
+        {
+          "id": "d4_12",
+          "speaker": "lili",
+          "zh": "没办法，我们管不了他。",
+          "pinyin": "Méi bànfǎ, wǒmen guǎnbùliǎo tā.",
+          "ja": "仕方ないの、私たちじゃ彼をコントロールできないの。",
+          "segments": ["没办法，", "我们管不了他。"],
+          "notes": [
+            {"word": "办法", "pinyin": "bànfǎ", "meaning": "方法、手立て（HSK2）"},
+            {"word": "管不了", "pinyin": "guǎnbùliǎo", "meaning": "手に負えない、取り締まれない"}
+          ]
+        },
+        {
+          "id": "d4_13",
+          "speaker": "sufei",
+          "zh": "为什么？",
+          "pinyin": "Wèishénme?",
+          "ja": "どうして？",
+          "segments": ["为什么？"],
+          "notes": []
+        },
+        {
+          "id": "d4_14",
+          "speaker": "lili",
+          "zh": "他是我们经理的表哥，有关系，我们都不能招惹。",
+          "pinyin": "Tā shì wǒmen jīnglǐ de biǎogē, yǒu guānxì, wǒmen dōu bù néng zhāore.",
+          "ja": "彼は私たちのマネージャーの従兄で、コネがあるから、誰も手出しできないのよ。",
+          "segments": ["他是我们经理的表哥，", "有关系，", "我们都不能招惹。"],
+          "notes": [
+            {"word": "表哥", "pinyin": "biǎogē", "meaning": "母方の従兄"},
+            {"word": "关系", "pinyin": "guānxì", "meaning": "関係、コネ（HSK3）"},
+            {"word": "招惹", "pinyin": "zhāore", "meaning": "かかわる、からむ、刺激する"}
+          ]
+        },
+        {
+          "id": "d4_15",
+          "speaker": "sufei",
+          "zh": "只是，真的没有什么办法可以阻止他吗？",
+          "pinyin": "Zhǐshì, zhēnde méiyǒu shénme bànfǎ kěyǐ zǔzhǐ tā ma?",
+          "ja": "ただ、彼を止める方法は本当に何もないの？",
+          "segments": ["只是，", "真的没有什么办法可以阻止他吗？"],
+          "notes": [
+            {"word": "阻止", "pinyin": "zǔzhǐ", "meaning": "阻止する、止める（HSK3）"}
+          ]
+        },
+        {
+          "id": "d4_16",
+          "speaker": "lili",
+          "zh": "嗯，现在，我跟同事们已经开始不在办公室放零食了。",
+          "pinyin": "En, xiànzài, wǒ gēn tóngshìmen yǐjīng kāishǐ bú zài bànɡōnɡshì fàng língshí le.",
+          "ja": "うん、今は私と同僚たちはオフィスにお菓子を置かないようにし始めたわ。",
+          "segments": ["嗯，现在，", "我跟同事们已经开始不在办公室放零食了。"],
+          "notes": [
+            {"word": "零食", "pinyin": "língshí", "meaning": "お菓子、間食（HSK3）"},
+            {"word": "放", "pinyin": "fàng", "meaning": "置く（HSK3）"}
+          ]
+        },
+        {
+          "id": "d4_17",
+          "speaker": "sufei",
+          "zh": "看来，这是唯一的办法！",
+          "pinyin": "Kànlái, zhè shì wéi-yī de bànfǎ!",
+          "ja": "どうやら、それが唯一の方法みたいね！",
+          "segments": ["看来，", "这是唯一的办法！"],
+          "notes": [
+            {"word": "看来", "pinyin": "kànlái", "meaning": "見たところ〜のようだ（HSK3）"},
+            {"word": "唯一", "pinyin": "wéi-yī", "meaning": "唯一の（HSK3）"}
+          ]
+        },
+        {
+          "id": "d4_18",
+          "speaker": "lili",
+          "zh": "其实，这个人也不算太坏，有时候他心情好，还会请我们吃饭。可是，他不经过我们的同意就乱吃我们的东西，确实非常讨厌！",
+          "pinyin": "Qíshí, zhège rén yě bú suàn tài huài, yǒu shíhou tā xīnqíng hǎo, hái huì qǐng wǒmen chīfàn. Kěshì, tā bù jīngguò wǒmen de tóngyì jiù luàn chī wǒmen de dōngxi, quèshí fēicháng tǎoyàn!",
+          "ja": "実は、この人もそれほど悪い人ではなくて、機嫌が良い時は私たちにご飯をご馳走してくれることもあるの。でも、私たちの許可なく勝手に食べるのは、本当に嫌だわ！",
+          "segments": ["其实，这个人也不算太坏，", "有时候他心情好，还会请我们吃饭。", "可是，他不经过我们的同意就乱吃我们的东西，", "确实非常讨厌！"],
+          "notes": [
+            {"word": "其实", "pinyin": "qíshí", "meaning": "実は（HSK3）"},
+            {"word": "心情", "pinyin": "xīnqíng", "meaning": "気分、機嫌（HSK3）"},
+            {"word": "同意", "pinyin": "tóngyì", "meaning": "同意する、許可（HSK3）"},
+            {"word": "乱", "pinyin": "luàn", "meaning": "みだりに、勝手に（HSK3）"},
+            {"word": "确实", "pinyin": "quèshí", "meaning": "確かに、本当に（HSK3）"}
+          ]
+        },
+        {
+          "id": "d4_19",
+          "speaker": "sufei",
+          "zh": "唉！爱吃不是错，乱吃才是错！",
+          "pinyin": "Ài! Ài chī bú shì cuò, luàn chī cái shì cuò!",
+          "ja": "はぁ！食べるのが好きなのは悪くないけど、勝手に食べるのが悪いんだわ！",
+          "segments": ["唉！", "爱吃不是错，", "乱吃才是错！"],
+          "notes": [
+            {"word": "错", "pinyin": "cuò", "meaning": "間違い、悪いこと（HSK2）"},
+            {"word": "才", "pinyin": "cái", "meaning": "〜こそが（強調）"}
+          ]
+        },
+        {
+          "id": "d4_20",
+          "speaker": "lili",
+          "zh": "完全同意！",
+          "pinyin": "Wánquán tóngyì!",
+          "ja": "まったく同感！",
+          "segments": ["完全同意！"],
+          "notes": [
+            {"word": "完全", "pinyin": "wánquán", "meaning": "完全に、まったく（HSK3）"}
+          ]
+        },
+        {
+          "id": "d4_21",
+          "speaker": "sufei",
+          "zh": "就像我，虽然我也是吃货，可是从来不会乱吃别人的东西！",
+          "pinyin": "Jiù xiàng wǒ, suīrán wǒ yě shì chīhuò, kěshì cónglái bú huì luàn chī biérén de dōngxi!",
+          "ja": "私みたいにね。私も食いしん坊だけど、人のものを勝手に食べたことは一度もないわ！",
+          "segments": ["就像我，", "虽然我也是吃货，", "可是从来不会乱吃别人的东西！"],
+          "notes": [
+            {"word": "就像", "pinyin": "jiù xiàng", "meaning": "〜のように"},
+            {"word": "虽然", "pinyin": "suīrán", "meaning": "〜だけれども（虽然...可是..., HSK3）"},
+            {"word": "从来", "pinyin": "cónglái", "meaning": "これまで一度も（从来不, HSK3）"},
+            {"word": "别人", "pinyin": "biérén", "meaning": "他人、ほかの人（HSK3）"}
+          ]
+        }
+      ]
+    }
+  ]
+}

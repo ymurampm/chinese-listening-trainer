@@ -1,9 +1,11 @@
 /**
  * Main Application Logic for Chinese Dialogue Listening Trainer
+ * Supports multi-homework JSON datasets with OptGroup grouping.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    let currentData = null;
+    let allHomeworkSets = [];
+    let currentHomeworkSet = null;
     let currentDialogue = null;
     let tts = new DialogueTTSEngine();
     let currentMode = 'listening'; // 'listening' | 'roleplay' | 'quiz'
@@ -44,9 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch and Load Data
     async function loadData() {
         try {
-            const response = await fetch('./data/homework_20260727.json');
-            if (!response.ok) throw new Error('Data file not found');
-            currentData = await response.json();
+            const files = ['./data/homework_20260824.json', './data/homework_20260727.json'];
+            const requests = files.map(file => fetch(file).then(res => {
+                if (!res.ok) throw new Error(`Failed to load ${file}`);
+                return res.json();
+            }));
+            allHomeworkSets = await Promise.all(requests);
             initApp();
         } catch (err) {
             console.error('Failed to load JSON data:', err);
@@ -55,33 +60,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function initApp() {
-        if (!currentData || !currentData.dialogues.length) return;
+        if (!allHomeworkSets.length) return;
 
-        // Populate Dialogue Select
-        dialogueSelect.innerHTML = currentData.dialogues.map((d, idx) => 
-            `<option value="${d.id}">${d.title} [${d.level}]</option>`
-        ).join('');
-
-        dialogueSelect.addEventListener('change', (e) => {
-            selectDialogue(e.target.value);
+        // Populate Dialogue Select with Grouped OptGroups
+        let html = '';
+        allHomeworkSets.forEach(set => {
+            html += `<optgroup label="📅 ${set.title}">`;
+            set.dialogues.forEach(d => {
+                html += `<option value="${set.id}:${d.id}">${d.title} [${d.level}]</option>`;
+            });
+            html += `</optgroup>`;
         });
 
-        // Set default dialogue
-        selectDialogue(currentData.dialogues[0].id);
+        dialogueSelect.innerHTML = html;
+
+        dialogueSelect.addEventListener('change', (e) => {
+            const [setId, dialogueId] = e.target.value.split(':');
+            selectDialogue(setId, dialogueId);
+        });
+
+        // Set default dialogue to latest (first set, first dialogue)
+        const defaultSet = allHomeworkSets[0];
+        selectDialogue(defaultSet.id, defaultSet.dialogues[0].id);
         setupEvents();
         setupKeyboardShortcuts();
     }
 
-    function selectDialogue(id) {
+    function selectDialogue(setId, dialogueId) {
         tts.stop();
-        currentDialogue = currentData.dialogues.find(d => d.id === id) || currentData.dialogues[0];
+        currentHomeworkSet = allHomeworkSets.find(s => s.id === setId) || allHomeworkSets[0];
+        currentDialogue = currentHomeworkSet.dialogues.find(d => d.id === dialogueId) || currentHomeworkSet.dialogues[0];
+        
         selectedLineIndex = 0;
         currentNoteIndex = 0;
         currentNoteWord = null;
         isInitialUnplayedState = true;
 
         // Update Title / Info Header
-        document.getElementById('dialogue-header-title').textContent = currentDialogue.title;
+        document.getElementById('dialogue-header-title').textContent = `${currentDialogue.title} (${currentHomeworkSet.title})`;
         document.getElementById('dialogue-header-topic').textContent = `💡 ${currentDialogue.topic} • ${currentDialogue.level}`;
 
         // Populate Role Selection Options for Role-Play Mode
