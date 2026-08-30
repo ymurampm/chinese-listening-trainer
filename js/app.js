@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadData() {
         try {
             const files = ['./data/homework_20260824.json', './data/homework_20260727.json'];
-            const requests = files.map(file => fetch(file).then(res => {
+            const requests = files.map(file => fetch(`${file}?v=${Date.now()}`).then(res => {
                 if (!res.ok) throw new Error(`Failed to load ${file}`);
                 return res.json();
             }));
@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             initApp();
         } catch (err) {
             console.error('Failed to load JSON data:', err);
+            if (customDropdownLabel) customDropdownLabel.textContent = '⚠️ データ読み込みエラー';
             chatContainer.innerHTML = `<div class="error-msg">データの読み込みに失敗しました (${err.message})</div>`;
         }
     }
