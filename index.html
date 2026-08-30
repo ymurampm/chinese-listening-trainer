@@ -24,11 +24,16 @@
             </div>
             <div class="header-right">
                 <button id="btn-open-help" class="btn-help">⌨️ キーガイド</button>
-                <div class="selector-box">
-                    <select id="dialogue-select" aria-label="会話レッスンの選択">
-                        <!-- Options populated dynamically from JSON -->
-                    </select>
+                <div class="custom-dropdown-container">
+                    <button id="custom-dropdown-btn" class="custom-dropdown-btn" type="button" aria-haspopup="listbox">
+                        <span id="custom-dropdown-label">読み込み中...</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div id="custom-dropdown-menu" class="custom-dropdown-menu hidden" role="listbox">
+                        <!-- Grouped items built dynamically -->
+                    </div>
                 </div>
+                <select id="dialogue-select" class="hidden" aria-label="会話レッスンの選択"></select>
             </div>
         </header>
 

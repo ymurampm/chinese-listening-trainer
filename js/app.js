@@ -59,25 +59,73 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function initApp() {
-        if (!allHomeworkSets.length) return;
+    // Custom Glassmorphic Dropdown Controls
+    const customDropdownBtn = document.getElementById('custom-dropdown-btn');
+    const customDropdownLabel = document.getElementById('custom-dropdown-label');
+    const customDropdownMenu = document.getElementById('custom-dropdown-menu');
 
-        // Populate Dialogue Select with Grouped OptGroups
+    function renderCustomDropdown() {
+        if (!customDropdownMenu) return;
         let html = '';
         allHomeworkSets.forEach(set => {
-            html += `<optgroup label="📅 ${set.title}">`;
+            html += `<div class="custom-dropdown-group">📅 ${set.title}</div>`;
             set.dialogues.forEach(d => {
-                html += `<option value="${set.id}:${d.id}">${d.title} [${d.level}]</option>`;
+                const isSelected = currentHomeworkSet?.id === set.id && currentDialogue?.id === d.id;
+                html += `<div class="custom-dropdown-item ${isSelected ? 'selected' : ''}" data-set-id="${set.id}" data-dialogue-id="${d.id}">
+                    ${d.title} [${d.level}]
+                </div>`;
             });
-            html += `</optgroup>`;
         });
+        customDropdownMenu.innerHTML = html;
 
-        dialogueSelect.innerHTML = html;
-
-        dialogueSelect.addEventListener('change', (e) => {
-            const [setId, dialogueId] = e.target.value.split(':');
-            selectDialogue(setId, dialogueId);
+        customDropdownMenu.querySelectorAll('.custom-dropdown-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                const setId = e.currentTarget.dataset.setId;
+                const dialogueId = e.currentTarget.dataset.dialogueId;
+                selectDialogue(setId, dialogueId);
+                closeCustomDropdown();
+            });
         });
+    }
+
+    function toggleCustomDropdown() {
+        if (!customDropdownMenu) return;
+        if (customDropdownMenu.classList.contains('hidden')) {
+            openCustomDropdown();
+        } else {
+            closeCustomDropdown();
+        }
+    }
+
+    function openCustomDropdown() {
+        if (!customDropdownMenu || !customDropdownBtn) return;
+        customDropdownMenu.classList.remove('hidden');
+        customDropdownBtn.classList.add('active');
+    }
+
+    function closeCustomDropdown() {
+        if (!customDropdownMenu || !customDropdownBtn) return;
+        customDropdownMenu.classList.add('hidden');
+        customDropdownBtn.classList.remove('active');
+    }
+
+    document.addEventListener('click', (e) => {
+        if (customDropdownBtn && customDropdownMenu) {
+            if (!customDropdownBtn.contains(e.target) && !customDropdownMenu.contains(e.target)) {
+                closeCustomDropdown();
+            }
+        }
+    });
+
+    if (customDropdownBtn) {
+        customDropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleCustomDropdown();
+        });
+    }
+
+    function initApp() {
+        if (!allHomeworkSets.length) return;
 
         // Set default dialogue to latest (first set, first dialogue)
         const defaultSet = allHomeworkSets[0];
@@ -96,9 +144,17 @@ document.addEventListener('DOMContentLoaded', () => {
         currentNoteWord = null;
         isInitialUnplayedState = true;
 
+        // Update Label
+        if (customDropdownLabel) {
+            customDropdownLabel.textContent = `${currentDialogue.title} [${currentDialogue.level}]`;
+        }
+
         // Update Title / Info Header
         document.getElementById('dialogue-header-title').textContent = `${currentDialogue.title} (${currentHomeworkSet.title})`;
         document.getElementById('dialogue-header-topic').textContent = `💡 ${currentDialogue.topic} • ${currentDialogue.level}`;
+
+        // Re-render custom dropdown items state
+        renderCustomDropdown();
 
         // Populate Role Selection Options for Role-Play Mode
         if (currentDialogue.characters) {
