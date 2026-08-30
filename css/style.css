@@ -131,6 +131,21 @@ body {
     background: rgba(255, 255, 255, 0.12);
 }
 
+/* Fix dropdown options readability in dark mode */
+select option {
+    background-color: #1e272e;
+    color: #ffffff;
+    padding: 8px 12px;
+}
+
+select optgroup {
+    background-color: #0f172a;
+    color: #4bcffa;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 6px;
+}
+
 /* Control Toolbar & Mode Switcher */
 .toolbar-card {
     background: var(--card-bg);
