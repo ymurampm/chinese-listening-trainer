@@ -54,6 +54,8 @@ body {
 
 /* Header Navbar */
 .app-header {
+    position: relative;
+    z-index: 100;
     background: var(--card-bg);
     backdrop-filter: blur(16px);
     border: 1px solid var(--card-border);
@@ -116,6 +118,7 @@ body {
 /* Custom Glassmorphic Dropdown Component */
 .custom-dropdown-container {
     position: relative;
+    z-index: 105;
     display: inline-block;
     min-width: 320px;
 }
@@ -164,12 +167,11 @@ body {
     min-width: 340px;
     max-height: 380px;
     overflow-y: auto;
-    background: rgba(15, 23, 42, 0.96);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(75, 207, 250, 0.3);
+    background: #111827;
+    border: 1px solid rgba(75, 207, 250, 0.4);
     border-radius: 14px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
-    z-index: 1000;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.95);
+    z-index: 99999;
     padding: 0.5rem 0;
 }
 
@@ -180,7 +182,7 @@ body {
     color: #4bcffa;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     margin-top: 0.4rem;
-    background: rgba(75, 207, 250, 0.05);
+    background: rgba(75, 207, 250, 0.08);
 }
 
 .custom-dropdown-group:first-child {
@@ -218,6 +220,8 @@ body {
 
 /* Control Toolbar & Mode Switcher */
 .toolbar-card {
+    position: relative;
+    z-index: 1;
     background: var(--card-bg);
     backdrop-filter: blur(16px);
     border: 1px solid var(--card-border);
