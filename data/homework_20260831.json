@@ -1,0 +1,574 @@
+{
+  "id": "homework_20260831",
+  "title": "宿題 2026/08/31 会話レッスン",
+  "description": "For 村上さん20260831.pdf 10〜12ページ（初級会話「我可以加你微信吗？」、中級会話「别紧张」）",
+  "dialogues": [
+    {
+      "id": "d20260831_1",
+      "title": "初级对话-4 我可以加你微信吗？",
+      "level": "初級 (HSK 2)",
+      "topic": "勤務地の偶然の近さとWeChat交換・ランチの約束",
+      "characters": [
+        {"id": "sufei", "name": "苏飞", "gender": "female", "avatar": "👧", "pitch": 1.0, "rate": 0.95},
+        {"id": "lili", "name": "李丽", "gender": "female", "avatar": "👩", "pitch": 1.0, "rate": 0.95}
+      ],
+      "lines": [
+        {
+          "id": "d5_1",
+          "speaker": "sufei",
+          "zh": "嗨！李丽，我们又见面了！",
+          "pinyin": "Hāi! Lìli, wǒmen yòu jiànmiàn le!",
+          "ja": "ハイ！リーリー、また会えたわね！",
+          "segments": ["嗨！李丽，", "我们又见面了！"],
+          "notes": [
+            {"word": "又", "pinyin": "yòu", "meaning": "また〜した（動作の再発, HSK2）"},
+            {"word": "见面", "pinyin": "jiànmiàn", "meaning": "会う、面会する（HSK2）"}
+          ]
+        },
+        {
+          "id": "d5_2",
+          "speaker": "lili",
+          "zh": "苏飞！真的是你。",
+          "pinyin": "Sūfēi! Zhēnde shì nǐ.",
+          "ja": "スーフェイ！本当にあなたね。",
+          "segments": ["苏飞！", "真的是你。"],
+          "notes": [
+            {"word": "真的", "pinyin": "zhēnde", "meaning": "本当の、本当に（HSK2）"}
+          ]
+        },
+        {
+          "id": "d5_3",
+          "speaker": "sufei",
+          "zh": "是啊！我们上星期五在咖啡馆见过。",
+          "pinyin": "Shì a! Wǒmen shàng xīngqīwǔ zài kāfēiguǎn jiànguò.",
+          "ja": "そうなの！先週の金曜日にカフェで会ったわよね。",
+          "segments": ["是啊！", "我们上星期五在咖啡馆见过。"],
+          "notes": [
+            {"word": "上", "pinyin": "shàng", "meaning": "前の（上个, 上星期）"},
+            {"word": "咖啡馆", "pinyin": "kāfēiguǎn", "meaning": "カフェ、喫茶店"},
+            {"word": "见过", "pinyin": "jiànguò", "meaning": "会ったことがある（経験助詞 过）"}
+          ]
+        },
+        {
+          "id": "d5_4",
+          "speaker": "lili",
+          "zh": "你也在这附近上班吗？",
+          "pinyin": "Nǐ yě zài zhè fùjìn shàngbān ma?",
+          "ja": "あなたもこの近くで働いているの？",
+          "segments": ["你也在这附近上班吗？"],
+          "notes": [
+            {"word": "附近", "pinyin": "fùjìn", "meaning": "近く、付近（HSK3）"},
+            {"word": "上班", "pinyin": "shàngbān", "meaning": "出勤する、働く（HSK2）"}
+          ]
+        },
+        {
+          "id": "d5_5",
+          "speaker": "sufei",
+          "zh": "对！你看，就在中国银行旁边的那座楼。",
+          "pinyin": "Duì! Nǐ kàn, jiù zài Zhōngguó Yínháng pángbiān de nà zuò lóu.",
+          "ja": "そうよ！見て、中国銀行の隣にあるあのビルよ。",
+          "segments": ["对！你看，", "就在中国银行旁边的那座楼。"],
+          "notes": [
+            {"word": "旁边", "pinyin": "pángbiān", "meaning": "隣、そば（HSK2）"},
+            {"word": "座", "pinyin": "zuò", "meaning": "ビルや山を数える量詞（HSK3）"},
+            {"word": "楼", "pinyin": "lóu", "meaning": "ビル、建物（HSK3）"}
+          ]
+        },
+        {
+          "id": "d5_6",
+          "speaker": "lili",
+          "zh": "真的吗？我就在中国银行上班。",
+          "pinyin": "Zhēnde ma? Wǒ jiù zài Zhōngguó Yínháng shàngbān.",
+          "ja": "本当？私、まさにその中国銀行で働いているのよ。",
+          "segments": ["真的吗？", "我就在中国银行上班。"],
+          "notes": [
+            {"word": "就", "pinyin": "jiù", "meaning": "まさに、まさに〜で"}
+          ]
+        },
+        {
+          "id": "d5_7",
+          "speaker": "sufei",
+          "zh": "哇！太巧了！我在这里工作半年了，怎么没见过你？",
+          "pinyin": "Wa! Tài qiǎo le! Wǒ zài zhèlǐ gōngzuò bàn nián le, zěnme méi jiànguò nǐ?",
+          "ja": "わあ！なんて奇遇なの！私ここで半年働いてるけど、どうして会わなかったのかしら？",
+          "segments": ["哇！太巧了！", "我在这里工作半年了，", "怎么没见过你？"],
+          "notes": [
+            {"word": "巧", "pinyin": "qiǎo", "meaning": "偶然である、奇遇だ（HSK3）"},
+            {"word": "半年", "pinyin": "bàn nián", "meaning": "半年"}
+          ]
+        },
+        {
+          "id": "d5_8",
+          "speaker": "lili",
+          "zh": "是这样的，我上个月才来银行工作。",
+          "pinyin": "Shì zhèyàng de, wǒ shàng gè yuè cái lái yínháng gōngzuò.",
+          "ja": "実はね、私先月銀行に働きに来たばかりなの。",
+          "segments": ["是这样的，", "我上个月才来银行工作。"],
+          "notes": [
+            {"word": "才", "pinyin": "cái", "meaning": "〜になって初めて、〜したばかり（HSK3）"}
+          ]
+        },
+        {
+          "id": "d5_9",
+          "speaker": "sufei",
+          "zh": "啊！看来，如果没有杰明，我们也很可能会遇到。",
+          "pinyin": "A! Kànlái, rúguǒ méiyǒu Jiémíng, wǒmen yě hěn kěnéng huì yùdào.",
+          "ja": "あぁ！どうやら、ジエミンがいなかったとしても、私たちは出会っていた可能性が高そうね。",
+          "segments": ["啊！看来，", "如果没有杰明，", "我们也很可能会遇到。"],
+          "notes": [
+            {"word": "看来", "pinyin": "kànlái", "meaning": "見たところ〜のようだ（HSK3）"},
+            {"word": "可能", "pinyin": "kěnéng", "meaning": "〜かもしれない（HSK3）"},
+            {"word": "遇到", "pinyin": "yùdào", "meaning": "遭遇する、出会う（HSK3）"}
+          ]
+        },
+        {
+          "id": "d5_10",
+          "speaker": "lili",
+          "zh": "没错！那你认识杰明多久了？",
+          "pinyin": "Méicuò! Nà nǐ rènshi Jiémíng duōjiǔ le?",
+          "ja": "その通りね！ところで、ジエミンとは知り合ってどれくらいになるの？",
+          "segments": ["没错！", "那你认识杰明多久了？"],
+          "notes": [
+            {"word": "认识", "pinyin": "rènshi", "meaning": "知っている、知り合う（HSK2）"},
+            {"word": "多久", "pinyin": "duōjiǔ", "meaning": "どれくらいの時間・期間（HSK3）"}
+          ]
+        },
+        {
+          "id": "d5_11",
+          "speaker": "sufei",
+          "zh": "嗯，快一年了。我们在英国的时候就认识了。",
+          "pinyin": "En, kuài yì nián le. Wǒmen zài Yīngguó de shíhou jiù rènshi le.",
+          "ja": "うん、もうすぐ1年になるわ。私たちがイギリスにいた頃に知り合ったの。",
+          "segments": ["嗯，快一年了。", "我们在英国的时候就认识了。"],
+          "notes": [
+            {"word": "快", "pinyin": "kuài", "meaning": "もうすぐ〜になる（HSK2）"},
+            {"word": "英国", "pinyin": "Yīngguó", "meaning": "イギリス（HSK3）"}
+          ]
+        },
+        {
+          "id": "d5_12",
+          "speaker": "lili",
+          "zh": "真好！对了，我可以加你微信吗？",
+          "pinyin": "Zhēn hǎo! Duìle, wǒ kěyǐ jiā nǐ Wēixìn ma?",
+          "ja": "素敵ね！そういえば、WeChat（微信）追加してもいい？",
+          "segments": ["真好！对了，", "我可以加你微信吗？"],
+          "notes": [
+            {"word": "可以", "pinyin": "kěyǐ", "meaning": "〜してもよい（HSK2）"},
+            {"word": "加", "pinyin": "jiā", "meaning": "追加する、加える（HSK3）"},
+            {"word": "微信", "pinyin": "Wēixìn", "meaning": "WeChat（中国のチャットアプリ）"}
+          ]
+        },
+        {
+          "id": "d5_13",
+          "speaker": "sufei",
+          "zh": "当然可以！我的微信号是Sophie93。",
+          "pinyin": "Dāngrán kěyǐ! Wǒ de Wēixìnhào shì Sophie93.",
+          "ja": "もちろん！私のWeChat IDはSophie93よ。",
+          "segments": ["当然可以！", "我的微信号是Sophie93。"],
+          "notes": [
+            {"word": "当然", "pinyin": "dāngrán", "meaning": "当然、もちろん（HSK3）"},
+            {"word": "微信号", "pinyin": "Wēixìnhào", "meaning": "WeChat ID"}
+          ]
+        },
+        {
+          "id": "d5_14",
+          "speaker": "lili",
+          "zh": "好的，加上了。",
+          "pinyin": "Hǎo de, jiāshang le.",
+          "ja": "はーい、追加したわ。",
+          "segments": ["好的，加上了。"],
+          "notes": [
+            {"word": "加上", "pinyin": "jiāshang", "meaning": "追加し終わる"}
+          ]
+        },
+        {
+          "id": "d5_15",
+          "speaker": "sufei",
+          "zh": "你的微信头像真有意思。",
+          "pinyin": "Nǐ de Wēixìn tóuxiàng zhēn yǒu yìsi.",
+          "ja": "あなたのWeChatのアイコン、すごく面白いわね。",
+          "segments": ["你的微信头像真有意思。"],
+          "notes": [
+            {"word": "头像", "pinyin": "tóuxiàng", "meaning": "アイコン写真、プロフィール画像"},
+            {"word": "有意思", "pinyin": "yǒu yìsi", "meaning": "面白い（HSK2）"}
+          ]
+        },
+        {
+          "id": "d5_16",
+          "speaker": "lili",
+          "zh": "嗯，这是我和我小狗的照片。",
+          "pinyin": "En, zhè shì wǒ hé wǒ xiǎogǒu de zhàopiàn.",
+          "ja": "うん、これは私と愛犬の写真なの。",
+          "segments": ["嗯，这是我和我小狗的照片。"],
+          "notes": [
+            {"word": "小狗", "pinyin": "xiǎogǒu", "meaning": "子犬、ワンちゃん"},
+            {"word": "照片", "pinyin": "zhàopiàn", "meaning": "写真（HSK2）"}
+          ]
+        },
+        {
+          "id": "d5_17",
+          "speaker": "sufei",
+          "zh": "它真可爱！明天中午你有时间吗？我们可以一起去吃午饭。",
+          "pinyin": "Tā zhēn kě'ài! Míngtiān zhōngwǔ nǐ yǒu shíjiān ma? Wǒmen kěyǐ yìqǐ qù chī wǔfàn.",
+          "ja": "すごく可愛い！明日の昼間、時間ある？一緒にランチに行けるわ。",
+          "segments": ["它真可爱！", "明天中午你有时间吗？", "我们可以一起去吃午饭。"],
+          "notes": [
+            {"word": "它", "pinyin": "tā", "meaning": "それ、動物の「彼/彼女」（HSK2）"},
+            {"word": "可爱", "pinyin": "kě'ài", "meaning": "可愛い（HSK3）"},
+            {"word": "时间", "pinyin": "shíjiān", "meaning": "時間（HSK2）"}
+          ]
+        },
+        {
+          "id": "d5_18",
+          "speaker": "lili",
+          "zh": "可以啊！我中午一般 12 点休息，你呢？",
+          "pinyin": "Kěyǐ a! Wǒ zhōngwǔ yìbān shí'èr diǎn xiūxi, nǐ ne?",
+          "ja": "いいわね！私、お昼はたいてい12時に休憩なんだけど、あなたは？",
+          "segments": ["可以啊！", "我中午一般 12 点休息，你呢？"],
+          "notes": [
+            {"word": "一般", "pinyin": "yìbān", "meaning": "普通は、たいてい（HSK3）"},
+            {"word": "休息", "pinyin": "xiūxi", "meaning": "休む、休憩する（HSK2）"}
+          ]
+        },
+        {
+          "id": "d5_19",
+          "speaker": "sufei",
+          "zh": "我也是。",
+          "pinyin": "Wǒ yě shì.",
+          "ja": "私もよ。",
+          "segments": ["我也是。"],
+          "notes": []
+        },
+        {
+          "id": "d5_20",
+          "speaker": "lili",
+          "zh": "那我们明天 12 点在银行门口见面吧。",
+          "pinyin": "Nà wǒmen míngtiān shí'èr diǎn zài yínháng ménkǒu jiànmiàn ba.",
+          "ja": "じゃあ明日12時に銀行の入り口で待ち合わせましょう。",
+          "segments": ["那我们明天 12 点在银行门口见面吧。"],
+          "notes": [
+            {"word": "门口", "pinyin": "ménkǒu", "meaning": "入り口、門の前（HSK3）"}
+          ]
+        },
+        {
+          "id": "d5_21",
+          "speaker": "sufei",
+          "zh": "可以！我知道一家很棒的面馆，我带你去。",
+          "pinyin": "Kěyǐ! Wǒ zhīdào yì jiā hěn bàng de miànguǎn, wǒ dài nǐ qù.",
+          "ja": "いいわよ！素晴らしい麺料理屋さんを知ってるから、連れて行ってあげるわ。",
+          "segments": ["可以！我知道一家很棒的面馆，", "我带你去。"],
+          "notes": [
+            {"word": "家", "pinyin": "jiā", "meaning": "店や企業を数える量詞（HSK2）"},
+            {"word": "棒", "pinyin": "bàng", "meaning": "素晴らしい、すごい（HSK3）"},
+            {"word": "带", "pinyin": "dài", "meaning": "連れて行く、携える（HSK3）"}
+          ]
+        },
+        {
+          "id": "d5_22",
+          "speaker": "lili",
+          "zh": "好的！明天见！",
+          "pinyin": "Hǎo de! Míngtiān jiàn!",
+          "ja": "分かったわ！また明日！",
+          "segments": ["好的！明天见！"],
+          "notes": []
+        },
+        {
+          "id": "d5_23",
+          "speaker": "sufei",
+          "zh": "明天见！",
+          "pinyin": "Míngtiān jiàn!",
+          "ja": "また明日！",
+          "segments": ["明天见！"],
+          "notes": []
+        }
+      ]
+    },
+    {
+      "id": "d20260831_2",
+      "title": "中级对话-③ 别紧张",
+      "level": "中級 (HSK 3)",
+      "topic": "外資系金融企業の採用面接・学歴と職歴のアピール",
+      "characters": [
+        {"id": "jieming", "name": "杰明", "gender": "male", "avatar": "👨", "pitch": 1.0, "rate": 0.95},
+        {"id": "chenhong", "name": "陈红", "gender": "female", "avatar": "👩‍💼", "pitch": 1.0, "rate": 0.95}
+      ],
+      "lines": [
+        {
+          "id": "d6_1",
+          "speaker": "jieming",
+          "zh": "你好！陈女士。",
+          "pinyin": "Nǐ hǎo! Chén nǚshì.",
+          "ja": "こんにちは！陳さん（女性）。",
+          "segments": ["你好！陈女士。"],
+          "notes": [
+            {"word": "女士", "pinyin": "nǚshì", "meaning": "女性に対する敬称（〜様/〜さん）"}
+          ]
+        },
+        {
+          "id": "d6_2",
+          "speaker": "chenhong",
+          "zh": "你好！请坐。杰明。",
+          "pinyin": "Nǐ hǎo! Qǐng zuò. Jiémíng.",
+          "ja": "こんにちは！どうぞお掛けください、ジエミンさん。",
+          "segments": ["你好！请坐。杰明。"],
+          "notes": [
+            {"word": "请坐", "pinyin": "qǐng zuò", "meaning": "どうぞお座りください（HSK2）"}
+          ]
+        },
+        {
+          "id": "d6_3",
+          "speaker": "jieming",
+          "zh": "谢谢！",
+          "pinyin": "Xièxie!",
+          "ja": "ありがとうございます！",
+          "segments": ["谢谢！"],
+          "notes": []
+        },
+        {
+          "id": "d6_4",
+          "speaker": "chenhong",
+          "zh": "今天感觉怎么样？",
+          "pinyin": "Jīntiān gǎnjué zěnmeyàng?",
+          "ja": "今日の気分（手ごたえ）はいかがですか？",
+          "segments": ["今天感觉怎么样？"],
+          "notes": [
+            {"word": "感觉", "pinyin": "gǎnjué", "meaning": "感じる、気分（HSK3）"}
+          ]
+        },
+        {
+          "id": "d6_5",
+          "speaker": "jieming",
+          "zh": "感觉非常好，就是有点紧张。",
+          "pinyin": "Gǎnjué fēicháng hǎo, jiùshì yǒudiǎnr jǐnzhāng.",
+          "ja": "とても調子が良いですが、ただ少し緊張しています。",
+          "segments": ["感觉非常好，", "就是有点紧张。"],
+          "notes": [
+            {"word": "紧张", "pinyin": "jǐnzhāng", "meaning": "緊張している（HSK3）"}
+          ]
+        },
+        {
+          "id": "d6_6",
+          "speaker": "chenhong",
+          "zh": "别紧张！这个面试只是为了让我们多了解你。",
+          "pinyin": "Bié jǐnzhāng! Zhège miànshì zhǐshì wèi le ràng wǒmen duō liǎojiě nǐ.",
+          "ja": "緊張しないでください！この面接は、私たちにあなたをよりよく知ってもらうためのものですよ。",
+          "segments": ["别紧张！", "这个面试只是为了让我们多了解你。"],
+          "notes": [
+            {"word": "别", "pinyin": "bié", "meaning": "〜するな（禁止, HSK2）"},
+            {"word": "面试", "pinyin": "miànshì", "meaning": "面接（HSK3）"},
+            {"word": "为了", "pinyin": "wèile", "meaning": "〜のために（目的, HSK3）"},
+            {"word": "了解", "pinyin": "liǎojiě", "meaning": "理解する、知る（HSK3）"}
+          ]
+        },
+        {
+          "id": "d6_7",
+          "speaker": "jieming",
+          "zh": "谢谢！我现在觉得放松了很多。",
+          "pinyin": "Xièxie! Wǒ xiànzài juéde fàngsōng le hěn duō.",
+          "ja": "ありがとうございます！今だいぶリラックスできました。",
+          "segments": ["谢谢！", "我现在觉得放松了很多。"],
+          "notes": [
+            {"word": "放松", "pinyin": "fàngsōng", "meaning": "リラックスする（HSK3）"}
+          ]
+        },
+        {
+          "id": "d6_8",
+          "speaker": "chenhong",
+          "zh": "你可以先做一个简单的自我介绍吗？",
+          "pinyin": "Nǐ kěyǐ xiān zuò yí gè jiǎndān de zìwǒ jièshào ma?",
+          "ja": "まず簡単な自己紹介をしていただいてもよろしいですか？",
+          "segments": ["你可以先做一个简单的自我介绍吗？"],
+          "notes": [
+            {"word": "先", "pinyin": "xiān", "meaning": "まず、先に（HSK2）"},
+            {"word": "简单", "pinyin": "jiǎndān", "meaning": "簡単な（HSK3）"},
+            {"word": "自我介绍", "pinyin": "zìwǒ jièshào", "meaning": "自己紹介（HSK3）"}
+          ]
+        },
+        {
+          "id": "d6_9",
+          "speaker": "jieming",
+          "zh": "我叫杰明，是英国人。我以前在伦敦政治经济学院读本科，专业是经济学。毕业后，我在伦敦的一家金融公司工作了三年。我非常喜欢中国文化，来中国以前，就已经学了几年的中文，去年九月份到上海，在大学里又学习了半年。我打算长期在中国工作和生活。",
+          "pinyin": "Wǒ jiào Jiémíng, shì Yīngguó rén. Wǒ yǐqián zài Lúndūn Zhèngzhì Jīngjì Xuéyuàn dú běnkē, zhuānyè shì jīngjìxué. Bìyè hòu, wǒ zài Lúndūn de yì jiā jīnróng gōngsī gōngzuò le sān nián. Wǒ fēicháng xǐhuan Zhōngguó wénhuà, lái Zhōngguó yǐqián, jiù yǐjīng xué le jǐ nián de Zhōngwén, qùnián jiǔ yuèfèn dào Shànghǎi, zài dàxué li yòu xuéxí le bàn nián. Wǒ dǎsuan chángqī zài Zhōngguó gōngzuò hé shēnghuó.",
+          "ja": "私はジエミンと申します。イギリス人です。以前ロンドン・スクール・オブ・エコノミクス（LSE）で学士号を取得し、専攻は経済学でした。卒業後、ロンドンの金融会社で3年間勤務しました。中国文化がとても好きで、中国に来る前に数年間中国語を学んでおり、昨年9月に上海に来て大学でさらに半年学びました。将来的に長く中国で働き、生活するつもりです。",
+          "segments": ["我叫杰明，是英国人。", "我以前在伦敦政治经济学院读本科，专业是经济学。", "毕业后，我在伦敦的一家金融公司工作了三年。", "我非常喜欢中国文化，", "来中国以前，就已经学了几年的中文，", "去年九月份到上海，在大学里又学习了半年。", "我打算长期在中国工作和生活。"],
+          "notes": [
+            {"word": "本科", "pinyin": "běnkē", "meaning": "学士課程、大学本科（HSK3）"},
+            {"word": "毕业", "pinyin": "bìyè", "meaning": "卒業する（HSK3）"},
+            {"word": "金融", "pinyin": "jīnróng", "meaning": "金融（HSK3）"},
+            {"word": "打算", "pinyin": "dǎsuan", "meaning": "〜するつもりだ（HSK3）"},
+            {"word": "长期", "pinyin": "chángqī", "meaning": "長期的に（HSK3）"}
+          ]
+        },
+        {
+          "id": "d6_10",
+          "speaker": "chenhong",
+          "zh": "谢谢！你的中文说得很好！",
+          "pinyin": "Xièxie! Nǐ de Zhōngwén shuō de hěn hǎo!",
+          "ja": "ありがとうございます！あなたの中国語はとても上手ですね！",
+          "segments": ["谢谢！", "你的中文说得很好！"],
+          "notes": []
+        },
+        {
+          "id": "d6_11",
+          "speaker": "jieming",
+          "zh": "过奖过奖。",
+          "pinyin": "Guòjiǎng guòjiǎng.",
+          "ja": "褒めすぎです（恐縮です）。",
+          "segments": ["过奖过奖。"],
+          "notes": [
+            {"word": "过奖", "pinyin": "guòjiǎng", "meaning": "褒めすぎです、恐縮です（謙遜表現）"}
+          ]
+        },
+        {
+          "id": "d6_12",
+          "speaker": "chenhong",
+          "zh": "请问，你听说过我们公司吗？",
+          "pinyin": "Qǐngwèn, nǐ tīngshuō guo wǒmen gōngsī ma?",
+          "ja": "お聞きしますが、我が社について噂や話を聞いたことがありますか？",
+          "segments": ["请问，", "你听说过我们公司吗？"],
+          "notes": [
+            {"word": "听说", "pinyin": "tīngshuō", "meaning": "〜と聞いている、噂を聞く（HSK3）"}
+          ]
+        },
+        {
+          "id": "d6_13",
+          "speaker": "jieming",
+          "zh": "听说过，我还知道公司的总部在纽约，在全世界也有很多分公司。",
+          "pinyin": "Tīngshuō guo, wǒ hái zhīdào gōngsī de zǒngbù zài Niǔyuē, zài quán shìjiè yě yǒu hěn duō fēn gōngsī.",
+          "ja": "聞いたことがあります。本社がニューヨークにあり、世界中に多くの支社があることも知っています。",
+          "segments": ["听说过，", "我还知道公司的总部在纽约，", "在全世界也有很多分公司。"],
+          "notes": [
+            {"word": "总部", "pinyin": "zǒngbù", "meaning": "本社、本部（HSK3）"},
+            {"word": "分公司", "pinyin": "fēn gōngsī", "meaning": "支社、分社（HSK3）"}
+          ]
+        },
+        {
+          "id": "d6_14",
+          "speaker": "chenhong",
+          "zh": "我们在中国的分公司在哪些城市？",
+          "pinyin": "Wǒmen zài Zhōngguó de fēn gōngsī zài nǎxiē chéngshì?",
+          "ja": "中国における我が社の支社はどの都市にありますか？",
+          "segments": ["我们在中国的分公司在哪些城市？"],
+          "notes": [
+            {"word": "城市", "pinyin": "chéngshì", "meaning": "都市、街（HSK3）"}
+          ]
+        },
+        {
+          "id": "d6_15",
+          "speaker": "jieming",
+          "zh": "在上海、北京、香港和成都。",
+          "pinyin": "Zài Shànghǎi, Běijīng, Xiānggǎng hé Chéngdū.",
+          "ja": "上海、北京、香港、抓して成都です。",
+          "segments": ["在上海、北京、香港和成都。"],
+          "notes": []
+        },
+        {
+          "id": "d6_16",
+          "speaker": "chenhong",
+          "zh": "对！我们需要一位市场经理，要求经济相关的教育背景和工作经验，也要求很好的中英文水平。我觉得你的条件很符合我们的要求。",
+          "pinyin": "Duì! Wǒmen xūyào yí wèi shìchǎng jīnglǐ, yāoqiú jīngjì xiāngguān de jiàoyù bèijǐng hé gōngzuò jīngyàn, yě yāoqiú hěn hǎo de Zhōng-Yīngwén shuǐpíng. Wǒ juéde nǐ de tiáojiàn hěn fúhé wǒmen de yāoqiú.",
+          "ja": "その通りです！我が社はマーケティングマネージャーを1名必要としており、経済関連の教育背景と職務経験、ならびに高度な中英バイリンガル能力を要求しています。あなたの条件は我が社の要求に非常によく合致していると感じます。",
+          "segments": ["对！我们需要一位市场经理，", "要求经济相关的教育背景和工作经验，", "也要求很好的中英文水平。", "我觉得你的条件很符合我们的要求。"],
+          "notes": [
+            {"word": "需要", "pinyin": "xūyào", "meaning": "必要とする（HSK3）"},
+            {"word": "背景", "pinyin": "bèijǐng", "meaning": "背景（HSK3）"},
+            {"word": "经验", "pinyin": "jīngyàn", "meaning": "経験（HSK3）"},
+            {"word": "符合", "pinyin": "fúhé", "meaning": "合致する、当てはまる（HSK3）"}
+          ]
+        },
+        {
+          "id": "d6_17",
+          "speaker": "jieming",
+          "zh": "谢谢！",
+          "pinyin": "Xièxie!",
+          "ja": "ありがとうございます！",
+          "segments": ["谢谢！"],
+          "notes": []
+        },
+        {
+          "id": "d6_18",
+          "speaker": "chenhong",
+          "zh": "请问你的工资要求是多少？",
+          "pinyin": "Qǐngwèn nǐ de gōngzī yāoqiú shì duōshao?",
+          "ja": "希望する給与額はおいくらですか？",
+          "segments": ["请问你的工资要求是多少？"],
+          "notes": [
+            {"word": "工资", "pinyin": "gōngzī", "meaning": "給与、給料（HSK3）"}
+          ]
+        },
+        {
+          "id": "d6_19",
+          "speaker": "jieming",
+          "zh": "不低于25000一个月。",
+          "pinyin": "Bù dīyú èr wàn wǔ qiān yí gè yuè.",
+          "ja": "月額25,000元（約50万円）を下回らないことです。",
+          "segments": ["不低于25000一个月。"],
+          "notes": [
+            {"word": "低于", "pinyin": "dīyú", "meaning": "〜を下回る"}
+          ]
+        },
+        {
+          "id": "d6_20",
+          "speaker": "chenhong",
+          "zh": "请问你最快能什么时候开始上班？",
+          "pinyin": "Qǐngwèn nǐ zuì kuài néng shénme shíhou kāishǐ shàngbān?",
+          "ja": "最短でいつから勤務開始できますか？",
+          "segments": ["请问你最快能什么时候开始上班？"],
+          "notes": []
+        },
+        {
+          "id": "d6_21",
+          "speaker": "jieming",
+          "zh": "两个星期以后。",
+          "pinyin": "Liǎng gè xīngqī yǐhòu.",
+          "ja": "2週間後です。",
+          "segments": ["两个星期以后。"],
+          "notes": [
+            {"word": "以后", "pinyin": "yǐhòu", "meaning": "〜の後（HSK2）"}
+          ]
+        },
+        {
+          "id": "d6_22",
+          "speaker": "chenhong",
+          "zh": "非常好！我会安排你下午两点和总经理的第二个面试。",
+          "pinyin": "Fēicháng hǎo! Wǒ huì ānpái nǐ xiàwǔ liǎng diǎn hé zǒngjīnglǐ de dì-èr gè miànshì.",
+          "ja": "素晴らしいです！今日の午後2時に、CEO（総支配人）との2次面接を手配いたしますね。",
+          "segments": ["非常好！", "我会安排你下午两点和总经理的第二个面试。"],
+          "notes": [
+            {"word": "安排", "pinyin": "ānpái", "meaning": "手配する、アレンジする（HSK3）"},
+            {"word": "总经理", "pinyin": "zǒngjīnglǐ", "meaning": "社長、総支配人/CEO（HSK3）"}
+          ]
+        },
+        {
+          "id": "d6_23",
+          "speaker": "jieming",
+          "zh": "请问是中文面试，还是英文面试？",
+          "pinyin": "Qǐngwèn shì Zhōngwén miànshì, háishi Yīngwén miànshì?",
+          "ja": "中国語の面接ですか、それとも英語の面接ですか？",
+          "segments": ["请问是中文面试，", "还是英文面试？"],
+          "notes": [
+            {"word": "还是", "pinyin": "háishi", "meaning": "それとも（選択疑問, HSK2）"}
+          ]
+        },
+        {
+          "id": "d6_24",
+          "speaker": "chenhong",
+          "zh": "是英文面试，总经理是美国人。",
+          "pinyin": "Shì Yīngwén miànshì, zǒngjīnglǐ shì Měiguórén.",
+          "ja": "英語の面接です、CEOはアメリカ人ですので。",
+          "segments": ["是英文面试，", "总经理是美国人。"],
+          "notes": []
+        },
+        {
+          "id": "d6_25",
+          "speaker": "jieming",
+          "zh": "好的，谢谢！",
+          "pinyin": "Hǎo de, xièxie!",
+          "ja": "かしこまりました、ありがとうございます！",
+          "segments": ["好的，谢谢！"],
+          "notes": []
+        }
+      ]
+    }
+  ]
+}
