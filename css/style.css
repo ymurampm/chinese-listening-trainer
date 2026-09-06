@@ -115,6 +115,28 @@ body {
     border-color: var(--primary);
 }
 
+.btn-mode-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+    background: rgba(156, 136, 255, 0.18);
+    border: 1px solid rgba(156, 136, 255, 0.4);
+    color: #9c88ff;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-mode-switch:hover {
+    background: rgba(156, 136, 255, 0.35);
+    color: #ffffff;
+    border-color: #9c88ff;
+    box-shadow: 0 0 15px rgba(156, 136, 255, 0.4);
+}
+
 /* Custom Glassmorphic Dropdown Component */
 .custom-dropdown-container {
     position: relative;
