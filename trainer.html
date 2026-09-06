@@ -811,9 +811,11 @@
                         <span class="key-desc">速度ギア（1:減速 / 2:等倍リセット / 3:加速）</span>
                     </div>
                     <div class="key-row">
+                        <kbd id="key-j" class="keycap">J</kbd>
+                        <kbd id="key-k" class="keycap">K</kbd>
                         <kbd id="key-arrowleft" class="keycap">←</kbd>
                         <kbd id="key-arrowright" class="keycap">→</kbd>
-                        <span class="key-desc">前の文 / 次の文へ移動</span>
+                        <span class="key-desc">J: 次の文 / K: 前の文</span>
                     </div>
                 </div>
             </div>
@@ -1177,9 +1179,11 @@
                 } else if (e.key === 'r' || e.key === 'R') {
                     triggerActiveVisual('key-r');
                     handleSpaceOrRKey();
-                } else if (e.key === 'a' || e.key === 'A' || e.key === '4') {
+                } else if (e.key === 'k' || e.key === 'K' || e.key === 'a' || e.key === 'A' || e.key === '4') {
+                    triggerActiveVisual('key-k');
                     navigateSentence(-1);
-                } else if (e.key === 'd' || e.key === 'D' || e.key === '5') {
+                } else if (e.key === 'j' || e.key === 'J' || e.key === 'd' || e.key === 'D' || e.key === '5') {
+                    triggerActiveVisual('key-j');
                     navigateSentence(1);
                 } else if (e.key === 'q' || e.key === 'Q') {
                     triggerActiveVisual('key-q');
@@ -1221,6 +1225,8 @@
                 let id = '';
                 if (e.key === ' ' || e.code === 'Space') id = 'key-space';
                 else if (e.key === 'r' || e.key === 'R') id = 'key-r';
+                else if (e.key === 'j' || e.key === 'J') id = 'key-j';
+                else if (e.key === 'k' || e.key === 'K') id = 'key-k';
                 else if (e.key === 'q' || e.key === 'Q') id = 'key-q';
                 else if (e.key === 'f' || e.key === 'F') id = 'key-f';
                 else if (e.key === 'w' || e.key === 'W') id = 'key-w';
