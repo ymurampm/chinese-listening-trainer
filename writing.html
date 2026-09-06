@@ -107,7 +107,14 @@
         <section id="section-traps" class="main-card" style="display: none;">
             <div class="question-info-bar">
                 <span class="question-badge" style="background: rgba(255,94,87,0.2); border-color: var(--danger); color: var(--danger);">⚠️ 日本人減点防止トラップ集</span>
-                <span class="question-counter">全 16 厳選頻出漢字</span>
+                <span id="trap-counter" class="question-counter">全 63 厳選頻出漢字</span>
+            </div>
+            <!-- Trap Category Filter Pills -->
+            <div class="filter-pills" id="trap-filter-pills">
+                <button class="filter-pill active" data-trap-cat="all">すべて (63字)</button>
+                <button class="filter-pill" data-trap-cat="subtle">⚠️ 微差・減点危険 (关/写/带/发/条/步/真...)</button>
+                <button class="filter-pill" data-trap-cat="radical">偏旁・部首簡略 (纟/讠/钅/门...)</button>
+                <button class="filter-pill" data-trap-cat="simplified">しんにょう・又系 (运/动/买/卖/双/马...)</button>
             </div>
             <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">
                 紙の筆記試験では、日本の漢字（新字体や旧字体）の癖で書いてしまうと「0点」と判定されます。以下の微差を完璧に頭に入れておきましょう！

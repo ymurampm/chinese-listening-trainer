@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         initTTS();
         setupTabs();
         setupOrderingCategoryFilters();
+        setupTrapCategoryFilters();
         loadOrderQuestion(0);
         loadFillQuestion(0);
         renderKanjiTraps();
@@ -279,12 +280,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // SECTION 3: 日中漢字トラップ図鑑
+    let activeTrapCategory = 'all';
+
+    function setupTrapCategoryFilters() {
+        const pills = document.querySelectorAll('#trap-filter-pills .filter-pill');
+        pills.forEach(pill => {
+            pill.addEventListener('click', (e) => {
+                pills.forEach(p => p.classList.remove('active'));
+                e.currentTarget.classList.add('active');
+                activeTrapCategory = e.currentTarget.dataset.trapCat;
+                renderKanjiTraps();
+            });
+        });
+    }
+
     function renderKanjiTraps() {
         const grid = document.getElementById('trap-grid');
+        const counterEl = document.getElementById('trap-counter');
         if (!grid || !writingDB || !writingDB.kanji_traps) return;
-        grid.innerHTML = '';
 
-        writingDB.kanji_traps.forEach(trap => {
+        const list = activeTrapCategory === 'all'
+            ? writingDB.kanji_traps
+            : writingDB.kanji_traps.filter(t => t.category === activeTrapCategory);
+
+        if (counterEl) {
+            counterEl.textContent = `表示中 ${list.length} / 全 ${writingDB.kanji_traps.length} 漢字`;
+        }
+
+        grid.innerHTML = '';
+        list.forEach(trap => {
             const card = document.createElement('div');
             card.className = 'trap-card';
             card.innerHTML = `
