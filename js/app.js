@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let numberBuffer = '';
     let numberBufferTimeout = null;
     let isInitialUnplayedState = true;
+    let gTimeout = null;
 
     // DOM Elements
     const dialogueSelect = document.getElementById('dialogue-select');
@@ -46,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch and Load Data
     async function loadData() {
         try {
-            const files = ['./data/homework_20260831.json', './data/homework_20260824.json', './data/homework_20260727.json'];
+            const files = ['./data/homework_20260831.json', './data/homework_20260824.json', './data/homework_20260727.json', './data/hsk_drills.json'];
             const requests = files.map(file => fetch(`${file}?v=${Date.now()}`).then(res => {
                 if (!res.ok) throw new Error(`Failed to load ${file}`);
                 return res.json();
@@ -316,6 +317,92 @@ document.addEventListener('DOMContentLoaded', () => {
         if (badge) badge.remove();
     }
 
+    // G-Mode: Pinyin Bombardment (0.7x -> 0.85x -> 1.0x 3-shot repeat with Tip card)
+    function playGBombardment(lineIndex) {
+        tts.stop();
+        const line = currentDialogue?.lines[lineIndex];
+        if (!line) return;
+
+        highlightActiveLine(lineIndex);
+
+        if (line.tip) {
+            showGTipCard(lineIndex, line.tip);
+        }
+
+        const speeds = [0.7, 0.85, 1.0];
+        let step = 0;
+
+        const playStep = () => {
+            if (step >= speeds.length) {
+                removeGBadge(lineIndex);
+                return;
+            }
+            const rate = speeds[step];
+            showGBadge(lineIndex, step + 1, speeds.length, rate);
+
+            tts.speakText(line.zh, rate, () => {
+                step++;
+                if (step < speeds.length) {
+                    setTimeout(playStep, 350);
+                } else {
+                    removeGBadge(lineIndex);
+                }
+            });
+        };
+
+        playStep();
+    }
+
+    function showGTipCard(lineIndex, tipText) {
+        removeGTipCard(lineIndex);
+        const bubble = document.querySelector(`.chat-bubble[data-line-index="${lineIndex}"] .bubble-content`);
+        if (bubble) {
+            const card = document.createElement('div');
+            card.className = 'g-tip-card';
+            card.id = `g-tip-card-${lineIndex}`;
+            card.innerHTML = `
+                <div class="g-tip-header">⚠️ 天敵ピンイン解説</div>
+                <div class="g-tip-text">${tipText}</div>
+            `;
+            bubble.appendChild(card);
+        }
+    }
+
+    function removeGTipCard(lineIndex) {
+        const card = document.getElementById(`g-tip-card-${lineIndex}`);
+        if (card) card.remove();
+    }
+
+    function showGBadge(lineIndex, current, total, rate) {
+        removeGBadge(lineIndex);
+        const bubble = document.querySelector(`.chat-bubble[data-line-index="${lineIndex}"] .bubble-content`);
+        if (bubble) {
+            const badge = document.createElement('div');
+            badge.className = 'g-mode-badge';
+            badge.id = `g-mode-badge-${lineIndex}`;
+            badge.innerHTML = `💣 ピンイン爆撃再生 (${current}/${total}: ${rate}x)`;
+            bubble.appendChild(badge);
+        }
+    }
+
+    function removeGBadge(lineIndex) {
+        const badge = document.getElementById(`g-mode-badge-${lineIndex}`);
+        if (badge) badge.remove();
+    }
+
+    // F-Mode: Segmented Pause Playback
+    function playFSegmented(lineIndex) {
+        tts.stop();
+        const line = currentDialogue?.lines[lineIndex];
+        if (!line) return;
+
+        highlightActiveLine(lineIndex);
+        const segs = line.segments && line.segments.length > 0 ? line.segments : [line.zh];
+        tts.playSegmentsSequentially(segs, () => {
+            document.querySelectorAll('.chat-bubble').forEach(b => b.classList.remove('playing'));
+        });
+    }
+
     function showNoteDrawer(word, py, meaning, currentIdx = 1, totalCount = 1) {
         currentNoteWord = word;
         notesContent.innerHTML = `
@@ -457,20 +544,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // G / gg : Jump to Top or Bottom
+            // G / gg / F : G-Mode Bombardment, Jump to Top/Bottom, F-Mode Segmented
             if (key === 'G') { // Shift + g -> Jump to Last Line
                 e.preventDefault();
                 selectLine(currentDialogue.lines.length - 1, true);
                 return;
             } else if (lowerKey === 'g') {
+                e.preventDefault();
                 const now = Date.now();
-                if (now - lastGKeyPressTime < 400) { // Double 'g' -> Jump to Top
-                    e.preventDefault();
+                if (now - lastGKeyPressTime < 400) { // Double 'g' (gg) -> Jump to Top
+                    if (gTimeout) clearTimeout(gTimeout);
                     selectLine(0, true);
                     lastGKeyPressTime = 0;
                     return;
                 }
                 lastGKeyPressTime = now;
+                gTimeout = setTimeout(() => {
+                    playGBombardment(selectedLineIndex);
+                }, 420);
+            }
+            // F : Segmented Pause Playback (お助け区切り再生)
+            else if (lowerKey === 'f') {
+                e.preventDefault();
+                playFSegmented(selectedLineIndex);
             }
 
             // P or Space: Play/Pause current line or full dialogue

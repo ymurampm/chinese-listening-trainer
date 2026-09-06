@@ -847,3 +847,68 @@ kbd {
     align-self: flex-start;
     font-weight: 600;
 }
+
+/* 12 Enemy Pinyin Tagging Colors */
+ruby.pinyin-ruby rt.bad-an {
+    color: #ff9f43 !important; /* ネオンオレンジ: -ian, -ui, -un, ü */
+    font-weight: 700;
+}
+
+ruby.pinyin-ruby rt.bad-e {
+    color: #ff6b6b !important; /* ネオンレッド: こもる e */
+    font-weight: 700;
+}
+
+ruby.pinyin-ruby rt.bad-retro {
+    color: #4bcffa !important; /* ネオンブルー: 巻き舌 zh, ch, sh, r, zi/ci/si */
+    font-weight: 700;
+}
+
+ruby.pinyin-ruby rt.bad-ing {
+    color: #1dd1a1 !important; /* ネオングリーン: 鼻音 -ng */
+    font-weight: 700;
+}
+
+ruby.pinyin-ruby rt.bad-front {
+    color: #9c88ff !important; /* ネオンパープル: 前舌面 j, q, x */
+    font-weight: 700;
+}
+
+/* G-Mode Bombardment & Tip Card Styling */
+.g-mode-badge {
+    background: rgba(255, 211, 42, 0.2);
+    border: 1px solid #ffd32a;
+    color: #ffd32a;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    margin-top: 0.4rem;
+    align-self: flex-start;
+    font-weight: 700;
+}
+
+.g-tip-card {
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid var(--primary);
+    border-radius: 12px;
+    padding: 0.8rem 1.2rem;
+    margin-top: 0.6rem;
+    box-shadow: 0 8px 25px rgba(75, 207, 250, 0.3);
+    animation: fadeIn 0.3s ease;
+}
+
+.g-tip-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: bold;
+    color: var(--primary);
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+}
+
+.g-tip-text {
+    font-size: 0.88rem;
+    color: #f5f6fa;
+    line-height: 1.5;
+}
