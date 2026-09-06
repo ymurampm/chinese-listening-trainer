@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch and Load Data
     async function loadData() {
         try {
-            const files = ['./data/homework_20260831.json', './data/homework_20260824.json', './data/homework_20260727.json', './data/hsk_drills.json'];
+            const files = ['./data/homework_20260831.json', './data/homework_20260824.json', './data/homework_20260727.json'];
             const requests = files.map(file => fetch(`${file}?v=${Date.now()}`).then(res => {
                 if (!res.ok) throw new Error(`Failed to load ${file}`);
                 return res.json();
