@@ -47,7 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch and Load Data
     async function loadData() {
         try {
-            const files = ['./data/homework_20260831.json', './data/homework_20260824.json', './data/homework_20260727.json'];
+            const files = [
+                './data/hsk3_exam_dialogues.json',
+                './data/homework_20260831.json',
+                './data/homework_20260824.json',
+                './data/homework_20260727.json'
+            ];
             const requests = files.map(file => fetch(`${file}?v=${Date.now()}`).then(res => {
                 if (!res.ok) throw new Error(`Failed to load ${file}`);
                 return res.json();
@@ -242,6 +247,122 @@ document.addEventListener('DOMContentLoaded', () => {
                 const idx = parseInt(e.currentTarget.dataset.index);
                 selectLine(idx, true);
             });
+        });
+
+        // Render Exam Quiz Card if present
+        if (currentDialogue.exam_quiz) {
+            renderExamQuiz(currentDialogue.exam_quiz);
+        }
+    }
+
+    function renderExamQuiz(quiz) {
+        if (!quiz) return;
+        const card = document.createElement('div');
+        card.className = 'exam-quiz-card';
+        card.id = 'exam-quiz-container';
+        card.innerHTML = `
+            <div class="exam-quiz-header">
+                <span class="exam-badge">HSK 3級 実戦問題</span>
+                <button id="btn-play-question-audio" class="btn-quiz-audio">🔊 設問音声を聞く</button>
+            </div>
+            <div class="exam-question-text">
+                <strong>問：</strong>${quiz.question}
+                <span class="exam-question-ja">（${quiz.question_ja}）</span>
+            </div>
+            <div class="exam-options-grid">
+                ${quiz.options.map(opt => `
+                    <button class="exam-option-btn" data-opt-key="${opt.key}">
+                        <span class="opt-key-badge">${opt.key}</span>
+                        <span class="opt-text">${opt.text}</span>
+                        <span class="opt-ja">（${opt.ja}）</span>
+                    </button>
+                `).join('')}
+            </div>
+            <div id="exam-quiz-feedback" class="exam-quiz-feedback" style="display: none;"></div>
+        `;
+
+        chatContainer.appendChild(card);
+
+        card.querySelector('#btn-play-question-audio').addEventListener('click', () => {
+            tts.speakText(quiz.question, 0.95);
+        });
+
+        card.querySelectorAll('.exam-option-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const selectedKey = e.currentTarget.dataset.optKey;
+                handleExamAnswer(selectedKey, quiz);
+            });
+        });
+    }
+
+    function handleExamAnswer(selectedKey, quiz) {
+        const isCorrect = selectedKey === quiz.answer;
+        const feedbackEl = document.getElementById('exam-quiz-feedback');
+        if (!feedbackEl) return;
+
+        feedbackEl.style.display = 'block';
+        feedbackEl.innerHTML = `
+            <div style="font-weight:bold; color:${isCorrect ? 'var(--success)' : 'var(--danger)'}; margin-bottom:0.3rem;">
+                ${isCorrect ? '✓ 正解！' : '✕ 不正解'}（正解は ${quiz.answer}）
+            </div>
+            <div>${quiz.explanation}</div>
+        `;
+
+        document.querySelectorAll('.exam-option-btn').forEach(btn => {
+            const key = btn.dataset.optKey;
+            if (key === quiz.answer) {
+                btn.classList.add('correct');
+            } else if (key === selectedKey && !isCorrect) {
+                btn.classList.add('incorrect');
+            }
+        });
+
+        if (isCorrect) {
+            tts.speakText('回答正确！', 1.0);
+        } else {
+            tts.speakText('回答错误，请看解析。', 1.0);
+        }
+    }
+
+    let isBroadcasting = false;
+    function startExamBroadcast() {
+        if (!currentDialogue) return;
+        const broadcastBtn = document.getElementById('btn-exam-broadcast');
+        if (isBroadcasting) {
+            tts.stop();
+            isBroadcasting = false;
+            if (broadcastBtn) broadcastBtn.classList.remove('broadcasting');
+            return;
+        }
+
+        isBroadcasting = true;
+        if (broadcastBtn) broadcastBtn.classList.add('broadcasting');
+
+        chatContainer.classList.add('blind-mode');
+        tts.playFullDialogue(currentDialogue, 0, () => {
+            if (!isBroadcasting) return;
+
+            const notice = document.createElement('div');
+            notice.className = 'quiz-feedback';
+            notice.style.margin = '1rem auto';
+            notice.style.textAlign = 'center';
+            notice.innerHTML = '🔔 第1回目終了。3秒後に第2回目（精聴）を開始します...';
+            chatContainer.appendChild(notice);
+
+            setTimeout(() => {
+                notice.remove();
+                if (!isBroadcasting) return;
+                chatContainer.classList.remove('blind-mode');
+                tts.playFullDialogue(currentDialogue, 0, () => {
+                    isBroadcasting = false;
+                    if (broadcastBtn) broadcastBtn.classList.remove('broadcasting');
+                    if (currentDialogue.exam_quiz) {
+                        setTimeout(() => {
+                            tts.speakText(currentDialogue.exam_quiz.question, 0.95);
+                        }, 1000);
+                    }
+                });
+            }, 3000);
         });
     }
 
@@ -480,6 +601,11 @@ document.addEventListener('DOMContentLoaded', () => {
             updateRoleplayVisibility(e.target.value);
         });
 
+        const examBroadcastBtn = document.getElementById('btn-exam-broadcast');
+        if (examBroadcastBtn) {
+            examBroadcastBtn.addEventListener('click', startExamBroadcast);
+        }
+
         // Shortcut Help Modal Toggle
         const openHelpBtn = document.getElementById('btn-open-help');
         const helpModal = document.getElementById('help-modal');
@@ -542,6 +668,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (numberBufferTimeout) clearTimeout(numberBufferTimeout);
                 numberBufferTimeout = setTimeout(() => { numberBuffer = ''; }, 1500);
                 return;
+            }
+
+            // Exam Option answering: A / B / C
+            if (currentDialogue && currentDialogue.exam_quiz && document.getElementById('exam-quiz-container')) {
+                if (lowerKey === 'a') {
+                    e.preventDefault();
+                    handleExamAnswer('A', currentDialogue.exam_quiz);
+                    return;
+                } else if (lowerKey === 'b') {
+                    e.preventDefault();
+                    handleExamAnswer('B', currentDialogue.exam_quiz);
+                    return;
+                } else if (lowerKey === 'c') {
+                    e.preventDefault();
+                    handleExamAnswer('C', currentDialogue.exam_quiz);
+                    return;
+                }
             }
 
             // G / gg / F : G-Mode Bombardment, Jump to Top/Bottom, F-Mode Segmented

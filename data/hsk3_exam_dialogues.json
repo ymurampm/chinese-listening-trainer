@@ -1,0 +1,285 @@
+{
+  "id": "hsk3_exam_dialogues",
+  "title": "🎓 HSK 3級 リスニング実戦模擬（第3・4部分）",
+  "description": "本番同様の3〜5往復の会話対話＋設問（Q）＋3択クイズ（A/B/C）。本番2回放送・ピンイン非表示対応。",
+  "dialogues": [
+    {
+      "id": "hsk3_dlg_1",
+      "title": "実戦第1問：空港での出迎えと荷物",
+      "level": "HSK 3級実戦",
+      "topic": "空港への到着・荷物の受け取りと移動手段",
+      "characters": [
+        {
+          "id": "male",
+          "name": "男",
+          "gender": "male",
+          "avatar": "👨",
+          "pitch": 1.0,
+          "rate": 0.95
+        },
+        {
+          "id": "female",
+          "name": "女",
+          "gender": "female",
+          "avatar": "👩",
+          "pitch": 1.0,
+          "rate": 0.95
+        }
+      ],
+      "lines": [
+        {
+          "id": "hsk3_1_1",
+          "speaker": "male",
+          "zh": "喂，你到了吗？我在出站口等了你半个小时了。",
+          "pinyin": "Wèi, nǐ dào le ma? Wǒ zài chūzhànkǒu děng le nǐ bàn gè xiǎoshí le.",
+          "ja": "もしもし、着いた？僕、出口で君を30分も待っているよ。",
+          "segments": [
+            "喂，你到了吗？",
+            "我在出站口等了你半个小时了。"
+          ],
+          "notes": [
+            {
+              "word": "出站口",
+              "pinyin": "chūzhànkǒu",
+              "meaning": "改札口、出口"
+            },
+            {
+              "word": "半个小时",
+              "pinyin": "bàn gè xiǎoshí",
+              "meaning": "30分間"
+            }
+          ]
+        },
+        {
+          "id": "hsk3_1_2",
+          "speaker": "female",
+          "zh": "真不好意思！飞机晚点了二十分钟，我刚拿到行李，正准备出去呢。",
+          "pinyin": "Zhēn bù hǎoyìsi! Fēijī wǎndiǎn le èrshí fēnzhōng, wǒ gāng nádào xíngli, zhèng zhǔnbèi chūqù ne.",
+          "ja": "本当にごめんなさい！飛行機が20分遅延して、今荷物を受け取ったところで、まさに外に出ようとしているの。",
+          "segments": [
+            "真不好意思！",
+            "飞机晚点了二十分钟，",
+            "我刚拿到行李，正准备出去呢。"
+          ],
+          "notes": [
+            {
+              "word": "晚点",
+              "pinyin": "wǎndiǎn",
+              "meaning": "遅延する[HSK3]"
+            },
+            {
+              "word": "行李",
+              "pinyin": "xíngli",
+              "meaning": "荷物[HSK3]"
+            }
+          ]
+        },
+        {
+          "id": "hsk3_1_3",
+          "speaker": "male",
+          "zh": "你的箱子重不重？要不要我进去帮你拿？",
+          "pinyin": "Nǐ de xiāngzi zhòng bu zhòng? Yào bu yào wǒ jìnqu bāng nǐ ná?",
+          "ja": "君のスーツケースは重い？僕が中に入って運ぶのを手伝おうか？",
+          "segments": [
+            "你的箱子重不重？",
+            "要不要我进去帮你拿？"
+          ],
+          "notes": [
+            {
+              "word": "箱子",
+              "pinyin": "xiāngzi",
+              "meaning": "スーツケース、箱[HSK3]"
+            },
+            {
+              "word": "重",
+              "pinyin": "zhòng",
+              "meaning": "重い[HSK3]"
+            }
+          ]
+        },
+        {
+          "id": "hsk3_1_4",
+          "speaker": "female",
+          "zh": "不用不用，箱子有轮子，我自己推过去就行。我们在旁边的咖啡店见吧。",
+          "pinyin": "Búyòng búyòng, xiāngzi yǒu lúnzi, wǒ zìjǐ tuī guòqu jiù xíng. Wǒmen zài pángbiān de kāfēidiàn jiàn ba.",
+          "ja": "いらないいらない、スーツケースに車輪があるから自分で押して行けば大丈夫。隣のカフェで会いましょう。",
+          "segments": [
+            "不用不用，",
+            "箱子有轮子，我自己推过去就行。",
+            "我们在旁边的咖啡店见吧。"
+          ],
+          "notes": [
+            {
+              "word": "推",
+              "pinyin": "tuī",
+              "meaning": "押す[HSK3]"
+            }
+          ]
+        }
+      ],
+      "exam_quiz": {
+        "question": "女的为什么迟到了？",
+        "question_pinyin": "Nǚ de wèishénme chídào le?",
+        "question_ja": "女性はなぜ遅刻したのですか？",
+        "options": [
+          {
+            "key": "A",
+            "text": "飞机晚点了",
+            "ja": "飛行機が遅延したから"
+          },
+          {
+            "key": "B",
+            "text": "找不着行李",
+            "ja": "荷物が見つからなかったから"
+          },
+          {
+            "key": "C",
+            "text": "去喝咖啡了",
+            "ja": "コーヒーを飲みに行ったから"
+          }
+        ],
+        "answer": "A",
+        "explanation": "女性は「飞机晚点了二十分钟（飛行機が20分遅延した）」と言っているため、正解はAです。"
+      }
+    },
+    {
+      "id": "hsk3_dlg_2",
+      "title": "実戦第2問：アパート探しと家賃の交渉",
+      "level": "HSK 3級実戦",
+      "topic": "賃貸物件の内見・立地と家賃",
+      "characters": [
+        {
+          "id": "female",
+          "name": "女（仲介）",
+          "gender": "female",
+          "avatar": "👩‍💼",
+          "pitch": 1.0,
+          "rate": 0.95
+        },
+        {
+          "id": "male",
+          "name": "男（客）",
+          "gender": "male",
+          "avatar": "👨",
+          "pitch": 1.0,
+          "rate": 0.95
+        }
+      ],
+      "lines": [
+        {
+          "id": "hsk3_2_1",
+          "speaker": "female",
+          "zh": "您看这套房子怎么样？虽然旧了一点儿，但是离地铁站走路只要三分钟。",
+          "pinyin": "Nín kàn zhè tào fángzi zěnmeyàng? Suīrán jiù le yìdiǎnr, dànshì lí dìtiězhàn zǒulù zhǐ yào sān fēnzhōng.",
+          "ja": "このお部屋はいかがですか？少し古いですが、地下鉄の駅まで歩いてたった3分です。",
+          "segments": [
+            "您看这套房子怎么样？",
+            "虽然旧了一点儿，",
+            "但是离地铁站走路只要三分钟。"
+          ],
+          "notes": [
+            {
+              "word": "套",
+              "pinyin": "tào",
+              "meaning": "部屋や服を数える量詞"
+            },
+            {
+              "word": "旧",
+              "pinyin": "jiù",
+              "meaning": "古い[HSK3]"
+            }
+          ]
+        },
+        {
+          "id": "hsk3_2_2",
+          "speaker": "male",
+          "zh": "环境确实挺安静的，而且厨房和洗手间都很干净。请问一个月房租多少钱？",
+          "pinyin": "Huánjìng quèshí tǐng ānjìng de, érqiě chúfáng hé xǐshǒujiān dōu hěn gānjìng. Qǐngwèn yí gè yuè fángzū duōshao qián?",
+          "ja": "環境は確かにとても静かですし、キッチンもトイレもとても清潔ですね。1か月の家賃はおいくらですか？",
+          "segments": [
+            "环境确实挺安静的，",
+            "而且厨房和洗手间都很干净。",
+            "请问一个月房租多少钱？"
+          ],
+          "notes": [
+            {
+              "word": "环境",
+              "pinyin": "huánjìng",
+              "meaning": "環境[HSK3]"
+            },
+            {
+              "word": "洗手间",
+              "pinyin": "xǐshǒujiān",
+              "meaning": "トイレ[HSK3]"
+            }
+          ]
+        },
+        {
+          "id": "hsk3_2_3",
+          "speaker": "female",
+          "zh": "房东要求四千块，如果签一年的合同，可以便宜两百块。",
+          "pinyin": "Fángdōng yāoqiú sìqiān kuài, rúguǒ qiān yì nián de hétong, kěyǐ piányi liǎngbǎi kuài.",
+          "ja": "家主は4000元を希望していますが、1年契約を結ぶなら200元安くできますよ。",
+          "segments": [
+            "房东要求四千块，",
+            "如果签一年的合同，可以便宜两百块。"
+          ],
+          "notes": [
+            {
+              "word": "房东",
+              "pinyin": "fángdōng",
+              "meaning": "家主[HSK3]"
+            },
+            {
+              "word": "合同",
+              "pinyin": "hétong",
+              "meaning": "契約[HSK3]"
+            }
+          ]
+        },
+        {
+          "id": "hsk3_2_4",
+          "speaker": "male",
+          "zh": "太好了！那我下午就带护照过来签合同。",
+          "pinyin": "Tài hǎo le! Nà wǒ xiàwǔ jiù dài hùzhào guòlái qiān hétong.",
+          "ja": "素晴らしい！では私は今日の午後にパスポートを持って契約に来ます。",
+          "segments": [
+            "太好了！",
+            "那我下午就带护照过来签合同。"
+          ],
+          "notes": [
+            {
+              "word": "护照",
+              "pinyin": "hùzhào",
+              "meaning": "パスポート[HSK3]"
+            }
+          ]
+        }
+      ],
+      "exam_quiz": {
+        "question": "关于这套房子，下面哪项是正确的？",
+        "question_pinyin": "Guānyú zhè tào fángzi, xiàmiàn nǎ xiàng shì zhèngquè de?",
+        "question_ja": "この部屋について、以下の中で正しいものはどれですか？",
+        "options": [
+          {
+            "key": "A",
+            "text": "房租是五千块",
+            "ja": "家賃は5000元である"
+          },
+          {
+            "key": "B",
+            "text": "离地铁站很近",
+            "ja": "地下鉄の駅にとても近い"
+          },
+          {
+            "key": "C",
+            "text": "房子非常新",
+            "ja": "部屋が非常に新しい"
+          }
+        ],
+        "answer": "B",
+        "explanation": "女性が「离地铁站走路只要三分钟（駅まで歩いてたった3分）」と述べているため、正解はBです（Aは4000元、Cは旧了一点儿なので誤り）。"
+      }
+    }
+  ]
+}

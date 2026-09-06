@@ -934,3 +934,151 @@ ruby.pinyin-ruby rt.bad-front {
     color: #f5f6fa;
     line-height: 1.5;
 }
+
+/* HSK 3 Exam Quiz Card & 2-Pass Broadcast */
+.btn-exam-broadcast {
+    background: linear-gradient(135deg, #ffd32a 0%, #ff9f43 100%);
+    border: none;
+    color: #121826;
+    font-weight: 700;
+    padding: 0.65rem 1.1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    box-shadow: 0 4px 15px rgba(255, 211, 42, 0.25);
+    transition: all 0.2s ease;
+}
+
+.btn-exam-broadcast:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 211, 42, 0.45);
+}
+
+.btn-exam-broadcast.broadcasting {
+    background: #ff5e57;
+    color: #ffffff;
+    animation: pulse 1.2s infinite;
+}
+
+.exam-quiz-card {
+    background: rgba(18, 26, 46, 0.96);
+    border: 2px solid var(--accent);
+    border-radius: 18px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 10px 30px rgba(255, 211, 42, 0.2);
+    animation: fadeIn 0.3s ease;
+}
+
+.exam-quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exam-badge {
+    background: linear-gradient(135deg, #ffd32a 0%, #ff9f43 100%);
+    color: #121826;
+    font-weight: 800;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 8px;
+}
+
+.btn-quiz-audio {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--card-border);
+    color: var(--primary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-quiz-audio:hover {
+    background: rgba(75, 207, 250, 0.2);
+    border-color: var(--primary);
+}
+
+.exam-question-text {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.exam-question-ja {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: normal;
+    display: block;
+    margin-top: 0.2rem;
+}
+
+.exam-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.8rem;
+}
+
+.exam-option-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    color: #f5f6fa;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.exam-option-btn:hover {
+    background: rgba(75, 207, 250, 0.15);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.exam-option-btn .opt-key-badge {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.82rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.exam-option-btn.correct {
+    background: rgba(11, 232, 129, 0.25) !important;
+    border-color: var(--success) !important;
+    color: #ffffff !important;
+}
+
+.exam-option-btn.incorrect {
+    background: rgba(255, 94, 87, 0.25) !important;
+    border-color: var(--danger) !important;
+    color: #ffffff !important;
+}
+
+.exam-quiz-feedback {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid var(--primary);
+    padding: 0.8rem 1.2rem;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: #f1f2f6;
+    animation: fadeIn 0.3s ease;
+}

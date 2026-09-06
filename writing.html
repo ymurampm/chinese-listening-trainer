@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSK 3級 書写（ライティング）マスター | 紙の試験突破特訓</title>
+    <link rel="stylesheet" href="./css/writing.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        
+        <!-- Header Navbar -->
+        <header class="app-header">
+            <div class="header-left">
+                <span class="header-icon">✍️</span>
+                <div>
+                    <h1>HSK 3級 書写（ライティング）マスター</h1>
+                    <p>紙の試験特化：語順整序パズル ＆ 日中漢字トラップ減点防止特訓</p>
+                </div>
+            </div>
+            <div class="header-nav-links">
+                <a href="index.html" class="nav-link-btn">💬 会話宿題マスターへ</a>
+                <a href="trainer.html" class="nav-link-btn">🎯 単文リスニングへ</a>
+            </div>
+        </header>
+
+        <!-- Section Switcher Tabs -->
+        <div class="section-tabs">
+            <button id="tab-ordering" class="tab-btn active" data-section="ordering">🧩 第1部分：語順整序パズル (组词成句)</button>
+            <button id="tab-fill" class="tab-btn" data-section="fill">✏️ 第2部分：看拼音写汉字 (空欄手書き想起)</button>
+            <button id="tab-traps" class="tab-btn" data-section="traps">⚠️ 日中漢字トラップ図鑑 (手書き減点防止)</button>
+        </div>
+
+        <!-- Section 1: 語順整序パズル (Ordering) -->
+        <section id="section-ordering" class="main-card">
+            <!-- Grammar Category Filter Pills -->
+            <div class="filter-pills" id="category-filter-pills">
+                <!-- Dynamically populated -->
+            </div>
+
+            <!-- Question Info Bar -->
+            <div class="question-info-bar">
+                <span id="order-category-badge" class="question-badge">把構文 (処置文)</span>
+                <span id="order-counter" class="question-counter">問 1 / 18</span>
+            </div>
+
+            <!-- Answer Slot Container -->
+            <div id="answer-slot" class="answer-slot-container empty"></div>
+
+            <!-- Word Chip Pool -->
+            <div id="chip-pool" class="word-chip-pool"></div>
+
+            <!-- Explanation & Feedback Card -->
+            <div id="order-explanation" class="explanation-card" style="display: none;">
+                <div id="order-feedback" class="feedback-badge correct">✓ 正解！ 正しい語順です</div>
+                <div id="order-full-zh" class="full-sentence-zh"></div>
+                <div id="order-full-pinyin" class="full-sentence-pinyin"></div>
+                <div id="order-full-ja" class="full-sentence-ja"></div>
+                <div id="order-grammar-details" class="grammar-details"></div>
+            </div>
+
+            <!-- Action Controls -->
+            <div class="action-buttons">
+                <div class="btn-group-left">
+                    <button id="btn-check-order" class="btn-primary">判定する (Enter)</button>
+                    <button id="btn-reset-order" class="btn-secondary">リセット (Esc)</button>
+                    <button id="btn-play-order-audio" class="btn-secondary">🔊 音声再生 (Space)</button>
+                </div>
+                <div class="btn-group-right">
+                    <button id="btn-prev-order" class="btn-secondary">◀ 前へ (K)</button>
+                    <button id="btn-next-order" class="btn-primary">次へ (J) ▶</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: 看拼音写汉字 (Fill in character) -->
+        <section id="section-fill" class="main-card" style="display: none;">
+            <div class="question-info-bar">
+                <span class="question-badge">第2部分 看拼音写汉字</span>
+                <span id="fill-counter" class="question-counter">問 1 / 10</span>
+            </div>
+
+            <div class="fill-card-prompt" id="fill-prompt">
+                <!-- Dynamically generated prompt with blank -->
+            </div>
+
+            <div id="fill-explanation" class="explanation-card" style="display: none;">
+                <div id="fill-feedback" class="feedback-badge correct">✓ 正解です！</div>
+                <div id="fill-trap-alert" class="trap-card-alert"></div>
+                <div id="fill-translation" class="full-sentence-ja"></div>
+            </div>
+
+            <div class="action-buttons">
+                <div class="btn-group-left">
+                    <button id="btn-check-fill" class="btn-primary">答え合わせ (Enter)</button>
+                    <button id="btn-reveal-fill" class="btn-secondary">正解を表示</button>
+                    <button id="btn-play-fill-audio" class="btn-secondary">🔊 音声再生 (Space)</button>
+                </div>
+                <div class="btn-group-right">
+                    <button id="btn-prev-fill" class="btn-secondary">◀ 前へ (K)</button>
+                    <button id="btn-next-fill" class="btn-primary">次へ (J) ▶</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: 日中漢字トラップ図鑑 (Kanji Traps Deck) -->
+        <section id="section-traps" class="main-card" style="display: none;">
+            <div class="question-info-bar">
+                <span class="question-badge" style="background: rgba(255,94,87,0.2); border-color: var(--danger); color: var(--danger);">⚠️ 日本人減点防止トラップ集</span>
+                <span class="question-counter">全 16 厳選頻出漢字</span>
+            </div>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">
+                紙の筆記試験では、日本の漢字（新字体や旧字体）の癖で書いてしまうと「0点」と判定されます。以下の微差を完璧に頭に入れておきましょう！
+            </p>
+            <div id="trap-grid" class="trap-grid">
+                <!-- Dynamically populated trap comparison cards -->
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/writing.js"></script>
+</body>
+</html>
