@@ -279,16 +279,27 @@ document.addEventListener('DOMContentLoaded', () => {
         checkFillAnswer();
     }
 
-    // SECTION 3: 日中漢字トラップ図鑑
-    let activeTrapCategory = 'all';
+    // SECTION 3: 日中漢字トラップ図鑑 (HSK 3級出題重要度順)
+    let activeTrapTier = 'all';
+    let activeTrapType = 'all';
 
     function setupTrapCategoryFilters() {
-        const pills = document.querySelectorAll('#trap-filter-pills .filter-pill');
-        pills.forEach(pill => {
+        const tierPills = document.querySelectorAll('#trap-tier-pills .filter-pill');
+        tierPills.forEach(pill => {
             pill.addEventListener('click', (e) => {
-                pills.forEach(p => p.classList.remove('active'));
+                tierPills.forEach(p => p.classList.remove('active'));
                 e.currentTarget.classList.add('active');
-                activeTrapCategory = e.currentTarget.dataset.trapCat;
+                activeTrapTier = e.currentTarget.dataset.trapTier;
+                renderKanjiTraps();
+            });
+        });
+
+        const typePills = document.querySelectorAll('#trap-type-pills .filter-pill');
+        typePills.forEach(pill => {
+            pill.addEventListener('click', (e) => {
+                typePills.forEach(p => p.classList.remove('active'));
+                e.currentTarget.classList.add('active');
+                activeTrapType = e.currentTarget.dataset.trapType;
                 renderKanjiTraps();
             });
         });
@@ -299,9 +310,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const counterEl = document.getElementById('trap-counter');
         if (!grid || !writingDB || !writingDB.kanji_traps) return;
 
-        const list = activeTrapCategory === 'all'
-            ? writingDB.kanji_traps
-            : writingDB.kanji_traps.filter(t => t.category === activeTrapCategory);
+        let list = writingDB.kanji_traps;
+
+        // Filter by Tier
+        if (activeTrapTier !== 'all') {
+            list = list.filter(t => t.tier === activeTrapTier);
+        }
+
+        // Filter by Type
+        if (activeTrapType !== 'all') {
+            list = list.filter(t => t.category === activeTrapType);
+        }
 
         if (counterEl) {
             counterEl.textContent = `表示中 ${list.length} / 全 ${writingDB.kanji_traps.length} 漢字`;
@@ -311,11 +330,17 @@ document.addEventListener('DOMContentLoaded', () => {
         list.forEach(trap => {
             const card = document.createElement('div');
             card.className = 'trap-card';
+            const tierClass = trap.tier ? `tier-${trap.tier.toLowerCase()}` : 'tier-c';
             card.innerHTML = `
                 <div class="trap-header">
-                    <span style="font-weight:700; color:var(--accent); font-size:1.05rem;">【${trap.pinyin}】 ${trap.meaning}</span>
-                    <span style="font-size:0.75rem; background:rgba(255,255,255,0.1); padding:0.2rem 0.5rem; border-radius:6px;">HSK ${trap.hsk}</span>
+                    <div class="trap-title-group">
+                        <span class="rank-badge">#${trap.rank}</span>
+                        <span class="tier-badge ${tierClass}">${trap.importance_label || `Tier ${trap.tier}`}</span>
+                        <span style="font-weight:700; color:var(--accent); font-size:1.05rem;">【${trap.pinyin}】</span>
+                    </div>
+                    <span style="font-size:0.75rem; background:rgba(255,255,255,0.08); padding:0.2rem 0.5rem; border-radius:6px; color:var(--text-muted);">HSK ${trap.hsk}級</span>
                 </div>
+                <div style="font-size: 0.88rem; color: #f1f2f6; font-weight: 600;">意味: ${trap.meaning}</div>
                 <div class="trap-compare-box">
                     <div class="char-cell zh">
                         <span class="char-big">${trap.zh}</span>
