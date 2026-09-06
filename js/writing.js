@@ -268,6 +268,24 @@ document.addEventListener('DOMContentLoaded', () => {
         trap.innerHTML = q.trap_warning;
         trans.textContent = `日本語訳: ${q.meaning}`;
 
+        // External dictionary reference links
+        let dictLinks = document.getElementById('fill-dict-links');
+        if (!dictLinks) {
+            dictLinks = document.createElement('div');
+            dictLinks.id = 'fill-dict-links';
+            dictLinks.className = 'fill-dict-links';
+            exp.appendChild(dictLinks);
+        }
+        dictLinks.innerHTML = `
+            <span style="font-size:0.8rem; color:var(--text-muted);">手書き・筆順確認:</span>
+            <a href="https://cndic.naver.com/zh/search?q=${encodeURIComponent(q.answer)}" target="_blank" rel="noopener noreferrer" class="trap-ext-link line-dict" title="NAVER/LINE中日辞書で筆順アニメと解説を見る">
+                ✍️ 「${q.answer}」の筆順・書き方（LINE辞書）↗
+            </a>
+            <a href="https://zdic.net/hans/${encodeURIComponent(q.answer)}" target="_blank" rel="noopener noreferrer" class="trap-ext-link zdic" title="汉典(zdic)で標準字形を見る">
+                📖 汉典 (zdic) ↗
+            </a>
+        `;
+
         speakText(q.sentence_before + q.answer + q.sentence_after);
     }
 
@@ -353,7 +371,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
                 <div class="trap-tip-text">${trap.tip}</div>
-                <button class="nav-link-btn" style="align-self:flex-start; margin-top:0.2rem;" onclick="speakTrap('${trap.zh}')">🔊 発音を聞く</button>
+                <div class="trap-action-bar">
+                    <button class="trap-btn" onclick="speakTrap('${trap.zh}')" title="発音を聞く">🔊 発音</button>
+                    <a href="https://cndic.naver.com/zh/search?q=${encodeURIComponent(trap.zh)}" target="_blank" rel="noopener noreferrer" class="trap-ext-link line-dict" title="NAVER/LINE中日辞書で筆順アニメと日本語訳を見る">
+                        ✍️ LINE辞書 (筆順) ↗
+                    </a>
+                    <a href="https://zdic.net/hans/${encodeURIComponent(trap.zh)}" target="_blank" rel="noopener noreferrer" class="trap-ext-link zdic" title="汉典(zdic)で標準筆順と字形解説を見る">
+                        📖 汉典 (標準字形) ↗
+                    </a>
+                </div>
             `;
             grid.appendChild(card);
         });

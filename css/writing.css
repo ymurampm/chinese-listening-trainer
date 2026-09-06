@@ -566,6 +566,83 @@ body {
     border-radius: 8px;
 }
 
+.trap-action-bar {
+    display: flex;
+    gap: 0.45rem;
+    flex-wrap: wrap;
+    margin-top: 0.4rem;
+    align-items: center;
+}
+
+.trap-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--card-border);
+    color: #f1f2f6;
+    padding: 0.35rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.trap-btn:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+.trap-ext-link {
+    text-decoration: none;
+    padding: 0.35rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: all 0.2s ease;
+}
+
+.trap-ext-link.line-dict {
+    background: rgba(0, 195, 0, 0.12);
+    border: 1px solid rgba(0, 210, 106, 0.45);
+    color: #2ed573;
+}
+
+.trap-ext-link.line-dict:hover {
+    background: rgba(0, 195, 0, 0.22);
+    border-color: rgba(0, 210, 106, 0.7);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(46, 213, 115, 0.25);
+}
+
+.trap-ext-link.zdic {
+    background: rgba(75, 207, 250, 0.12);
+    border: 1px solid rgba(75, 207, 250, 0.4);
+    color: #4bcffa;
+}
+
+.trap-ext-link.zdic:hover {
+    background: rgba(75, 207, 250, 0.22);
+    border-color: rgba(75, 207, 250, 0.7);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(75, 207, 250, 0.25);
+}
+
+.fill-dict-links {
+    margin-top: 0.6rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(6px); }
     to { opacity: 1; transform: translateY(0); }
