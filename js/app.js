@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadData() {
         try {
             const files = [
+                './data/homework_20260914.json',
                 './data/homework_20260907.json',
                 './data/hsk3_exam_dialogues.json',
                 './data/homework_20260831.json',

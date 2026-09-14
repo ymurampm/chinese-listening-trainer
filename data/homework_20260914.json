@@ -1,0 +1,627 @@
+{
+  "id": "homework_20260914",
+  "title": "宿題 2026/09/14 会話レッスン",
+  "description": "For 村上さん20260914.pdf 7ページ（初級会話「去沃尔玛购物」）",
+  "dialogues": [
+    {
+      "id": "d20260914_1",
+      "title": "初级对话-6 去沃尔玛购物",
+      "level": "初級 (HSK 2)",
+      "topic": "ウォルマートでの買い物（野菜・果物・肉）とセルフレジ（スマホ決済）",
+      "characters": [
+        {
+          "id": "sufei",
+          "name": "苏飞",
+          "gender": "female",
+          "avatar": "👧",
+          "pitch": 1.0,
+          "rate": 0.95
+        },
+        {
+          "id": "jieming",
+          "name": "杰明",
+          "gender": "male",
+          "avatar": "👨",
+          "pitch": 0.95,
+          "rate": 0.95
+        },
+        {
+          "id": "narrator",
+          "name": "旁白",
+          "gender": "female",
+          "avatar": "⏱️",
+          "pitch": 1.0,
+          "rate": 1.0
+        }
+      ],
+      "lines": [
+        {
+          "id": "d9_1",
+          "speaker": "sufei",
+          "zh": "你看，前面就是沃尔玛超市。",
+          "pinyin": "Nǐ kàn, qiánmiàn jiù shì Wò'ěrmǎ chāoshì.",
+          "ja": "見て、前にあるのがウォルマート（スーパー）よ。",
+          "segments": [
+            "你看，",
+            "前面就是沃尔玛超市。"
+          ],
+          "notes": [
+            {
+              "word": "沃尔玛",
+              "pinyin": "Wò'ěrmǎ",
+              "meaning": "ウォルマート（Walmart）"
+            },
+            {
+              "word": "超市",
+              "pinyin": "chāoshì",
+              "meaning": "スーパーマーケット（HSK2）"
+            },
+            {
+              "word": "前面",
+              "pinyin": "qiánmiàn",
+              "meaning": "前、前方（HSK1）"
+            },
+            {
+              "word": "就是",
+              "pinyin": "jiù shì",
+              "meaning": "まさに〜である"
+            }
+          ]
+        },
+        {
+          "id": "d9_2",
+          "speaker": "jieming",
+          "zh": "哇！这个超市真大。",
+          "pinyin": "Wa! Zhè ge chāoshì zhēn dà.",
+          "ja": "わあ！このスーパー、本当に大きいね。",
+          "segments": [
+            "哇！",
+            "这个超市真大。"
+          ],
+          "notes": [
+            {
+              "word": "真",
+              "pinyin": "zhēn",
+              "meaning": "本当に、実に（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d9_3",
+          "speaker": "sufei",
+          "zh": "当然！很多人都喜欢在沃尔玛买东西，很方便、选择也多。",
+          "pinyin": "Dāngrán! Hěn duō rén dōu xǐhuan zài Wò'ěrmǎ mǎi dōngxi, hěn fāngbiàn, xuǎnzé yě duō.",
+          "ja": "当然よ！たくさんの人がウォルマートで買い物するのが好きなの。とても便利だし、品揃え（選択肢）も多いからね。",
+          "segments": [
+            "当然！",
+            "很多人都喜欢在沃尔玛买东西，",
+            "很方便、",
+            "选择也多。"
+          ],
+          "notes": [
+            {
+              "word": "当然",
+              "pinyin": "dāngrán",
+              "meaning": "もちろん、当然（HSK3）"
+            },
+            {
+              "word": "买东西",
+              "pinyin": "mǎi dōngxi",
+              "meaning": "買い物をする（HSK1）"
+            },
+            {
+              "word": "方便",
+              "pinyin": "fāngbiàn",
+              "meaning": "便利だ（HSK3）"
+            },
+            {
+              "word": "选择",
+              "pinyin": "xuǎnzé",
+              "meaning": "選択、選ぶ（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d9_4",
+          "speaker": "jieming",
+          "zh": "看来，沃尔玛很有名！",
+          "pinyin": "Kànlái, Wò'ěrmǎ hěn yǒumíng!",
+          "ja": "どうやら、ウォルマートはとても有名なんだね！",
+          "segments": [
+            "看来，",
+            "沃尔玛很有名！"
+          ],
+          "notes": [
+            {
+              "word": "看来",
+              "pinyin": "kànlái",
+              "meaning": "見たところ〜のようだ（HSK4）"
+            },
+            {
+              "word": "有名",
+              "pinyin": "yǒumíng",
+              "meaning": "有名な（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d9_5",
+          "speaker": "sufei",
+          "zh": "嗯！这里的东西也不错，我每个周末都会来这里买菜。",
+          "pinyin": "Èn! Zhèlǐ de dōngxi yě búcuò, wǒ měi gè zhōumò dōu huì lái zhèlǐ mǎi cài.",
+          "ja": "ええ！ここにある商品もなかなか良いし、私は毎週末必ずここに来て食材を買っているの。",
+          "segments": [
+            "嗯！这里的东西也不错，",
+            "我每个周末都会来这里买菜。"
+          ],
+          "notes": [
+            {
+              "word": "不错",
+              "pinyin": "búcuò",
+              "meaning": "悪くない、素晴らしい（HSK2）"
+            },
+            {
+              "word": "周末",
+              "pinyin": "zhōumò",
+              "meaning": "週末（HSK3）"
+            },
+            {
+              "word": "买菜",
+              "pinyin": "mǎi cài",
+              "meaning": "食材・野菜の買い出しをする"
+            }
+          ]
+        },
+        {
+          "id": "d9_6",
+          "speaker": "jieming",
+          "zh": "今天人很多，好像有点儿挤！",
+          "pinyin": "Jīntiān rén hěn duō, hǎoxiàng yǒudiǎnr jǐ!",
+          "ja": "今日は人が多くて、ちょっと混み合っている（ぎゅうぎゅうな）ようだね！",
+          "segments": [
+            "今天人很多，",
+            "好像有点儿挤！"
+          ],
+          "notes": [
+            {
+              "word": "好像",
+              "pinyin": "hǎoxiàng",
+              "meaning": "まるで〜のようだ（HSK3）"
+            },
+            {
+              "word": "有点儿",
+              "pinyin": "yǒudiǎnr",
+              "meaning": "少し、ちょっと（消極的なニュアンス, HSK2）"
+            },
+            {
+              "word": "挤",
+              "pinyin": "jǐ",
+              "meaning": "混雑している、ぎゅうぎゅう押し合う（HSK4）"
+            }
+          ]
+        },
+        {
+          "id": "d9_7",
+          "speaker": "sufei",
+          "zh": "是啊！周末买菜都挤。",
+          "pinyin": "Shì a! Zhōumò mǎi cài dōu jǐ.",
+          "ja": "そうよ！週末の買い出しはいつも混むの。",
+          "segments": [
+            "是啊！",
+            "周末买菜都挤。"
+          ],
+          "notes": [
+            {
+              "word": "都",
+              "pinyin": "dōu",
+              "meaning": "いつも〜だ、すべて（HSK1）"
+            }
+          ]
+        },
+        {
+          "id": "d9_8",
+          "speaker": "jieming",
+          "zh": "我要买很多东西——蔬菜、水果和肉。",
+          "pinyin": "Wǒ yào mǎi hěn duō dōngxi —— shūcài, shuǐguǒ hé ròu.",
+          "ja": "買いたいものがたくさんあるんだ。野菜、果物、それとお肉。",
+          "segments": [
+            "我要买很多东西——",
+            "蔬菜、水果和肉。"
+          ],
+          "notes": [
+            {
+              "word": "蔬菜",
+              "pinyin": "shūcài",
+              "meaning": "野菜（HSK3）"
+            },
+            {
+              "word": "水果",
+              "pinyin": "shuǐguǒ",
+              "meaning": "果物（HSK1）"
+            },
+            {
+              "word": "肉",
+              "pinyin": "ròu",
+              "meaning": "肉（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d9_9",
+          "speaker": "sufei",
+          "zh": "这里有香蕉、苹果、橘子和葡萄。",
+          "pinyin": "Zhèlǐ yǒu xiāngjiāo, píngguǒ, júzi hé pútao.",
+          "ja": "ここにはバナナ、リンゴ、みかん、ぶどうがあるわ。",
+          "segments": [
+            "这里有香蕉、苹果、",
+            "橘子和葡萄。"
+          ],
+          "notes": [
+            {
+              "word": "香蕉",
+              "pinyin": "xiāngjiāo",
+              "meaning": "バナナ（HSK3）"
+            },
+            {
+              "word": "苹果",
+              "pinyin": "píngguǒ",
+              "meaning": "リンゴ（HSK1）"
+            },
+            {
+              "word": "橘子",
+              "pinyin": "júzi",
+              "meaning": "みかん（HSK3）"
+            },
+            {
+              "word": "葡萄",
+              "pinyin": "pútao",
+              "meaning": "ぶどう（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d9_10",
+          "speaker": "jieming",
+          "zh": "对了，香蕉和葡萄多少钱一斤？",
+          "pinyin": "Duì le, xiāngjiāo hé pútao duōshao qián yì jīn?",
+          "ja": "そういえば、バナナとぶどうは500グラム（1斤）いくら？",
+          "segments": [
+            "对了，",
+            "香蕉和葡萄多少钱一斤？"
+          ],
+          "notes": [
+            {
+              "word": "对了",
+              "pinyin": "duì le",
+              "meaning": "そういえば、ところで"
+            },
+            {
+              "word": "多少钱",
+              "pinyin": "duōshao qián",
+              "meaning": "いくら（値段の尋ね方, HSK1）"
+            },
+            {
+              "word": "斤",
+              "pinyin": "jīn",
+              "meaning": "斤（中国の重さの単位、1斤＝500g, HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d9_11",
+          "speaker": "sufei",
+          "zh": "我看一看，香蕉5块钱一斤，葡萄18块钱一斤。",
+          "pinyin": "Wǒ kàn yi kàn, xiāngjiāo wǔ kuài qián yì jīn, pútao shíbā kuài qián yì jīn.",
+          "ja": "ちょっと見てみるわね。バナナは500gで5元、ぶどうは500gで18元よ。",
+          "segments": [
+            "我看一看，",
+            "香蕉5块钱一斤，",
+            "葡萄18块钱一斤。"
+          ],
+          "notes": [
+            {
+              "word": "看一看",
+              "pinyin": "kàn yi kàn",
+              "meaning": "ちょっと見てみる（動詞の重ね型）"
+            },
+            {
+              "word": "块",
+              "pinyin": "kuài",
+              "meaning": "元（口語の金額単位, HSK1）"
+            }
+          ]
+        },
+        {
+          "id": "d9_12",
+          "speaker": "jieming",
+          "zh": "看来，香蕉很便宜，葡萄有点儿贵。",
+          "pinyin": "Kànlái, xiāngjiāo hěn piányi, pútao yǒudiǎnr guì.",
+          "ja": "なるほど、バナナはとても安くて、ぶどうはちょっと高いね。",
+          "segments": [
+            "看来，",
+            "香蕉很便宜，",
+            "葡萄有点儿贵。"
+          ],
+          "notes": [
+            {
+              "word": "便宜",
+              "pinyin": "piányi",
+              "meaning": "安い（HSK2）"
+            },
+            {
+              "word": "贵",
+              "pinyin": "guì",
+              "meaning": "高い（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d9_13",
+          "speaker": "sufei",
+          "zh": "你要买哪些蔬菜？",
+          "pinyin": "Nǐ yào mǎi nǎxiē shūcài?",
+          "ja": "どんな野菜を買いたいの？",
+          "segments": [
+            "你要买哪些蔬菜？"
+          ],
+          "notes": [
+            {
+              "word": "哪些",
+              "pinyin": "nǎxiē",
+              "meaning": "どの、どんな（複数, HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d9_14",
+          "speaker": "jieming",
+          "zh": "我要买白菜、土豆、西红柿和西兰花。",
+          "pinyin": "Wǒ yào mǎi báicài, tǔdòu, xīhóngshì hé xīlánhuā.",
+          "ja": "白菜、じゃがいも、トマト、ブロッコリーを買いたいんだ。",
+          "segments": [
+            "我要买白菜、土豆、",
+            "西红柿和西兰花。"
+          ],
+          "notes": [
+            {
+              "word": "白菜",
+              "pinyin": "báicài",
+              "meaning": "白菜"
+            },
+            {
+              "word": "土豆",
+              "pinyin": "tǔdòu",
+              "meaning": "じゃがいも"
+            },
+            {
+              "word": "西红柿",
+              "pinyin": "xīhóngshì",
+              "meaning": "トマト（HSK3）"
+            },
+            {
+              "word": "西兰花",
+              "pinyin": "xīlánhuā",
+              "meaning": "ブロッコリー"
+            }
+          ]
+        },
+        {
+          "id": "d9_15",
+          "speaker": "sufei",
+          "zh": "还有吗？",
+          "pinyin": "Hái yǒu ma?",
+          "ja": "まだ他にある？",
+          "segments": [
+            "还有吗？"
+          ],
+          "notes": [
+            {
+              "word": "还有",
+              "pinyin": "hái yǒu",
+              "meaning": "まだある、その他に"
+            }
+          ]
+        },
+        {
+          "id": "d9_16",
+          "speaker": "jieming",
+          "zh": "还有面包、猪肉、牛肉、鸡蛋和鱼。",
+          "pinyin": "Hái yǒu miànbāo, zhūròu, niúròu, jīdàn hé yú.",
+          "ja": "あとはパン、豚肉、牛肉、卵、魚だよ。",
+          "segments": [
+            "还有面包、猪肉、",
+            "牛肉、鸡蛋和鱼。"
+          ],
+          "notes": [
+            {
+              "word": "面包",
+              "pinyin": "miànbāo",
+              "meaning": "パン（HSK3）"
+            },
+            {
+              "word": "猪肉",
+              "pinyin": "zhūròu",
+              "meaning": "豚肉"
+            },
+            {
+              "word": "牛肉",
+              "pinyin": "niúròu",
+              "meaning": "牛肉（HSK2）"
+            },
+            {
+              "word": "鸡蛋",
+              "pinyin": "jīdàn",
+              "meaning": "卵（HSK2）"
+            },
+            {
+              "word": "鱼",
+              "pinyin": "yú",
+              "meaning": "魚（HSK1）"
+            }
+          ]
+        },
+        {
+          "id": "d9_17",
+          "speaker": "sufei",
+          "zh": "东西都在前面，我们过去吧。",
+          "pinyin": "Dōngxi dōu zài qiánmiàn, wǒmen guòqu ba.",
+          "ja": "品物は全部前にあるから、あっちへ行きましょう。",
+          "segments": [
+            "东西都在前面，",
+            "我们过去吧。"
+          ],
+          "notes": [
+            {
+              "word": "过去",
+              "pinyin": "guòqu",
+              "meaning": "向こうへ行く（方向補語, HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d9_18",
+          "speaker": "narrator",
+          "zh": "（十分钟后...）",
+          "pinyin": "(Shí fēnzhōng hòu...)",
+          "ja": "（10分後...）",
+          "segments": [
+            "十分钟后..."
+          ],
+          "notes": []
+        },
+        {
+          "id": "d9_19",
+          "speaker": "jieming",
+          "zh": "都买好了！",
+          "pinyin": "Dōu mǎihǎo le!",
+          "ja": "全部買い揃えたよ！",
+          "segments": [
+            "都买好了！"
+          ],
+          "notes": [
+            {
+              "word": "买好",
+              "pinyin": "mǎihǎo",
+              "meaning": "買い終える、ちゃんと買う（結果補語 好）"
+            }
+          ]
+        },
+        {
+          "id": "d9_20",
+          "speaker": "sufei",
+          "zh": "这是自动付款机，你可以用手机扫码付款。",
+          "pinyin": "Zhè shì zìdòng fùkuǎnjī, nǐ kěyǐ yòng shǒujī sǎomǎ fùkuǎn.",
+          "ja": "これはセルフレジ（自動精算機）よ。スマホでQRコードを読み取って決済できるわ。",
+          "segments": [
+            "这是自动付款机，",
+            "你可以用手机扫码付款。"
+          ],
+          "notes": [
+            {
+              "word": "自动付款机",
+              "pinyin": "zìdòng fùkuǎnjī",
+              "meaning": "セルフレジ、自動精算機"
+            },
+            {
+              "word": "手机",
+              "pinyin": "shǒujī",
+              "meaning": "携帯電話、スマホ（HSK2）"
+            },
+            {
+              "word": "扫码",
+              "pinyin": "sǎomǎ",
+              "meaning": "コードをスキャンする"
+            },
+            {
+              "word": "付款",
+              "pinyin": "fùkuǎn",
+              "meaning": "支払いをする、決済する"
+            }
+          ]
+        },
+        {
+          "id": "d9_21",
+          "speaker": "jieming",
+          "zh": "好的。一共才120块钱，不贵！",
+          "pinyin": "Hǎo de. Yígòng cái yībǎi èrshí kuài qián, bú guì!",
+          "ja": "わかった。全部でたったの120元か、高くないね！",
+          "segments": [
+            "好的。",
+            "一共才120块钱，",
+            "不贵！"
+          ],
+          "notes": [
+            {
+              "word": "一共",
+              "pinyin": "yígòng",
+              "meaning": "全部で、合計（HSK2）"
+            },
+            {
+              "word": "才",
+              "pinyin": "cái",
+              "meaning": "わずか〜にすぎない、たったの（数量の少なさを強調, HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d9_22",
+          "speaker": "sufei",
+          "zh": "是啊，比英国的便宜多了。",
+          "pinyin": "Shì a, bǐ Yīngguó de piányi duō le.",
+          "ja": "そうね、イギリスのよりずっと安いわよ。",
+          "segments": [
+            "是啊，",
+            "比英国的便宜多了。"
+          ],
+          "notes": [
+            {
+              "word": "比",
+              "pinyin": "bǐ",
+              "meaning": "〜に比べて（比較文, HSK2）"
+            },
+            {
+              "word": "便宜多了",
+              "pinyin": "piányi duō le",
+              "meaning": "ずっと安い（形容詞＋多了: 程度が大きい）"
+            }
+          ]
+        },
+        {
+          "id": "d9_23",
+          "speaker": "jieming",
+          "zh": "嗯，谢谢你帮我！",
+          "pinyin": "Èn, xièxie nǐ bāng wǒ!",
+          "ja": "うん、手伝ってくれてありがとう！",
+          "segments": [
+            "嗯，",
+            "谢谢你帮我！"
+          ],
+          "notes": [
+            {
+              "word": "帮",
+              "pinyin": "bāng",
+              "meaning": "手伝う、助ける（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d9_24",
+          "speaker": "sufei",
+          "zh": "不客气！",
+          "pinyin": "Bú kèqi!",
+          "ja": "どういたしまして！",
+          "segments": [
+            "不客气！"
+          ],
+          "notes": [
+            {
+              "word": "不客气",
+              "pinyin": "bú kèqi",
+              "meaning": "どういたしまして（HSK1）"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
