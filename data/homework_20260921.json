@@ -1,0 +1,625 @@
+{
+  "id": "homework_20260921",
+  "title": "宿題 2026/09/21 会話レッスン",
+  "description": "For 村上さん20260921.pdf 9ページ（初級会話「去饭店」）",
+  "dialogues": [
+    {
+      "id": "d20260921_1",
+      "title": "初级对话-7 去饭店",
+      "level": "初級 (HSK 2)",
+      "topic": "レストランでの注文（量詞・中華料理名）・箸への挑戦・WeChat決済",
+      "characters": [
+        {
+          "id": "sufei",
+          "name": "苏飞",
+          "gender": "female",
+          "avatar": "👧",
+          "pitch": 1.0,
+          "rate": 0.95
+        },
+        {
+          "id": "jieming",
+          "name": "杰明",
+          "gender": "male",
+          "avatar": "👨",
+          "pitch": 0.95,
+          "rate": 0.95
+        },
+        {
+          "id": "waiter",
+          "name": "服务员",
+          "gender": "female",
+          "avatar": "🧑‍🍳",
+          "pitch": 1.05,
+          "rate": 0.95
+        },
+        {
+          "id": "narrator",
+          "name": "旁白",
+          "gender": "female",
+          "avatar": "⏱️",
+          "pitch": 1.0,
+          "rate": 1.0
+        }
+      ],
+      "lines": [
+        {
+          "id": "d10_1",
+          "speaker": "sufei",
+          "zh": "就是这家饭馆，我们进去吧。",
+          "pinyin": "Jiù shì zhè jiā fànguǎn, wǒmen jìnqu ba.",
+          "ja": "まさにこのレストランよ、中に入りましょう。",
+          "segments": [
+            "就是这家饭馆，",
+            "我们进去吧。"
+          ],
+          "notes": [
+            {
+              "word": "饭馆",
+              "pinyin": "fànguǎn",
+              "meaning": "レストラン、飲食店（HSK2）"
+            },
+            {
+              "word": "家",
+              "pinyin": "jiā",
+              "meaning": "店やレストランを数える量詞（HSK2）"
+            },
+            {
+              "word": "进去",
+              "pinyin": "jìnqu",
+              "meaning": "入っていく（方向補語, HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d10_2",
+          "speaker": "jieming",
+          "zh": "好啊！",
+          "pinyin": "Hǎo a!",
+          "ja": "いいね！",
+          "segments": [
+            "好啊！"
+          ],
+          "notes": []
+        },
+        {
+          "id": "d10_3",
+          "speaker": "waiter",
+          "zh": "欢迎，请问几位？",
+          "pinyin": "Huānyíng, qǐngwèn jǐ wèi?",
+          "ja": "いらっしゃいませ、何名様でしょうか？",
+          "segments": [
+            "欢迎，",
+            "请问几位？"
+          ],
+          "notes": [
+            {
+              "word": "欢迎",
+              "pinyin": "huānyíng",
+              "meaning": "いらっしゃいませ、歓迎する（HSK2）"
+            },
+            {
+              "word": "请问",
+              "pinyin": "qǐngwèn",
+              "meaning": "お尋ねしますが（丁寧な質問の切り出し, HSK2）"
+            },
+            {
+              "word": "位",
+              "pinyin": "wèi",
+              "meaning": "人を数える敬称の量詞（〜名様, HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d10_4",
+          "speaker": "sufei",
+          "zh": "就我们两个人。",
+          "pinyin": "Jiù wǒmen liǎng gè rén.",
+          "ja": "私たち2人だけです。",
+          "segments": [
+            "就我们两个人。"
+          ],
+          "notes": [
+            {
+              "word": "就",
+              "pinyin": "jiù",
+              "meaning": "〜だけ、〜のみ（限定）"
+            }
+          ]
+        },
+        {
+          "id": "d10_5",
+          "speaker": "waiter",
+          "zh": "好的，请进！两位请坐！这是菜单。",
+          "pinyin": "Hǎo de, qǐng jìn! Liǎng wèi qǐng zuò! Zhè shì càidān.",
+          "ja": "かしこまりました、どうぞお入りください！お二人様、どうぞお座りください！こちらがメニューです。",
+          "segments": [
+            "好的，请进！",
+            "两位请坐！",
+            "这是菜单。"
+          ],
+          "notes": [
+            {
+              "word": "请进",
+              "pinyin": "qǐng jìn",
+              "meaning": "お入りください（HSK2）"
+            },
+            {
+              "word": "请坐",
+              "pinyin": "qǐng zuò",
+              "meaning": "お座りください（HSK2）"
+            },
+            {
+              "word": "菜单",
+              "pinyin": "càidān",
+              "meaning": "メニュー（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d10_6",
+          "speaker": "jieming",
+          "zh": "谢谢！我看一看。我要一盘北京烤鸭和一碗炒饭。",
+          "pinyin": "Xièxie! Wǒ kàn yi kàn. Wǒ yào yì pán Běijīng kǎoyā hé yì wǎn chǎofàn.",
+          "ja": "ありがとうございます！ちょっと見ますね。北京ダックを一皿と、チャーハンを一杯ください。",
+          "segments": [
+            "谢谢！我看一看。",
+            "我要一盘北京烤鸭",
+            "和一碗炒饭。"
+          ],
+          "notes": [
+            {
+              "word": "看一看",
+              "pinyin": "kàn yi kàn",
+              "meaning": "ちょっと見てみる（動詞の重ね型）"
+            },
+            {
+              "word": "盘",
+              "pinyin": "pán",
+              "meaning": "皿、一皿分の料理を数える量詞（HSK3）"
+            },
+            {
+              "word": "北京烤鸭",
+              "pinyin": "Běijīng kǎoyā",
+              "meaning": "北京ダック"
+            },
+            {
+              "word": "碗",
+              "pinyin": "wǎn",
+              "meaning": "椀、一杯分の料理を数える量詞（HSK3）"
+            },
+            {
+              "word": "炒饭",
+              "pinyin": "chǎofàn",
+              "meaning": "チャーハン、炒めご飯"
+            }
+          ]
+        },
+        {
+          "id": "d10_7",
+          "speaker": "sufei",
+          "zh": "我要一份宫爆鸡丁和一份西红柿炒鸡蛋。",
+          "pinyin": "Wǒ yào yí fèn gōngbàojīdīng hé yí fèn xīhóngshì chǎo jīdàn.",
+          "ja": "私はゴンバオジーディン（鶏肉とピーナッツのピリ辛炒め）を一人前と、トマトと卵の炒めものを一人前ください。",
+          "segments": [
+            "我要一份宫爆鸡丁",
+            "和一份西红柿炒鸡蛋。"
+          ],
+          "notes": [
+            {
+              "word": "份",
+              "pinyin": "fèn",
+              "meaning": "〜人前、セットを数える量詞（HSK3）"
+            },
+            {
+              "word": "宫爆鸡丁",
+              "pinyin": "gōngbàojīdīng",
+              "meaning": "宮保鶏丁（鶏肉とピーナッツの甘辛炒め、四川名物料理）"
+            },
+            {
+              "word": "西红柿炒鸡蛋",
+              "pinyin": "xīhóngshì chǎo jīdàn",
+              "meaning": "トマトと卵の炒め物（中国の国民的定番料理）"
+            }
+          ]
+        },
+        {
+          "id": "d10_8",
+          "speaker": "waiter",
+          "zh": "好的！请问你们要喝什么吗？",
+          "pinyin": "Hǎo de! Qǐngwèn nǐmen yào hē shénme ma?",
+          "ja": "かしこまりました！お飲み物は何になさいますか？",
+          "segments": [
+            "好的！",
+            "请问你们要喝什么吗？"
+          ],
+          "notes": [
+            {
+              "word": "喝",
+              "pinyin": "hē",
+              "meaning": "飲む（HSK1）"
+            }
+          ]
+        },
+        {
+          "id": "d10_9",
+          "speaker": "jieming",
+          "zh": "我要一杯绿茶。",
+          "pinyin": "Wǒ yào yì bēi lǜchá.",
+          "ja": "僕は緑茶を一杯ください。",
+          "segments": [
+            "我要一杯绿茶。"
+          ],
+          "notes": [
+            {
+              "word": "杯",
+              "pinyin": "bēi",
+              "meaning": "コップ・杯を数える量詞（HSK1）"
+            },
+            {
+              "word": "绿茶",
+              "pinyin": "lǜchá",
+              "meaning": "緑茶（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d10_10",
+          "speaker": "sufei",
+          "zh": "我要一瓶可乐。",
+          "pinyin": "Wǒ yào yì píng kělè.",
+          "ja": "私はコーラを一本ください。",
+          "segments": [
+            "我要一瓶可乐。"
+          ],
+          "notes": [
+            {
+              "word": "瓶",
+              "pinyin": "píng",
+              "meaning": "ボトル・瓶を数える量詞（HSK3）"
+            },
+            {
+              "word": "可乐",
+              "pinyin": "kělè",
+              "meaning": "コーラ（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d10_11",
+          "speaker": "waiter",
+          "zh": "好的！请稍等。",
+          "pinyin": "Hǎo de! Qǐng shāoděng.",
+          "ja": "かしこまりました！少々お待ちください。",
+          "segments": [
+            "好的！请稍等。"
+          ],
+          "notes": [
+            {
+              "word": "请稍等",
+              "pinyin": "qǐng shāoděng",
+              "meaning": "少々お待ちください（接客の定番フレーズ）"
+            }
+          ]
+        },
+        {
+          "id": "d10_12",
+          "speaker": "narrator",
+          "zh": "（10分钟后...）",
+          "pinyin": "(Shí fēnzhōng hòu...)",
+          "ja": "（10分後...）",
+          "segments": [
+            "10分钟后..."
+          ],
+          "notes": []
+        },
+        {
+          "id": "d10_13",
+          "speaker": "waiter",
+          "zh": "这是你们的菜，请慢用！",
+          "pinyin": "Zhè shì nǐmen de cài, qǐng màn yòng!",
+          "ja": "ご注文のお料理です、ごゆっくりどうぞ！",
+          "segments": [
+            "这是你们的菜，",
+            "请慢用！"
+          ],
+          "notes": [
+            {
+              "word": "慢用",
+              "pinyin": "màn yòng",
+              "meaning": "ごゆっくり召し上がってください（料理提供時の定番挨拶）"
+            }
+          ]
+        },
+        {
+          "id": "d10_14",
+          "speaker": "sufei",
+          "zh": "好的，谢谢！",
+          "pinyin": "Hǎo de, xièxie!",
+          "ja": "はーい、ありがとう！",
+          "segments": [
+            "好的，谢谢！"
+          ],
+          "notes": []
+        },
+        {
+          "id": "d10_15",
+          "speaker": "jieming",
+          "zh": "啊！这些菜看上去真不错，我要全部吃完！",
+          "pinyin": "A! Zhèxiē cài kàn shangqu zhēn búcuò, wǒ yào quánbù chīwán!",
+          "ja": "わあ！これらのお料理、見たところ本当に美味しそう、全部平らげちゃうよ！",
+          "segments": [
+            "啊！这些菜看上去真不错，",
+            "我要全部吃完！"
+          ],
+          "notes": [
+            {
+              "word": "这些",
+              "pinyin": "zhèxiē",
+              "meaning": "これら（HSK1）"
+            },
+            {
+              "word": "看上去",
+              "pinyin": "kàn shangqu",
+              "meaning": "見たところ〜のようだ"
+            },
+            {
+              "word": "全部",
+              "pinyin": "quánbù",
+              "meaning": "すべて、全部（HSK4）"
+            },
+            {
+              "word": "吃完",
+              "pinyin": "chīwán",
+              "meaning": "食べ終える、平らげる（結果補語 完）"
+            }
+          ]
+        },
+        {
+          "id": "d10_16",
+          "speaker": "sufei",
+          "zh": "你真是个吃货！",
+          "pinyin": "Nǐ zhēn shì gè chīhuò!",
+          "ja": "あなたって本当に食いしん坊ね！",
+          "segments": [
+            "你真是个吃货！"
+          ],
+          "notes": [
+            {
+              "word": "吃货",
+              "pinyin": "chīhuò",
+              "meaning": "食いしん坊、グルメ好き（口語）"
+            }
+          ]
+        },
+        {
+          "id": "d10_17",
+          "speaker": "jieming",
+          "zh": "对，我就是个大吃货！",
+          "pinyin": "Duì, wǒ jiù shì gè dà chīhuò!",
+          "ja": "そう、僕は筋金入りの大食い・食いしん坊さ！",
+          "segments": [
+            "对，",
+            "我就是个大吃货！"
+          ],
+          "notes": [
+            {
+              "word": "大吃货",
+              "pinyin": "dà chīhuò",
+              "meaning": "大食漢、大の食いしん坊"
+            }
+          ]
+        },
+        {
+          "id": "d10_18",
+          "speaker": "sufei",
+          "zh": "这有一双筷子，你会用吗？",
+          "pinyin": "Zhè yǒu yì shuāng kuàizi, nǐ huì yòng ma?",
+          "ja": "ここに箸が一足あるけど、使える？",
+          "segments": [
+            "这有一双筷子，",
+            "你会用吗？"
+          ],
+          "notes": [
+            {
+              "word": "双",
+              "pinyin": "shuāng",
+              "meaning": "対・ペア・一足を数える量詞（HSK3）"
+            },
+            {
+              "word": "筷子",
+              "pinyin": "kuàizi",
+              "meaning": "箸（HSK3）"
+            },
+            {
+              "word": "会",
+              "pinyin": "huì",
+              "meaning": "〜できる（習得した技能, HSK1）"
+            },
+            {
+              "word": "用",
+              "pinyin": "yòng",
+              "meaning": "使う（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d10_19",
+          "speaker": "jieming",
+          "zh": "不会，但是我要试一试。现在在中国，我一定要学会用筷子。",
+          "pinyin": "Bú huì, dànshì wǒ yào shì yi shì. Xiànzài zài Zhōngguó, wǒ yídìng yào xuéhuì yòng kuàizi.",
+          "ja": "使えないんだ、でも試してみるよ。いま中国にいるんだから、絶対に箸を使えるようにならなきゃ。",
+          "segments": [
+            "不会，但是我要试一试。",
+            "现在在中国，",
+            "我一定要学会用筷子。"
+          ],
+          "notes": [
+            {
+              "word": "但是",
+              "pinyin": "dànshì",
+              "meaning": "しかし、でも（逆接, HSK2）"
+            },
+            {
+              "word": "试一试",
+              "pinyin": "shì yi shì",
+              "meaning": "試してみる、やってみる（動詞の重ね型）"
+            },
+            {
+              "word": "一定",
+              "pinyin": "yídìng",
+              "meaning": "必ず、絶対に（HSK3）"
+            },
+            {
+              "word": "学会",
+              "pinyin": "xuéhuì",
+              "meaning": "学んでマスターする、できるようになる（結果補語 会）"
+            }
+          ]
+        },
+        {
+          "id": "d10_20",
+          "speaker": "narrator",
+          "zh": "（30分钟后...）",
+          "pinyin": "(Sānshí fēnzhōng hòu...)",
+          "ja": "（30分後...）",
+          "segments": [
+            "30分钟后..."
+          ],
+          "notes": []
+        },
+        {
+          "id": "d10_21",
+          "speaker": "jieming",
+          "zh": "真好吃！服务员，我要买单。",
+          "pinyin": "Zhēn hǎochī! Fúwùyuán, wǒ yào mǎidān.",
+          "ja": "本当に美味しかった！店員さん、お会計をお願いします。",
+          "segments": [
+            "真好吃！",
+            "服务员，我要买单。"
+          ],
+          "notes": [
+            {
+              "word": "好吃",
+              "pinyin": "hǎochī",
+              "meaning": "美味しい（HSK1）"
+            },
+            {
+              "word": "买单",
+              "pinyin": "mǎidān",
+              "meaning": "お会計をする、勘定を払う（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d10_22",
+          "speaker": "waiter",
+          "zh": "先生，一共80块钱！",
+          "pinyin": "Xiānsheng, yígòng bāshí kuài qián!",
+          "ja": "お客様、合計で80元でございます！",
+          "segments": [
+            "先生，",
+            "一共80块钱！"
+          ],
+          "notes": [
+            {
+              "word": "先生",
+              "pinyin": "xiānsheng",
+              "meaning": "お客様、〜さん（男性への敬称, HSK1）"
+            },
+            {
+              "word": "一共",
+              "pinyin": "yígòng",
+              "meaning": "合計で（HSK2）"
+            },
+            {
+              "word": "块",
+              "pinyin": "kuài",
+              "meaning": "元（口語の通貨単位, HSK1）"
+            }
+          ]
+        },
+        {
+          "id": "d10_23",
+          "speaker": "jieming",
+          "zh": "嗯，我用微信付吧。",
+          "pinyin": "Èn, wǒ yòng Wēixìn fù ba.",
+          "ja": "うん、WeChat（ウィーチャット）で支払います。",
+          "segments": [
+            "嗯，",
+            "我用微信付吧。"
+          ],
+          "notes": [
+            {
+              "word": "微信",
+              "pinyin": "Wēixìn",
+              "meaning": "WeChat（中国最大のメッセージ・決済アプリ）"
+            },
+            {
+              "word": "付",
+              "pinyin": "fù",
+              "meaning": "支払う（付款）"
+            }
+          ]
+        },
+        {
+          "id": "d10_24",
+          "speaker": "waiter",
+          "zh": "可以，请在这里扫码！",
+          "pinyin": "Kěyǐ, qǐng zài zhèlǐ sǎomǎ!",
+          "ja": "かしこまりました、こちらでコードをスキャンしてください！",
+          "segments": [
+            "可以，",
+            "请在这里扫码！"
+          ],
+          "notes": [
+            {
+              "word": "可以",
+              "pinyin": "kěyǐ",
+              "meaning": "構いません、できます（HSK2）"
+            },
+            {
+              "word": "扫码",
+              "pinyin": "sǎomǎ",
+              "meaning": "コードをスキャンする"
+            }
+          ]
+        },
+        {
+          "id": "d10_25",
+          "speaker": "jieming",
+          "zh": "好的。",
+          "pinyin": "Hǎo de.",
+          "ja": "わかりました。",
+          "segments": [
+            "好的。"
+          ],
+          "notes": []
+        },
+        {
+          "id": "d10_26",
+          "speaker": "waiter",
+          "zh": "谢谢！欢迎下次再来。",
+          "pinyin": "Xièxie! Huānyíng xià cì zài lái.",
+          "ja": "ありがとうございます！またのお越しをお待ちしております。",
+          "segments": [
+            "谢谢！",
+            "欢迎下次再来。"
+          ],
+          "notes": [
+            {
+              "word": "下次",
+              "pinyin": "xià cì",
+              "meaning": "次回、今度（HSK2）"
+            },
+            {
+              "word": "再来",
+              "pinyin": "zài lái",
+              "meaning": "また来る"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
