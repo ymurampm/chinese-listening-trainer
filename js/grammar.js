@@ -230,13 +230,35 @@ document.addEventListener('DOMContentLoaded', () => {
                     </button>
                 </div>
 
+                <!-- Meaning & Purpose (構文の意味・使いどころ) -->
+                ${item.meaning ? `
+                    <div class="meaning-section">
+                        <div class="meaning-hero">
+                            <span class="meaning-badge">🎯 この構文で言えること</span>
+                            <div class="meaning-headline">${item.meaning}</div>
+                        </div>
+                        ${item.purpose ? `
+                            <div class="purpose-container">
+                                <div class="purpose-label">💡 どういう文章を作ろうとするときに使う構文？</div>
+                                <div class="purpose-text">${item.purpose}</div>
+                            </div>
+                        ` : ''}
+                    </div>
+                ` : ''}
+
                 <!-- Formula Block -->
                 <div class="formula-section">
-                    <div class="formula-label">📐 構文公式（Syntax Formula）</div>
+                    <div class="formula-label">📐 語順公式（言葉の並べ方）</div>
                     <div class="formula-chips-container">
                         ${formulaChipsHtml}
                     </div>
                     <div class="formula-text-raw">${item.formula}</div>
+                    ${item.formula_meaning ? `
+                        <div class="formula-meaning-box">
+                            <span class="formula-meaning-badge">語順の日本語訳</span>
+                            <span class="formula-meaning-text">${item.formula_meaning}</span>
+                        </div>
+                    ` : ''}
                 </div>
 
                 <!-- Teacher Advice Bubble -->
