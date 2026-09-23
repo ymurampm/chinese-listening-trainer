@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSK 3級 文法マスター | 王老师の公式＆ツボ押し図鑑</title>
+    <meta name="description" content="HSK 3級の全構文・文法要素を公式ブロックと音声、王老师のツボ押しでクイック＆楽しく完全攻略する専用アプリ。">
+    <link rel="stylesheet" href="./css/grammar.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        
+        <!-- Header Navbar -->
+        <header class="app-header">
+            <div class="header-left">
+                <span class="header-icon">📚</span>
+                <div>
+                    <h1>HSK 3級 文法マスター</h1>
+                    <p>全12章・構文公式ブロック ＆ 王老师（ワン先生）の減点防止ツボ押し図鑑</p>
+                </div>
+            </div>
+            <div class="header-nav-links">
+                <a href="writing.html" class="nav-link-btn highlight">✍️ 3級書写マスターへ</a>
+                <a href="index.html" class="nav-link-btn">💬 会話宿題マスターへ</a>
+                <a href="trainer.html" class="nav-link-btn">🎯 単文リスニングへ</a>
+            </div>
+        </header>
+
+        <!-- Teacher Mentoring & Mastery Progress Toolbar -->
+        <div class="mastery-toolbar">
+            <div class="teacher-badge">
+                <div class="teacher-avatar-small">👩‍🏫</div>
+                <div class="teacher-text-group">
+                    <span class="teacher-name">王老师（ワン先生）</span>
+                    <span id="teacher-status-msg" class="teacher-status-msg">「まずは第1章の把構文から始めてみましょう！」</span>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-track">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <span id="progress-label" class="progress-label">制覇率: 0 / 22 構文 (0%)</span>
+            </div>
+
+            <div class="toolbar-actions">
+                <button id="btn-toggle-mask" class="tool-btn" title="重要文法をマスクして想起特訓">
+                    ❓ 穴埋めマスク <span class="key-hint">Q</span>
+                </button>
+                <button id="btn-toggle-pinyin" class="tool-btn active" title="ピンインの表示/非表示">
+                    🔤 ピンイン <span class="key-hint">T</span>
+                </button>
+                <button id="btn-toggle-ja" class="tool-btn active" title="日本語訳の表示/非表示">
+                    🇯🇵 日本語訳 <span class="key-hint">H</span>
+                </button>
+                <button id="btn-shuffle-item" class="tool-btn" title="ランダムな構文へジャンプ">
+                    🔀 ランダム <span class="key-hint">S</span>
+                </button>
+                <button id="btn-key-help" class="tool-btn" title="キーボードショートカット一覧">
+                    ⌨️ <span class="key-hint">?</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main 2-Column Layout -->
+        <div class="grammar-layout">
+            <!-- Left Sidebar Navigation -->
+            <aside class="sidebar-panel">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="grammar-search-input" class="search-input" placeholder="構文名やキーワードで検索... (/)" autocomplete="off">
+                </div>
+                <nav id="category-nav-list" class="category-nav-list">
+                    <!-- Populated dynamically via JS -->
+                </nav>
+            </aside>
+
+            <!-- Right Main Content Area -->
+            <main id="main-content-area" class="content-area">
+                <!-- Current Grammar Card Populated dynamically via JS -->
+            </main>
+        </div>
+
+    </div>
+
+    <!-- Keyboard Shortcuts Guide Modal -->
+    <div id="keyboard-modal" class="keyboard-modal hidden" style="display: none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 class="modal-title">⌨️ キーボード操作ガイド（左手完結）</h3>
+                <button id="close-modal-btn" class="close-modal-btn">&times;</button>
+            </div>
+            <table class="key-guide-table">
+                <tbody>
+                    <tr>
+                        <td><span class="kbd-badge">J</span> / <span class="kbd-badge">→</span> / <span class="kbd-badge">↓</span></td>
+                        <td>次の構文へ進む</td>
+                    </tr>
+                    <tr>
+                        <td><span class="kbd-badge">K</span> / <span class="kbd-badge">←</span> / <span class="kbd-badge">↑</span></td>
+                        <td>前の構文へ戻る</td>
+                    </tr>
+                    <tr>
+                        <td><span class="kbd-badge">Space</span> / <span class="kbd-badge">R</span></td>
+                        <td>代表例文の音声を再生</td>
+                    </tr>
+                    <tr>
+                        <td><span class="kbd-badge">1</span> 〜 <span class="kbd-badge">4</span></td>
+                        <td>例文1〜4の音声を直接再生</td>
+                    </tr>
+                    <tr>
+                        <td><span class="kbd-badge">Q</span></td>
+                        <td>重要文法を「？？？」にマスク（想起訓練）</td>
+                    </tr>
+                    <tr>
+                        <td><span class="kbd-badge">M</span></td>
+                        <td>「覚えた！（Mastered）」のチェックをトグル</td>
+                    </tr>
+                    <tr>
+                        <td><span class="kbd-badge">T</span></td>
+                        <td>ピンインの表示 / 非表示トグル</td>
+                    </tr>
+                    <tr>
+                        <td><span class="kbd-badge">H</span></td>
+                        <td>日本語訳の表示 / 非表示トグル</td>
+                    </tr>
+                    <tr>
+                        <td><span class="kbd-badge">P</span></td>
+                        <td>語順整序パズル（writing.html）へ直行</td>
+                    </tr>
+                    <tr>
+                        <td><span class="kbd-badge">S</span></td>
+                        <td>ランダムな構文にジャンプ</td>
+                    </tr>
+                    <tr>
+                        <td><span class="kbd-badge">/</span></td>
+                        <td>検索バーにフォーカス</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="./js/grammar.js"></script>
+    <script>
+        // Modal helper
+        const modalEl = document.getElementById('keyboard-modal');
+        if (modalEl) {
+            const observer = new MutationObserver(() => {
+                if (modalEl.classList.contains('hidden')) {
+                    modalEl.style.display = 'none';
+                } else {
+                    modalEl.style.display = 'flex';
+                }
+            });
+            observer.observe(modalEl, { attributes: true, attributeFilter: ['class'] });
+        }
+    </script>
+</body>
+</html>

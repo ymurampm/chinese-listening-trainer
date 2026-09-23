@@ -1,0 +1,1184 @@
+{
+  "teacher": {
+    "name": "王老师 (ワン先生)",
+    "role": "HSK 3級 専属メンター講師",
+    "avatar": "👩‍🏫",
+    "intro": "HSK 3級の文法は、コツさえ掴めば『パズルの公式』のようにスラスラ解けるようになります！各文法の『語順の型』と『日本人が引っかかりやすい罠』を一緒にサクサク攻略していきましょう！"
+  },
+  "syntax_chip_types": {
+    "subj": {
+      "label": "主語",
+      "color": "#4bcffa",
+      "bg": "rgba(75, 207, 250, 0.18)"
+    },
+    "prep": {
+      "label": "介詞/標識",
+      "color": "#ff9f43",
+      "bg": "rgba(255, 159, 67, 0.22)"
+    },
+    "obj": {
+      "label": "目的語/対象",
+      "color": "#a55eea",
+      "bg": "rgba(165, 94, 234, 0.22)"
+    },
+    "verb": {
+      "label": "動詞",
+      "color": "#2ed573",
+      "bg": "rgba(46, 213, 115, 0.22)"
+    },
+    "comp": {
+      "label": "補語/結果",
+      "color": "#ff6b81",
+      "bg": "rgba(255, 107, 129, 0.22)"
+    },
+    "adj": {
+      "label": "形容詞",
+      "color": "#ffd32a",
+      "bg": "rgba(255, 211, 42, 0.22)"
+    },
+    "conj": {
+      "label": "接続詞",
+      "color": "#00d2d3",
+      "bg": "rgba(0, 210, 211, 0.22)"
+    },
+    "modal": {
+      "label": "助動詞/副詞",
+      "color": "#ff6348",
+      "bg": "rgba(255, 99, 72, 0.22)"
+    }
+  },
+  "categories": [
+    {
+      "id": "cat_ba",
+      "number": "01",
+      "title": "把構文（処置文）",
+      "icon": "📦",
+      "summary": "特定の目的語を前に引っ張り出し、動作によってどう変化・移動させたかを表すHSK最重要構文。",
+      "items": [
+        {
+          "id": "g_ba_1",
+          "title": "基本把構文（処置・完了）",
+          "level": "★5 超頻出",
+          "formula": "[主語] + 把 + [特定の目的語] + [動詞] + [結果 / 了]",
+          "formula_chips": [
+            {
+              "type": "subj",
+              "text": "主語"
+            },
+            {
+              "type": "prep",
+              "text": "把"
+            },
+            {
+              "type": "obj",
+              "text": "特定の目的語"
+            },
+            {
+              "type": "verb",
+              "text": "動詞"
+            },
+            {
+              "type": "comp",
+              "text": "結果 / 了"
+            }
+          ],
+          "puzzle_category": "ba",
+          "teacher_tip": "『把』の後ろに来る目的語は、聞き手も知っている『特定のもの（この本、そのリンゴ等）』でなければいけません！動詞単独で終わることは絶対にできず、必ず『了』や結果がくっつきます。",
+          "trap_warning": {
+            "bad": "❌ 我把一本书看了。",
+            "good": "⭕ 我把这本书看完了。",
+            "explanation": "『一本书（不特定）』には使えません！『这本书（特定）』にして、動詞の後ろも『看了』ではなく『看完了』と処置結果をつけます。"
+          },
+          "examples": [
+            {
+              "zh": "请把这本护照给服务员。",
+              "pinyin": "Qǐng bǎ zhè běn hùzhào gěi fúwùyuán.",
+              "ja": "このパスポートをフロント係に渡してください。",
+              "mask_target": "把"
+            },
+            {
+              "zh": "弟弟把桌子上的苹果吃掉了。",
+              "pinyin": "Dìdi bǎ zhuōzi shang de píngguǒ chīdiào le.",
+              "ja": "弟は机の上のリンゴを食べてしまった。",
+              "mask_target": "吃掉了"
+            },
+            {
+              "zh": "你把空调关了吗？",
+              "pinyin": "Nǐ bǎ kōngtiáo guān le ma?",
+              "ja": "エアコンを消しましたか？",
+              "mask_target": "关了"
+            }
+          ]
+        },
+        {
+          "id": "g_ba_2",
+          "title": "移動・結果の帰着点（在 / 到 / 给）",
+          "level": "★5 超頻出",
+          "formula": "[主語] + 把 + [目的語] + [動詞] + 在 / 到 / 给 + [場所・受取人]",
+          "formula_chips": [
+            {
+              "type": "subj",
+              "text": "主語"
+            },
+            {
+              "type": "prep",
+              "text": "把"
+            },
+            {
+              "type": "obj",
+              "text": "目的語"
+            },
+            {
+              "type": "verb",
+              "text": "動詞"
+            },
+            {
+              "type": "comp",
+              "text": "在 / 到 / 给 + 帰着点"
+            }
+          ],
+          "puzzle_category": "ba",
+          "teacher_tip": "物を『どこそこに置く（放在…）』『どこそこへ運ぶ（送到…）』『だれだれに渡す（交给…）』という帰着点を表すとき、把構文が圧倒的によく使われます！",
+          "trap_warning": {
+            "bad": "❌ 我把手机放在。",
+            "good": "⭕ 我把手机放在桌子上了。",
+            "explanation": "『在』の後ろには必ず場所名詞（桌子上）が必要です。"
+          },
+          "examples": [
+            {
+              "zh": "请把车停在公司门口。",
+              "pinyin": "Qǐng bǎ chē tíng zài gōngsī ménkǒu.",
+              "ja": "車を会社の入口に停めてください。",
+              "mask_target": "停在"
+            },
+            {
+              "zh": "他把行李送到了酒店。",
+              "pinyin": "Tā bǎ xíngli sòng dào le jiǔdiàn.",
+              "ja": "彼は荷物をホテルに届けた。",
+              "mask_target": "送到了"
+            },
+            {
+              "zh": "把雨伞借给我用一下，好吗？",
+              "pinyin": "Bǎ yǔsǎn jiè gěi wǒ yòng yíxià, hǎo ma?",
+              "ja": "傘をちょっと私に貸してくれませんか？",
+              "mask_target": "借给我"
+            }
+          ]
+        },
+        {
+          "id": "g_ba_3",
+          "title": "把構文の否定（没/别）と助動詞の位置",
+          "level": "★5 配点直結トラップ",
+          "formula": "[主語] + 没 / 别 / 想 / 要 / 能 + 把 + [目的語] + [動詞句]",
+          "formula_chips": [
+            {
+              "type": "subj",
+              "text": "主語"
+            },
+            {
+              "type": "modal",
+              "text": "否定(没/别)・助動詞"
+            },
+            {
+              "type": "prep",
+              "text": "把"
+            },
+            {
+              "type": "obj",
+              "text": "目的語"
+            },
+            {
+              "type": "verb",
+              "text": "動詞句"
+            }
+          ],
+          "puzzle_category": "ba",
+          "teacher_tip": "【試験頻出度No.1】日本人が一番やりがちなのが『把のうしろに否定を入れるミス』です！否定詞（没、别）や助動詞（想、能）は、必ず『把の前』に置きます！",
+          "trap_warning": {
+            "bad": "❌ 我把衣服没洗干净。",
+            "good": "⭕ 我没把衣服洗干净。",
+            "explanation": "否定詞『没』は必ず『把』の前に置きます！把の後に否定を置くと0点になります。"
+          },
+          "examples": [
+            {
+              "zh": "我还没把今天的作业做完。",
+              "pinyin": "Wǒ hái méi bǎ jīntiān de zuòyè zuòwán.",
+              "ja": "私はまだ今日の宿題をやり終えていません。",
+              "mask_target": "还没把"
+            },
+            {
+              "zh": "别把手机忘在出租车上！",
+              "pinyin": "Bié bǎ shǒujī wàng zài chūzūchē shang!",
+              "ja": "タクシーの中にスマホを忘れないで！",
+              "mask_target": "别把"
+            },
+            {
+              "zh": "你想把这个电脑卖掉吗？",
+              "pinyin": "Nǐ xiǎng bǎ zhè ge diànnǎo màidiào ma?",
+              "ja": "あなたはこのパソコンを売ってしまいたいのですか？",
+              "mask_target": "你想把"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_bei",
+      "number": "02",
+      "title": "被構文・受身文（被 / 叫 / 让）",
+      "icon": "🛡️",
+      "summary": "不本意な被害や影響を受けたことを表す受け身表現。口語の叫・让もHSK3級必須。",
+      "items": [
+        {
+          "id": "g_bei_1",
+          "title": "基本被構文（行為者明示）",
+          "level": "★5 超頻出",
+          "formula": "[受け手] + 被 + [行為者] + [動詞] + [結果]",
+          "formula_chips": [
+            {
+              "type": "subj",
+              "text": "受け手(被害者)"
+            },
+            {
+              "type": "prep",
+              "text": "被"
+            },
+            {
+              "type": "obj",
+              "text": "行為者"
+            },
+            {
+              "type": "verb",
+              "text": "動詞"
+            },
+            {
+              "type": "comp",
+              "text": "結果"
+            }
+          ],
+          "puzzle_category": "bei",
+          "teacher_tip": "受身文も把構文と同様、動詞単独では終われません。食べられちゃった（吃掉了）、壊された（弄坏了）のように結果の成分を必ず後ろに伴います。",
+          "trap_warning": {
+            "bad": "❌ 蛋糕被弟弟吃。",
+            "good": "⭕ 蛋糕被弟弟吃光了。",
+            "explanation": "受身文は動作の結果（吃光了/吃掉了）を必ず伴わなければなりません。"
+          },
+          "examples": [
+            {
+              "zh": "我的蛋糕被弟弟吃掉了。",
+              "pinyin": "Wǒ de dàngāo bèi dìdi chīdiào le.",
+              "ja": "私のケーキは弟に食べられてしまった。",
+              "mask_target": "被弟弟"
+            },
+            {
+              "zh": "眼镜被小狗弄坏了。",
+              "pinyin": "Yǎnjìng bèi xiǎogǒu nònghuài le.",
+              "ja": "メガネは子犬に壊されてしまった。",
+              "mask_target": "弄坏了"
+            }
+          ]
+        },
+        {
+          "id": "g_bei_2",
+          "title": "行為者省略の被構文 & 口語受身（让/叫）",
+          "level": "★4 頻出",
+          "formula": "[受け手] + 被 + [動詞句] / 让・叫 + [行為者] + [動詞句]",
+          "formula_chips": [
+            {
+              "type": "subj",
+              "text": "受け手"
+            },
+            {
+              "type": "prep",
+              "text": "被 (行為者省略可) / 让・叫 (行為者必須)"
+            },
+            {
+              "type": "verb",
+              "text": "動詞句"
+            }
+          ],
+          "puzzle_category": "bei",
+          "teacher_tip": "『被』は行為者を省略できます（钱包被偷了＝財布が盗まれた）。しかし口語の『让』や『叫』を使うときは、誰にやられたのか行為者を絶対に省略できません！",
+          "trap_warning": {
+            "bad": "❌ 自行车叫偷走了。(行為者なし叫は不可)",
+            "good": "⭕ 自行车被偷走了。 / 自行车叫小偷偷走了。",
+            "explanation": "叫・让を使う場合は必ず『叫小偷』のように行為者が必要です。省略したいときは『被』一択です！"
+          },
+          "examples": [
+            {
+              "zh": "钱包被偷了，我现在没有现金。",
+              "pinyin": "Qiánbāo bèi tōu le, wǒ xiànzài méiyǒu xiànjīn.",
+              "ja": "財布が盗まれてしまい、今現金がありません。",
+              "mask_target": "被偷了"
+            },
+            {
+              "zh": "他的衣服让雨淋湿了。",
+              "pinyin": "Tā de yīfu ràng yǔ línshī le.",
+              "ja": "彼の服は雨でびしょ濡れになってしまった。",
+              "mask_target": "让雨"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_bi",
+      "number": "03",
+      "title": "比較構文（比 / 没有 / 一样 / 越...越...）",
+      "icon": "⚖️",
+      "summary": "2つの事物の優劣、差の程度、同一性、変化の進行を表す表現。",
+      "items": [
+        {
+          "id": "g_bi_1",
+          "title": "A 比 B + 形容詞 ＋ 差の程度",
+          "level": "★5 超頻出",
+          "formula": "A + 比 + B + [形容詞] + [一点儿 / 得多 / 多了 / 具体的数量]",
+          "formula_chips": [
+            {
+              "type": "subj",
+              "text": "A"
+            },
+            {
+              "type": "prep",
+              "text": "比"
+            },
+            {
+              "type": "obj",
+              "text": "B"
+            },
+            {
+              "type": "adj",
+              "text": "形容詞"
+            },
+            {
+              "type": "comp",
+              "text": "差の程度(得多/多了/数量)"
+            }
+          ],
+          "puzzle_category": "bi",
+          "teacher_tip": "【超重要】『AはBよりずっと〜だ』と言うとき、形容詞の前に『很』を置くのは厳禁です（×比他很大）！差の大きさは形容詞の【後ろ】に『得多』『多了』を置きます！",
+          "trap_warning": {
+            "bad": "❌ 他比我很忙。",
+            "good": "⭕ 他比我忙得多。 / 他比我更忙。",
+            "explanation": "比の文では形容詞の前に『很/非常』を置けません。後ろに『得多/多了』を置くか、前に『更』を置きます。"
+          },
+          "examples": [
+            {
+              "zh": "今天比昨天冷多了。",
+              "pinyin": "Jīntiān bǐ zuótiān lěng duō le.",
+              "ja": "今日は昨日よりずっと寒いです。",
+              "mask_target": "比昨天冷多了"
+            },
+            {
+              "zh": "哥哥比我大三岁。",
+              "pinyin": "Gēge bǐ wǒ dà sān suì.",
+              "ja": "兄は私より3歳年上です。",
+              "mask_target": "大三岁"
+            },
+            {
+              "zh": "这件衣服比那件便宜一点儿。",
+              "pinyin": "Zhè jiàn yīfu bǐ nà jiàn piányi yìdiǎnr.",
+              "ja": "この服はあの服より少し安いです。",
+              "mask_target": "便宜一点儿"
+            }
+          ]
+        },
+        {
+          "id": "g_bi_2",
+          "title": "劣等比較（A 没有 B 那么...）& 同等比較（一样）",
+          "level": "★5 超頻出",
+          "formula": "A + 没有 + B + (那么 / 这么) + [形容詞] / A + 跟/和 + B + 一样",
+          "formula_chips": [
+            {
+              "type": "subj",
+              "text": "A"
+            },
+            {
+              "type": "modal",
+              "text": "没有 / 跟...一样"
+            },
+            {
+              "type": "obj",
+              "text": "B"
+            },
+            {
+              "type": "adj",
+              "text": "形容詞"
+            }
+          ],
+          "puzzle_category": "bi",
+          "teacher_tip": "『AはBほど〜ではない』は【A 没有 B (那么) 形容詞】を使います。並べ替え試験で『不比』と混同しないように要注意です！",
+          "trap_warning": {
+            "bad": "❌ 今天不比昨天冷。(単に否定するだけでニュアンスが違う)",
+            "good": "⭕ 今天没有昨天那么冷。(昨日ほど寒くない)",
+            "explanation": "『〜ほど〜ない』の日常表現は『没有……那么……』が王道です。"
+          },
+          "examples": [
+            {
+              "zh": "南方没有北方那么冷。",
+              "pinyin": "Nánfāng méiyǒu běifāng nàme lěng.",
+              "ja": "南部は北部ほど寒くありません。",
+              "mask_target": "没有北方那么冷"
+            },
+            {
+              "zh": "这台电脑和那台一样贵。",
+              "pinyin": "Zhè tái diànnǎo hé nà tái yíyàng guì.",
+              "ja": "このパソコンはあのパソコンと同じくらい高いです。",
+              "mask_target": "和那台一样"
+            }
+          ]
+        },
+        {
+          "id": "g_bi_3",
+          "title": "越……越…… & 越来越……",
+          "level": "★4 頻出",
+          "formula": "越 + [動詞A] + 越 + [動詞/形容詞B] / 越来越 + [形容詞/感情動詞]",
+          "formula_chips": [
+            {
+              "type": "modal",
+              "text": "越 A 越 B"
+            },
+            {
+              "type": "modal",
+              "text": "越来越 + 形容詞"
+            }
+          ],
+          "puzzle_category": "bi",
+          "teacher_tip": "『〜すればするほど…』は【越A越B】、『だんだん〜になる』は【越来越…】。越来越の後ろにも『很』をつけないのが鉄則です！",
+          "trap_warning": {
+            "bad": "❌ 天气越来越很热。",
+            "good": "⭕ 天气越来越热了。",
+            "explanation": "越来越自体が程度の進行を含むため、『很』と重複させることはできません。"
+          },
+          "examples": [
+            {
+              "zh": "雨越下越大了。",
+              "pinyin": "Yǔ yuè xià yuè dà le.",
+              "ja": "雨が降れば降るほどひどくなってきた。",
+              "mask_target": "越下越大"
+            },
+            {
+              "zh": "他的汉语说得越来越流利了。",
+              "pinyin": "Tā de Hànyǔ shuō de yuèláiyuè liúlì le.",
+              "ja": "彼の中国語はだんだん流暢になってきました。",
+              "mask_target": "越来越流利"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_cunxian",
+      "number": "04",
+      "title": "存現文（存在・出現・消失）",
+      "icon": "📍",
+      "summary": "ある場所に何かが存在している、または何かが新しく現れた・消えたことを描写する構文。",
+      "items": [
+        {
+          "id": "g_cunxian_1",
+          "title": "状態持続の存現文（場所 + V + 着 + 物）",
+          "level": "★4 頻出",
+          "formula": "[場所] + [動詞] + 着 + [数量詞 + 不特定の物]",
+          "formula_chips": [
+            {
+              "type": "subj",
+              "text": "場所名詞"
+            },
+            {
+              "type": "verb",
+              "text": "動詞"
+            },
+            {
+              "type": "modal",
+              "text": "着"
+            },
+            {
+              "type": "obj",
+              "text": "不特定の目的語(数量+名詞)"
+            }
+          ],
+          "puzzle_category": "basic",
+          "teacher_tip": "文頭に『在』をつけてはいけません！主語そのものが『場所（桌子上/门外）』になり、動詞＋着のあとに『一个/三本』など不特定のものが続きます。",
+          "trap_warning": {
+            "bad": "❌ 在桌子上放着这本书。",
+            "good": "⭕ 桌子上放着一本书。",
+            "explanation": "文頭に『在』は不要。また特定名詞（这本书）ではなく不特定名詞（一本书）を置きます。"
+          },
+          "examples": [
+            {
+              "zh": "桌子上放着一杯热咖啡。",
+              "pinyin": "Zhuōzi shang fàngzhe yì bēi rè kāfēi.",
+              "ja": "机の上に温かいコーヒーが一杯置いてあります。",
+              "mask_target": "放着"
+            },
+            {
+              "zh": "墙上挂着一张中国地图。",
+              "pinyin": "Qiáng shang guàzhe yì zhāng Zhōngguó dìtú.",
+              "ja": "壁に中国の地図が1枚掛けてあります。",
+              "mask_target": "挂着"
+            },
+            {
+              "zh": "门外站着一个陌生人。",
+              "pinyin": "Mén wài zhànzhe yí gè mòshēngrén.",
+              "ja": "ドアの外に見知らぬ人が一人立っています。",
+              "mask_target": "站着"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_buyu",
+      "number": "05",
+      "title": "補語マスター（結果・方向・可能・様態・時量）",
+      "icon": "🎯",
+      "summary": "HSK 3級の最重要得点源。動詞の後ろにくっついて動作の結果、方向、可能、状態、時間を肉付けする。",
+      "items": [
+        {
+          "id": "g_buyu_1",
+          "title": "結果補語（完 / 懂 / 见 / 到 / 好 / 错 / 清楚）",
+          "level": "★5 超頻出",
+          "formula": "[主語] + [動詞] + 完 / 懂 / 见 / 到 / 好 / 错 / 清楚 + [目的語]",
+          "formula_chips": [
+            {
+              "type": "subj",
+              "text": "主語"
+            },
+            {
+              "type": "verb",
+              "text": "動詞"
+            },
+            {
+              "type": "comp",
+              "text": "結果補語"
+            },
+            {
+              "type": "obj",
+              "text": "目的語"
+            }
+          ],
+          "puzzle_category": "basic",
+          "teacher_tip": "動作をした結果どうなったかを表します。『做完（やり終える）』『听懂（聞いて理解する）』『看见（視界に入る・見かける）』『准备好（準備が完了する）』など、動詞＋補語が1つの熟語のように一体化します！",
+          "trap_warning": {
+            "bad": "❌ 我没听明白你说了什么。(否定に不は不可)",
+            "good": "⭕ 我没听懂你说的话。",
+            "explanation": "結果補語の否定は『不』ではなく、過去・完了の否定なので必ず『没』を使います！"
+          },
+          "examples": [
+            {
+              "zh": "昨天的考试你都做完了吗？",
+              "pinyin": "Zuótiān de kǎoshì nǐ dōu zuòwán le ma?",
+              "ja": "昨日の試験は全部解き終わりましたか？",
+              "mask_target": "做完了"
+            },
+            {
+              "zh": "老师说的话你听懂了吗？",
+              "pinyin": "Lǎoshī shuō de huà nǐ tīngdǒng le ma?",
+              "ja": "先生の言ったことは聞いて理解できましたか？",
+              "mask_target": "听懂了"
+            },
+            {
+              "zh": "我在飞机场看到了我的朋友。",
+              "pinyin": "Wǒ zài fēijīchǎng kàndào le wǒ de péngyou.",
+              "ja": "私は空港で友達を見かけました。",
+              "mask_target": "看到了"
+            }
+          ]
+        },
+        {
+          "id": "g_buyu_2",
+          "title": "可能補語（V + 得 / 不 + 補語）",
+          "level": "★5 超頻出",
+          "formula": "肯定: [動詞] + 得 + [補語] / 否定: [動詞] + 不 + [補語]",
+          "formula_chips": [
+            {
+              "type": "verb",
+              "text": "動詞"
+            },
+            {
+              "type": "modal",
+              "text": "得 / 不"
+            },
+            {
+              "type": "comp",
+              "text": "補語(懂/见/完/了)"
+            }
+          ],
+          "puzzle_category": "basic",
+          "teacher_tip": "『〜できる/できない』を表す超重要構文。『听得懂（理解できる）』『听不懂（理解できない）』のように、真ん中に『得』か『不』を挟み込みます。特に『来不了（来られない）』はHSK3級必出！",
+          "trap_warning": {
+            "bad": "❌ 我不能听懂中文。",
+            "good": "⭕ 我听不懂中文。",
+            "explanation": "能力的に理解できない場合は『不能＋動詞』よりも可能補語『听不懂』を使うのが圧倒的に自然で、試験でも問われます。"
+          },
+          "examples": [
+            {
+              "zh": "你说得太快了，我听不懂。",
+              "pinyin": "Nǐ shuō de tài kuài le, wǒ tīngbudǒng.",
+              "ja": "話すのが速すぎて、私には聞き取れません。",
+              "mask_target": "听不懂"
+            },
+            {
+              "zh": "我爸爸今天工作很忙，来不了。",
+              "pinyin": "Wǒ bàba jīntiān gōngzuò hěn máng, lái bu liǎo.",
+              "ja": "父は今日仕事が忙しくて来られません。",
+              "mask_target": "来不了"
+            },
+            {
+              "zh": "这么多菜，你一个人吃得完吗？",
+              "pinyin": "Zhème duō cài, nǐ yí gè rén chī de wán ma?",
+              "ja": "こんなにたくさんの料理、一人で食べきれますか？",
+              "mask_target": "吃得完"
+            }
+          ]
+        },
+        {
+          "id": "g_buyu_3",
+          "title": "方向補語（単純: 来/去 & 複合: 起来/出来/过去等）",
+          "level": "★4 頻出",
+          "formula": "[動詞] + 来 / 去 / 起来 / 出来 / 过去 / 回来",
+          "formula_chips": [
+            {
+              "type": "verb",
+              "text": "動詞"
+            },
+            {
+              "type": "comp",
+              "text": "方向補語"
+            }
+          ],
+          "puzzle_category": "basic",
+          "teacher_tip": "話し手の方向へ近づくなら『来』、遠ざかるなら『去』。さらに『想起来（思い出す）』『看出来（見てわかる）』『站起来（立ち上がる）』など抽象的な意味への派生も3級の頻出ターゲットです！",
+          "trap_warning": {
+            "bad": "❌ 进家里去吧。(目的語の位置に注意)",
+            "good": "⭕ 进家去吧。 / 走过去吧。",
+            "explanation": "場所名詞がある場合、来/去の【前】に挟み込みます（回学校去、进教室来）。"
+          },
+          "examples": [
+            {
+              "zh": "我想起来了！那个人是张经理。",
+              "pinyin": "Wǒ xiǎng qǐlái le! Nà gè rén shì Zhāng jīnglǐ.",
+              "ja": "思い出しました！あの人は張マネージャーです。",
+              "mask_target": "想起来了"
+            },
+            {
+              "zh": "外面太冷了，快点儿走进去吧。",
+              "pinyin": "Wàimiàn tài lěng le, kuài diǎnr zǒu jìnqu ba.",
+              "ja": "外は寒すぎるから、早く中に入っていきましょう。",
+              "mask_target": "走进去"
+            }
+          ]
+        },
+        {
+          "id": "g_buyu_4",
+          "title": "様態補語（V + 得 + 形容詞/評価フレーズ）",
+          "level": "★5 超頻出",
+          "formula": "[動詞] + 得 + [形容詞/評価] / [動詞] + [目的語] + [動詞] + 得 + [形容詞]",
+          "formula_chips": [
+            {
+              "type": "verb",
+              "text": "動詞"
+            },
+            {
+              "type": "modal",
+              "text": "得"
+            },
+            {
+              "type": "adj",
+              "text": "状態・評価(很快/非常好)"
+            }
+          ],
+          "puzzle_category": "basic",
+          "teacher_tip": "『走るのが速い（跑得快）』『中国語を話すのが上手（说得好）』のように、動作がどんな状態で行われているかを評価します。目的語がある場合は動詞を2回繰り返す（我说中文说得很好）ルールが超重要！",
+          "trap_warning": {
+            "bad": "❌ 他说汉语很好。",
+            "good": "⭕ 他说汉语说得很好。 / 他的汉语说得很好。",
+            "explanation": "動作の評価には必ず構造助詞『得』が必要です！"
+          },
+          "examples": [
+            {
+              "zh": "祝你们玩得开心！",
+              "pinyin": "Zhù nǐmen wán de kāixīn!",
+              "ja": "楽しんできてくださいね！（楽しく遊べることを祈ります）",
+              "mask_target": "玩得开心"
+            },
+            {
+              "zh": "他每天都起得很早。",
+              "pinyin": "Tā měitiān dōu qǐ de hěn zǎo.",
+              "ja": "彼は毎日とても起きるのが早いです。",
+              "mask_target": "起得很早"
+            }
+          ]
+        },
+        {
+          "id": "g_buyu_5",
+          "title": "時量補語・動量補語（動作の継続時間・回数）",
+          "level": "★4 頻出",
+          "formula": "[動詞] + 了 + [時間量] (+ 了) / [動詞] + 过 + [回数]",
+          "formula_chips": [
+            {
+              "type": "verb",
+              "text": "動詞"
+            },
+            {
+              "type": "modal",
+              "text": "了/过"
+            },
+            {
+              "type": "comp",
+              "text": "時間量/回数(一个小时/两次)"
+            }
+          ],
+          "puzzle_category": "basic",
+          "teacher_tip": "時間の長さ（時量）や回数（動量）は動詞の【後ろ】に置きます！文末にも『了』があると『今も継続中』を表します（等了半个小时了＝待って30分経ち、今も待っている）。",
+          "trap_warning": {
+            "bad": "❌ 我一个小时学汉语。",
+            "good": "⭕ 我学了一个小时的汉语。",
+            "explanation": "時間は動詞の前に置かず、動詞の後ろに置きます。"
+          },
+          "examples": [
+            {
+              "zh": "我在出站口等了你半个小时了。",
+              "pinyin": "Wǒ zài chūzhànkǒu děng le nǐ bàn gè xiǎoshí le.",
+              "ja": "改札口であなたを30分も待っているよ（今も待っている最中）。",
+              "mask_target": "等了你半个小时了"
+            },
+            {
+              "zh": "这个电影我看过两次。",
+              "pinyin": "Zhè ge diànyǐng wǒ kànguo liǎng cì.",
+              "ja": "この映画は2回見たことがあります。",
+              "mask_target": "看过两次"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_shi_de",
+      "number": "06",
+      "title": "是……的 強調構文",
+      "icon": "✨",
+      "summary": "すでに起きた過去の事実について、「いつ・どこで・どのように・誰と」その行為を行ったかをクローズアップする構文。",
+      "items": [
+        {
+          "id": "g_shi_de_1",
+          "title": "時間・場所・手段の強調",
+          "level": "★5 超頻出",
+          "formula": "[主語] + 是 + [強調したい時間 / 場所 / 手段] + [動詞] + 的",
+          "formula_chips": [
+            {
+              "type": "subj",
+              "text": "主語"
+            },
+            {
+              "type": "modal",
+              "text": "是"
+            },
+            {
+              "type": "comp",
+              "text": "強調要素(時間/場所/方法)"
+            },
+            {
+              "type": "verb",
+              "text": "動詞"
+            },
+            {
+              "type": "modal",
+              "text": "的"
+            }
+          ],
+          "puzzle_category": "shi_de",
+          "teacher_tip": "『中国に来た』という事実は双方が知っていて、『いつ来たの？（我是去年来的）』『どこで知り合ったの？（我们是在咖啡馆认识的）』と詳細を尋ねたり答えたりする時に絶対に使います！",
+          "trap_warning": {
+            "bad": "❌ 我是去年来了中国。",
+            "good": "⭕ 我是去年来中国的。",
+            "explanation": "『是……的』構文の中では完了の『了』は使いません！末尾に『的』を置きます。"
+          },
+          "examples": [
+            {
+              "zh": "我们是在大学里认识的。",
+              "pinyin": "Wǒmen shì zài dàxué lǐ rènshi de.",
+              "ja": "私たちが知り合ったのは大学の中でした。",
+              "mask_target": "是在大学里认识的"
+            },
+            {
+              "zh": "他是坐飞机去上海的。",
+              "pinyin": "Tā shì zuò fēijī qù Shànghǎi de.",
+              "ja": "彼が上海へ行ったのは飛行機に乗ってでした。",
+              "mask_target": "是坐飞机去的"
+            },
+            {
+              "zh": "这个汉字不是我写的，是老师写的。",
+              "pinyin": "Zhè ge hànzì bú shì wǒ xiě de, shì lǎoshī xiě de.",
+              "ja": "この漢字は私が書いたのではなく、先生が書かれたものです。",
+              "mask_target": "不是我写的"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_liandong",
+      "number": "07",
+      "title": "連動文 & 状態持続の伴随動作",
+      "icon": "🚴",
+      "summary": "1つの主語が複数の動作を連続して行う文、またはある状態のままで別の動作を行う構文。",
+      "items": [
+        {
+          "id": "g_liandong_1",
+          "title": "連動文（手段・移動・目的の時系列）",
+          "level": "★4 頻出",
+          "formula": "[主語] + [手段 V1] + [移動 V2] + [目的 V3]",
+          "formula_chips": [
+            {
+              "type": "subj",
+              "text": "主語"
+            },
+            {
+              "type": "verb",
+              "text": "手段/方法 V1"
+            },
+            {
+              "type": "verb",
+              "text": "移動 V2"
+            },
+            {
+              "type": "verb",
+              "text": "最終目的 V3"
+            }
+          ],
+          "puzzle_category": "lian",
+          "teacher_tip": "中国語の鉄則は『時間が起きた順に動詞を並べる』こと！『自転車に乗って（V1）銀行へ行き（V2）手続きをする（V3）』という順番通りに並べるだけで正解できます！",
+          "trap_warning": {
+            "bad": "❌ 他去银行办业务骑自行车。",
+            "good": "⭕ 他骑着自行车去银行办业务。",
+            "explanation": "手段（骑自行车）は移動（去）の前に来ます。"
+          },
+          "examples": [
+            {
+              "zh": "我骑着自行车去银行办业务。",
+              "pinyin": "Wǒ qízhe zìxíngchē qù yínháng bàn yèwù.",
+              "ja": "私は自転車に乗って銀行へ行き、用事を済ませました。",
+              "mask_target": "骑着自行车去银行"
+            },
+            {
+              "zh": "他笑着对我说：早上好！",
+              "pinyin": "Tā xiàozhe duì wǒ shuō: Zǎoshang hǎo!",
+              "ja": "彼は微笑みながら私に『おはよう！』と言った。",
+              "mask_target": "笑着对我说"
+            },
+            {
+              "zh": "不要站着吃东西。",
+              "pinyin": "Bú yào zhànzhe chī dōngxi.",
+              "ja": "立ったまま物を食べないでください。",
+              "mask_target": "站着吃"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_lianci",
+      "number": "08",
+      "title": "複文・ペア接続詞構文",
+      "icon": "🔗",
+      "summary": "HSK 3級リーディング・リスニング・書写すべてで合否を分ける重要接続詞ペア。",
+      "items": [
+        {
+          "id": "g_lianci_1",
+          "title": "累加・逆接・継起（不但...而且... / 虽然...但是... / 一...就...）",
+          "level": "★5 超頻出",
+          "formula": "不但 A 而且 B (AだけでなくBも) / 虽然 A 但是 B (AだがB) / 一 A 就 B (AするとすぐB)",
+          "formula_chips": [
+            {
+              "type": "conj",
+              "text": "不但……而且……"
+            },
+            {
+              "type": "conj",
+              "text": "虽然……但是……"
+            },
+            {
+              "type": "conj",
+              "text": "一……就……"
+            }
+          ],
+          "puzzle_category": "lian",
+          "teacher_tip": "並べ替え問題でこのペアを見つけたら大チャンス！『不但〜しかも〜』『〜だけど〜』『〜するとすぐに〜』と、前後がセットで呼応します。",
+          "trap_warning": {
+            "bad": "❌ 虽然他很累，所以想休息。(接続詞のミスマッチ)",
+            "good": "⭕ 虽然他很累，但是坚持工作。",
+            "explanation": "虽然には必ず『但是 / 可是』がペアになります。『因为〜所以〜』と混同しないように！"
+          },
+          "examples": [
+            {
+              "zh": "他不但会说汉语，而且说得非常流利。",
+              "pinyin": "Tā búdàn huì shuō Hànyǔ, érqiě shuō de fēicháng liúlì.",
+              "ja": "彼は中国語を話せるだけでなく、しかもとても流暢です。",
+              "mask_target": "不但...而且..."
+            },
+            {
+              "zh": "虽然外面下雨，但是我们还是想去踢足球。",
+              "pinyin": "Suīrán wàimiàn xiàyǔ, dànshì wǒmen háishi xiǎng qù tī zúqiú.",
+              "ja": "外は雨が降っているけれど、私たちはやっぱりサッカーをしに行きたい。",
+              "mask_target": "虽然...但是..."
+            },
+            {
+              "zh": "我一到家就给你发微信。",
+              "pinyin": "Wǒ yí dào jiā jiù gěi nǐ fā Wēixìn.",
+              "ja": "家に帰り着いたらすぐにあなたにWeChatを送ります。",
+              "mask_target": "一到家就"
+            }
+          ]
+        },
+        {
+          "id": "g_lianci_2",
+          "title": "条件・選択（如果...就... / 只有...才... / 只要...就...）",
+          "level": "★5 超頻出",
+          "formula": "如果 A 就 B (もしAなら) / 只有 A 才 B (AしてこそB) / 只要 A 就 B (AしさえすればB)",
+          "formula_chips": [
+            {
+              "type": "conj",
+              "text": "如果……就……"
+            },
+            {
+              "type": "conj",
+              "text": "只有……才……"
+            },
+            {
+              "type": "conj",
+              "text": "只要……就……"
+            }
+          ],
+          "puzzle_category": "lian",
+          "teacher_tip": "『只有……才……（〜して初めて…）』と『只要……就……（〜しさえすれば…）』のペアは絶対に取り違えないでください！只有には『才』、只要には『就』です！",
+          "trap_warning": {
+            "bad": "❌ 只有努力学习，就能通过。(只有に就はNG)",
+            "good": "⭕ 只有努力学习，才能通过考试。",
+            "explanation": "『只有』は唯一の必須条件を表すため、後ろは必ず『才』とペアになります！"
+          },
+          "examples": [
+            {
+              "zh": "只有努力练习，才能学会用筷子。",
+              "pinyin": "Zhǐyǒu nǔlì liànxí, cái néng xuéhuì yòng kuàizi.",
+              "ja": "一生懸命練習してこそ初めて、箸を使えるようになります。",
+              "mask_target": "只有...才能..."
+            },
+            {
+              "zh": "只要明天不下雨，我们就去爬山。",
+              "pinyin": "Zhǐyào míngtiān bú xiàyǔ, wǒmen jiù qù páshān.",
+              "ja": "明日雨さえ降らなければ、私たちは山登りに行きます。",
+              "mask_target": "只要...就..."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_yiwenci",
+      "number": "09",
+      "title": "疑問詞の任指・全面否定（誰でも/何でも）",
+      "icon": "🌐",
+      "summary": "疑问代词（谁/什么/哪儿/怎么）を用いて、「誰もが〜」「何一つ〜ない」を表す構文。",
+      "items": [
+        {
+          "id": "g_yiwenci_1",
+          "title": "全面肯定 & 全面否定",
+          "level": "★4 頻出",
+          "formula": "谁 / 什么 / 哪儿 + 都 / 也 + [動詞・形容詞]",
+          "formula_chips": [
+            {
+              "type": "subj",
+              "text": "疑问代词(谁/什么/哪儿)"
+            },
+            {
+              "type": "modal",
+              "text": "都 / 也"
+            },
+            {
+              "type": "verb",
+              "text": "動詞句(肯定/否定)"
+            }
+          ],
+          "puzzle_category": "basic",
+          "teacher_tip": "疑問詞の後ろに『都』や『也』を置くだけで、『誰もが〜（谁都…）』『何一つ〜ない（什么也不/没…）』『どこへも〜（哪儿都…）』という意味に大変身します！",
+          "trap_warning": {
+            "bad": "❌ 我不想吃什么。",
+            "good": "⭕ 我什么都不想吃。",
+            "explanation": "『何も〜ない』と言いたい時、疑問詞は動詞の後ろではなく、都/也の前に持ってきます。"
+          },
+          "examples": [
+            {
+              "zh": "这个问题太简单了，谁都知道答案。",
+              "pinyin": "Zhè ge wèntí tài jiǎndān le, shuí dōu zhīdào dá'àn.",
+              "ja": "この問題はとても簡単なので、誰でも答えを知っています。",
+              "mask_target": "谁都知道"
+            },
+            {
+              "zh": "我今天胃不太舒服，什么也不想吃。",
+              "pinyin": "Wǒ jīntiān wèi bú tài shūfu, shénme yě bù xiǎng chī.",
+              "ja": "私は今日胃の調子がよくないので、何も食べたくありません。",
+              "mask_target": "什么也不想吃"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_zhudongci",
+      "number": "10",
+      "title": "重要助動詞（应该 / 愿意 / 敢 / 会・能・可以）",
+      "icon": "💡",
+      "summary": "話者の意志、義務、勇気、能力、許可のニュアンスを添える重要助動詞。",
+      "items": [
+        {
+          "id": "g_zhudongci_1",
+          "title": "应该 (義務・推量) / 愿意 (意欲) / 敢 (勇気)",
+          "level": "★4 頻出",
+          "formula": "[主語] + 应该 / 愿意 / 敢 + [動詞句]",
+          "formula_chips": [
+            {
+              "type": "subj",
+              "text": "主語"
+            },
+            {
+              "type": "modal",
+              "text": "应该 / 愿意 / 敢"
+            },
+            {
+              "type": "verb",
+              "text": "動詞句"
+            }
+          ],
+          "puzzle_category": "basic",
+          "teacher_tip": "『应该（〜すべきだ）』『愿意（喜んで〜したい）』『敢（あえて〜する、怖がらずに〜する）』は3級作文の頻出語彙です。否定は『不应该』『不愿意』『不敢』と動詞の前に置きます。",
+          "trap_warning": {
+            "bad": "❌ 我没敢去。(過去でも敢の否定は不)",
+            "good": "⭕ 我不敢一个人去。",
+            "explanation": "助動詞の否定は原則として『不』を用います。"
+          },
+          "examples": [
+            {
+              "zh": "感冒的时候应该多喝水、多休息。",
+              "pinyin": "Gǎnmào de shíhou yīnggāi duō hē shuǐ, duō xiūxi.",
+              "ja": "風邪をひいた時は、水をたくさん飲んでしっかり休むべきです。",
+              "mask_target": "应该多喝水"
+            },
+            {
+              "zh": "外面太黑了，妹妹不敢一个人走。",
+              "pinyin": "Wàimiàn tài hēi le, mèimei bù gǎn yí gè rén zǒu.",
+              "ja": "外が暗すぎるので、妹は一人で歩く勇気がありません。",
+              "mask_target": "不敢"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_jieci",
+      "number": "11",
+      "title": "重要介詞（前置詞フレーズの語順）",
+      "icon": "🧭",
+      "summary": "介詞句（前置詞＋名詞）は動詞の前に置くのが中国語の黄金ルール。",
+      "items": [
+        {
+          "id": "g_jieci_1",
+          "title": "为了 (目的) / 对...来说 / 除了...以外",
+          "level": "★5 超頻出",
+          "formula": "为了 + [目的]，[主語] + [動詞句] / 对 + [人] + 来说 / 除了 A 以外，还/都 B",
+          "formula_chips": [
+            {
+              "type": "prep",
+              "text": "为了……"
+            },
+            {
+              "type": "prep",
+              "text": "对……来说"
+            },
+            {
+              "type": "prep",
+              "text": "除了……以外"
+            }
+          ],
+          "puzzle_category": "basic",
+          "teacher_tip": "『为了〜（〜のために）』は目的を表し、文頭に置くことも多いです。『对日本人来说（日本人にとって）』や『除了西瓜以外还买了苹果（スイカの他にリンゴも買った）』は並べ替えの超定番！",
+          "trap_warning": {
+            "bad": "❌ 他努力学习为了通过考试。(目的を末尾に置くのは英語的NG)",
+            "good": "⭕ 为了通过考试，他努力学习。",
+            "explanation": "『为了…』は動詞句の【前】（または文頭）に置きます！英語の to不定詞のように後ろに置いてはいけません。"
+          },
+          "examples": [
+            {
+              "zh": "为了这次面试，他认真准备了一个星期。",
+              "pinyin": "Wèile zhè cì miànshì, tā rènzhēn zhǔnbèi le yí gè xīngqī.",
+              "ja": "今回の面接のために、彼は1週間真剣に準備しました。",
+              "mask_target": "为了这次面试"
+            },
+            {
+              "zh": "除了星期天以外，图书馆每天都开门。",
+              "pinyin": "Chúle xīngqītiān yǐwài, túshūguǎn měitiān dōu kāimén.",
+              "ja": "日曜日を除いて、図書館は毎日開館しています。",
+              "mask_target": "除了...以外"
+            },
+            {
+              "zh": "看报纸对学汉语很有帮助。",
+              "pinyin": "Kàn bàozhǐ duì xué Hànyǔ hěn yǒu bāngzhù.",
+              "ja": "新聞を読むことは中国語の学習にとても役立ちます。",
+              "mask_target": "对学汉语很有帮助"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_aspect",
+      "number": "12",
+      "title": "アスペクト & 時間変化（快要...了 / 刚 / 又 vs 再）",
+      "icon": "⏳",
+      "summary": "時間関係、切迫完了、重複を表すニュアンスの差を整理する構文群。",
+      "items": [
+        {
+          "id": "g_aspect_1",
+          "title": "快要……了 (切迫) & 刚 vs 刚才 & 又 vs 再",
+          "level": "★5 超頻出",
+          "formula": "快要 / 就要 + [動詞] + 了 / [主語] + 刚 + [動詞] / 又(過去既発) vs 再(未来予定)",
+          "formula_chips": [
+            {
+              "type": "modal",
+              "text": "快要……了"
+            },
+            {
+              "type": "modal",
+              "text": "刚 (副詞) / 刚才 (名詞)"
+            },
+            {
+              "type": "modal",
+              "text": "又 (過去) / 再 (未来)"
+            }
+          ],
+          "puzzle_category": "basic",
+          "teacher_tip": "『快要……了』は『まもなく〜する』という直前の変化を表します。『又』はすでに起きたこと（他又迟到了＝また遅刻した）、『再』はこれからのこと（请再说一遍＝もう一度言ってください）です！",
+          "trap_warning": {
+            "bad": "❌ 明天我又要去上海。(未来の予定に又は不可)",
+            "good": "⭕ 明天我想再去一次上海。",
+            "explanation": "未来に『もう一度』行う場合は必ず『再』を使います。『又』は過去の繰り返しです。"
+          },
+          "examples": [
+            {
+              "zh": "飞机快要起飞了，请关掉手机。",
+              "pinyin": "Fēijī kuàiyào qǐfēi le, qǐng guāndiào shǒujī.",
+              "ja": "飛行機がまもなく離陸しますので、スマホの電源をお切りください。",
+              "mask_target": "快要起飞了"
+            },
+            {
+              "zh": "他刚来中国一个月，就已经适应了这里的气候。",
+              "pinyin": "Tā gāng lái Zhōngguó yí gè yuè, jiù yǐjīng shìyìng le zhèlǐ de qìhòu.",
+              "ja": "彼は中国に来てたった1ヶ月だが、もうこちらの気候に順応した。",
+              "mask_target": "刚来中国"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
