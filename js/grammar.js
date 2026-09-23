@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         🔊
                     </button>
                     <div class="example-text-content">
-                        <div class="example-zh-row">${zhDisplay}</div>
+                        <div class="example-zh-row" lang="zh-CN">${zhDisplay}</div>
                         <div class="example-pinyin-row ${isPinyinVisible ? '' : 'hidden'}">${ex.pinyin}</div>
                         <div class="example-ja-row ${isJaVisible ? '' : 'hidden'}">${ex.ja}</div>
                     </div>
@@ -277,8 +277,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="trap-warning-box">
                         <div class="trap-warning-title">⚠️ 日本人あるある減点トラップ（減点防止！）</div>
                         <div class="trap-compare-grid">
-                            <div class="trap-cell bad">${item.trap_warning.bad}</div>
-                            <div class="trap-cell good">${item.trap_warning.good}</div>
+                            <div class="trap-cell bad" lang="zh-CN">${item.trap_warning.bad}</div>
+                            <div class="trap-cell good" lang="zh-CN">${item.trap_warning.good}</div>
                         </div>
                         <div class="trap-exp-text">💡 <strong>解説:</strong> ${item.trap_warning.explanation}</div>
                     </div>
