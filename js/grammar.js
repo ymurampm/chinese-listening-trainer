@@ -298,11 +298,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <!-- Footer Navigation & Puzzle Jump -->
                 <div class="grammar-footer">
                     <div class="footer-nav-group">
-                        <button id="btn-prev-grammar" class="btn-secondary" title="前の文法 (K)">
-                            ⬅ 前の文法 (K)
+                        <button id="btn-prev-grammar" class="btn-secondary" title="前の文法 (P)">
+                            ⬅ 前の文法 (P)
                         </button>
-                        <button id="btn-next-grammar" class="btn-secondary" title="次の文法 (J)">
-                            次の文法 (J) ➡
+                        <button id="btn-next-grammar" class="btn-secondary" title="次の文法 (N)">
+                            次の文法 (N) ➡
                         </button>
                     </div>
 
@@ -565,16 +565,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const lowerKey = e.key.toLowerCase();
             const currentItem = allItems[currentItemIndex];
 
-            if (lowerKey === 'j' || e.key === 'ArrowRight') {
+            if (lowerKey === 'n' || e.key === 'ArrowRight') {
                 e.preventDefault();
                 goToItem(currentItemIndex + 1);
-            } else if (lowerKey === 'k' || e.key === 'ArrowLeft') {
+            } else if (lowerKey === 'p' || e.key === 'ArrowLeft') {
                 e.preventDefault();
                 goToItem(currentItemIndex - 1);
-            } else if (lowerKey === 'n' || e.key === 'ArrowDown') {
+            } else if (lowerKey === 'j' || e.key === 'ArrowDown') {
                 e.preventDefault();
                 scrollToNextBlock();
-            } else if (lowerKey === 'p' || e.key === 'ArrowUp') {
+            } else if (lowerKey === 'k' || e.key === 'ArrowUp') {
                 e.preventDefault();
                 scrollToPrevBlock();
             } else if (lowerKey === 'w') {
