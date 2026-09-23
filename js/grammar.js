@@ -241,7 +241,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <!-- Teacher Advice Bubble -->
                 <div class="teacher-advice-box">
-                    <div class="teacher-avatar-big">👩‍🏫</div>
+                    <div class="teacher-avatar-big">
+                        <img src="./img/teacher_wang.jpg" alt="王老师" />
+                    </div>
                     <div class="teacher-bubble-content">
                         <div class="teacher-bubble-title">王老师（ワン先生）のツボ押しアドバイス</div>
                         <div class="teacher-bubble-body">${item.teacher_tip}</div>
