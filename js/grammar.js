@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     ${item.puzzle_category ? `
                         <a href="writing.html" class="btn-puzzle-jump" title="語順整序パズルでこの文法を実践">
-                            🧩 この構文のパズルを解く (P) ↗
+                            🧩 この構文のパズルを解く (W) ↗
                         </a>
                     ` : ''}
                 </div>
@@ -373,8 +373,89 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCurrentGrammar();
     }
 
-    // Event Listeners for Top Toolbar
+    // Block-level Navigation within the current card (N / P / ArrowDown / ArrowUp)
+    function getScrollBlocks() {
+        const selectors = [
+            '.grammar-card-header',
+            '.meaning-section',
+            '.formula-section',
+            '.teacher-advice-box',
+            '.trap-warning-box',
+            '.example-card',
+            '.action-footer'
+        ];
+        const card = document.querySelector('.grammar-card');
+        if (!card) return [];
+        return Array.from(card.querySelectorAll(selectors.join(', ')));
+    }
+
+    function highlightBlock(el) {
+        if (!el) return;
+        el.classList.add('block-focused');
+        setTimeout(() => el.classList.remove('block-focused'), 750);
+    }
+
+    function scrollToNextBlock() {
+        const blocks = getScrollBlocks();
+        if (blocks.length === 0) {
+            window.scrollBy({ top: 220, behavior: 'smooth' });
+            return;
+        }
+
+        // Find the first block that starts below viewport top threshold
+        const threshold = 50;
+        const nextBlock = blocks.find(b => {
+            const rect = b.getBoundingClientRect();
+            return rect.top > threshold;
+        });
+
+        if (nextBlock) {
+            const targetY = window.scrollY + nextBlock.getBoundingClientRect().top - 20;
+            window.scrollTo({ top: targetY, behavior: 'smooth' });
+            highlightBlock(nextBlock);
+        } else {
+            // Reached near bottom, scroll down slightly
+            window.scrollBy({ top: 220, behavior: 'smooth' });
+        }
+    }
+
+    function scrollToPrevBlock() {
+        const blocks = getScrollBlocks();
+        if (blocks.length === 0) {
+            window.scrollBy({ top: -220, behavior: 'smooth' });
+            return;
+        }
+
+        // Find the last block whose top is above the current viewport
+        const threshold = -30;
+        const prevBlocks = blocks.filter(b => {
+            const rect = b.getBoundingClientRect();
+            return rect.top < threshold;
+        });
+
+        if (prevBlocks.length > 0) {
+            const prevBlock = prevBlocks[prevBlocks.length - 1];
+            const targetY = window.scrollY + prevBlock.getBoundingClientRect().top - 20;
+            window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+            highlightBlock(prevBlock);
+        } else {
+            // Already at or near top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
+
+    // Event Listeners for Top Toolbar & Controls
     function setupEventListeners() {
+        // Floating Block Scroll Buttons (P / N)
+        const btnScrollPrev = document.getElementById('btn-scroll-prev-block');
+        if (btnScrollPrev) {
+            btnScrollPrev.addEventListener('click', scrollToPrevBlock);
+        }
+        const btnScrollNext = document.getElementById('btn-scroll-next-block');
+        if (btnScrollNext) {
+            btnScrollNext.addEventListener('click', scrollToNextBlock);
+        }
+
         // Mask Button (Q)
         const btnMask = document.getElementById('btn-toggle-mask');
         if (btnMask) {
@@ -490,6 +571,15 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (lowerKey === 'k' || e.key === 'ArrowLeft') {
                 e.preventDefault();
                 goToItem(currentItemIndex - 1);
+            } else if (lowerKey === 'n' || e.key === 'ArrowDown') {
+                e.preventDefault();
+                scrollToNextBlock();
+            } else if (lowerKey === 'p' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                scrollToPrevBlock();
+            } else if (lowerKey === 'w') {
+                e.preventDefault();
+                window.location.href = 'writing.html';
             } else if (e.code === 'Space' || lowerKey === 'r') {
                 e.preventDefault();
                 if (currentItem && currentItem.examples.length > 0) {
@@ -522,9 +612,6 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (lowerKey === 'm') {
                 e.preventDefault();
                 toggleMastered();
-            } else if (lowerKey === 'p') {
-                e.preventDefault();
-                window.location.href = 'writing.html';
             } else if (lowerKey === 's') {
                 e.preventDefault();
                 const randomIdx = Math.floor(Math.random() * allItems.length);

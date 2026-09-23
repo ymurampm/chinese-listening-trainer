@@ -85,22 +85,40 @@
 
     </div>
 
+    <!-- Floating Block Scroll Navigation -->
+    <div class="block-nav-float" id="block-nav-float">
+        <button id="btn-scroll-prev-block" class="float-nav-btn" title="前のブロックへスクロール (P / ↑)">
+            ▲ <span class="key-hint">P</span>
+        </button>
+        <button id="btn-scroll-next-block" class="float-nav-btn" title="次のブロックへスクロール (N / ↓)">
+            ▼ <span class="key-hint">N</span>
+        </button>
+    </div>
+
     <!-- Keyboard Shortcuts Guide Modal -->
     <div id="keyboard-modal" class="keyboard-modal hidden" style="display: none;">
         <div class="modal-card">
             <div class="modal-header">
-                <h3 class="modal-title">⌨️ キーボード操作ガイド（左手完結）</h3>
+                <h3 class="modal-title">⌨️ キーボード操作ガイド（マウス不要）</h3>
                 <button id="close-modal-btn" class="close-modal-btn">&times;</button>
             </div>
             <table class="key-guide-table">
                 <tbody>
                     <tr>
-                        <td><span class="kbd-badge">J</span> / <span class="kbd-badge">→</span> / <span class="kbd-badge">↓</span></td>
-                        <td>次の構文へ進む</td>
+                        <td><span class="kbd-badge">J</span> / <span class="kbd-badge">→</span></td>
+                        <td>次の構文へ進む（大項目）</td>
                     </tr>
                     <tr>
-                        <td><span class="kbd-badge">K</span> / <span class="kbd-badge">←</span> / <span class="kbd-badge">↑</span></td>
-                        <td>前の構文へ戻る</td>
+                        <td><span class="kbd-badge">K</span> / <span class="kbd-badge">←</span></td>
+                        <td>前の構文へ戻る（大項目）</td>
+                    </tr>
+                    <tr>
+                        <td><span class="kbd-badge">N</span> / <span class="kbd-badge">↓</span></td>
+                        <td>次のブロックへスクロール（小項目）</td>
+                    </tr>
+                    <tr>
+                        <td><span class="kbd-badge">P</span> / <span class="kbd-badge">↑</span></td>
+                        <td>前のブロックへスクロール（小項目）</td>
                     </tr>
                     <tr>
                         <td><span class="kbd-badge">Space</span> / <span class="kbd-badge">R</span></td>
@@ -127,7 +145,7 @@
                         <td>日本語訳の表示 / 非表示トグル</td>
                     </tr>
                     <tr>
-                        <td><span class="kbd-badge">P</span></td>
+                        <td><span class="kbd-badge">W</span></td>
                         <td>語順整序パズル（writing.html）へ直行</td>
                     </tr>
                     <tr>
