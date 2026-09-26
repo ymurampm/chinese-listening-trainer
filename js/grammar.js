@@ -94,10 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function initUI() {
         renderSidebar();
+        renderChapterSheet();
         renderMasteryProgress();
         renderCurrentGrammar();
         setupEventListeners();
         setupKeyboardShortcuts();
+        setupTouchGestures();
     }
 
     // Mastery Progress Bar & Teacher Feedback
@@ -162,6 +164,64 @@ document.addEventListener('DOMContentLoaded', () => {
 
             listEl.appendChild(item);
         });
+
+        // Also update mobile chapter bottom sheet
+        renderChapterSheet();
+    }
+
+    // Mobile Chapter Bottom Sheet (Drawer for iPhone 15 Plus)
+    function renderChapterSheet() {
+        const sheetListEl = document.getElementById('sheet-category-list');
+        if (!sheetListEl || !grammarData) return;
+
+        sheetListEl.innerHTML = '';
+        grammarData.categories.forEach(cat => {
+            const item = document.createElement('div');
+            item.className = `sheet-cat-item ${cat.id === allItems[currentItemIndex]?.categoryId ? 'active' : ''}`;
+
+            const catItems = allItems.filter(i => i.categoryId === cat.id);
+            const catMastered = catItems.filter(i => masteredItems.has(i.id)).length;
+            const isAllDone = catMastered === catItems.length && catItems.length > 0;
+
+            item.innerHTML = `
+                <div class="sheet-cat-left">
+                    <span class="sheet-cat-num">${cat.number}</span>
+                    <span class="sheet-cat-title">${cat.icon} ${cat.title}</span>
+                </div>
+                <span class="sheet-cat-count">${isAllDone ? '✓' : `${catMastered}/${catItems.length}`}</span>
+            `;
+
+            item.addEventListener('click', () => {
+                const targetIdx = allItems.findIndex(i => i.categoryId === cat.id);
+                if (targetIdx !== -1) {
+                    goToItem(targetIdx);
+                    closeChapterSheet();
+                }
+            });
+
+            sheetListEl.appendChild(item);
+        });
+    }
+
+    function openChapterSheet() {
+        renderChapterSheet();
+        const sheet = document.getElementById('chapter-sheet-overlay');
+        if (sheet) {
+            sheet.style.display = 'block';
+            requestAnimationFrame(() => sheet.classList.remove('hidden'));
+        }
+    }
+
+    function closeChapterSheet() {
+        const sheet = document.getElementById('chapter-sheet-overlay');
+        if (sheet) {
+            sheet.classList.add('hidden');
+            setTimeout(() => {
+                if (sheet.classList.contains('hidden')) {
+                    sheet.style.display = 'none';
+                }
+            }, 280);
+        }
     }
 
     // Render Current Grammar Card
@@ -334,10 +394,32 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        // Attach Example Card Tap Listeners (Tap anywhere on card to play audio on mobile)
+        cardContainer.querySelectorAll('.example-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                // Ignore if clicked on mask slot
+                if (e.target.closest('.mask-slot')) return;
+                const exIdx = parseInt(card.dataset.exampleIndex, 10);
+                if (!isNaN(exIdx) && item.examples[exIdx]) {
+                    speakText(item.examples[exIdx].zh);
+                }
+            });
+        });
+
         // Attach Mastered Button Listener
         const masterBtn = document.getElementById('btn-toggle-mastered');
         if (masterBtn) {
             masterBtn.addEventListener('click', toggleMastered);
+        }
+
+        // Sync Mobile Bottom Dock Mastered State
+        const dockMasteredBtn = document.getElementById('dock-btn-mastered');
+        if (dockMasteredBtn) {
+            dockMasteredBtn.classList.toggle('mastered', isMastered);
+            const iconEl = dockMasteredBtn.querySelector('.dock-icon');
+            const labelEl = dockMasteredBtn.querySelector('.dock-label');
+            if (iconEl) iconEl.textContent = isMastered ? '✓' : '○';
+            if (labelEl) labelEl.textContent = isMastered ? '習得済' : '覚えた';
         }
 
         // Attach Prev/Next Listeners
@@ -446,6 +528,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event Listeners for Top Toolbar & Controls
     function setupEventListeners() {
+        // Mobile Bottom Action Dock Listeners (iPhone 15 Plus Ergonomics)
+        const dockNext = document.getElementById('dock-btn-next');
+        if (dockNext) dockNext.addEventListener('click', () => goToItem(currentItemIndex + 1));
+
+        const dockPrev = document.getElementById('dock-btn-prev');
+        if (dockPrev) dockPrev.addEventListener('click', () => goToItem(currentItemIndex - 1));
+
+        const dockAudio = document.getElementById('dock-btn-audio');
+        if (dockAudio) {
+            dockAudio.addEventListener('click', () => {
+                const item = allItems[currentItemIndex];
+                if (item && item.examples.length > 0) {
+                    speakText(item.examples[0].zh);
+                }
+            });
+        }
+
+        const dockMastered = document.getElementById('dock-btn-mastered');
+        if (dockMastered) dockMastered.addEventListener('click', toggleMastered);
+
+        const dockChapters = document.getElementById('dock-btn-chapters');
+        if (dockChapters) dockChapters.addEventListener('click', openChapterSheet);
+
+        const sheetClose = document.getElementById('sheet-close-btn');
+        if (sheetClose) sheetClose.addEventListener('click', closeChapterSheet);
+
+        const sheetBackdrop = document.getElementById('chapter-sheet-backdrop');
+        if (sheetBackdrop) sheetBackdrop.addEventListener('click', closeChapterSheet);
+
         // Floating Block Scroll Buttons (P / N)
         const btnScrollPrev = document.getElementById('btn-scroll-prev-block');
         if (btnScrollPrev) {
@@ -631,6 +742,46 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
+    }
+
+    // Touch Gestures: Horizontal Swipe for iPhone 15 Plus & Mobile
+    function setupTouchGestures() {
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchStartTime = 0;
+
+        window.addEventListener('touchstart', (e) => {
+            if (e.touches.length !== 1) return;
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            touchStartTime = Date.now();
+        }, { passive: true });
+
+        window.addEventListener('touchend', (e) => {
+            if (e.changedTouches.length !== 1) return;
+            // Ignore if bottom sheet or modal is open
+            const sheet = document.getElementById('chapter-sheet-overlay');
+            if (sheet && !sheet.classList.contains('hidden')) return;
+            const modal = document.getElementById('keyboard-modal');
+            if (modal && !modal.classList.contains('hidden')) return;
+
+            const touchEndX = e.changedTouches[0].clientX;
+            const touchEndY = e.changedTouches[0].clientY;
+            const dx = touchEndX - touchStartX;
+            const dy = touchEndY - touchStartY;
+            const dt = Date.now() - touchStartTime;
+
+            // Horizontal flick: within 500ms, dx > 45px, and primarily horizontal (|dx| > |dy| * 1.5)
+            if (dt < 500 && Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+                if (dx < 0) {
+                    // Swipe Left (Flick left with thumb) -> Next Item (N)
+                    goToItem(currentItemIndex + 1);
+                } else {
+                    // Swipe Right (Flick right with thumb) -> Prev Item (P)
+                    goToItem(currentItemIndex - 1);
+                }
+            }
+        }, { passive: true });
     }
 
     loadData();

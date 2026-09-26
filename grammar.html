@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>HSK 3級 文法マスター | 王老师の公式＆ツボ押し図鑑</title>
     <!-- Google Fonts: Outfit & Noto Sans SC -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -96,6 +96,49 @@
         <button id="btn-scroll-next-block" class="float-nav-btn" title="次のブロックへスクロール (J / ↓)">
             ▼ <span class="key-hint">J</span>
         </button>
+    </div>
+
+    <!-- Mobile Bottom Action Dock (Right-Handed Thumb Ergonomics for iPhone 15 Plus) -->
+    <nav class="mobile-bottom-dock" id="mobile-bottom-dock" aria-label="モバイル親指アクションバー">
+        <div class="dock-left-group">
+            <button id="dock-btn-chapters" class="dock-btn" title="章一覧・目次を開く">
+                <span class="dock-icon">📚</span>
+                <span class="dock-label">章目次</span>
+            </button>
+            <button id="dock-btn-prev" class="dock-btn" title="前の構文へ (P)">
+                <span class="dock-icon">◀</span>
+                <span class="dock-label">前へ</span>
+            </button>
+        </div>
+        <div class="dock-right-group">
+            <button id="dock-btn-audio" class="dock-btn" title="代表音声を聴く (Space)">
+                <span class="dock-icon">🔊</span>
+                <span class="dock-label">発音</span>
+            </button>
+            <button id="dock-btn-mastered" class="dock-btn" title="覚えた！チェック (M)">
+                <span class="dock-icon">✓</span>
+                <span class="dock-label">覚えた</span>
+            </button>
+            <button id="dock-btn-next" class="dock-btn dock-btn-primary" title="次の構文へ (N)">
+                <span class="dock-icon">▶</span>
+                <span class="dock-label">次へ</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Chapter Selector Bottom Sheet -->
+    <div id="chapter-sheet-overlay" class="chapter-sheet-overlay hidden" style="display: none;">
+        <div class="chapter-sheet-backdrop" id="chapter-sheet-backdrop"></div>
+        <div class="chapter-sheet-content" id="chapter-sheet-content">
+            <div class="sheet-drag-handle"></div>
+            <div class="sheet-header">
+                <div class="sheet-title">📚 HSK 3級 全12章 目次</div>
+                <button id="sheet-close-btn" class="sheet-close-btn" aria-label="閉じる">&times;</button>
+            </div>
+            <div class="sheet-body" id="sheet-category-list">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </div>
     </div>
 
     <!-- Keyboard Shortcuts Guide Modal -->
