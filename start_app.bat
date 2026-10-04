@@ -1,14 +1,7 @@
 @echo off
-chcp 65001 >nul
-title Chinese Listening Trainer
+cd /d "C:\Antigravity\Projects\ListeningTraining"
 
-cd /d "%~dp0"
-
-netstat -ano | findstr ":8080 " >nul
-if %errorlevel% neq 0 (
-    start /b python -m http.server 8080 >nul 2>&1
-    ping 127.0.0.1 -n 2 >nul
-)
+powershell -NoProfile -Command "$ok = $false; try { $r = [System.Net.WebRequest]::Create('http://localhost:8080/').GetResponse(); if ($r.StatusCode -eq 200) { $ok = $true }; $r.Close() } catch {}; if (-not $ok) { Get-NetTCPConnection -LocalPort 8080 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue }; Start-Process -FilePath 'python' -ArgumentList '-m http.server 8080' -WorkingDirectory 'C:\Antigravity\Projects\ListeningTraining' -WindowStyle Hidden; Start-Sleep -Seconds 1 }"
 
 start http://localhost:8080/
 exit
