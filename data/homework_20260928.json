@@ -1,0 +1,536 @@
+{
+  "id": "homework_20260928",
+  "title": "宿題 2026/09/28 会話レッスン",
+  "description": "For 村上さん20260928.pdf 12ページ（初級会話「点外卖」）",
+  "dialogues": [
+    {
+      "id": "d20260928_1",
+      "title": "初级对话-8 点外卖",
+      "level": "初級 (HSK 2-3)",
+      "topic": "フードデリバリー（美団外売・注文アプリ・把構文・料理の量詞）",
+      "characters": [
+        {
+          "id": "sufei",
+          "name": "苏飞",
+          "gender": "female",
+          "avatar": "👧",
+          "pitch": 1.0,
+          "rate": 0.95
+        },
+        {
+          "id": "jieming",
+          "name": "杰明",
+          "gender": "male",
+          "avatar": "👨",
+          "pitch": 0.95,
+          "rate": 0.95
+        }
+      ],
+      "lines": [
+        {
+          "id": "d0928_1",
+          "speaker": "sufei",
+          "zh": "我觉得好饿！可是不想做饭。",
+          "pinyin": "Wǒ juéde hǎo è! Kěshì bù xiǎng zuòfàn.",
+          "ja": "お腹がすごく空いた！でもご飯を作りたくないな。",
+          "segments": [
+            "我觉得好饿！",
+            "可是不想做饭。"
+          ],
+          "notes": [
+            {
+              "word": "饿",
+              "pinyin": "è",
+              "meaning": "お腹が空く、飢える（HSK2）"
+            },
+            {
+              "word": "可是",
+              "pinyin": "kěshì",
+              "meaning": "しかし、だが（HSK2）"
+            },
+            {
+              "word": "做饭",
+              "pinyin": "zuòfàn",
+              "meaning": "ご飯を作る、料理する（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d0928_2",
+          "speaker": "jieming",
+          "zh": "我也是，感觉今天特别懒！",
+          "pinyin": "Wǒ yě shì, gǎnjué jīntiān tèbié lǎn!",
+          "ja": "僕もそうだよ、今日は特にだるい（やる気が出ない）感じがする！",
+          "segments": [
+            "我也是，",
+            "感觉今天特别懒！"
+          ],
+          "notes": [
+            {
+              "word": "感觉",
+              "pinyin": "gǎnjué",
+              "meaning": "感じる、〜という気がする（HSK3）"
+            },
+            {
+              "word": "特别",
+              "pinyin": "tèbié",
+              "meaning": "特に、とりわけ、格別に（HSK3）"
+            },
+            {
+              "word": "懒",
+              "pinyin": "lǎn",
+              "meaning": "怠惰な、面倒くさがりの、だるい（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d0928_3",
+          "speaker": "sufei",
+          "zh": "要不，我们点外卖吧！",
+          "pinyin": "Yàobù, wǒmen diǎn wàimài ba!",
+          "ja": "それじゃあ、出前（デリバリー）を取ろうよ！",
+          "segments": [
+            "要不，",
+            "我们点外卖吧！"
+          ],
+          "notes": [
+            {
+              "word": "要不",
+              "pinyin": "yàobù",
+              "meaning": "それなら、いっそのこと（提案の接続表現）"
+            },
+            {
+              "word": "点外卖",
+              "pinyin": "diǎn wàimài",
+              "meaning": "デリバリー・出前を注文する"
+            },
+            {
+              "word": "外卖",
+              "pinyin": "wàimài",
+              "meaning": "テイクアウト、出前、デリバリー"
+            }
+          ]
+        },
+        {
+          "id": "d0928_4",
+          "speaker": "jieming",
+          "zh": "好主意！",
+          "pinyin": "Hǎo zhǔyi!",
+          "ja": "いい考えだね！",
+          "segments": [
+            "好主意！"
+          ],
+          "notes": [
+            {
+              "word": "主意",
+              "pinyin": "zhǔyi",
+              "meaning": "考え、アイデア（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d0928_5",
+          "speaker": "sufei",
+          "zh": "你知道怎么点外卖吗？",
+          "pinyin": "Nǐ zhīdào zěnme diǎn wàimài ma?",
+          "ja": "どうやって出前を注文するか知ってる？",
+          "segments": [
+            "你知道",
+            "怎么点外卖吗？"
+          ],
+          "notes": [
+            {
+              "word": "怎么",
+              "pinyin": "zěnme",
+              "meaning": "どうやって、どのように（HSK1）"
+            }
+          ]
+        },
+        {
+          "id": "d0928_6",
+          "speaker": "jieming",
+          "zh": "还不知道，你告诉我怎么点吧。",
+          "pinyin": "Hái bù zhīdào, nǐ gàosu wǒ zěnme diǎn ba.",
+          "ja": "まだ知らないんだ、どうやって注文するか教えてよ。",
+          "segments": [
+            "还不知道，",
+            "你告诉我怎么点吧。"
+          ],
+          "notes": [
+            {
+              "word": "还",
+              "pinyin": "hái",
+              "meaning": "まだ（HSK2）"
+            },
+            {
+              "word": "告诉",
+              "pinyin": "gàosu",
+              "meaning": "教える、告げる（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d0928_7",
+          "speaker": "sufei",
+          "zh": "你用手机上就可以点。下载外卖的手机程序“美团外卖”，在上面点。",
+          "pinyin": "Nǐ yòng shǒujī shang jiù kěyǐ diǎn. Xiàzài wàimài de shǒujī chéngxù “Měituán Wàimài”, zài shàngmiàn diǎn.",
+          "ja": "スマホを使えばすぐ注文できるよ。出前アプリの「美団外売」をダウンロードして、その上で注文するの。",
+          "segments": [
+            "你用手机上就可以点。",
+            "下载外卖的手机程序“美团外卖”，",
+            "在上面点。"
+          ],
+          "notes": [
+            {
+              "word": "下载",
+              "pinyin": "xiàzài",
+              "meaning": "ダウンロードする"
+            },
+            {
+              "word": "程序",
+              "pinyin": "chéngxù",
+              "meaning": "アプリケーション、プログラム、手順"
+            },
+            {
+              "word": "美团外卖",
+              "pinyin": "Měituán Wàimài",
+              "meaning": "美団（メイトゥアン）外売（中国大手の生活・出前アプリ）"
+            }
+          ]
+        },
+        {
+          "id": "d0928_8",
+          "speaker": "jieming",
+          "zh": "好的，我现在就下载！",
+          "pinyin": "Hǎo de, wǒ xiànzài jiù xiàzài!",
+          "ja": "わかった、今すぐダウンロードするよ！",
+          "segments": [
+            "好的，",
+            "我现在就下载！"
+          ],
+          "notes": [
+            {
+              "word": "就",
+              "pinyin": "jiù",
+              "meaning": "すぐに、即座に（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d0928_9",
+          "speaker": "sufei",
+          "zh": "美团上有很多饭馆可以选择，也有很多又好吃又便宜的饭菜。",
+          "pinyin": "Měituán shang yǒu hěn duō fànguǎn kěyǐ xuǎnzé, yě yǒu hěn duō yòu hǎochī yòu piányi de fàncài.",
+          "ja": "美団には選べるレストランがたくさんあって、美味しくて安い料理もたくさんあるよ。",
+          "segments": [
+            "美团上有很多饭馆可以选择，",
+            "也有很多又好吃又便宜的饭菜。"
+          ],
+          "notes": [
+            {
+              "word": "选择",
+              "pinyin": "xuǎnzé",
+              "meaning": "選ぶ、選択する（HSK3）"
+            },
+            {
+              "word": "又……又……",
+              "pinyin": "yòu... yòu...",
+              "meaning": "〜でもあり〜でもある（HSK3）"
+            },
+            {
+              "word": "饭菜",
+              "pinyin": "fàncài",
+              "meaning": "食事、料理、ご飯とおかず"
+            }
+          ]
+        },
+        {
+          "id": "d0928_10",
+          "speaker": "jieming",
+          "zh": "就是说，我想吃什么，就点什么吗？",
+          "pinyin": "Jiùshìshuō, wǒ xiǎng chī shénme, jiù diǎn shénme ma?",
+          "ja": "つまり、食べたいものを何でも注文していいってこと？",
+          "segments": [
+            "就是说，",
+            "我想吃什么，",
+            "就点什么吗？"
+          ],
+          "notes": [
+            {
+              "word": "就是说",
+              "pinyin": "jiùshìshuō",
+              "meaning": "つまり、言うなれば"
+            },
+            {
+              "word": "什么……就什么",
+              "pinyin": "shénme... jiù shénme",
+              "meaning": "〜のものを何でも〜する（疑問詞の呼応構文）"
+            }
+          ]
+        },
+        {
+          "id": "d0928_11",
+          "speaker": "sufei",
+          "zh": "对！点完后，就会有送餐人员把饭菜送到你家。",
+          "pinyin": "Duì! Diǎnwán hòu, jiù huì yǒu sòngcān rényuán bǎ fàncài sòng dào nǐ jiā.",
+          "ja": "そう！注文し終わったら、配達員が料理をあなたの家まで届けてくれるよ。",
+          "segments": [
+            "对！",
+            "点完后，",
+            "就会有送餐人员把饭菜送到你家。"
+          ],
+          "notes": [
+            {
+              "word": "完",
+              "pinyin": "wán",
+              "meaning": "〜し終える（結果補語, HSK2）"
+            },
+            {
+              "word": "送餐人员",
+              "pinyin": "sòngcān rényuán",
+              "meaning": "配達員、デリバリースタッフ（外卖小哥）"
+            },
+            {
+              "word": "把",
+              "pinyin": "bǎ",
+              "meaning": "〜を（把構文・処置文, HSK3）"
+            },
+            {
+              "word": "送到",
+              "pinyin": "sòng dào",
+              "meaning": "〜へ届ける、送り届ける"
+            }
+          ]
+        },
+        {
+          "id": "d0928_12",
+          "speaker": "jieming",
+          "zh": "太棒了！我现在就点一碗面和一瓶可乐。",
+          "pinyin": "Tài bàng le! Wǒ xiànzài jiù diǎn yì wǎn miàn hé yì píng kělè.",
+          "ja": "最高！僕は今すぐラーメン（麺）1杯とコーラ1本を注文するよ。",
+          "segments": [
+            "太棒了！",
+            "我现在就点一碗面和一瓶可乐。"
+          ],
+          "notes": [
+            {
+              "word": "棒",
+              "pinyin": "bàng",
+              "meaning": "素晴らしい、すごい（HSK3）"
+            },
+            {
+              "word": "碗",
+              "pinyin": "wǎn",
+              "meaning": "〜杯、丼（量詞, HSK3）"
+            },
+            {
+              "word": "瓶",
+              "pinyin": "píng",
+              "meaning": "〜本、ボトル（量詞, HSK3）"
+            },
+            {
+              "word": "可乐",
+              "pinyin": "kělè",
+              "meaning": "コーラ（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d0928_13",
+          "speaker": "sufei",
+          "zh": "我也来点。",
+          "pinyin": "Wǒ yě lái diǎn.",
+          "ja": "私も注文しようっと。",
+          "segments": [
+            "我也来点。"
+          ],
+          "notes": [
+            {
+              "word": "来",
+              "pinyin": "lái",
+              "meaning": "（積極的に行うことを表す）〜する、頼む（HSK1）"
+            }
+          ]
+        },
+        {
+          "id": "d0928_14",
+          "speaker": "jieming",
+          "zh": "你点了什么？",
+          "pinyin": "Nǐ diǎn le shénme?",
+          "ja": "何を注文したの？",
+          "segments": [
+            "你点了什么？"
+          ],
+          "notes": []
+        },
+        {
+          "id": "d0928_15",
+          "speaker": "sufei",
+          "zh": "我点了一碗牛肉饭和一杯酸奶。",
+          "pinyin": "Wǒ diǎn le yì wǎn niúròufàn hé yì bēi suānnǎi.",
+          "ja": "私は牛丼（牛肉ご飯）1杯とヨーグルト1個を注文したよ。",
+          "segments": [
+            "我点了一碗牛肉饭",
+            "和一杯酸奶。"
+          ],
+          "notes": [
+            {
+              "word": "牛肉饭",
+              "pinyin": "niúròufàn",
+              "meaning": "牛肉ご飯、牛丼"
+            },
+            {
+              "word": "杯",
+              "pinyin": "bēi",
+              "meaning": "〜杯、カップ（量詞, HSK1）"
+            },
+            {
+              "word": "酸奶",
+              "pinyin": "suānnǎi",
+              "meaning": "ヨーグルト（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d0928_16",
+          "speaker": "jieming",
+          "zh": "好了！那现在我们就等送餐人员吧！对了，会等多久？",
+          "pinyin": "Hǎo le! Nà xiànzài wǒmen jiù děng sòngcān rényuán ba! Duì le, huì děng duōjiǔ?",
+          "ja": "よし！じゃあ今は配達員さんを待とう！そういえば、どれくらい待つのかな？",
+          "segments": [
+            "好了！",
+            "那现在我们就等送餐人员吧！",
+            "对了，会等多久？"
+          ],
+          "notes": [
+            {
+              "word": "好了",
+              "pinyin": "hǎo le",
+              "meaning": "できた、完了した、よし"
+            },
+            {
+              "word": "对了",
+              "pinyin": "duì le",
+              "meaning": "そういえば、ところで（HSK3）"
+            },
+            {
+              "word": "多久",
+              "pinyin": "duōjiǔ",
+              "meaning": "どれくらい（の時間・期間）（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d0928_17",
+          "speaker": "sufei",
+          "zh": "放心！差不多20分钟就会送到。",
+          "pinyin": "Fàngxīn! Chàbuduō èrshí fēnzhōng jiù huì sòng dào.",
+          "ja": "安心して！だいたい20分くらいで届くよ。",
+          "segments": [
+            "放心！",
+            "差不多20分钟就会送到。"
+          ],
+          "notes": [
+            {
+              "word": "放心",
+              "pinyin": "fàngxīn",
+              "meaning": "安心する、気を楽にする（HSK3）"
+            },
+            {
+              "word": "差不多",
+              "pinyin": "chàbuduō",
+              "meaning": "だいたい、約、ほぼ（HSK3）"
+            },
+            {
+              "word": "分钟",
+              "pinyin": "fēnzhōng",
+              "meaning": "〜分間（HSK1）"
+            }
+          ]
+        },
+        {
+          "id": "d0928_18",
+          "speaker": "jieming",
+          "zh": "太好了！这个程序真方便！",
+          "pinyin": "Tài hǎo le! Zhè ge chéngxù zhēn fāngbiàn!",
+          "ja": "やった！このアプリ本当に便利だね！",
+          "segments": [
+            "太好了！",
+            "这个程序真方便！"
+          ],
+          "notes": [
+            {
+              "word": "方便",
+              "pinyin": "fāngbiàn",
+              "meaning": "便利である（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d0928_19",
+          "speaker": "sufei",
+          "zh": "当然！现在大家都用。",
+          "pinyin": "Dāngrán! Xiànzài dàjiā dōu yòng.",
+          "ja": "もちろん！今ではみんな使っているよ。",
+          "segments": [
+            "当然！",
+            "现在大家都用。"
+          ],
+          "notes": [
+            {
+              "word": "当然",
+              "pinyin": "dāngrán",
+              "meaning": "もちろん、当然（HSK3）"
+            },
+            {
+              "word": "大家都",
+              "pinyin": "dàjiā dōu",
+              "meaning": "みんな〜だ（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d0928_20",
+          "speaker": "jieming",
+          "zh": "对了，你经常点外卖吗？",
+          "pinyin": "Duì le, nǐ jīngcháng diǎn wàimài ma?",
+          "ja": "そういえば、君はよく出前を頼むの？",
+          "segments": [
+            "对了，",
+            "你经常点外卖吗？"
+          ],
+          "notes": [
+            {
+              "word": "经常",
+              "pinyin": "jīngcháng",
+              "meaning": "よく、しばしば、日常的に（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d0928_21",
+          "speaker": "sufei",
+          "zh": "不经常，每两星期一次。",
+          "pinyin": "Bù jīngcháng, měi liǎng xīngqī yí cì.",
+          "ja": "そんなに頼まないよ、2週間に1回くらいかな。",
+          "segments": [
+            "不经常，",
+            "每两星期一次。"
+          ],
+          "notes": [
+            {
+              "word": "星期",
+              "pinyin": "xīngqī",
+              "meaning": "週、日曜日（HSK1）"
+            },
+            {
+              "word": "每……一次",
+              "pinyin": "měi... yí cì",
+              "meaning": "〜ごとに1回（頻度表現）"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
