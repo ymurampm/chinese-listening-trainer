@@ -23,9 +23,11 @@
                 </div>
             </div>
             <div class="header-right">
-                <a href="grammar.html" class="btn-mode-switch" style="color: #4bcffa; border-color: rgba(75, 207, 250, 0.4); background: rgba(75, 207, 250, 0.15);">📚 3級文法マスターへ</a>
-                <a href="writing.html" class="btn-mode-switch" style="color: #ffd32a; border-color: rgba(255, 211, 42, 0.4); background: rgba(255, 211, 42, 0.15);">✍️ 3級書写マスターへ</a>
-                <a href="trainer.html" class="btn-mode-switch">🎯 過去の単文特訓へ</a>
+                <div class="header-nav-scroll">
+                    <a href="grammar.html" class="btn-mode-switch" style="color: #4bcffa; border-color: rgba(75, 207, 250, 0.4); background: rgba(75, 207, 250, 0.15);">📚 3級文法</a>
+                    <a href="writing.html" class="btn-mode-switch" style="color: #ffd32a; border-color: rgba(255, 211, 42, 0.4); background: rgba(255, 211, 42, 0.15);">✍️ 3級書写</a>
+                    <a href="trainer.html" class="btn-mode-switch">🎯 単文特訓</a>
+                </div>
                 <button id="btn-open-help" class="btn-help">⌨️ キーガイド</button>
                 <div class="custom-dropdown-container">
                     <button id="custom-dropdown-btn" class="custom-dropdown-btn" type="button" aria-haspopup="listbox">
@@ -179,6 +181,65 @@
                         <tr><td><span style="color:#9c88ff; font-weight:bold;">紫色 (前舌面)</span></td><td>j, q, x (前舌面のジ・チ・シ)</td></tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Action Dock (Right-Handed Thumb Ergonomics for iPhone 15 Plus) -->
+    <nav class="mobile-bottom-dock" id="mobile-bottom-dock" aria-label="モバイル親指アクションバー">
+        <div class="dock-left-group">
+            <button id="dock-btn-dialogues" class="dock-btn" type="button" title="会話目次・設定を開く">
+                <span class="dock-icon">📚</span>
+                <span class="dock-label">会話目次</span>
+            </button>
+            <button id="dock-btn-prev" class="dock-btn" type="button" title="前のセリフ (K)">
+                <span class="dock-icon">⏮️</span>
+                <span class="dock-label">前の文</span>
+            </button>
+        </div>
+        <div class="dock-right-group">
+            <button id="dock-btn-replay" class="dock-btn" type="button" title="このセリフを聴く (Space)">
+                <span class="dock-icon">🔊</span>
+                <span class="dock-label">この文</span>
+            </button>
+            <button id="dock-btn-play-full" class="dock-btn" type="button" title="会話全体を再生 / 停止 (P)">
+                <span class="dock-icon" id="dock-icon-full">▶️</span>
+                <span class="dock-label" id="dock-label-full">全体</span>
+            </button>
+            <button id="dock-btn-next" class="dock-btn dock-btn-primary" type="button" title="次のセリフへ進んで再生 (J)">
+                <span class="dock-icon">⏭️</span>
+                <span class="dock-label">次へ</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Dialogue Selector Bottom Sheet -->
+    <div id="dialogue-sheet-overlay" class="chapter-sheet-overlay hidden">
+        <div class="chapter-sheet-backdrop" id="dialogue-sheet-backdrop"></div>
+        <div class="chapter-sheet-content" id="dialogue-sheet-content">
+            <div class="sheet-drag-handle"></div>
+            <div class="sheet-header">
+                <div class="sheet-title">🎧 会話レッスン目次 & 設定</div>
+                <button id="sheet-close-btn" class="sheet-close-btn" aria-label="閉じる">&times;</button>
+            </div>
+            <!-- Quick Settings Bar inside Sheet -->
+            <div class="sheet-quick-settings">
+                <button id="sheet-toggle-pinyin" class="sheet-setting-pill active" type="button">
+                    <span class="pill-label">ピンイン</span>: <span class="pill-val" id="sheet-val-pinyin">常時</span>
+                </button>
+                <button id="sheet-toggle-ja" class="sheet-setting-pill active" type="button">
+                    <span class="pill-label">日本語訳</span>: <span class="pill-val" id="sheet-val-ja">ON</span>
+                </button>
+                <button id="sheet-toggle-speed" class="sheet-setting-pill" type="button">
+                    <span class="pill-label">速度</span>: <span class="pill-val" id="sheet-val-speed">0.85x</span>
+                </button>
+                <button id="sheet-toggle-loop" class="sheet-setting-pill" type="button">
+                    <span class="pill-label">1文ループ</span>: <span class="pill-val" id="sheet-val-loop">OFF</span>
+                </button>
+            </div>
+            <!-- Dialogue List grouped by Homework -->
+            <div class="sheet-body" id="sheet-dialogue-list">
+                <!-- Dynamically populated via JS -->
             </div>
         </div>
     </div>

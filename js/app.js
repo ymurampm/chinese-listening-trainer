@@ -144,6 +144,9 @@ document.addEventListener('DOMContentLoaded', () => {
         selectDialogue(defaultSet.id, defaultSet.dialogues[0].id);
         setupEvents();
         setupKeyboardShortcuts();
+        setupMobileDock();
+        setupDialogueSheet();
+        setupTouchGestures();
     }
 
     function selectDialogue(setId, dialogueId) {
@@ -559,11 +562,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // Controls
         playFullBtn.addEventListener('click', () => {
             highlightActiveLine(0);
-            tts.playFullDialogue(currentDialogue, 0);
+            updateDockFullState(true);
+            tts.playFullDialogue(currentDialogue, 0, () => {
+                updateDockFullState(false);
+            });
         });
 
         stopBtn.addEventListener('click', () => {
             tts.stop();
+            updateDockFullState(false);
             document.querySelectorAll('.chat-bubble').forEach(b => b.classList.remove('playing'));
         });
 
@@ -649,6 +656,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         tts.onFinish = () => {
+            updateDockFullState(false);
             document.querySelectorAll('.chat-bubble').forEach(b => b.classList.remove('playing'));
         };
     }
@@ -994,6 +1002,262 @@ document.addEventListener('DOMContentLoaded', () => {
         inputElem.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') checkAnswer();
         });
+    }
+
+    // =========================================================================
+    // Mobile iPhone 15 Plus Ergonomics: Bottom Dock & Dialogue Bottom Sheet
+    // =========================================================================
+
+    let isMobileFullPlaying = false;
+
+    function setupMobileDock() {
+        const dockDialogues = document.getElementById('dock-btn-dialogues');
+        const dockPrev = document.getElementById('dock-btn-prev');
+        const dockReplay = document.getElementById('dock-btn-replay');
+        const dockPlayFull = document.getElementById('dock-btn-play-full');
+        const dockNext = document.getElementById('dock-btn-next');
+
+        if (dockDialogues) {
+            dockDialogues.addEventListener('click', () => {
+                openDialogueSheet();
+            });
+        }
+
+        if (dockPrev) {
+            dockPrev.addEventListener('click', () => {
+                if (!currentDialogue) return;
+                if (selectedLineIndex > 0) {
+                    selectLine(selectedLineIndex - 1, true);
+                } else {
+                    selectLine(0, true);
+                }
+            });
+        }
+
+        if (dockReplay) {
+            dockReplay.addEventListener('click', () => {
+                if (!currentDialogue) return;
+                selectLine(selectedLineIndex, true);
+            });
+        }
+
+        if (dockPlayFull) {
+            dockPlayFull.addEventListener('click', () => {
+                if (!currentDialogue) return;
+                if (isMobileFullPlaying) {
+                    tts.stop();
+                    updateDockFullState(false);
+                } else {
+                    updateDockFullState(true);
+                    highlightActiveLine(selectedLineIndex || 0);
+                    tts.playFullDialogue(currentDialogue, selectedLineIndex || 0, () => {
+                        updateDockFullState(false);
+                    });
+                }
+            });
+        }
+
+        if (dockNext) {
+            dockNext.addEventListener('click', () => {
+                if (!currentDialogue) return;
+                if (selectedLineIndex < currentDialogue.lines.length - 1) {
+                    selectLine(selectedLineIndex + 1, true);
+                } else {
+                    selectLine(0, true);
+                }
+            });
+        }
+    }
+
+    function updateDockFullState(playing) {
+        isMobileFullPlaying = playing;
+        const icon = document.getElementById('dock-icon-full');
+        const label = document.getElementById('dock-label-full');
+        const btn = document.getElementById('dock-btn-play-full');
+        if (icon && label && btn) {
+            if (playing) {
+                icon.textContent = '⏹️';
+                label.textContent = '停止';
+                btn.classList.add('playing');
+            } else {
+                icon.textContent = '▶️';
+                label.textContent = '全体';
+                btn.classList.remove('playing');
+            }
+        }
+    }
+
+    function setupDialogueSheet() {
+        const sheetClose = document.getElementById('sheet-close-btn');
+        const sheetBackdrop = document.getElementById('dialogue-sheet-backdrop');
+
+        if (sheetClose) sheetClose.addEventListener('click', closeDialogueSheet);
+        if (sheetBackdrop) sheetBackdrop.addEventListener('click', closeDialogueSheet);
+
+        // Quick Settings Pills
+        const pillPinyin = document.getElementById('sheet-toggle-pinyin');
+        const valPinyin = document.getElementById('sheet-val-pinyin');
+        const pinyinModes = ['always', 'hover', 'hidden'];
+        const pinyinLabels = { 'always': '常時', 'hover': 'タップ時', 'hidden': '非表示' };
+
+        if (pillPinyin && valPinyin) {
+            pillPinyin.addEventListener('click', () => {
+                const currentMode = pinyinToggle.value;
+                const nextIdx = (pinyinModes.indexOf(currentMode) + 1) % pinyinModes.length;
+                const nextMode = pinyinModes[nextIdx];
+                pinyinToggle.value = nextMode;
+                PinyinUtils.setMode(nextMode);
+                valPinyin.textContent = pinyinLabels[nextMode];
+                pillPinyin.classList.toggle('active', nextMode !== 'hidden');
+            });
+        }
+
+        const pillJa = document.getElementById('sheet-toggle-ja');
+        const valJa = document.getElementById('sheet-val-ja');
+        if (pillJa && valJa) {
+            pillJa.addEventListener('click', () => {
+                jaToggle.checked = !jaToggle.checked;
+                if (jaToggle.checked) {
+                    chatContainer.classList.remove('hide-ja');
+                    valJa.textContent = 'ON';
+                    pillJa.classList.add('active');
+                } else {
+                    chatContainer.classList.add('hide-ja');
+                    valJa.textContent = 'OFF';
+                    pillJa.classList.remove('active');
+                }
+            });
+        }
+
+        const pillSpeed = document.getElementById('sheet-toggle-speed');
+        const valSpeed = document.getElementById('sheet-val-speed');
+        const speeds = ['0.7', '0.85', '1.0', '0.5'];
+        if (pillSpeed && valSpeed) {
+            pillSpeed.addEventListener('click', () => {
+                const currentRate = speedSelect.value;
+                const nextIdx = (speeds.indexOf(currentRate) + 1) % speeds.length;
+                const nextRate = speeds[nextIdx];
+                speedSelect.value = nextRate;
+                tts.setRate(nextRate);
+                valSpeed.textContent = `${nextRate}x`;
+            });
+        }
+
+        const pillLoop = document.getElementById('sheet-toggle-loop');
+        const valLoop = document.getElementById('sheet-val-loop');
+        if (pillLoop && valLoop) {
+            pillLoop.addEventListener('click', () => {
+                loopToggle.checked = !loopToggle.checked;
+                tts.setLoopSingleLine(loopToggle.checked);
+                valLoop.textContent = loopToggle.checked ? 'ON' : 'OFF';
+                pillLoop.classList.toggle('active', loopToggle.checked);
+            });
+        }
+    }
+
+    function openDialogueSheet() {
+        const sheetOverlay = document.getElementById('dialogue-sheet-overlay');
+        const sheetList = document.getElementById('sheet-dialogue-list');
+        if (!sheetOverlay || !sheetList) return;
+
+        // Render Grouped dialogues
+        let html = '';
+        allHomeworkSets.forEach(set => {
+            html += `<div class="sheet-group-title">📅 ${set.title}</div>`;
+            set.dialogues.forEach(d => {
+                const isSelected = currentHomeworkSet?.id === set.id && currentDialogue?.id === d.id;
+                html += `
+                    <div class="sheet-dialogue-item ${isSelected ? 'active' : ''}" data-set-id="${set.id}" data-dialogue-id="${d.id}">
+                        <div class="sheet-item-info">
+                            <span class="sheet-item-title">${d.title}</span>
+                            <span class="sheet-item-meta">💡 ${d.topic || ''}</span>
+                        </div>
+                        <span class="sheet-item-badge">${d.level || 'HSK'}</span>
+                    </div>
+                `;
+            });
+        });
+        sheetList.innerHTML = html;
+
+        sheetList.querySelectorAll('.sheet-dialogue-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                const setId = e.currentTarget.dataset.setId;
+                const dialogueId = e.currentTarget.dataset.dialogueId;
+                selectDialogue(setId, dialogueId);
+                closeDialogueSheet();
+            });
+        });
+
+        // Sync pill values
+        const valPinyin = document.getElementById('sheet-val-pinyin');
+        const pillPinyin = document.getElementById('sheet-toggle-pinyin');
+        const pinyinLabels = { 'always': '常時', 'hover': 'タップ時', 'hidden': '非表示' };
+        if (valPinyin) valPinyin.textContent = pinyinLabels[pinyinToggle.value] || '常時';
+        if (pillPinyin) pillPinyin.classList.toggle('active', pinyinToggle.value !== 'hidden');
+
+        const valJa = document.getElementById('sheet-val-ja');
+        const pillJa = document.getElementById('sheet-toggle-ja');
+        if (valJa) valJa.textContent = jaToggle.checked ? 'ON' : 'OFF';
+        if (pillJa) pillJa.classList.toggle('active', jaToggle.checked);
+
+        const valSpeed = document.getElementById('sheet-val-speed');
+        if (valSpeed) valSpeed.textContent = `${speedSelect.value}x`;
+
+        const valLoop = document.getElementById('sheet-val-loop');
+        const pillLoop = document.getElementById('sheet-toggle-loop');
+        if (valLoop) valLoop.textContent = loopToggle.checked ? 'ON' : 'OFF';
+        if (pillLoop) pillLoop.classList.toggle('active', loopToggle.checked);
+
+        sheetOverlay.classList.remove('hidden');
+    }
+
+    function closeDialogueSheet() {
+        const sheetOverlay = document.getElementById('dialogue-sheet-overlay');
+        if (sheetOverlay) sheetOverlay.classList.add('hidden');
+    }
+
+    // Touch Gestures: Horizontal Swipe for iPhone 15 Plus & Mobile
+    function setupTouchGestures() {
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchStartTime = 0;
+
+        window.addEventListener('touchstart', (e) => {
+            if (e.touches.length !== 1) return;
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            touchStartTime = Date.now();
+        }, { passive: true });
+
+        window.addEventListener('touchend', (e) => {
+            if (e.changedTouches.length !== 1) return;
+            const sheet = document.getElementById('dialogue-sheet-overlay');
+            if (sheet && !sheet.classList.contains('hidden')) return;
+            const helpModal = document.getElementById('help-modal');
+            if (helpModal && !helpModal.classList.contains('hidden')) return;
+
+            const touchEndX = e.changedTouches[0].clientX;
+            const touchEndY = e.changedTouches[0].clientY;
+            const dx = touchEndX - touchStartX;
+            const dy = touchEndY - touchStartY;
+            const dt = Date.now() - touchStartTime;
+
+            // Horizontal flick: within 500ms, dx > 45px, and primarily horizontal (|dx| > |dy| * 1.5)
+            if (dt < 500 && Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+                if (!currentDialogue) return;
+                if (dx < 0) {
+                    // Swipe Left (Flick left with thumb) -> Next Line
+                    if (selectedLineIndex < currentDialogue.lines.length - 1) {
+                        selectLine(selectedLineIndex + 1, true);
+                    }
+                } else {
+                    // Swipe Right (Flick right with thumb) -> Prev Line
+                    if (selectedLineIndex > 0) {
+                        selectLine(selectedLineIndex - 1, true);
+                    }
+                }
+            }
+        }, { passive: true });
     }
 
     // Load Data
