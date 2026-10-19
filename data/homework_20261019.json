@@ -1,0 +1,580 @@
+{
+  "id": "homework_20261019",
+  "title": "宿題 2026/10/19 会話レッスン",
+  "description": "For 村上さん20261019.pdf 8ページ（初級会話「你喜欢做什么？・共享单车」）",
+  "dialogues": [
+    {
+      "id": "d20261019_1",
+      "title": "初级对话-10 你喜欢做什么？",
+      "level": "初級 (HSK 2-3)",
+      "topic": "シェアサイクル（共享单车・QRコード決済・被構文「被偷过」・趣味と週末）",
+      "characters": [
+        {
+          "id": "lili",
+          "name": "李丽",
+          "gender": "female",
+          "avatar": "👧",
+          "pitch": 1.05,
+          "rate": 0.95
+        },
+        {
+          "id": "jieming",
+          "name": "杰明",
+          "gender": "male",
+          "avatar": "👨",
+          "pitch": 0.95,
+          "rate": 0.95
+        }
+      ],
+      "lines": [
+        {
+          "id": "d1019_1",
+          "speaker": "lili",
+          "zh": "在周末，你喜欢做什么？",
+          "pinyin": "Zài zhōumò, nǐ xǐhuan zuò shénme?",
+          "ja": "週末には、何をするのが好きですか？",
+          "segments": [
+            "在周末，",
+            "你喜欢做什么？"
+          ],
+          "notes": [
+            {
+              "word": "周末",
+              "pinyin": "zhōumò",
+              "meaning": "週末（HSK3）"
+            },
+            {
+              "word": "喜欢",
+              "pinyin": "xǐhuan",
+              "meaning": "好きである、好む（HSK1）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_2",
+          "speaker": "jieming",
+          "zh": "我喜欢看电影，特别是科幻电影，你呢？",
+          "pinyin": "Wǒ xǐhuan kàn diànyǐng, tèbié shì kēhuàn diànyǐng, nǐ ne?",
+          "ja": "僕は映画を見るのが好きで、特にSF映画が好きだよ。君は？",
+          "segments": [
+            "我喜欢看电影，",
+            "特别是科幻电影，",
+            "你呢？"
+          ],
+          "notes": [
+            {
+              "word": "特别是",
+              "pinyin": "tèbié shì",
+              "meaning": "特に、とりわけ（HSK3）"
+            },
+            {
+              "word": "科幻电影",
+              "pinyin": "kēhuàn diànyǐng",
+              "meaning": "SF映画（科学幻想映画）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_3",
+          "speaker": "lili",
+          "zh": "我喜欢看小说，也喜欢和朋友们骑自行车到处玩。",
+          "pinyin": "Wǒ xǐhuan kàn xiǎoshuō, yě xǐhuan hé péngyoumen qí zìxíngchē dàochù wán.",
+          "ja": "私は小説を読むのが好きだし、友達と自転車に乗ってあちこち遊びに行くのも好きよ。",
+          "segments": [
+            "我喜欢看小说，",
+            "也喜欢和朋友们",
+            "骑自行车到处玩。"
+          ],
+          "notes": [
+            {
+              "word": "小说",
+              "pinyin": "xiǎoshuō",
+              "meaning": "小説（HSK4）"
+            },
+            {
+              "word": "骑自行车",
+              "pinyin": "qí zìxíngchē",
+              "meaning": "自転車に乗る（HSK2）"
+            },
+            {
+              "word": "到处",
+              "pinyin": "dàochù",
+              "meaning": "あちこち、至る所（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_4",
+          "speaker": "jieming",
+          "zh": "那你有自己的自行车吗？",
+          "pinyin": "Nà nǐ yǒu zìjǐ de zìxíngchē ma?",
+          "ja": "じゃあ、自分の自転車を持っているの？",
+          "segments": [
+            "那你有",
+            "自己的自行车吗？"
+          ],
+          "notes": [
+            {
+              "word": "自己",
+              "pinyin": "zìjǐ",
+              "meaning": "自分、自身（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_5",
+          "speaker": "lili",
+          "zh": "没有。现在在中国，大家都不用买自行车了，都用“共享单车”。",
+          "pinyin": "Méiyǒu. Xiànzài zài Zhōngguó, dàjiā dōu bú yòng mǎi zìxíngchē le, dōu yòng “gòngxiǎng dānchē”.",
+          "ja": "持ってないよ。今の中国では、みんな自転車を買う必要がなくて、みんな「シェアサイクル」を使っているの。",
+          "segments": [
+            "没有。",
+            "现在在中国，",
+            "大家都不用买自行车了，",
+            "都用“共享单车”。"
+          ],
+          "notes": [
+            {
+              "word": "不用……了",
+              "pinyin": "bú yòng... le",
+              "meaning": "もう〜する必要はない（状況の変化）"
+            },
+            {
+              "word": "共享单车",
+              "pinyin": "gòngxiǎng dānchē",
+              "meaning": "シェアサイクル、共有自転車"
+            },
+            {
+              "word": "单车",
+              "pinyin": "dānchē",
+              "meaning": "自転車（南方の表現・愛称）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_6",
+          "speaker": "jieming",
+          "zh": "你说的“共享单车”，是街上那些彩色的自行车吗？",
+          "pinyin": "Nǐ shuō de “gòngxiǎng dānchē”, shì jiē shang nàxiē cǎisè de zìxíngchē ma?",
+          "ja": "君が言っている「シェアサイクル」って、街にあるあのカラフルな自転車のこと？",
+          "segments": [
+            "你说的“共享单车”，",
+            "是街上那些彩色的自行车吗？"
+          ],
+          "notes": [
+            {
+              "word": "街上",
+              "pinyin": "jiē shang",
+              "meaning": "路上、街角"
+            },
+            {
+              "word": "那些",
+              "pinyin": "nàxiē",
+              "meaning": "あれらの、それらの（HSK2）"
+            },
+            {
+              "word": "彩色",
+              "pinyin": "cǎisè",
+              "meaning": "カラーの、色とりどりの"
+            }
+          ]
+        },
+        {
+          "id": "d1019_7",
+          "speaker": "lili",
+          "zh": "对！这些自行车非常方便，用手机扫码就可以骑。",
+          "pinyin": "Duì! Zhèxiē zìxíngchē fēicháng fāngbiàn, yòng shǒujī sǎomǎ jiù kěyǐ qí.",
+          "ja": "そう！この自転車はすごく便利で、スマホでQRコードをスキャンすればすぐ乗れるのよ。",
+          "segments": [
+            "对！这些自行车非常方便，",
+            "用手机扫码就可以骑。"
+          ],
+          "notes": [
+            {
+              "word": "非常",
+              "pinyin": "fēicháng",
+              "meaning": "非常に、とても（HSK2）"
+            },
+            {
+              "word": "扫码",
+              "pinyin": "sǎomǎ",
+              "meaning": "QRコードをスキャンする"
+            },
+            {
+              "word": "就可以",
+              "pinyin": "jiù kěyǐ",
+              "meaning": "すぐに〜できる"
+            }
+          ]
+        },
+        {
+          "id": "d1019_8",
+          "speaker": "jieming",
+          "zh": "贵吗？",
+          "pinyin": "Guì ma?",
+          "ja": "高いたの？",
+          "segments": [
+            "贵吗？"
+          ],
+          "notes": [
+            {
+              "word": "贵",
+              "pinyin": "guì",
+              "meaning": "（値段が）高い（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_9",
+          "speaker": "lili",
+          "zh": "不贵！我每个月才花10块钱，想什么时候骑，就什么时候骑。",
+          "pinyin": "Bú guì! Wǒ měi ge yuè cái huā shí kuài qián, xiǎng shénme shíhou qí, jiù shénme shíhou qí.",
+          "ja": "高くないよ！私は毎月たった10元しか使わないし、乗りたい時にいつでも乗れるの。",
+          "segments": [
+            "不贵！我每个月才花10块钱，",
+            "想什么时候骑，",
+            "就什么时候骑。"
+          ],
+          "notes": [
+            {
+              "word": "才",
+              "pinyin": "cái",
+              "meaning": "たった〜だけ、わずか（HSK3）"
+            },
+            {
+              "word": "花",
+              "pinyin": "huā",
+              "meaning": "（お金・時間を）使う、費やす（HSK3）"
+            },
+            {
+              "word": "什么时候……就什么时候……",
+              "pinyin": "shénme shíhou... jiù shénme shíhou...",
+              "meaning": "〜のときにいつでも〜する（疑問詞呼応構文）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_10",
+          "speaker": "jieming",
+          "zh": "在城市里，到处都有这些自行车吗？",
+          "pinyin": "Zài chéngshì li, dàochù dōu yǒu zhèxiē zìxíngchē ma?",
+          "ja": "街中（都市の中）なら、どこにでもこの自転車があるの？",
+          "segments": [
+            "在城市里，",
+            "到处都有这些自行车吗？"
+          ],
+          "notes": [
+            {
+              "word": "城市",
+              "pinyin": "chéngshì",
+              "meaning": "都市、街（HSK3）"
+            },
+            {
+              "word": "到处都",
+              "pinyin": "dàochù dōu",
+              "meaning": "いたる所に〜がある（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_11",
+          "speaker": "lili",
+          "zh": "对！所以，你想到哪里都可以。",
+          "pinyin": "Duì! Suǒyǐ, nǐ xiǎng dào nǎlǐ dōu kěyǐ.",
+          "ja": "そう！だから、行きたい所ならどこへでも行けるよ。",
+          "segments": [
+            "对！所以，",
+            "你想到哪里都可以。"
+          ],
+          "notes": [
+            {
+              "word": "所以",
+              "pinyin": "suǒyǐ",
+              "meaning": "だから、したがって（HSK2）"
+            },
+            {
+              "word": "哪里都可以",
+              "pinyin": "nǎlǐ dōu kěyǐ",
+              "meaning": "どこへでも〜できる（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_12",
+          "speaker": "jieming",
+          "zh": "那停车呢？",
+          "pinyin": "Nà tíngchē ne?",
+          "ja": "じゃあ、駐輪（駐車）はどうするの？",
+          "segments": [
+            "那停车呢？"
+          ],
+          "notes": [
+            {
+              "word": "停车",
+              "pinyin": "tíngchē",
+              "meaning": "駐車する、駐輪する（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_13",
+          "speaker": "lili",
+          "zh": "任何有“共享单车”的地方，都可以停车。",
+          "pinyin": "Rènhé yǒu “gòngxiǎng dānchē” de dìfang, dōu kěyǐ tíngchē.",
+          "ja": "シェアサイクルがある場所ならどこでも駐輪できるよ。",
+          "segments": [
+            "任何有“共享单车”的地方，",
+            "都可以停车。"
+          ],
+          "notes": [
+            {
+              "word": "任何",
+              "pinyin": "rènhé",
+              "meaning": "いかなる、どんな〜でも（HSK4）"
+            },
+            {
+              "word": "地方",
+              "pinyin": "dìfang",
+              "meaning": "場所、所（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_14",
+          "speaker": "jieming",
+          "zh": "这听上去太方便了！",
+          "pinyin": "Zhè tīng shàngqu tài fāngbiàn le!",
+          "ja": "それは話を聞く限り、すごく便利そうだね！",
+          "segments": [
+            "这听上去太方便了！"
+          ],
+          "notes": [
+            {
+              "word": "听上去",
+              "pinyin": "tīng shàngqu",
+              "meaning": "聞いたところ〜そうだ、〜のように思える（方向補語）"
+            },
+            {
+              "word": "方便",
+              "pinyin": "fāngbiàn",
+              "meaning": "便利である（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_15",
+          "speaker": "lili",
+          "zh": "是啊！以前大家得买自行车，现在不用了。",
+          "pinyin": "Shì a! Yǐqián dàjiā děi mǎi zìxíngchē, xiànzài bú yòng le.",
+          "ja": "そうなの！以前はみんな自転車を買わなきゃいけなかったけど、今はその必要がないの。",
+          "segments": [
+            "是啊！以前大家得买自行车，",
+            "现在不用了。"
+          ],
+          "notes": [
+            {
+              "word": "以前",
+              "pinyin": "yǐqián",
+              "meaning": "以前、前は（HSK2）"
+            },
+            {
+              "word": "得",
+              "pinyin": "děi",
+              "meaning": "〜しなければならない（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_16",
+          "speaker": "jieming",
+          "zh": "的确！而且，买的车子也容易被偷！",
+          "pinyin": "Díquè! Érqiě, mǎi de chēzi yě róngyì bèi tōu!",
+          "ja": "確かに！それに、買った自転車は盗まれやすいしね！",
+          "segments": [
+            "的确！而且，",
+            "买的车子也容易被偷！"
+          ],
+          "notes": [
+            {
+              "word": "的确",
+              "pinyin": "díquè",
+              "meaning": "確かに、実に（HSK4）"
+            },
+            {
+              "word": "而且",
+              "pinyin": "érqiě",
+              "meaning": "その上、しかも（HSK3）"
+            },
+            {
+              "word": "容易",
+              "pinyin": "róngyì",
+              "meaning": "容易である、〜しやすい（HSK3）"
+            },
+            {
+              "word": "被",
+              "pinyin": "bèi",
+              "meaning": "〜される（受け身文・被構文, HSK3）"
+            },
+            {
+              "word": "偷",
+              "pinyin": "tōu",
+              "meaning": "盗む、盗まれる（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_17",
+          "speaker": "lili",
+          "zh": "你的自行车被偷过吗？",
+          "pinyin": "Nǐ de zìxíngchē bèi tōu guo ma?",
+          "ja": "あなたの自転車、盗まれたことがあるの？",
+          "segments": [
+            "你的自行车",
+            "被偷过吗？"
+          ],
+          "notes": [
+            {
+              "word": "被偷过",
+              "pinyin": "bèi tōu guo",
+              "meaning": "盗まれたことがある（受け身+経験態）"
+            },
+            {
+              "word": "过",
+              "pinyin": "guo",
+              "meaning": "〜したことがある（経験態, HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_18",
+          "speaker": "jieming",
+          "zh": "当然！在伦敦的时候，被偷过两次。",
+          "pinyin": "Dāngrán! Zài Lúndūn de shíhou, bèi tōu guo liǎng cì.",
+          "ja": "もちろん！ロンドンにいた時、2回盗まれたよ。",
+          "segments": [
+            "当然！在伦敦的时候，",
+            "被偷过两次。"
+          ],
+          "notes": [
+            {
+              "word": "当然",
+              "pinyin": "dāngrán",
+              "meaning": "もちろん、当然（HSK3）"
+            },
+            {
+              "word": "伦敦",
+              "pinyin": "Lúndūn",
+              "meaning": "ロンドン（英国首都）"
+            },
+            {
+              "word": "两次",
+              "pinyin": "liǎng cì",
+              "meaning": "2回（動量詞, HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_19",
+          "speaker": "lili",
+          "zh": "真倒霉！",
+          "pinyin": "Zhēn dǎoméi!",
+          "ja": "なんてついてないの（アンラッキー）！",
+          "segments": [
+            "真倒霉！"
+          ],
+          "notes": [
+            {
+              "word": "倒霉",
+              "pinyin": "dǎoméi",
+              "meaning": "運が悪い、ついてない（HSK4/口語）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_20",
+          "speaker": "jieming",
+          "zh": "不过，现在不用担心了！",
+          "pinyin": "Búguò, xiànzài bú yòng dānxīn le!",
+          "ja": "でも、今はもう心配しなくていいよ！",
+          "segments": [
+            "不过，",
+            "现在不用担心了！"
+          ],
+          "notes": [
+            {
+              "word": "不过",
+              "pinyin": "búguò",
+              "meaning": "でも、しかし（HSK3）"
+            },
+            {
+              "word": "担心",
+              "pinyin": "dānxīn",
+              "meaning": "心配する、気にかける（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_21",
+          "speaker": "lili",
+          "zh": "嗯，你可以下载“共享单车”的手机程序，这样更方便。",
+          "pinyin": "Ǹg, nǐ kěyǐ xiàzài “gòngxiǎng dānchē” de shǒujī chéngxù, zhèyàng gèng fāngbiàn.",
+          "ja": "うん、シェアサイクルのスマホアプリをダウンロードできるよ、そうすればもっと便利だから。",
+          "segments": [
+            "嗯，你可以下载“共享单车”的手机程序，",
+            "这样更方便。"
+          ],
+          "notes": [
+            {
+              "word": "下载",
+              "pinyin": "xiàzài",
+              "meaning": "ダウンロードする"
+            },
+            {
+              "word": "手机程序",
+              "pinyin": "shǒujī chéngxù",
+              "meaning": "スマホアプリ"
+            },
+            {
+              "word": "这样",
+              "pinyin": "zhèyàng",
+              "meaning": "このように、そうすれば（HSK3）"
+            },
+            {
+              "word": "更",
+              "pinyin": "gèng",
+              "meaning": "さらに、もっと（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1019_22",
+          "speaker": "jieming",
+          "zh": "我现在就去下载，一会儿骑自行车回学校。",
+          "pinyin": "Wǒ xiànzài jiù qù xiàzài, yíhuìr qí zìxíngchē huí xuéxiào.",
+          "ja": "今すぐダウンロードしに行って、後で自転車に乗って学校に戻るよ。",
+          "segments": [
+            "我现在就去下载，",
+            "一会儿骑自行车回学校。"
+          ],
+          "notes": [
+            {
+              "word": "现在就",
+              "pinyin": "xiànzài jiù",
+              "meaning": "今すぐ、即座に"
+            },
+            {
+              "word": "一会儿",
+              "pinyin": "yíhuìr",
+              "meaning": "しばらくして、後で（HSK3）"
+            },
+            {
+              "word": "回学校",
+              "pinyin": "huí xuéxiào",
+              "meaning": "学校に戻る（HSK1）"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
