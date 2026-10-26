@@ -1,0 +1,416 @@
+{
+  "id": "homework_20261026",
+  "title": "宿題 2026/10/26 会話レッスン",
+  "description": "For 村上さん20261026.pdf 10ページ（初級会話「我的中文名字」）",
+  "dialogues": [
+    {
+      "id": "d20261026_1",
+      "title": "初级对话-11 我的中文名字",
+      "level": "初級 (HSK 2-3)",
+      "topic": "中国語の名前の由来（杰出・聪明・漢字の説明・中国文化・谷歌翻訳）",
+      "characters": [
+        {
+          "id": "lili",
+          "name": "李丽",
+          "gender": "female",
+          "avatar": "👧",
+          "pitch": 1.05,
+          "rate": 0.95
+        },
+        {
+          "id": "jieming",
+          "name": "杰明",
+          "gender": "male",
+          "avatar": "👨",
+          "pitch": 0.95,
+          "rate": 0.95
+        }
+      ],
+      "lines": [
+        {
+          "id": "d1026_1",
+          "speaker": "lili",
+          "zh": "你和苏飞是什么时候认识的？",
+          "pinyin": "Nǐ hé Sū Fēi shì shénme shíhou rènshi de?",
+          "ja": "あなたと蘇飛（スー・フェイ）はいつ知り合ったの？",
+          "segments": [
+            "你和苏飞，",
+            "是什么时候认识的？"
+          ],
+          "notes": [
+            {
+              "word": "认识",
+              "pinyin": "rènshi",
+              "meaning": "知り合う、知っている（HSK1）"
+            },
+            {
+              "word": "是……的",
+              "pinyin": "shì... de",
+              "meaning": "〜したのだ（時・場所・方法を強調する構文, HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1026_2",
+          "speaker": "jieming",
+          "zh": "是去年六月份认识的。",
+          "pinyin": "Shì qùnián liù yuèfèn rènshi de.",
+          "ja": "去年の6月に知り合ったんだ。",
+          "segments": [
+            "是去年六月份认识的。"
+          ],
+          "notes": [
+            {
+              "word": "去年",
+              "pinyin": "qùnián",
+              "meaning": "去年（HSK2）"
+            },
+            {
+              "word": "月份",
+              "pinyin": "yuèfèn",
+              "meaning": "〜月（月を指す口語的表現）"
+            }
+          ]
+        },
+        {
+          "id": "d1026_3",
+          "speaker": "lili",
+          "zh": "我觉得你很喜欢她。",
+          "pinyin": "Wǒ juéde nǐ hěn xǐhuan tā.",
+          "ja": "あなたは彼女のことがとても好きなんだと思うわ。",
+          "segments": [
+            "我觉得你很喜欢她。"
+          ],
+          "notes": [
+            {
+              "word": "觉得",
+              "pinyin": "juéde",
+              "meaning": "〜と思う、感じる（HSK2）"
+            },
+            {
+              "word": "喜欢",
+              "pinyin": "xǐhuan",
+              "meaning": "好きである、好む（HSK1）"
+            }
+          ]
+        },
+        {
+          "id": "d1026_4",
+          "speaker": "jieming",
+          "zh": "当然了！她是我在中国最好的朋友。",
+          "pinyin": "Dāngrán le! Tā shì wǒ zài Zhōngguó zuì hǎo de péngyou.",
+          "ja": "もちろんだよ！彼女は僕の中国で一番の親友さ。",
+          "segments": [
+            "当然了！",
+            "她是我在中国最好的朋友。"
+          ],
+          "notes": [
+            {
+              "word": "当然了",
+              "pinyin": "dāngrán le",
+              "meaning": "もちろんだとも、当然だ（HSK3）"
+            },
+            {
+              "word": "最",
+              "pinyin": "zuì",
+              "meaning": "もっとも、一番（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1026_5",
+          "speaker": "lili",
+          "zh": "现在我和她也是朋友了，还经常一起吃饭。",
+          "pinyin": "Xiànzài wǒ hé tā yě shì péngyou le, hái jīngcháng yìqǐ chīfàn.",
+          "ja": "今は私も彼女と友達になったし、よく一緒にご飯を食べているわ。",
+          "segments": [
+            "现在我和她也是朋友了，",
+            "还经常一起吃饭。"
+          ],
+          "notes": [
+            {
+              "word": "经常",
+              "pinyin": "jīngcháng",
+              "meaning": "よく、しばしば（HSK2）"
+            },
+            {
+              "word": "一起",
+              "pinyin": "yìqǐ",
+              "meaning": "一緒に（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1026_6",
+          "speaker": "jieming",
+          "zh": "是吗？这太棒了！",
+          "pinyin": "Shì ma? Zhè tài bàng le!",
+          "ja": "そうなの？それ最高だね！",
+          "segments": [
+            "是吗？",
+            "这太棒了！"
+          ],
+          "notes": [
+            {
+              "word": "太……了",
+              "pinyin": "tài... le",
+              "meaning": "とても〜だ（感嘆, HSK1）"
+            },
+            {
+              "word": "棒",
+              "pinyin": "bàng",
+              "meaning": "素晴らしい、すごい（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1026_7",
+          "speaker": "lili",
+          "zh": "我觉得你的中文名字很特别！",
+          "pinyin": "Wǒ juéde nǐ de Zhōngwén míngzi hěn tèbié!",
+          "ja": "あなたの中国語の名前って、すごく特別（ユニークで素敵）だと思うわ！",
+          "segments": [
+            "我觉得",
+            "你的中文名字很特别！"
+          ],
+          "notes": [
+            {
+              "word": "中文",
+              "pinyin": "Zhōngwén",
+              "meaning": "中国語（HSK2）"
+            },
+            {
+              "word": "名字",
+              "pinyin": "míngzi",
+              "meaning": "名前（HSK1）"
+            },
+            {
+              "word": "特别",
+              "pinyin": "tèbié",
+              "meaning": "特別である、ユニークな（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1026_8",
+          "speaker": "jieming",
+          "zh": "其实，这个中文名字也是苏飞帮我取的。",
+          "pinyin": "Qíshí, zhè ge Zhōngwén míngzi yě shì Sū Fēi bāng wǒ qǔ de.",
+          "ja": "実は、この中国語の名前も蘇飛が僕のためにつけて（名付けて）くれたんだ。",
+          "segments": [
+            "其实，",
+            "这个中文名字",
+            "也是苏飞帮我取的。"
+          ],
+          "notes": [
+            {
+              "word": "其实",
+              "pinyin": "qíshí",
+              "meaning": "実は、本当は（HSK3）"
+            },
+            {
+              "word": "帮",
+              "pinyin": "bāng",
+              "meaning": "〜を助ける、〜のために（HSK2）"
+            },
+            {
+              "word": "取",
+              "pinyin": "qǔ",
+              "meaning": "（名前を）つける、命名する"
+            }
+          ]
+        },
+        {
+          "id": "d1026_9",
+          "speaker": "lili",
+          "zh": "那么，这个名字是什么意思呢？",
+          "pinyin": "Nàme, zhè ge míngzi shì shénme yìsi ne?",
+          "ja": "それじゃあ、その名前はどういう意味なの？",
+          "segments": [
+            "那么，",
+            "这个名字是什么意思呢？"
+          ],
+          "notes": [
+            {
+              "word": "那么",
+              "pinyin": "nàme",
+              "meaning": "それなら、では（HSK3）"
+            },
+            {
+              "word": "意思",
+              "pinyin": "yìsi",
+              "meaning": "意味（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1026_10",
+          "speaker": "jieming",
+          "zh": "“杰”是“杰出”的“杰”，“明”是“聪明”的“明”。",
+          "pinyin": "“Jié” shì “jiéchū” de “jié”, “míng” shì “cōngmíng” de “míng”.",
+          "ja": "「杰（ジエ）」は「傑出（並外れて優れている）」の「杰」、「明（ミン）」は「聡明（賢い）」の「明」だよ。",
+          "segments": [
+            "“杰”是“杰出”的“杰”，",
+            "“明”是“聪明”的“明”。"
+          ],
+          "notes": [
+            {
+              "word": "杰出",
+              "pinyin": "jiéchū",
+              "meaning": "傑出した、並外れて優れた（HSK5）"
+            },
+            {
+              "word": "聪明",
+              "pinyin": "cōngmíng",
+              "meaning": "賢い、頭が良い（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1026_11",
+          "speaker": "lili",
+          "zh": "没错！所以，“杰明”的意思就是“又杰出，又聪明”！是一个非常好的名字！",
+          "pinyin": "Méi cuò! Suǒyǐ, “Jiémíng” de yìsi jiù shì “yòu jiéchū, yòu cōngmíng”! Shì yí ge fēicháng hǎo de míngzi!",
+          "ja": "その通りね！だから「杰明（ジエミン）」の意味は「傑出していて、賢い」ってことね！すごく良い名前じゃない！",
+          "segments": [
+            "没错！所以，",
+            "“杰明”的意思就是“又杰出，又聪明”！",
+            "是一个非常好的名字！"
+          ],
+          "notes": [
+            {
+              "word": "没错",
+              "pinyin": "méi cuò",
+              "meaning": "その通り、間違いない（HSK3）"
+            },
+            {
+              "word": "所以",
+              "pinyin": "suǒyǐ",
+              "meaning": "だから、したがって（HSK2）"
+            },
+            {
+              "word": "又……又……",
+              "pinyin": "yòu... yòu...",
+              "meaning": "〜でもあり〜でもある（HSK3）"
+            },
+            {
+              "word": "非常",
+              "pinyin": "fēicháng",
+              "meaning": "非常に、とても（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1026_12",
+          "speaker": "jieming",
+          "zh": "是啊！我知道，在中国文化里，名字很重要，一定要有意义。",
+          "pinyin": "Shì a! Wǒ zhīdào, zài Zhōngguó wénhuà li, míngzi hěn zhòngyào, yídìng yào yǒu yìyì.",
+          "ja": "そうなんだ！中国の文化では名前がとても大切で、必ず意味が込められていなければならないと知っているよ。",
+          "segments": [
+            "是啊！我知道，",
+            "在中国文化里，名字很重要，",
+            "一定要有意义。"
+          ],
+          "notes": [
+            {
+              "word": "文化",
+              "pinyin": "wénhuà",
+              "meaning": "文化（HSK3）"
+            },
+            {
+              "word": "重要",
+              "pinyin": "zhòngyào",
+              "meaning": "重要である、大切だ（HSK3）"
+            },
+            {
+              "word": "一定要",
+              "pinyin": "yídìng yào",
+              "meaning": "必ず〜しなければならない（HSK3）"
+            },
+            {
+              "word": "有意义",
+              "pinyin": "yǒu yìyì",
+              "meaning": "意味がある、有意義だ"
+            }
+          ]
+        },
+        {
+          "id": "d1026_13",
+          "speaker": "lili",
+          "zh": "对！所以，你的名字很有中国风！",
+          "pinyin": "Duì! Suǒyǐ, nǐ de míngzi hěn yǒu Zhōngguó fēng!",
+          "ja": "その通り！だから、あなたの名前はとても中国風（中国的な趣がある）なのよ！",
+          "segments": [
+            "对！所以，",
+            "你的名字很有中国风！"
+          ],
+          "notes": [
+            {
+              "word": "中国风",
+              "pinyin": "Zhōngguó fēng",
+              "meaning": "中国風、チャイニーズ・スタイル、中国的な趣"
+            }
+          ]
+        },
+        {
+          "id": "d1026_14",
+          "speaker": "jieming",
+          "zh": "我很幸运！因为很多外国朋友的名字都是用谷歌翻译的，没有意义。",
+          "pinyin": "Wǒ hěn xìngyùn! Yīnwèi hěn duō wàiguó péngyou de míngzi dōu shì yòng Gǔgē fānyì de, méiyǒu yìyì.",
+          "ja": "僕はとてもラッキーだよ！多くの外国人の友達の名前はGoogle翻訳で作られていて、意味がないからね。",
+          "segments": [
+            "我很幸运！",
+            "因为很多外国朋友的名字",
+            "都是用谷歌翻译的，",
+            "没有意义。"
+          ],
+          "notes": [
+            {
+              "word": "幸运",
+              "pinyin": "xìngyùn",
+              "meaning": "幸運である、ラッキーだ（HSK4）"
+            },
+            {
+              "word": "谷歌",
+              "pinyin": "Gǔgē",
+              "meaning": "Google（グーグル）"
+            },
+            {
+              "word": "翻译",
+              "pinyin": "fānyì",
+              "meaning": "翻訳する、訳す（HSK3）"
+            },
+            {
+              "word": "意义",
+              "pinyin": "yìyì",
+              "meaning": "意義、意味（HSK4）"
+            }
+          ]
+        },
+        {
+          "id": "d1026_15",
+          "speaker": "lili",
+          "zh": "当然，谷歌很少能翻译出有意义的名字。",
+          "pinyin": "Dāngrán, Gǔgē hěn shǎo néng fānyì chū yǒu yìyì de míngzi.",
+          "ja": "もちろんよ、Google（の機械翻訳）じゃ意味のある良い名前なんてめったに訳せないもの。",
+          "segments": [
+            "当然，",
+            "谷歌很少能翻译出有意义的名字。"
+          ],
+          "notes": [
+            {
+              "word": "很少",
+              "pinyin": "hěn shǎo",
+              "meaning": "めったに〜ない、少ない（HSK2）"
+            },
+            {
+              "word": "翻译出",
+              "pinyin": "fānyì chū",
+              "meaning": "翻訳して生み出す、訳し出す（方向補語）"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
