@@ -1,0 +1,514 @@
+{
+  "id": "homework_20261102",
+  "title": "宿題 2026/11/02 会話レッスン",
+  "description": "For 村上さん20261102.pdf 6ページ（初級会話「你有时间吗」）",
+  "dialogues": [
+    {
+      "id": "d20261102_1",
+      "title": "初级对话-12 你有时间吗",
+      "level": "初級 (HSK 2-3)",
+      "topic": "休日の約束・予定変更（来不了・逛街・书店喝茶・一边……一边……・待ち合わせ）",
+      "characters": [
+        {
+          "id": "sufei",
+          "name": "苏飞",
+          "gender": "female",
+          "avatar": "👧",
+          "pitch": 1.0,
+          "rate": 0.95
+        },
+        {
+          "id": "lili",
+          "name": "李丽",
+          "gender": "female",
+          "avatar": "👩",
+          "pitch": 1.05,
+          "rate": 0.95
+        }
+      ],
+      "lines": [
+        {
+          "id": "d1102_1",
+          "speaker": "sufei",
+          "zh": "喂，丽丽！",
+          "pinyin": "Wèi, Lìli!",
+          "ja": "もしもし、麗麗（リーリー）！",
+          "segments": [
+            "喂，丽丽！"
+          ],
+          "notes": [
+            {
+              "word": "喂",
+              "pinyin": "wèi",
+              "meaning": "もしもし（電話の呼びかけ, HSK1）"
+            },
+            {
+              "word": "丽丽",
+              "pinyin": "Lìli",
+              "meaning": "李麗（人名）の愛称"
+            }
+          ]
+        },
+        {
+          "id": "d1102_2",
+          "speaker": "lili",
+          "zh": "喂，是飞飞吗？",
+          "pinyin": "Wèi, shì Fēifei ma?",
+          "ja": "もしもし、飛飛（フェイフェイ）？",
+          "segments": [
+            "喂，",
+            "是飞飞吗？"
+          ],
+          "notes": [
+            {
+              "word": "飞飞",
+              "pinyin": "Fēifei",
+              "meaning": "蘇飛（人名）の愛称"
+            }
+          ]
+        },
+        {
+          "id": "d1102_3",
+          "speaker": "sufei",
+          "zh": "是啊，你在忙什么？",
+          "pinyin": "Shì a, nǐ zài máng shénme?",
+          "ja": "そうだよ、今何してるの（何に忙しくしているの）？",
+          "segments": [
+            "是啊，",
+            "你在忙什么？"
+          ],
+          "notes": [
+            {
+              "word": "在",
+              "pinyin": "zài",
+              "meaning": "〜している（進行を表す, HSK2）"
+            },
+            {
+              "word": "忙什么",
+              "pinyin": "máng shénme",
+              "meaning": "何で忙しいの？何をしているの？"
+            }
+          ]
+        },
+        {
+          "id": "d1102_4",
+          "speaker": "lili",
+          "zh": "没忙什么！现在在家里看电视呢，你打电话有什么事吗？",
+          "pinyin": "Méi máng shénme! Xiànzài zài jiā li kàn diànshì ne, nǐ dǎ diànhuà yǒu shénme shì ma?",
+          "ja": "別に何もしてないよ！今は家でテレビを見ているところ。電話してきたのは何か用事？",
+          "segments": [
+            "没忙什么！",
+            "现在在家里看电视呢，",
+            "你打电话有什么事吗？"
+          ],
+          "notes": [
+            {
+              "word": "看电视",
+              "pinyin": "kàn diànshì",
+              "meaning": "テレビを見る（HSK1）"
+            },
+            {
+              "word": "呢",
+              "pinyin": "ne",
+              "meaning": "〜しているところだ（進行の語気助詞, HSK1）"
+            },
+            {
+              "word": "有什么事",
+              "pinyin": "yǒu shénme shì",
+              "meaning": "何か用事があるのか（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1102_5",
+          "speaker": "sufei",
+          "zh": "呃，我上次说过明天会和你去逛街……",
+          "pinyin": "È, wǒ shàng cì shuō guo míngtiān huì hé nǐ qù guàngjiē...",
+          "ja": "えっと、私この前、明日あなたと買い物（ショッピング）に行くって言ってたよね……",
+          "segments": [
+            "呃，我上次说过",
+            "明天会和你去逛街……"
+          ],
+          "notes": [
+            {
+              "word": "上次",
+              "pinyin": "shàng cì",
+              "meaning": "前回、この前（HSK2）"
+            },
+            {
+              "word": "逛街",
+              "pinyin": "guàngjiē",
+              "meaning": "街をぶらぶらする、買い物に行く（HSK3）"
+            },
+            {
+              "word": "会",
+              "pinyin": "huì",
+              "meaning": "〜するはずだ、〜する予定だ（HSK1）"
+            }
+          ]
+        },
+        {
+          "id": "d1102_6",
+          "speaker": "lili",
+          "zh": "对啊！怎么了？",
+          "pinyin": "Duì a! Zěnme le?",
+          "ja": "そうね！どうしたの？",
+          "segments": [
+            "对啊！",
+            "怎么了？"
+          ],
+          "notes": [
+            {
+              "word": "怎么了",
+              "pinyin": "zěnme le",
+              "meaning": "どうしたの？何かあったの？（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1102_7",
+          "speaker": "sufei",
+          "zh": "真对不起，我明天很忙，来不了。",
+          "pinyin": "Zhēn duìbuqǐ, wǒ míngtiān hěn máng, lái bu liǎo.",
+          "ja": "本当にごめんね、明日すごく忙しくなっちゃって、行けなくなっちゃった（来られないんだ）。",
+          "segments": [
+            "真对不起，",
+            "我明天很忙，来不了。"
+          ],
+          "notes": [
+            {
+              "word": "对不起",
+              "pinyin": "duìbuqǐ",
+              "meaning": "ごめんなさい、申し訳ありません（HSK1）"
+            },
+            {
+              "word": "来不了",
+              "pinyin": "lái bu liǎo",
+              "meaning": "来られない、行くことができない（可能補語の否定形, HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1102_8",
+          "speaker": "lili",
+          "zh": "哦，没关系。",
+          "pinyin": "Ò, méi guānxi.",
+          "ja": "ああ、全然大丈夫だよ（気にしないで）。",
+          "segments": [
+            "哦，没关系。"
+          ],
+          "notes": [
+            {
+              "word": "没关系",
+              "pinyin": "méi guānxi",
+              "meaning": "大丈夫です、構いません（HSK1）"
+            }
+          ]
+        },
+        {
+          "id": "d1102_9",
+          "speaker": "sufei",
+          "zh": "不过，我后天不忙，你有时间吗？",
+          "pinyin": "Búguò, wǒ hòutiān bù máng, nǐ yǒu shíjiān ma?",
+          "ja": "でも、明後日は忙しくないんだけど、時間あるかな？",
+          "segments": [
+            "不过，我后天不忙，",
+            "你有时间吗？"
+          ],
+          "notes": [
+            {
+              "word": "不过",
+              "pinyin": "búguò",
+              "meaning": "でも、しかし（HSK3）"
+            },
+            {
+              "word": "后天",
+              "pinyin": "hòutiān",
+              "meaning": "明後日、あさって（HSK2）"
+            },
+            {
+              "word": "有时间",
+              "pinyin": "yǒu shíjiān",
+              "meaning": "時間がある、暇がある（HSK1）"
+            }
+          ]
+        },
+        {
+          "id": "d1102_10",
+          "speaker": "lili",
+          "zh": "有！只是，我下午两点后才有时间，可以吗？",
+          "pinyin": "Yǒu! Zhǐshì, wǒ xiàwǔ liǎng diǎn hòu cái yǒu shíjiān, kěyǐ ma?",
+          "ja": "あるよ！ただ、午後の2時以降じゃないと時間が取れないんだけど、いいかな？",
+          "segments": [
+            "有！只是，",
+            "我下午两点后才有时间，",
+            "可以吗？"
+          ],
+          "notes": [
+            {
+              "word": "只是",
+              "pinyin": "zhǐshì",
+              "meaning": "ただ〜なだけだ、ただし（HSK3）"
+            },
+            {
+              "word": "才",
+              "pinyin": "cái",
+              "meaning": "〜になってようやく、〜してからやっと（HSK2）"
+            },
+            {
+              "word": "可以吗",
+              "pinyin": "kěyǐ ma",
+              "meaning": "いいですか？（HSK1）"
+            }
+          ]
+        },
+        {
+          "id": "d1102_11",
+          "speaker": "sufei",
+          "zh": "当然可以。",
+          "pinyin": "Dāngrán kěyǐ.",
+          "ja": "もちろんいいよ。",
+          "segments": [
+            "当然可以。"
+          ],
+          "notes": [
+            {
+              "word": "当然",
+              "pinyin": "dāngrán",
+              "meaning": "もちろん、当然（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1102_12",
+          "speaker": "lili",
+          "zh": "好的。我们可以先去逛街，然后去饭馆吃饭。",
+          "pinyin": "Hǎo de. Wǒmen kěyǐ xiān qù guàngjiē, ránhòu qù fànguǎn chīfàn.",
+          "ja": "よかった。まず買い物に行って、そのあとレストランにご飯を食べに行こうよ。",
+          "segments": [
+            "好的。我们可以先去逛街，",
+            "然后去饭馆吃饭。"
+          ],
+          "notes": [
+            {
+              "word": "先……然后……",
+              "pinyin": "xiān... ránhòu...",
+              "meaning": "まず〜して、それから〜する（順序表現, HSK3）"
+            },
+            {
+              "word": "饭馆",
+              "pinyin": "fànguǎn",
+              "meaning": "レストラン、食堂（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1102_13",
+          "speaker": "sufei",
+          "zh": "好啊！我已经很久没去逛街了，真的很想去。",
+          "pinyin": "Hǎo a! Wǒ yǐjīng hěn jiǔ méi qù guàngjiē le, zhēn de hěn xiǎng qù.",
+          "ja": "いいね！私もう長いこと買い物に行ってなかったから、本当に行きたいと思ってたの。",
+          "segments": [
+            "好啊！我已经很久没去逛街了，",
+            "真的很想去。"
+          ],
+          "notes": [
+            {
+              "word": "很久",
+              "pinyin": "hěn jiǔ",
+              "meaning": "長い間、久しぶり（HSK3）"
+            },
+            {
+              "word": "已经",
+              "pinyin": "yǐjīng",
+              "meaning": "すでに、もう（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1102_14",
+          "speaker": "lili",
+          "zh": "我知道市中心的一个书店，那里有很多新版小说，我可以带你去。",
+          "pinyin": "Wǒ zhīdào shì zhōngxīn de yí ge shūdiàn, nàlǐ yǒu hěn duō xīn bǎn xiǎoshuō, wǒ kěyǐ dài nǐ qù.",
+          "ja": "私、街の中心（ダウンタウン）にある本屋さんを知ってるよ。そこには新しい小説がたくさんあるから、連れて行ってあげる。",
+          "segments": [
+            "我知道市中心的一个书店，",
+            "那里有很多新版小说，",
+            "我可以带你去。"
+          ],
+          "notes": [
+            {
+              "word": "市中心",
+              "pinyin": "shì zhōngxīn",
+              "meaning": "市街地、都心、ダウンタウン"
+            },
+            {
+              "word": "书店",
+              "pinyin": "shūdiàn",
+              "meaning": "本屋、書店（HSK2）"
+            },
+            {
+              "word": "新版",
+              "pinyin": "xīn bǎn",
+              "meaning": "新刊、新版"
+            },
+            {
+              "word": "带",
+              "pinyin": "dài",
+              "meaning": "連れて行く、案内する（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1102_15",
+          "speaker": "sufei",
+          "zh": "书店里可以喝茶吗？",
+          "pinyin": "Shūdiàn li kěyǐ hē chá ma?",
+          "ja": "本屋さんの中で（お茶を）飲めるの？",
+          "segments": [
+            "书店里可以喝茶吗？"
+          ],
+          "notes": [
+            {
+              "word": "喝茶",
+              "pinyin": "hē chá",
+              "meaning": "お茶を飲む（HSK1）"
+            }
+          ]
+        },
+        {
+          "id": "d1102_16",
+          "speaker": "lili",
+          "zh": "当然可以，那里有茶，也有其他饮料。",
+          "pinyin": "Dāngrán kěyǐ, nàlǐ yǒu chá, yě yǒu qítā yǐnliào.",
+          "ja": "もちろん飲めるよ。あそこにはお茶もあるし、他の飲み物もあるわ。",
+          "segments": [
+            "当然可以，那里有茶，",
+            "也有其他饮料。"
+          ],
+          "notes": [
+            {
+              "word": "其他",
+              "pinyin": "qítā",
+              "meaning": "その他の、ほかの（HSK3）"
+            },
+            {
+              "word": "饮料",
+              "pinyin": "yǐnliào",
+              "meaning": "飲み物、飲料（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1102_17",
+          "speaker": "sufei",
+          "zh": "太好了！我就喜欢一边看书，一边喝茶。对了，我们后天在哪里见面呢？",
+          "pinyin": "Tài hǎo le! Wǒ jiù xǐhuan yìbiān kàn shū, yìbiān hē chá. Duì le, wǒmen hòutiān zài nǎlǐ jiànmiàn ne?",
+          "ja": "最高！私、本を読みながらお茶を飲むのがまさに大好きなの。そういえば、明後日どこで待ち合わせする？",
+          "segments": [
+            "太好了！",
+            "我就喜欢一边看书，一边喝茶。",
+            "对了，我们后天在哪里见面呢？"
+          ],
+          "notes": [
+            {
+              "word": "一边……一边……",
+              "pinyin": "yìbiān... yìbiān...",
+              "meaning": "〜しながら〜する（動作の並行, HSK3）"
+            },
+            {
+              "word": "对了",
+              "pinyin": "duì le",
+              "meaning": "ところで、そういえば（HSK3）"
+            },
+            {
+              "word": "见面",
+              "pinyin": "jiànmiàn",
+              "meaning": "会う、対面する（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1102_18",
+          "speaker": "lili",
+          "zh": "我想想，我们下午两点半在地铁B出口见面，好吗？",
+          "pinyin": "Wǒ xiǎng xiang, wǒmen xiàwǔ liǎng diǎn bàn zài dìtiě B chūkǒu jiànmiàn, hǎo ma?",
+          "ja": "ちょっと考えるね、午後2時半に地下鉄のB出口で待ち合わせ、どうかな？",
+          "segments": [
+            "我想想，",
+            "我们下午两点半在地铁B出口见面，",
+            "好吗？"
+          ],
+          "notes": [
+            {
+              "word": "想想",
+              "pinyin": "xiǎng xiang",
+              "meaning": "ちょっと考える（動詞の重ね型）"
+            },
+            {
+              "word": "地铁",
+              "pinyin": "dìtiě",
+              "meaning": "地下鉄（HSK3）"
+            },
+            {
+              "word": "出口",
+              "pinyin": "chūkǒu",
+              "meaning": "出口（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1102_19",
+          "speaker": "sufei",
+          "zh": "好的，我到了会给你发微信。",
+          "pinyin": "Hǎo de, wǒ dào le huì gěi nǐ fā Wēixìn.",
+          "ja": "了解！着いたらWeChat送るね。",
+          "segments": [
+            "好的，",
+            "我到了会给你发微信。"
+          ],
+          "notes": [
+            {
+              "word": "到",
+              "pinyin": "dào",
+              "meaning": "着く、到着する（HSK2）"
+            },
+            {
+              "word": "发微信",
+              "pinyin": "fā Wēixìn",
+              "meaning": "WeChat（メッセージ）を送る"
+            }
+          ]
+        },
+        {
+          "id": "d1102_20",
+          "speaker": "lili",
+          "zh": "好！那我们后天见！",
+          "pinyin": "Hǎo! Nà wǒmen hòutiān jiàn!",
+          "ja": "うん！じゃあ明後日ね！",
+          "segments": [
+            "好！那我们后天见！"
+          ],
+          "notes": [
+            {
+              "word": "后天见",
+              "pinyin": "hòutiān jiàn",
+              "meaning": "明後日また会いましょう"
+            }
+          ]
+        },
+        {
+          "id": "d1102_21",
+          "speaker": "sufei",
+          "zh": "后天见！",
+          "pinyin": "Hòutiān jiàn!",
+          "ja": "また明後日！",
+          "segments": [
+            "后天见！"
+          ],
+          "notes": []
+        }
+      ]
+    }
+  ]
+}
