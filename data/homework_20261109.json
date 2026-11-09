@@ -1,0 +1,583 @@
+{
+  "id": "homework_20261109",
+  "title": "宿題 2026/11/09 会話レッスン",
+  "description": "For 村上さん20261109.pdf 10ページ（初級会話「去商场买东西」）",
+  "dialogues": [
+    {
+      "id": "d20261109_1",
+      "title": "初级对话-13 去商场买东西",
+      "level": "初級 (HSK 2-3)",
+      "topic": "デパートでの買い物（衣服の量詞・色・服装の組み合わせ・腕時計と誕生日プレゼント）",
+      "characters": [
+        {
+          "id": "sufei",
+          "name": "苏飞",
+          "gender": "female",
+          "avatar": "👧",
+          "pitch": 1.0,
+          "rate": 0.95
+        },
+        {
+          "id": "lili",
+          "name": "李丽",
+          "gender": "female",
+          "avatar": "👩",
+          "pitch": 1.05,
+          "rate": 0.95
+        },
+        {
+          "id": "narrator",
+          "name": "旁白",
+          "gender": "female",
+          "avatar": "⏱️",
+          "pitch": 1.0,
+          "rate": 1.0
+        }
+      ],
+      "lines": [
+        {
+          "id": "d1109_1",
+          "speaker": "sufei",
+          "zh": "李丽！我在这儿。",
+          "pinyin": "Lìli! Wǒ zài zhèr.",
+          "ja": "麗麗（リーリー）！私ここだよ。",
+          "segments": [
+            "李丽！",
+            "我在这儿。"
+          ],
+          "notes": [
+            {
+              "word": "这儿",
+              "pinyin": "zhèr",
+              "meaning": "ここ、こちら（HSK1）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_2",
+          "speaker": "lili",
+          "zh": "嗨，苏飞！你真准时。",
+          "pinyin": "Hāi, Sū Fēi! Nǐ zhēn zhǔnshí.",
+          "ja": "ハーイ、蘇飛（スー・フェイ）！時間ぴったり（時間通り）ね。",
+          "segments": [
+            "嗨，苏飞！",
+            "你真准时。"
+          ],
+          "notes": [
+            {
+              "word": "准时",
+              "pinyin": "zhǔnshí",
+              "meaning": "時間通りである、時間ぴったりだ（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_3",
+          "speaker": "sufei",
+          "zh": "今天不忙，所以想早点来。",
+          "pinyin": "Jīntiān bù máng, suǒyǐ xiǎng zǎo diǎnr lái.",
+          "ja": "今日は忙しくないから、早めに来ようと思ったの。",
+          "segments": [
+            "今天不忙，",
+            "所以想早点来。"
+          ],
+          "notes": [
+            {
+              "word": "所以",
+              "pinyin": "suǒyǐ",
+              "meaning": "だから、したがって（HSK2）"
+            },
+            {
+              "word": "早点",
+              "pinyin": "zǎo diǎnr",
+              "meaning": "早めに、少し早く（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_4",
+          "speaker": "lili",
+          "zh": "我们往前走吧，先去商场，然后去书店。",
+          "pinyin": "Wǒmen wǎng qián zǒu ba, xiān qù shāngchǎng, ránhòu qù shūdiàn.",
+          "ja": "前に進みましょう、まずショッピングモールに行って、それから本屋さんに行こう。",
+          "segments": [
+            "我们往前走吧，",
+            "先去商场，",
+            "然后去书店。"
+          ],
+          "notes": [
+            {
+              "word": "往前走",
+              "pinyin": "wǎng qián zǒu",
+              "meaning": "前へ進む（前置詞「往」, HSK3）"
+            },
+            {
+              "word": "先……然后……",
+              "pinyin": "xiān... ránhòu...",
+              "meaning": "まず〜して、それから〜する（順序表現, HSK3）"
+            },
+            {
+              "word": "商场",
+              "pinyin": "shāngchǎng",
+              "meaning": "デパート、ショッピングモール（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_5",
+          "speaker": "sufei",
+          "zh": "今天天晴，很适合逛街！",
+          "pinyin": "Jīntiān tiān qíng, hěn shìhé guàngjiē!",
+          "ja": "今日は晴れていて、買い物（ウィンドウショッピング）にぴったりね！",
+          "segments": [
+            "今天天晴，",
+            "很适合逛街！"
+          ],
+          "notes": [
+            {
+              "word": "天晴",
+              "pinyin": "tiān qíng",
+              "meaning": "晴れる、晴天である（HSK2）"
+            },
+            {
+              "word": "适合",
+              "pinyin": "shìhé",
+              "meaning": "合っている、適している（HSK4）"
+            },
+            {
+              "word": "逛街",
+              "pinyin": "guàngjiē",
+              "meaning": "街をぶらぶらする、買い物する（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_6",
+          "speaker": "lili",
+          "zh": "你看，那里在卖什么？",
+          "pinyin": "Nǐ kàn, nàlǐ zài mài shénme?",
+          "ja": "見て、あそこで何を売っているのかしら？",
+          "segments": [
+            "你看，",
+            "那里在卖什么？"
+          ],
+          "notes": [
+            {
+              "word": "卖",
+              "pinyin": "mài",
+              "meaning": "売る（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_7",
+          "speaker": "sufei",
+          "zh": "走，我们去看看。",
+          "pinyin": "Zǒu, wǒmen qù kànkan.",
+          "ja": "行こう、見に行ってみよう。",
+          "segments": [
+            "走，",
+            "我们去看看。"
+          ],
+          "notes": [
+            {
+              "word": "看看",
+              "pinyin": "kànkan",
+              "meaning": "ちょっと見てみる（動詞の重ね型, HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_8",
+          "speaker": "lili",
+          "zh": "哇！好多漂亮的衣服，有衬衫、T恤、裤子和裙子。",
+          "pinyin": "Wa! Hǎo duō piàoliang de yīfu, yǒu chènshān, T-xù, kùzi hé qúnzi.",
+          "ja": "わあ！綺麗な服がいっぱいある！シャツ、Tシャツ、ズボンにスカートもあるわ。",
+          "segments": [
+            "哇！好多漂亮的衣服，",
+            "有衬衫、T恤、裤子和裙子。"
+          ],
+          "notes": [
+            {
+              "word": "衬衫",
+              "pinyin": "chènshān",
+              "meaning": "シャツ、ワイシャツ（HSK3）"
+            },
+            {
+              "word": "T恤",
+              "pinyin": "T-xù",
+              "meaning": "Tシャツ"
+            },
+            {
+              "word": "裤子",
+              "pinyin": "kùzi",
+              "meaning": "ズボン、パンツ（HSK3）"
+            },
+            {
+              "word": "裙子",
+              "pinyin": "qúnzi",
+              "meaning": "スカート、ワンピース（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_9",
+          "speaker": "sufei",
+          "zh": "这件衬衫不错！你觉得哪个颜色最好看。",
+          "pinyin": "Zhè jiàn chènshān búcuò! Nǐ juéde nǎ ge yánsè zuì hǎokàn.",
+          "ja": "このシャツいいね！どの色が一番綺麗だと思う？",
+          "segments": [
+            "这件衬衫不错！",
+            "你觉得哪个颜色最好看。"
+          ],
+          "notes": [
+            {
+              "word": "件",
+              "pinyin": "jiàn",
+              "meaning": "〜着、〜枚（服の量詞, HSK2）"
+            },
+            {
+              "word": "不错",
+              "pinyin": "búcuò",
+              "meaning": "素晴らしい、良い（HSK2）"
+            },
+            {
+              "word": "颜色",
+              "pinyin": "yánsè",
+              "meaning": "色（HSK2）"
+            },
+            {
+              "word": "好看",
+              "pinyin": "hǎokàn",
+              "meaning": "見た目が美しい、綺麗だ（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_10",
+          "speaker": "lili",
+          "zh": "我觉得蓝色和红色都好看，你呢？",
+          "pinyin": "Wǒ juéde lánsè hé hóngsè dōu hǎokàn, nǐ ne?",
+          "ja": "私は青も赤も両方綺麗だと思うよ。あなたは？",
+          "segments": [
+            "我觉得蓝色和红色都好看，",
+            "你呢？"
+          ],
+          "notes": [
+            {
+              "word": "蓝色",
+              "pinyin": "lánsè",
+              "meaning": "青色、ブルー（HSK3）"
+            },
+            {
+              "word": "红色",
+              "pinyin": "hóngsè",
+              "meaning": "赤色、レッド（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_11",
+          "speaker": "sufei",
+          "zh": "我更喜欢红色，就买一件红色的吧！",
+          "pinyin": "Wǒ gèng xǐhuan hóngsè, jiù mǎi yí jiàn hóngsè de ba!",
+          "ja": "私は赤のほうがもっと好きだから、赤いのを1着買うことにするわ！",
+          "segments": [
+            "我更喜欢红色，",
+            "就买一件红色的吧！"
+          ],
+          "notes": [
+            {
+              "word": "更",
+              "pinyin": "gèng",
+              "meaning": "さらに、もっと（副詞, HSK3）"
+            },
+            {
+              "word": "就",
+              "pinyin": "jiù",
+              "meaning": "それなら、〜することに決める（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_12",
+          "speaker": "lili",
+          "zh": "我想买那条黄色的裙子，和我的白衬衫很搭。",
+          "pinyin": "Wǒ xiǎng mǎi nà tiáo huángsè de qúnzi, hé wǒ de bái chènshān hěn dā.",
+          "ja": "私はあの黄色いスカートを買いたいな、私の白いシャツとすごく似合う（マッチする）の。",
+          "segments": [
+            "我想买那条黄色的裙子，",
+            "和我的白衬衫很搭。"
+          ],
+          "notes": [
+            {
+              "word": "条",
+              "pinyin": "tiáo",
+              "meaning": "〜本、〜着（スカートやズボンの量詞, HSK3）"
+            },
+            {
+              "word": "黄色",
+              "pinyin": "huángsè",
+              "meaning": "黄色、イエロー（HSK3）"
+            },
+            {
+              "word": "搭",
+              "pinyin": "dā",
+              "meaning": "似合う、調和する、マッチする（百搭/搭配）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_13",
+          "speaker": "sufei",
+          "zh": "嗯，我也觉得很搭！",
+          "pinyin": "Ǹg, wǒ yě juéde hěn dā!",
+          "ja": "うん、私もすごく似合ってる（合ってる）と思う！",
+          "segments": [
+            "嗯，",
+            "我也觉得很搭！"
+          ],
+          "notes": []
+        },
+        {
+          "id": "d1109_14",
+          "speaker": "narrator",
+          "zh": "5分钟后...",
+          "pinyin": "Wǔ fēnzhōng hòu...",
+          "ja": "5分後……",
+          "segments": [
+            "5分钟后..."
+          ],
+          "notes": [
+            {
+              "word": "分钟",
+              "pinyin": "fēnzhōng",
+              "meaning": "〜分間（HSK1）"
+            },
+            {
+              "word": "后",
+              "pinyin": "hòu",
+              "meaning": "〜後（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_15",
+          "speaker": "lili",
+          "zh": "那家商店在卖手表。你想去看看吗？",
+          "pinyin": "Nà jiā shāngdiàn zài mài shǒubiǎo. Nǐ xiǎng qù kànkan ma?",
+          "ja": "あのお店、腕時計を売っているわ。見に行ってみない？",
+          "segments": [
+            "那家商店在卖手表。",
+            "你想去看看吗？"
+          ],
+          "notes": [
+            {
+              "word": "家",
+              "pinyin": "jiā",
+              "meaning": "〜軒（店の量詞, HSK2）"
+            },
+            {
+              "word": "手表",
+              "pinyin": "shǒubiǎo",
+              "meaning": "腕時計（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_16",
+          "speaker": "sufei",
+          "zh": "我觉得手表没什么用。",
+          "pinyin": "Wǒ juéde shǒubiǎo méi shénme yòng.",
+          "ja": "腕時計ってあまり役に立たない（あまり意味がない）と思うけどな。",
+          "segments": [
+            "我觉得手表没什么用。"
+          ],
+          "notes": [
+            {
+              "word": "没什么用",
+              "pinyin": "méi shénme yòng",
+              "meaning": "あまり役に立たない、大して用をなさない"
+            }
+          ]
+        },
+        {
+          "id": "d1109_17",
+          "speaker": "lili",
+          "zh": "为什么？",
+          "pinyin": "Wèishénme?",
+          "ja": "どうして？",
+          "segments": [
+            "为什么？"
+          ],
+          "notes": [
+            {
+              "word": "为什么",
+              "pinyin": "wèishénme",
+              "meaning": "なぜ、どうして（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_18",
+          "speaker": "sufei",
+          "zh": "因为手机上也能看时间。",
+          "pinyin": "Yīnwèi shǒujī shang yě néng kàn shíjiān.",
+          "ja": "だって、スマホでも時間を見られるじゃない。",
+          "segments": [
+            "因为手机上也能看时间。"
+          ],
+          "notes": [
+            {
+              "word": "因为",
+              "pinyin": "yīnwèi",
+              "meaning": "なぜなら（HSK2）"
+            },
+            {
+              "word": "手机",
+              "pinyin": "shǒujī",
+              "meaning": "携帯電話、スマートフォン（HSK2）"
+            },
+            {
+              "word": "时间",
+              "pinyin": "shíjiān",
+              "meaning": "時間（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_19",
+          "speaker": "lili",
+          "zh": "是啊！但是，我觉得手表是很好的礼物，特别是送给男生。",
+          "pinyin": "Shì a! Dànshì, wǒ juéde shǒubiǎo shì hěn hǎo de lǐwù, tèbié shì sòng gěi nánshēng.",
+          "ja": "そうね！でも、腕時計はとても良いプレゼントだと思うの。特に男性への贈り物にはね。",
+          "segments": [
+            "是啊！但是，",
+            "我觉得手表是很好的礼物，",
+            "特别是送给男生。"
+          ],
+          "notes": [
+            {
+              "word": "礼物",
+              "pinyin": "lǐwù",
+              "meaning": "プレゼント、贈り物（HSK3）"
+            },
+            {
+              "word": "送给",
+              "pinyin": "sòng gěi",
+              "meaning": "〜に贈る、プレゼントする（HSK2）"
+            },
+            {
+              "word": "男生",
+              "pinyin": "nánshēng",
+              "meaning": "男性、男子、男の子"
+            }
+          ]
+        },
+        {
+          "id": "d1109_20",
+          "speaker": "sufei",
+          "zh": "你这样说，是不是有喜欢的男生了？",
+          "pinyin": "Nǐ zhèyàng shuō, shì bu shì yǒu xǐhuan de nánshēng le?",
+          "ja": "そんなこと言って、もしかして好きな男の子ができたの？",
+          "segments": [
+            "你这样说，",
+            "是不是有喜欢的男生了？"
+          ],
+          "notes": [
+            {
+              "word": "这样说",
+              "pinyin": "zhèyàng shuō",
+              "meaning": "そう言う、そんな言い方をする"
+            },
+            {
+              "word": "是不是",
+              "pinyin": "shì bu shì",
+              "meaning": "もしかして〜ではないか（反問・推測, HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_21",
+          "speaker": "lili",
+          "zh": "别开玩笑了！我想买一个送给我爸爸，下个月是他的生日。",
+          "pinyin": "Bié kāi wánxiào le! Wǒ xiǎng mǎi yí ge sòng gěi wǒ bàba, xià ge yuè shì tā de shēngrì.",
+          "ja": "冗談言わないでよ！お父さんに1つ買ってプレゼントしたいの、来月父の誕生日だから。",
+          "segments": [
+            "别开玩笑了！",
+            "我想买一个送给我爸爸，",
+            "下个月是他的生日。"
+          ],
+          "notes": [
+            {
+              "word": "开玩笑",
+              "pinyin": "kāi wánxiào",
+              "meaning": "冗談を言う、からかう（HSK4）"
+            },
+            {
+              "word": "别……了",
+              "pinyin": "bié... le",
+              "meaning": "〜するな、やめて（禁止, HSK2）"
+            },
+            {
+              "word": "生日",
+              "pinyin": "shēngrì",
+              "meaning": "誕生日（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_22",
+          "speaker": "sufei",
+          "zh": "嗯，是个好主意！我觉得他一定会喜欢。",
+          "pinyin": "Ǹg, shì ge hǎo zhǔyi! Wǒ juéde tā yídìng huì xǐhuan.",
+          "ja": "うん、いいアイデアね！お父さんきっと喜んでくれると思うわ。",
+          "segments": [
+            "嗯，是个好主意！",
+            "我觉得他一定会喜欢。"
+          ],
+          "notes": [
+            {
+              "word": "主意",
+              "pinyin": "zhǔyi",
+              "meaning": "アイデア、考え（HSK3）"
+            },
+            {
+              "word": "一定",
+              "pinyin": "yídìng",
+              "meaning": "きっと、必ず（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_23",
+          "speaker": "lili",
+          "zh": "那我们一起去看看吧。",
+          "pinyin": "Nà wǒmen yìqǐ qù kànkan ba.",
+          "ja": "じゃあ一緒に行って見てみようよ。",
+          "segments": [
+            "那我们一起去看看吧。"
+          ],
+          "notes": [
+            {
+              "word": "一起",
+              "pinyin": "yìqǐ",
+              "meaning": "一緒に（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1109_24",
+          "speaker": "sufei",
+          "zh": "好的。",
+          "pinyin": "Hǎo de.",
+          "ja": "いいよ（了解）。",
+          "segments": [
+            "好的。"
+          ],
+          "notes": []
+        }
+      ]
+    }
+  ]
+}
