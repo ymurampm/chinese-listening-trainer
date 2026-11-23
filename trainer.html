@@ -1157,16 +1157,21 @@
         // 音声自動選択（UIを汚さずに最適な中国語話者をバインド）
         function autoSelectVoice() {
             const voices = window.speechSynthesis.getVoices();
-            const zhVoices = voices.filter(v => v.lang.startsWith('zh'));
+            const zhVoices = voices.filter(v => {
+                const lang = (v.lang || '').toLowerCase().replace(/_/g, '-');
+                const name = (v.name || '').toLowerCase();
+                return lang.startsWith('zh') || lang.startsWith('cmn') ||
+                       /chinese|mandarin|普通话|国语|國語|中文/i.test(name);
+            });
             
             // zh-CN優先バインド
-            const defaultVoice = zhVoices.find(v => v.lang === 'zh-CN') || zhVoices[0];
+            const defaultVoice = zhVoices.find(v => (v.lang || '').toLowerCase().replace(/_/g, '-') === 'zh-cn') || zhVoices[0];
             if (defaultVoice) {
                 selectedVoice = defaultVoice;
                 console.log("Selected Chinese voice:", selectedVoice.name);
-            } else if (voices.length > 0) {
-                selectedVoice = voices[0];
-                console.warn("No Chinese voice found. Falling back to default voice:", selectedVoice.name);
+            } else {
+                selectedVoice = null; // 日本語音声などへのフォールバックを防止しブラウザのzh-CNルーティングに委ねる
+                console.warn("No Chinese voice found. Avoid non-Chinese fallback.");
             }
         }
 

@@ -8,6 +8,8 @@ class DialogueTTSEngine {
     constructor() {
         this.synth = window.speechSynthesis;
         this.selectedVoice = null;
+        this.femaleVoice = null;
+        this.maleVoice = null;
         this.rate = 0.85;             // Global playback rate (0.5 to 1.5)
         
         this.isPlaying = false;
@@ -37,22 +39,61 @@ class DialogueTTSEngine {
             } catch (e) {}
         }
 
-        const autoSelectVoice = () => {
-            const voices = window.speechSynthesis.getVoices();
-            const zhVoices = voices.filter(v => v.lang && v.lang.startsWith('zh'));
-            
-            const defaultVoice = zhVoices.find(v => v.lang === 'zh-CN') || zhVoices[0];
-            if (defaultVoice) {
-                this.selectedVoice = defaultVoice;
-            } else if (voices.length > 0) {
-                this.selectedVoice = voices[0];
-            }
+        this.autoSelectVoice();
+        if (typeof window !== 'undefined' && window.speechSynthesis && window.speechSynthesis.onvoiceschanged !== undefined) {
+            window.speechSynthesis.onvoiceschanged = () => this.autoSelectVoice();
+        }
+    }
+
+    autoSelectVoice() {
+        if (typeof window === 'undefined' || !window.speechSynthesis) return;
+        const voices = window.speechSynthesis.getVoices();
+        if (!voices || voices.length === 0) return;
+
+        const isChineseVoice = (v) => {
+            const lang = (v.lang || '').toLowerCase().replace(/_/g, '-');
+            const name = (v.name || '').toLowerCase();
+            return lang.startsWith('zh') ||
+                   lang.startsWith('cmn') ||
+                   /chinese|mandarin|普通话|国语|國語|中文/i.test(name) ||
+                   /xiaoxiao|yunxi|yunyang|xiaoyi|huihui|yaoyao|kangkang|hanhan/i.test(name);
         };
 
-        autoSelectVoice();
-        if (typeof window !== 'undefined' && window.speechSynthesis && window.speechSynthesis.onvoiceschanged !== undefined) {
-            window.speechSynthesis.onvoiceschanged = autoSelectVoice;
+        const zhVoices = voices.filter(isChineseVoice);
+
+        if (zhVoices.length === 0) {
+            // NEVER fallback to non-Chinese voices (prevent reading Chinese in Japanese)
+            this.selectedVoice = null;
+            this.femaleVoice = null;
+            this.maleVoice = null;
+            return;
         }
+
+        // Rank voices: prioritize Natural / Online voices (Edge/Chrome) and zh-CN
+        const rankVoice = (v) => {
+            let score = 0;
+            const lang = (v.lang || '').toLowerCase().replace(/_/g, '-');
+            const name = (v.name || '').toLowerCase();
+
+            if (lang === 'zh-cn' || lang.startsWith('zh-cn') || lang.startsWith('cmn-hans')) score += 30;
+            else if (lang.startsWith('zh')) score += 15;
+
+            if (name.includes('natural') || name.includes('online')) score += 50;
+            if (name.includes('google')) score += 40;
+            if (/xiaoxiao|yunxi|huihui|yaoyao|kangkang/.test(name)) score += 20;
+
+            return score;
+        };
+
+        const sorted = [...zhVoices].sort((a, b) => rankVoice(b) - rankVoice(a));
+        this.selectedVoice = sorted[0];
+
+        // Differentiate male and female voices if present
+        this.femaleVoice = sorted.find(v => /female|女|xiaoxiao|xiaoyi|huihui|yaoyao|tingting|meijia/i.test(v.name)) ||
+                           sorted.find(v => !/male|男|yunxi|yunyang|kangkang/i.test(v.name)) ||
+                           this.selectedVoice;
+
+        this.maleVoice = sorted.find(v => /male|男|yunxi|yunyang|kangkang/i.test(v.name)) || null;
     }
 
     setRate(rate) {
@@ -98,6 +139,9 @@ class DialogueTTSEngine {
 
         if (this.onLineStart) this.onLineStart(lineIndex, line);
 
+        const charObj = dialogue.characters?.find(c => c.id === line.speaker);
+        const lineRate = charObj?.rate ? (this.rate * charObj.rate) : this.rate;
+
         if (this.segmentMode && line.segments && line.segments.length > 1) {
             this.playSegmentsSequentially(line.segments, () => {
                 if (this.onLineEnd) this.onLineEnd(lineIndex);
@@ -106,16 +150,16 @@ class DialogueTTSEngine {
                 } else if (onDone) {
                     onDone();
                 }
-            });
+            }, lineRate, charObj);
         } else {
-            this.speakText(line.zh, this.rate, () => {
+            this.speakText(line.zh, lineRate, () => {
                 if (this.onLineEnd) this.onLineEnd(lineIndex);
                 if (this.loopSingleLine && this.isPlaying) {
                     setTimeout(() => this.playLine(dialogue, lineIndex, onDone), 500);
                 } else if (onDone) {
                     onDone();
                 }
-            });
+            }, charObj);
         }
     }
 
@@ -160,8 +204,9 @@ class DialogueTTSEngine {
     /**
      * Plays segments of a sentence with short pauses between them
      */
-    playSegmentsSequentially(segments, onComplete) {
+    playSegmentsSequentially(segments, onComplete, rate = null, charObj = null) {
         let segIdx = 0;
+        const currentRate = rate || this.rate;
 
         const playNextSeg = () => {
             if (!this.isPlaying) return;
@@ -176,14 +221,14 @@ class DialogueTTSEngine {
                 this.onSegmentStart(this.currentLineIndex, segIdx, segText);
             }
 
-            this.speakText(segText, this.rate, () => {
+            this.speakText(segText, currentRate, () => {
                 segIdx++;
                 if (segIdx < segments.length && this.isPlaying) {
-                    setTimeout(playNextSeg, this.segmentPauseMs);
+                    setTimeout(playNextSeg, this.segmentPauseMs || 350);
                 } else if (onComplete) {
                     onComplete();
                 }
-            });
+            }, charObj);
         };
 
         playNextSeg();
@@ -192,11 +237,15 @@ class DialogueTTSEngine {
     /**
      * Exact speakText function from Listening Training (trainer.html)
      */
-    speakText(text, rate = 0.85, onEnd = null) {
+    speakText(text, rate = 0.85, onEnd = null, charObj = null) {
         if (!('speechSynthesis' in window)) {
             alert('お使いのブラウザは音声合成（Web Speech API）に対応していません。');
             if (onEnd) onEnd();
             return;
+        }
+
+        if (!this.selectedVoice && window.speechSynthesis) {
+            this.autoSelectVoice();
         }
 
         window.speechSynthesis.cancel();
@@ -204,11 +253,21 @@ class DialogueTTSEngine {
         const cleanText = text.replace(/[\(\)（）]/g, '');
         const utterance = new SpeechSynthesisUtterance(cleanText);
         
-        if (this.selectedVoice) {
-            utterance.voice = this.selectedVoice;
+        let voiceToUse = this.selectedVoice;
+        if (charObj) {
+            if (charObj.gender === 'male' && this.maleVoice) {
+                voiceToUse = this.maleVoice;
+            } else if (charObj.gender === 'female' && this.femaleVoice) {
+                voiceToUse = this.femaleVoice;
+            }
+        }
+
+        if (voiceToUse) {
+            utterance.voice = voiceToUse;
         }
         utterance.lang = 'zh-CN';
         utterance.rate = Math.max(0.4, Math.min(1.5, parseFloat(rate)));
+        utterance.pitch = (charObj && typeof charObj.pitch === 'number') ? charObj.pitch : 1.0;
 
         utterance.onend = () => {
             if (onEnd) onEnd();

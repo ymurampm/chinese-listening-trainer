@@ -1,0 +1,604 @@
+{
+  "id": "homework_20261123",
+  "title": "宿題 2026/11/23 会話レッスン",
+  "description": "For 村上さん20261123.pdf 7ページ（初級会話「在星巴克喝咖啡」）",
+  "dialogues": [
+    {
+      "id": "d20261123_1",
+      "title": "初级对话-14 在星巴克喝咖啡",
+      "level": "初級 (HSK 2-3)",
+      "topic": "カフェ（スタバ）での注文・支払い（微信/支付宝）・環境の感想・自転車通勤と週末の予定",
+      "characters": [
+        {
+          "id": "sufei",
+          "name": "苏飞",
+          "gender": "female",
+          "avatar": "👧",
+          "pitch": 1.05,
+          "rate": 0.95
+        },
+        {
+          "id": "jieming",
+          "name": "杰明",
+          "gender": "male",
+          "avatar": "👨",
+          "pitch": 0.95,
+          "rate": 0.95
+        },
+        {
+          "id": "waiter",
+          "name": "服务员",
+          "gender": "female",
+          "avatar": "☕",
+          "pitch": 1.0,
+          "rate": 1.0
+        },
+        {
+          "id": "narrator",
+          "name": "旁白",
+          "gender": "female",
+          "avatar": "⏱️",
+          "pitch": 1.0,
+          "rate": 1.0
+        }
+      ],
+      "lines": [
+        {
+          "id": "d1123_1",
+          "speaker": "sufei",
+          "zh": "我走累了，想休息一下。",
+          "pinyin": "Wǒ zǒu lèi le, xiǎng xiūxi yíxià.",
+          "ja": "歩き疲れたから、ちょっと休みたいな。",
+          "segments": [
+            "我走累了，",
+            "想休息一下。"
+          ],
+          "notes": [
+            {
+              "word": "累",
+              "pinyin": "lèi",
+              "meaning": "疲れる、疲れている（HSK2）"
+            },
+            {
+              "word": "休息",
+              "pinyin": "xiūxi",
+              "meaning": "休む、休憩する（HSK2）"
+            },
+            {
+              "word": "一下",
+              "pinyin": "yíxià",
+              "meaning": "ちょっと〜してみる（動詞の後に置く）（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1123_2",
+          "speaker": "jieming",
+          "zh": "我也是。",
+          "pinyin": "Wǒ yě shì.",
+          "ja": "僕もだよ。",
+          "segments": [
+            "我也是。"
+          ],
+          "notes": [
+            {
+              "word": "也是",
+              "pinyin": "yě shì",
+              "meaning": "〜も同様だ、同じく（HSK1）"
+            }
+          ]
+        },
+        {
+          "id": "d1123_3",
+          "speaker": "sufei",
+          "zh": "你看，前面有家咖啡馆。啊！是星巴克。我们进去喝杯咖啡吧。",
+          "pinyin": "Nǐ kàn, qiánmiàn yǒu jiā kāfēiguǎn. À! Shì Xīngbākè. Wǒmen jìnqù hē bēi kāfēi ba.",
+          "ja": "見て、前方にカフェがあるよ。あ！スターバックスだ。入ってコーヒーを一杯飲もうよ。",
+          "segments": [
+            "你看，",
+            "前面有家咖啡馆。",
+            "啊！是星巴克。",
+            "我们进去喝杯咖啡吧。"
+          ],
+          "notes": [
+            {
+              "word": "前面",
+              "pinyin": "qiánmiàn",
+              "meaning": "前、前方（HSK1）"
+            },
+            {
+              "word": "家",
+              "pinyin": "jiā",
+              "meaning": "軒、店を数える量詞（HSK1）"
+            },
+            {
+              "word": "咖啡馆",
+              "pinyin": "kāfēiguǎn",
+              "meaning": "カフェ、喫茶店"
+            },
+            {
+              "word": "星巴克",
+              "pinyin": "Xīngbākè",
+              "meaning": "スターバックス（Starbucks）"
+            },
+            {
+              "word": "进去",
+              "pinyin": "jìnqù",
+              "meaning": "入っていく（方向補語）（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1123_4",
+          "speaker": "narrator",
+          "zh": "到达星巴克...",
+          "pinyin": "Dàodá Xīngbākè...",
+          "ja": "スターバックスに到着……",
+          "segments": [
+            "到达星巴克..."
+          ],
+          "notes": [
+            {
+              "word": "到达",
+              "pinyin": "dàodá",
+              "meaning": "到着する、着く（HSK4）"
+            }
+          ]
+        },
+        {
+          "id": "d1123_5",
+          "speaker": "jieming",
+          "zh": "我去点两杯咖啡。你想喝什么咖啡？",
+          "pinyin": "Wǒ qù diǎn liǎng bēi kāfēi. Nǐ xiǎng hē shénme kāfēi?",
+          "ja": "僕がコーヒーを2杯注文してくるよ。何コーヒーが飲みたい？",
+          "segments": [
+            "我去点两杯咖啡。",
+            "你想喝什么咖啡？"
+          ],
+          "notes": [
+            {
+              "word": "点",
+              "pinyin": "diǎn",
+              "meaning": "（料理や飲み物を）注文する（HSK3）"
+            },
+            {
+              "word": "两杯",
+              "pinyin": "liǎng bēi",
+              "meaning": "2杯（「二」ではなく「两」を用いる）"
+            }
+          ]
+        },
+        {
+          "id": "d1123_6",
+          "speaker": "sufei",
+          "zh": "我要喝白咖啡，你呢？",
+          "pinyin": "Wǒ yào hē bái kāfēi, nǐ ne?",
+          "ja": "私はホワイトコーヒー（ミルク入り）にする、あなたは？",
+          "segments": [
+            "我要喝白咖啡，",
+            "你呢？"
+          ],
+          "notes": [
+            {
+              "word": "要",
+              "pinyin": "yào",
+              "meaning": "〜が欲しい、〜にする（HSK2）"
+            },
+            {
+              "word": "白咖啡",
+              "pinyin": "bái kāfēi",
+              "meaning": "ホワイトコーヒー（ミルク入りコーヒー）"
+            }
+          ]
+        },
+        {
+          "id": "d1123_7",
+          "speaker": "jieming",
+          "zh": "我要喝黑咖啡。",
+          "pinyin": "Wǒ yào hē hēi kāfēi.",
+          "ja": "僕はブラックコーヒーにするよ。",
+          "segments": [
+            "我要喝黑咖啡。"
+          ],
+          "notes": [
+            {
+              "word": "黑咖啡",
+              "pinyin": "hēi kāfēi",
+              "meaning": "ブラックコーヒー"
+            }
+          ]
+        },
+        {
+          "id": "d1123_8",
+          "speaker": "jieming",
+          "zh": "你好！我要一杯白咖啡和一杯黑咖啡。",
+          "pinyin": "Nǐ hǎo! Wǒ yào yì bēi bái kāfēi hé yì bēi hēi kāfēi.",
+          "ja": "すみません！ホワイトコーヒーを1杯とブラックコーヒーを1杯ください。",
+          "segments": [
+            "你好！",
+            "我要一杯白咖啡和一杯黑咖啡。"
+          ],
+          "notes": [
+            {
+              "word": "一杯",
+              "pinyin": "yì bēi",
+              "meaning": "1杯（数量詞）"
+            }
+          ]
+        },
+        {
+          "id": "d1123_9",
+          "speaker": "waiter",
+          "zh": "好的。一共50元，请问你用微信还是支付宝？",
+          "pinyin": "Hǎo de. Yígòng wǔshí yuán, qǐngwèn nǐ yòng Wēixìn háishi Zhīfùbǎo?",
+          "ja": "かしこまりました。合計50元です。微信（WeChat）ですか、それとも支付宝（Alipay）でお支払いですか？",
+          "segments": [
+            "好的。",
+            "一共50元，",
+            "请问你用微信还是支付宝？"
+          ],
+          "notes": [
+            {
+              "word": "一共",
+              "pinyin": "yígòng",
+              "meaning": "合計で、全部で（HSK3）"
+            },
+            {
+              "word": "请问",
+              "pinyin": "qǐngwèn",
+              "meaning": "お伺いしますが、すみません（HSK2）"
+            },
+            {
+              "word": "微信",
+              "pinyin": "Wēixìn",
+              "meaning": "WeChat（ウィーチャット決済）"
+            },
+            {
+              "word": "还是",
+              "pinyin": "háishi",
+              "meaning": "それとも〜か（選択疑問文）（HSK2）"
+            },
+            {
+              "word": "支付宝",
+              "pinyin": "Zhīfùbǎo",
+              "meaning": "Alipay（アリペイ決済）"
+            }
+          ]
+        },
+        {
+          "id": "d1123_10",
+          "speaker": "jieming",
+          "zh": "用微信吧。",
+          "pinyin": "Yòng Wēixìn ba.",
+          "ja": "微信で払います。",
+          "segments": [
+            "用微信吧。"
+          ],
+          "notes": [
+            {
+              "word": "用",
+              "pinyin": "yòng",
+              "meaning": "〜を使う、〜で（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1123_11",
+          "speaker": "waiter",
+          "zh": "好的，请在这里扫码。",
+          "pinyin": "Hǎo de, qǐng zài zhèlǐ sǎomǎ.",
+          "ja": "承知いたしました。こちらでQRコードを読み取ってください。",
+          "segments": [
+            "好的，",
+            "请在这里扫码。"
+          ],
+          "notes": [
+            {
+              "word": "扫码",
+              "pinyin": "sǎomǎ",
+              "meaning": "QRコードを読み取る、スキャンする"
+            }
+          ]
+        },
+        {
+          "id": "d1123_12",
+          "speaker": "narrator",
+          "zh": "2分钟后...",
+          "pinyin": "Liǎng fēnzhōng hòu...",
+          "ja": "2分後……",
+          "segments": [
+            "2分钟后..."
+          ],
+          "notes": [
+            {
+              "word": "分钟",
+              "pinyin": "fēnzhōng",
+              "meaning": "〜分間（HSK1）"
+            },
+            {
+              "word": "后",
+              "pinyin": "hòu",
+              "meaning": "〜後（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1123_13",
+          "speaker": "jieming",
+          "zh": "你的咖啡到了，这是牛奶和糖。",
+          "pinyin": "Nǐ de kāfēi dào le, zhè shì niúnǎi hé táng.",
+          "ja": "コーヒーが届いたよ、これミルクとお砂糖ね。",
+          "segments": [
+            "你的咖啡到了，",
+            "这是牛奶和糖。"
+          ],
+          "notes": [
+            {
+              "word": "到",
+              "pinyin": "dào",
+              "meaning": "到着する、届く（HSK2）"
+            },
+            {
+              "word": "牛奶",
+              "pinyin": "niúnǎi",
+              "meaning": "牛乳、ミルク（HSK2）"
+            },
+            {
+              "word": "糖",
+              "pinyin": "táng",
+              "meaning": "砂糖、甘いもの（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1123_14",
+          "speaker": "sufei",
+          "zh": "啊！谢谢你！",
+          "pinyin": "À! Xièxie nǐ!",
+          "ja": "わあ！ありがとう！",
+          "segments": [
+            "啊！",
+            "谢谢你！"
+          ],
+          "notes": []
+        },
+        {
+          "id": "d1123_15",
+          "speaker": "jieming",
+          "zh": "你觉得这里的咖啡怎么样？",
+          "pinyin": "Nǐ juéde zhèlǐ de kāfēi zěnmeyàng?",
+          "ja": "ここのコーヒーはどう思う？",
+          "segments": [
+            "你觉得这里的咖啡怎么样？"
+          ],
+          "notes": [
+            {
+              "word": "觉得",
+              "pinyin": "juéde",
+              "meaning": "〜と思う、感じる（HSK2）"
+            },
+            {
+              "word": "怎么样",
+              "pinyin": "zěnmeyàng",
+              "meaning": "どうですか、いかがですか（HSK1）"
+            }
+          ]
+        },
+        {
+          "id": "d1123_16",
+          "speaker": "sufei",
+          "zh": "我觉得一般般。不过，我很喜欢这里的环境，很漂亮，也很安静。",
+          "pinyin": "Wǒ juéde yìbānbān. Búguò, wǒ hěn xǐhuan zhèlǐ de huánjìng, hěn piàoliang, yě hěn ānjìng.",
+          "ja": "味はまあまあかな。でも、ここの雰囲気がすごく気に入ったよ。綺麗だし、とても静かだしね。",
+          "segments": [
+            "我觉得一般般。",
+            "不过，我很喜欢这里的环境，",
+            "很漂亮，也很安静。"
+          ],
+          "notes": [
+            {
+              "word": "一般般",
+              "pinyin": "yìbānbān",
+              "meaning": "まあまあ、普通だ"
+            },
+            {
+              "word": "不过",
+              "pinyin": "búguò",
+              "meaning": "ただし、でも（HSK3）"
+            },
+            {
+              "word": "环境",
+              "pinyin": "huánjìng",
+              "meaning": "環境、周囲の雰囲気（HSK3）"
+            },
+            {
+              "word": "漂亮",
+              "pinyin": "piàoliang",
+              "meaning": "美しい、綺麗だ（HSK1）"
+            },
+            {
+              "word": "安静",
+              "pinyin": "ānjìng",
+              "meaning": "静かだ、落ち着いている（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1123_17",
+          "speaker": "jieming",
+          "zh": "我也是。而且，我发现，这家咖啡店离我家很近。",
+          "pinyin": "Wǒ yě shì. Érqiě, wǒ fāxiàn, zhè jiā kāfēidiàn lí wǒ jiā hěn jìn.",
+          "ja": "僕もそう思う。それに、このカフェって僕の家からすごく近いって気づいたよ。",
+          "segments": [
+            "我也是。",
+            "而且，我发现，",
+            "这家咖啡店离我家很近。"
+          ],
+          "notes": [
+            {
+              "word": "而且",
+              "pinyin": "érqiě",
+              "meaning": "その上、しかも（HSK3）"
+            },
+            {
+              "word": "发现",
+              "pinyin": "fāxiàn",
+              "meaning": "気づく、発見する（HSK3）"
+            },
+            {
+              "word": "离",
+              "pinyin": "lí",
+              "meaning": "〜から（距離や隔たりを示す）（HSK2）"
+            },
+            {
+              "word": "近",
+              "pinyin": "jìn",
+              "meaning": "近い（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1123_18",
+          "speaker": "sufei",
+          "zh": "是啊！你从家走过来就10分钟。如果骑自行车，更快！",
+          "pinyin": "Shì a! Nǐ cóng jiā zǒu guòlai jiù shí fēnzhōng. Rúguǒ qí zìxíngchē, gèng kuài!",
+          "ja": "そうだね！家から歩いて来てもたった10分だし。もし自転車に乗れば、もっと早いよ！",
+          "segments": [
+            "是啊！",
+            "你从家走过来就10分钟。",
+            "如果骑自行车，更快！"
+          ],
+          "notes": [
+            {
+              "word": "从",
+              "pinyin": "cóng",
+              "meaning": "〜から（起点）（HSK2）"
+            },
+            {
+              "word": "走过来",
+              "pinyin": "zǒu guòlai",
+              "meaning": "歩いてやって来る（複合方向補語）"
+            },
+            {
+              "word": "就",
+              "pinyin": "jiù",
+              "meaning": "たったの、わずか（HSK2）"
+            },
+            {
+              "word": "如果",
+              "pinyin": "rúguǒ",
+              "meaning": "もし〜ならば（HSK3）"
+            },
+            {
+              "word": "骑自行车",
+              "pinyin": "qí zìxíngchē",
+              "meaning": "自転車に乗る（HSK2）"
+            },
+            {
+              "word": "更",
+              "pinyin": "gèng",
+              "meaning": "もっと、いっそう（比較）（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1123_19",
+          "speaker": "jieming",
+          "zh": "我喜欢走路，但是更喜欢骑自行车！",
+          "pinyin": "Wǒ xǐhuan zǒulù, dànshì gèng xǐhuan qí zìxíngchē!",
+          "ja": "歩くのも好きだけど、自転車に乗るほうがもっと好きだな！",
+          "segments": [
+            "我喜欢走路，",
+            "但是更喜欢骑自行车！"
+          ],
+          "notes": [
+            {
+              "word": "走路",
+              "pinyin": "zǒulù",
+              "meaning": "歩く、歩行する（HSK2）"
+            },
+            {
+              "word": "但是",
+              "pinyin": "dànshì",
+              "meaning": "しかし、でも（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1123_20",
+          "speaker": "sufei",
+          "zh": "我也是，上班、下班都骑自行车。",
+          "pinyin": "Wǒ yě shì, shàngbān, xiàbān dōu qí zìxíngchē.",
+          "ja": "私も！出勤も退勤もいつも自転車に乗ってるよ。",
+          "segments": [
+            "我也是，",
+            "上班、下班都骑自行车。"
+          ],
+          "notes": [
+            {
+              "word": "上班",
+              "pinyin": "shàngbān",
+              "meaning": "出勤する、仕事に行く（HSK2）"
+            },
+            {
+              "word": "下班",
+              "pinyin": "xiàbān",
+              "meaning": "退勤する、仕事を終える（HSK2）"
+            }
+          ]
+        },
+        {
+          "id": "d1123_21",
+          "speaker": "jieming",
+          "zh": "这周六，我打算骑自行车去人民公园，你想跟我去吗？",
+          "pinyin": "Zhè zhōuliù, wǒ dǎsuàn qí zìxíngchē qù Rénmín Gōngyuán, nǐ xiǎng gēn wǒ qù ma?",
+          "ja": "今週の土曜日、自転車で人民公園に行こうと思ってるんだけど、僕と一緒に行かない？",
+          "segments": [
+            "这周六，",
+            "我打算骑自行车去人民公园，",
+            "你想跟我去吗？"
+          ],
+          "notes": [
+            {
+              "word": "这",
+              "pinyin": "zhè",
+              "meaning": "この、今（HSK1）"
+            },
+            {
+              "word": "打算",
+              "pinyin": "dǎsuàn",
+              "meaning": "〜する予定だ、計画する（HSK3）"
+            },
+            {
+              "word": "人民公园",
+              "pinyin": "Rénmín Gōngyuán",
+              "meaning": "人民公園（中国の代表的な都市公園名）"
+            },
+            {
+              "word": "跟",
+              "pinyin": "gēn",
+              "meaning": "〜と一緒に、〜と（介詞）（HSK3）"
+            }
+          ]
+        },
+        {
+          "id": "d1123_22",
+          "speaker": "sufei",
+          "zh": "好啊！",
+          "pinyin": "Hǎo a!",
+          "ja": "いいわね！（ぜひ行く！）",
+          "segments": [
+            "好啊！"
+          ],
+          "notes": [
+            {
+              "word": "好啊",
+              "pinyin": "hǎo a",
+              "meaning": "いいですね、オーケー！（快諾の表現）（HSK1）"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
